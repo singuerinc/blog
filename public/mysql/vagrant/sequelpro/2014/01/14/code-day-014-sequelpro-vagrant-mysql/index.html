@@ -10,7 +10,7 @@
 
   <title>
     
-      Day 014 - Connect SequelPro to Vagrant MySQL Database &middot; blog | singuerinc
+      Day 014 - SequelPro + Vagrant + MySQL &middot; blog | singuerinc
     
   </title>
 
@@ -38,7 +38,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>This is my personal blog.<br/>Feel free to copy anything you need. Carry on!</p>
+    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>Feel free to copy anything you need. Carry on!</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -99,9 +99,11 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Day 014 - Connect SequelPro to Vagrant MySQL Database</h1>
+  <h1 class="post-title">Day 014 - SequelPro + Vagrant + MySQL</h1>
   <span class="post-date">14 Jan 2014</span>
-  <h3>Vagrant Options</h3>
+  <p>Connect SequelPro to Vagrant MySQL Database</p>
+
+<h3>Vagrant Options</h3>
 
 <div class="highlight"><pre><code class="js"><span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">3306</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">3306</span>
 <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="nx">ip</span><span class="o">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
@@ -109,23 +111,65 @@
 
 <h3>SequelPro SSH Options</h3>
 
-<p>Name: vagrant_connection<br/>
-MySQL Host: <strong>127.0.0.1</strong><br/>
-Username: <strong>root</strong><br/>
-Password: &lt;blank&gt;<br/>
-Database: &lt;optional&gt;<br/>
-Port: <strong>3306</strong><br/>
-<br/>
-SSH Host: <strong>192.168.50.4</strong><br/>
-SSH User: <strong>vagrant</strong><br/>
-SSH Password: <strong>vagrant</strong><br/>
-SSH Port: &lt;optional&gt;</p>
+<table>
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td>vagrant_connection</td>
+        </tr>
+        <tr>
+            <td>MySQL Host</td>
+            <td>127.0.0.1</td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td>root</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>&lt;blank&gt;</td>
+        </tr>
+        <tr>
+            <td>Database</td>
+            <td>&lt;optional&gt;</td>
+        </tr>
+        <tr>
+            <td>Port</td>
+            <td>3306</td>
+        </tr>
+        <tr>
+            <td>SSH Host</td>
+            <td>192.168.50.4</td>
+        </tr>
+        <tr>
+            <td>SSH User</td>
+            <td>vagrant</td>
+        </tr>
+        <tr>
+            <td>SSH Password</td>
+            <td>vagrant</td>
+        </tr>
+        <tr>
+            <td>SSH Port</td>
+            <td>&lt;optional&gt;</td>
+        </tr>
+    </tbody>
+</table>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
+            Day 016 - Install Node.js on Ubuntu
+            <small>16 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -141,15 +185,6 @@ SSH Port: &lt;optional&gt;</p>
           <a href="/javascript/2014/01/13/code-day-013-format-score/">
             Day 013 - Format number
             <small>13 Jan 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/javascript/2014/01/12/code-day-012-extract-hashtags/">
-            Day 012 - Extract hashtags
-            <small>12 Jan 2014</small>
           </a>
         </h3>
       </li>

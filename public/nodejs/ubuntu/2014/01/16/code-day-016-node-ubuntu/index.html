@@ -10,7 +10,7 @@
 
   <title>
     
-      Day 003 - Async "waterfall" / node.js &middot; blog | singuerinc
+      Day 016 - Install Node.js on Ubuntu &middot; blog | singuerinc
     
   </title>
 
@@ -99,30 +99,15 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Day 003 - Async "waterfall" / node.js</h1>
-  <span class="post-date">03 Jan 2014</span>
-  <p><strong>Waterfall</strong> es una funci&oacute;n de la librer&iacute;a <a href="https://github.com/caolan/async" target="_blank">async.js</a> que nos permite ejecutar una serie de funciones, cada una pasa su resultado a la siguiente funci&oacute;n en el array.</p>
+  <h1 class="post-title">Day 016 - Install Node.js on Ubuntu</h1>
+  <span class="post-date">16 Jan 2014</span>
+  <p>Hoy instalamos Node.js en Ubuntu!</p>
 
-<div class="highlight"><pre><code class="js"><span class="nx">async</span><span class="p">.</span><span class="nx">waterfall</span><span class="p">([</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">){</span>
-        <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">str</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
-        <span class="nx">arg1</span> <span class="o">+=</span> <span class="s2">&quot;l&quot;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arg1</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">arg2</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
-        <span class="nx">arg2</span> <span class="o">+=</span> <span class="s2">&quot;o&quot;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">arg3</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
-        <span class="nx">arg3</span> <span class="o">+=</span> <span class="s2">&quot;g&quot;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arg3</span><span class="p">);</span>
-    <span class="p">},</span>
-<span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// &quot;blog&quot;</span>
-<span class="p">});</span>
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo apt-get install python-software-properties python g++ make
+<span class="gp">$</span> sudo add-apt-repository ppa:chris-lea/node.js
+<span class="gp">$</span> sudo apt-get update
+<span class="gp">$</span> sudo apt-get install nodejs
+<span class="gp">$</span> node --version // v0.10.24
 </code></pre></div>
 
 </div>
@@ -130,15 +115,6 @@
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
-            Day 016 - Install Node.js on Ubuntu
-            <small>16 Jan 2014</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -154,6 +130,15 @@
           <a href="/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/">
             Day 014 - SequelPro + Vagrant + MySQL
             <small>14 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/javascript/2014/01/13/code-day-013-format-score/">
+            Day 013 - Format number
+            <small>13 Jan 2014</small>
           </a>
         </h3>
       </li>

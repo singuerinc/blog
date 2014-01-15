@@ -1,5 +1,5 @@
 ---
-title: Day 011 - Open your email client without open a new browser tab
+title: "Day 011 - mailto: !== new browser tab"
 author: singuerinc
 layout: post
 categories:

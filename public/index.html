@@ -38,7 +38,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>This is my personal blog.<br/>Feel free to copy anything you need. Carry on!</p>
+    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>Feel free to copy anything you need. Carry on!</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -102,6 +102,26 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
+        Day 016 - Install Node.js on Ubuntu
+      </a>
+    </h1>
+
+    <span class="post-date">16 Jan 2014</span>
+
+    <p>Hoy instalamos Node.js en Ubuntu!</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo apt-get install python-software-properties python g++ make
+<span class="gp">$</span> sudo add-apt-repository ppa:chris-lea/node.js
+<span class="gp">$</span> sudo apt-get update
+<span class="gp">$</span> sudo apt-get install nodejs
+<span class="gp">$</span> node --version // v0.10.24
+</code></pre></div>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/javascript/2014/01/15/code-day-015-decimals/">
         Day 015 - Decimals
       </a>
@@ -128,13 +148,15 @@
   <div class="post">
     <h1 class="post-title">
       <a href="/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/">
-        Day 014 - Connect SequelPro to Vagrant MySQL Database
+        Day 014 - SequelPro + Vagrant + MySQL
       </a>
     </h1>
 
     <span class="post-date">14 Jan 2014</span>
 
-    <h3>Vagrant Options</h3>
+    <p>Connect SequelPro to Vagrant MySQL Database</p>
+
+<h3>Vagrant Options</h3>
 
 <div class="highlight"><pre><code class="js"><span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">3306</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">3306</span>
 <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="nx">ip</span><span class="o">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
@@ -142,17 +164,50 @@
 
 <h3>SequelPro SSH Options</h3>
 
-<p>Name: vagrant_connection<br/>
-MySQL Host: <strong>127.0.0.1</strong><br/>
-Username: <strong>root</strong><br/>
-Password: &lt;blank&gt;<br/>
-Database: &lt;optional&gt;<br/>
-Port: <strong>3306</strong><br/>
-<br/>
-SSH Host: <strong>192.168.50.4</strong><br/>
-SSH User: <strong>vagrant</strong><br/>
-SSH Password: <strong>vagrant</strong><br/>
-SSH Port: &lt;optional&gt;</p>
+<table>
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td>vagrant_connection</td>
+        </tr>
+        <tr>
+            <td>MySQL Host</td>
+            <td>127.0.0.1</td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td>root</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>&lt;blank&gt;</td>
+        </tr>
+        <tr>
+            <td>Database</td>
+            <td>&lt;optional&gt;</td>
+        </tr>
+        <tr>
+            <td>Port</td>
+            <td>3306</td>
+        </tr>
+        <tr>
+            <td>SSH Host</td>
+            <td>192.168.50.4</td>
+        </tr>
+        <tr>
+            <td>SSH User</td>
+            <td>vagrant</td>
+        </tr>
+        <tr>
+            <td>SSH Password</td>
+            <td>vagrant</td>
+        </tr>
+        <tr>
+            <td>SSH Port</td>
+            <td>&lt;optional&gt;</td>
+        </tr>
+    </tbody>
+</table>
 
   </div>
   
@@ -198,30 +253,6 @@ SSH Port: &lt;optional&gt;</p>
 </code></pre></div>
 
 <p><a href="/code/day-012/index.html" target="_blank">Demo</a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/html/2014/01/11/code-day-011-open-email-without-new-tab/">
-        Day 011 - Open your email client without open a new browser tab
-      </a>
-    </h1>
-
-    <span class="post-date">11 Jan 2014</span>
-
-    <p>&iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&ntilde;a nueva? F&aacute;cil.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">open_email</span><span class="p">(){</span>
-    <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;iframe&#39;</span><span class="p">);</span>
-    <span class="nx">f</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
-    <span class="nx">f</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;mailto:email@addre.ss&#39;</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p><a href="/code/day-011/index.html" target="_blank">Demo</a></p>
 
   </div>
   

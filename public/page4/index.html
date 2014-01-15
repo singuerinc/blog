@@ -38,7 +38,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>This is my personal blog.<br/>Feel free to copy anything you need. Carry on!</p>
+    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>Feel free to copy anything you need. Carry on!</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -99,6 +99,27 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/javascript/2014/01/01/code-day-001-random-hex-color/">
+        One script per day
+      </a>
+    </h1>
+
+    <span class="post-date">01 Jan 2014</span>
+
+    <p>Un script por d&iacute;a, eso es lo que me propongo para este 2014, no me centrar&eacute; en ning&uacute;n lenguaje, pondr&eacute; un script que me haya servido en cada d&iacute;a.</p>
+
+<p>Y para empezar algo de Javascript simple: <strong>random hex color</strong>.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">16777215</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">color</span><span class="p">);</span>
+</code></pre></div>
+
+<p><a href="/code/day-001/index.html" target="_blank">Demo</a></p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -404,90 +425,6 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 </code></pre></div>
 
 <p>Puedes encontrar la &uacute;ltima versi&oacute;n en <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as">github</a>.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/actionscript3/tip/validators/2011/06/14/tip-validar-un-telefono-espanol-con-actionscript/">
-        Validar un tel&eacute;fono de Espa&ntilde;a
-      </a>
-    </h1>
-
-    <span class="post-date">14 Jun 2011</span>
-
-    <p>Aqu&iacute; os dejo otra Regular Expresion classe para validar tel&eacute;fonos m&oacute;viles en Espa&ntilde;a, hasta hace poco, s&oacute;lo existian n&uacute;meros m&oacute;viles que empezaban por &quot;6&quot;, ahora se ha agregado el &quot;7&quot;, la classe valida tanto m&oacute;viles como fijos y pueden contener espacios:</p>
-
-<div class="highlight"><pre><code class="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.utils.validators</span> <span class="o">{</span>
-<span class="cm">/**</span>
-<span class="cm"> * @author nahuel.scotti</span>
-<span class="cm"> */</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="n">SpainPhoneValidator</span> <span class="o">{</span>
-
-    <span class="kd">private</span> <span class="kd">var</span> <span class="n">_isMobile</span><span class="p">:</span><span class="kt">Boolean</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kd">var</span> <span class="n">_isFixed</span><span class="p">:</span><span class="kt">Boolean</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kd">var</span> <span class="n">_isValid</span><span class="p">:</span><span class="kt">Boolean</span><span class="o">;</span>
-
-    <span class="kd">public</span> <span class="kd">function </span><span class="nf">SpainPhoneValidator</span><span class="o">(</span><span class="n">tel</span><span class="o">:</span><span class="kt">String</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">_isValid</span> <span class="o">=</span> <span class="n">_validate</span><span class="o">(</span><span class="n">tel</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="kd">private</span> <span class="kd">function </span><span class="nf">_validate</span><span class="o">(</span><span class="n">value</span><span class="o">:</span><span class="kt">Object</span><span class="o">):</span><span class="kt">Boolean</span> <span class="o">{</span>
-
-        <span class="kd">var</span> <span class="n">str</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-        <span class="n">str</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="na">replace</span><span class="o">(/</span><span class="n">s</span><span class="o">/</span><span class="n">g</span><span class="o">,</span> <span class="s1">&#39;&#39;</span><span class="o">);</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">length</span> <span class="o">!=</span> <span class="mi">9</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-
-        <span class="n">var</span> <span class="n">regExp</span><span class="o">:[</span><span class="n">RegExp</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="sr">/^[679]{1}[0-9]{8}$/</span><span class="o">;</span>
-        <span class="kd">var</span> <span class="n">result</span><span class="p">:</span><span class="kt">Boolean</span> <span class="o">=</span> <span class="n">regExp</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
-
-        <span class="k">if</span><span class="o">(</span><span class="n">result</span><span class="o">){</span>
-            <span class="n">_isFixed</span> <span class="o">=</span> <span class="sr">/^[9]/</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
-            <span class="n">_isMobile</span> <span class="o">=</span> <span class="sr">/^[67]/</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
-        <span class="o">}</span>
-
-        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kd">function </span><span class="nf">isValid</span><span class="o">():</span><span class="kt">Boolean</span><span class="o">{</span>
-        <span class="k">return</span> <span class="n">_isValid</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kd">function </span><span class="nf">isFixed</span><span class="o">():</span><span class="kt">Boolean</span><span class="o">{</span>
-        <span class="k">return</span> <span class="n">_isFixed</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kd">function </span><span class="nf">isMobile</span><span class="o">():</span><span class="kt">Boolean</span><span class="o">{</span>
-        <span class="k">return</span> <span class="n">_isMobile</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
-
-<p>Algunos ejemplos:</p>
-
-<div class="highlight"><pre><code class="as3">  <span class="kd">var</span> <span class="n">val1</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;639 125 230&#39;</span><span class="o">);</span>  
-    <span class="n">val1</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
-    <span class="n">val1</span><span class="o">.</span><span class="na">isFixed</span><span class="o">();</span> <span class="c1">//false  </span>
-    <span class="n">val1</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//true  </span>
-      
-    <span class="kd">var</span> <span class="n">val2</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;668515187&#39;</span><span class="o">);</span>  
-    <span class="n">val2</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
-    <span class="n">val2</span><span class="o">.</span><span class="na">isFixed</span><span class="o">();</span> <span class="c1">//false  </span>
-    <span class="n">val2</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//true  </span>
-      
-    <span class="kd">var</span> <span class="n">val3</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;133 560 158&#39;</span><span class="o">);</span>  
-    <span class="n">val3</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//false  </span>
-    <span class="n">val3</span><span class="o">.</span><span class="na">isFixed</span><span class="o">();</span> <span class="c1">//false  </span>
-    <span class="n">val3</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//false  </span>
-      
-    <span class="kd">var</span> <span class="n">val4</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;932 510 258&#39;</span><span class="o">);</span>  
-    <span class="n">val4</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
-    <span class="n">val4</span><span class="o">.</span><span class="na">isFixed</span><span class="o">();</span> <span class="c1">//true  </span>
-    <span class="n">val4</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//false</span>
-</code></pre></div>
-
-<p>Puedes descargarte el c&oacute;digo desde <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPhoneValidator.as">github</a>.</p>
 
   </div>
   

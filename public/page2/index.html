@@ -38,7 +38,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>This is my personal blog.<br/>Feel free to copy anything you need. Carry on!</p>
+    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>Feel free to copy anything you need. Carry on!</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -99,6 +99,30 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/javascript/html/2014/01/11/code-day-011-open-email-without-new-tab/">
+        Day 011 - mailto: !== new browser tab
+      </a>
+    </h1>
+
+    <span class="post-date">11 Jan 2014</span>
+
+    <p>&iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&ntilde;a nueva? F&aacute;cil.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">open_email</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;iframe&#39;</span><span class="p">);</span>
+    <span class="nx">f</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
+    <span class="nx">f</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;mailto:email@addre.ss&#39;</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><a href="/code/day-011/index.html" target="_blank">Demo</a></p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -217,45 +241,6 @@
 <span class="kd">var</span> <span class="nx">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dog</span><span class="p">();</span>
 <span class="nx">dog</span><span class="p">.</span><span class="nx">run</span><span class="p">()</span> <span class="c1">// &quot;Dog runnning&quot;</span>
 </code></pre></div>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/validation/2014/01/06/code-day-006-spain-dni-validation/">
-        Day 006 - Spain - dni/nie/nif validation
-      </a>
-    </h1>
-
-    <span class="post-date">06 Jan 2014</span>
-
-    <p>Hoy validamos un dni espa&ntilde;ol, puede validar tanto nif como nie.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">validate</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
-    
-    <span class="kd">var</span> <span class="nx">validChars</span> <span class="o">=</span> <span class="s1">&#39;TRWAGMYFPDXBNJZSQVHLCKET&#39;</span><span class="p">,</span>
-    <span class="nx">nifRexp</span> <span class="o">=</span> <span class="sr">/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i</span><span class="p">,</span>
-    <span class="nx">nieRexp</span> <span class="o">=</span> <span class="sr">/^[XYZ]{1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i</span><span class="p">,</span>
-    <span class="nx">str</span> <span class="o">=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toUpperCase</span><span class="p">();</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">nifRexp</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">nieRexp</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">))</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-    
-    <span class="kd">var</span> <span class="nx">nie</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^[X]/</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^[Y]/</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^[Z]/</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">),</span>
-    <span class="nx">letter</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
-    <span class="nx">charIndex</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">nie</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> <span class="o">%</span> <span class="mi">23</span><span class="p">;</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="nx">validChars</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">charIndex</span><span class="p">)</span> <span class="o">==</span> <span class="nx">letter</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-
-    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;12345678Z&#39;</span><span class="p">);</span>  <span class="c1">//true - &quot;nif&quot;</span>
-<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;X9464187D&#39;</span><span class="p">);</span>  <span class="c1">//true - &quot;nie&quot;</span>
-</code></pre></div>
-
-<p>Y en ActionScript 3 la clase completa puedes encontrarla <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as" target="_blank">aqu&iacute;</a></p>
-
-<p><a href="/code/day-006/index.html" target="_blank">Demo</a></p>
 
   </div>
   
