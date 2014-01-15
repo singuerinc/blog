@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      blog | singuerinc &middot; no rights reserved
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>This is my personal blog.<br/>Feel free to copy anything you need. Carry on!</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/singuerinc">GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/singuerinc">@singuerinc</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2014. No rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+          <h3 class="masthead-title">
+            <a href="/" title="Home">blog | singuerinc</a>
+            <small>no rights reserved</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/javascript/validation/2014/01/04/code-day-004-spain-phone-validation/">
+        Day 004 - Spain - Phone validation
+      </a>
+    </h1>
+
+    <span class="post-date">04 Jan 2014</span>
+
+    <p>Este es muy simple, una expresi&oacute;n regular para validar tel&eacute;fonos de Espa&ntilde;a en Javascript.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">validate</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\s/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">9</span> <span class="o">&amp;&amp;</span> <span class="sr">/^[679]{1}[0-9]{8}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;639 125 230&#39;</span><span class="p">);</span> <span class="c1">//true</span>
+<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;668515187&#39;</span><span class="p">);</span>   <span class="c1">//true</span>
+<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;133 560 158&#39;</span><span class="p">);</span> <span class="c1">//false</span>
+<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;932 510 258&#39;</span><span class="p">);</span> <span class="c1">//true</span>
+</code></pre></div>
+
+<p>Y en ActionScript 3 la clase completa puedes encontrarla <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPhoneValidator.as" target="_blank">aqu&iacute;</a></p>
+
+<p><a href="/code/day-004/index.html" target="_blank">Demo</a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/nodejs/async/javascript/2014/01/03/code-day-003-node-async-waterfall/">
+        Day 003 - Async "waterfall" / node.js
+      </a>
+    </h1>
+
+    <span class="post-date">03 Jan 2014</span>
+
+    <p><strong>Waterfall</strong> es una funci&oacute;n de la librer&iacute;a <a href="https://github.com/caolan/async" target="_blank">async.js</a> que nos permite ejecutar una serie de funciones, cada una pasa su resultado a la siguiente funci&oacute;n en el array.</p>
+
+<div class="highlight"><pre><code class="js"><span class="nx">async</span><span class="p">.</span><span class="nx">waterfall</span><span class="p">([</span>
+    <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">){</span>
+        <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">str</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="kd">function</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
+        <span class="nx">arg1</span> <span class="o">+=</span> <span class="s2">&quot;l&quot;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arg1</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="kd">function</span><span class="p">(</span><span class="nx">arg2</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
+        <span class="nx">arg2</span> <span class="o">+=</span> <span class="s2">&quot;o&quot;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="kd">function</span><span class="p">(</span><span class="nx">arg3</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
+        <span class="nx">arg3</span> <span class="o">+=</span> <span class="s2">&quot;g&quot;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arg3</span><span class="p">);</span>
+    <span class="p">},</span>
+<span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// &quot;blog&quot;</span>
+<span class="p">});</span>
+</code></pre></div>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/nodejs/handlebars/javascript/2014/01/02/code-day-002-if-condition-handlebars/">
+        Day 002 - if condition Handlebars
+      </a>
+    </h1>
+
+    <span class="post-date">02 Jan 2014</span>
+
+    <p>Hoy: Handlebars/Javascript, <strong>if condition helper</strong></p>
+
+<div class="highlight"><pre><code class="js"><span class="nx">handlebars</span><span class="p">.</span><span class="nx">registerHelper</span><span class="p">(</span><span class="s1">&#39;ifCond&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">v1</span><span class="p">,</span> <span class="nx">cond</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">opt</span><span class="p">){</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="nx">cond</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="s1">&#39;==&#39;</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">==</span>  <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">case</span> <span class="s1">&#39;===&#39;</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">===</span> <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">case</span> <span class="s1">&#39;&lt;&#39;</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">&lt;</span>   <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">case</span> <span class="s1">&#39;&lt;=&#39;</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">&lt;=</span>  <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">case</span> <span class="s1">&#39;&gt;&#39;</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">&gt;</span>   <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">case</span> <span class="s1">&#39;&gt;=&#39;</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">&gt;=</span>  <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">default</span><span class="o">:</span>
+            <span class="k">return</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<p>Ejemplo:</p>
+
+<div class="highlight"><pre><code class="xml">  
+#ifCond blog &#39;===&#39; &#39;singuerinc&#39;
+<span class="nt">&lt;node&gt;</span>blog ok<span class="nt">&lt;/node&gt;</span>
+/ifCond
+    
+</code></pre></div>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/javascript/2014/01/01/code-day-001-random-hex-color/">
+        One script per day
+      </a>
+    </h1>
+
+    <span class="post-date">01 Jan 2014</span>
+
+    <p>Un script por d&iacute;a, eso es lo que me propongo para este 2014, no me centrar&eacute; en ning&uacute;n lenguaje, pondr&eacute; un script que me haya servido en cada d&iacute;a.</p>
+
+<p>Y para empezar algo de Javascript simple: <strong>random hex color</strong>.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">16777215</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">color</span><span class="p">);</span>
+</code></pre></div>
+
+<p><a href="/code/day-001/index.html" target="_blank">Demo</a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/actionscript3/flash/2013/04/03/flash-player-logs-mac-os/">
+        Flash Player Debug Logs on Mac OS
+      </a>
+    </h1>
+
+    <span class="post-date">03 Apr 2013</span>
+
+    <p>&iquest;C&oacute;mo puedo ver los <strong>trace</strong> de Flash Player?<br/>
+Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador.</p>
+
+<ul>
+<li>Primero tienes que instalar la versi&oacute;n de <a href="http://www.adobe.com/support/flashplayer/downloads.html">Flash Player Debug</a></li>
+<li>Luego configurar el <em>mm.cfg</em> y <em>flashlog.txt</em></li>
+</ul>
+
+<p>Pero siempre olvido d&oacute;nde colocarlos, por eso he escrito un peque&ntilde;o script que lo hace:</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nv">$ MM_DIR</span><span class="o">=</span><span class="s2">&quot;/Library/Application Support/Macromedia&quot;</span>
+<span class="nv">$ LG_DIR</span><span class="o">=</span><span class="s2">&quot;${HOME}/Library/Preferences/Macromedia/Flash Player/Logs&quot;</span>
+<span class="nv">$ </span>sudo mkdir -vp <span class="nv">$MM_DIR</span>
+
+<span class="c"># create config file</span>
+<span class="nv">$ </span>sudo touch <span class="s2">&quot;${MM_DIR}/mm.cfg&quot;</span>
+
+<span class="c"># Write mm config</span>
+<span class="nv">$ </span>sudo <span class="nb">echo</span> <span class="s1">&#39;ErrorReportingEnable=1\nTraceOutputFileEnable=1&#39;</span> <span class="p">|</span> sudo tee <span class="s2">&quot;${MM_DIR}/mm.cfg&quot;</span>
+
+<span class="c"># Create Flash Player logs directory</span>
+<span class="nv">$ </span>mkdir -pv <span class="nv">$LG_DIR</span>
+
+<span class="c"># Create Flash Player logs file</span>
+<span class="nv">$ </span>touch <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
+
+<span class="c"># Add test message</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;Flashlogs test&#39;</span> <span class="p">|</span> tee <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
+
+<span class="c"># Restart the browser (w/ Flash Player &quot;Debug&quot; version) and execute:</span>
+<span class="nv">$ </span>tail -f <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
+</code></pre></div>
+
+<p>Para ejecutarlo:</p>
+
+<ul>
+<li>Abre simplemente una ventana de Terminal y escribe:</li>
+</ul>
+
+<div class="highlight"><pre><code class="sh">curl -L https://gist.github.com/singuerinc/5296967/raw/logs.sh <span class="p">|</span> sh
+</code></pre></div>
+
+<ul>
+<li><p>Reinicia el navegador.</p></li>
+<li><p>Visualiza los logs ejecutando en el Terminal lo siguiente:</p></li>
+</ul>
+
+<div class="highlight"><pre><code class="sh">tail -f ~/Library/Preferences/Macromedia/Flash<span class="se">\ </span>Player/Logs/flashlog.txt
+</code></pre></div>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page4">Older</a>
+  
+  
+    
+      <a class="pagination-item newer" href="/page2">Newer</a>
+    
+  
+</div>
+      </div>
+    </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-881783-13', 'singuerinc.com');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>
