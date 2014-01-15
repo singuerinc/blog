@@ -102,6 +102,67 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/actionscript3/flash/2013/04/03/flash-player-logs-mac-os/">
+        Flash Player Debug Logs on Mac OS
+      </a>
+    </h1>
+
+    <span class="post-date">03 Apr 2013</span>
+
+    <p>&iquest;C&oacute;mo puedo ver los <strong>trace</strong> de Flash Player?<br/>
+Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador.</p>
+
+<ul>
+<li>Primero tienes que instalar la versi&oacute;n de <a href="http://www.adobe.com/support/flashplayer/downloads.html">Flash Player Debug</a></li>
+<li>Luego configurar el <em>mm.cfg</em> y <em>flashlog.txt</em></li>
+</ul>
+
+<p>Pero siempre olvido d&oacute;nde colocarlos, por eso he escrito un peque&ntilde;o script que lo hace:</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nv">$ MM_DIR</span><span class="o">=</span><span class="s2">&quot;/Library/Application Support/Macromedia&quot;</span>
+<span class="nv">$ LG_DIR</span><span class="o">=</span><span class="s2">&quot;${HOME}/Library/Preferences/Macromedia/Flash Player/Logs&quot;</span>
+<span class="nv">$ </span>sudo mkdir -vp <span class="nv">$MM_DIR</span>
+
+<span class="c"># create config file</span>
+<span class="nv">$ </span>sudo touch <span class="s2">&quot;${MM_DIR}/mm.cfg&quot;</span>
+
+<span class="c"># Write mm config</span>
+<span class="nv">$ </span>sudo <span class="nb">echo</span> <span class="s1">&#39;ErrorReportingEnable=1\nTraceOutputFileEnable=1&#39;</span> <span class="p">|</span> sudo tee <span class="s2">&quot;${MM_DIR}/mm.cfg&quot;</span>
+
+<span class="c"># Create Flash Player logs directory</span>
+<span class="nv">$ </span>mkdir -pv <span class="nv">$LG_DIR</span>
+
+<span class="c"># Create Flash Player logs file</span>
+<span class="nv">$ </span>touch <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
+
+<span class="c"># Add test message</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;Flashlogs test&#39;</span> <span class="p">|</span> tee <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
+
+<span class="c"># Restart the browser (w/ Flash Player &quot;Debug&quot; version) and execute:</span>
+<span class="nv">$ </span>tail -f <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
+</code></pre></div>
+
+<p>Para ejecutarlo:</p>
+
+<ul>
+<li>Abre simplemente una ventana de Terminal y escribe:</li>
+</ul>
+
+<div class="highlight"><pre><code class="sh">curl -L https://gist.github.com/singuerinc/5296967/raw/logs.sh <span class="p">|</span> sh
+</code></pre></div>
+
+<ul>
+<li><p>Reinicia el navegador.</p></li>
+<li><p>Visualiza los logs ejecutando en el Terminal lo siguiente:</p></li>
+</ul>
+
+<div class="highlight"><pre><code class="sh">tail -f ~/Library/Preferences/Macromedia/Flash<span class="se">\ </span>Player/Logs/flashlog.txt
+</code></pre></div>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/actionscript3/validators/2011/06/21/tip-validar-un-telefono-movil-de-italia-con-actionscript-validazione-cellulare-italia/">
         Validar un tel&eacute;fono m&oacute;vil de Italia
       </a>
@@ -427,116 +488,6 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 </code></pre></div>
 
 <p>Puedes descargarte el c&oacute;digo desde <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPhoneValidator.as">github</a>.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/actionscript3/tip/validators/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/">
-        Validar un c&oacute;digo postal de Espa&ntilde;a
-      </a>
-    </h1>
-
-    <span class="post-date">14 Jun 2011</span>
-
-    <p>Hola, aqu&iacute; os dejo una peque&ntilde;a classe con una Regular Expresion que he hecho para validar c&oacute;digos postales espa&ntilde;oles. Tambi&eacute;n, puedes saber el nombre de la provincia al que pertenece:</p>
-
-<div class="highlight"><pre><code class="as3"><span class="k">package</span> <span class="nn">com.singuerinc.labs.utils.validators</span> <span class="o">{</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="n">SpainPostalCodeValidator</span> <span class="o">{</span>
-
-    <span class="kd">public</span> <span class="kd">var</span> <span class="n">stateNames</span><span class="p">:</span><span class="kt">Array</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;Alava/Araba&#39;</span><span class="o">,</span> <span class="s1">&#39;Albacete&#39;</span><span class="o">,</span> <span class="s1">&#39;Alicante&#39;</span><span class="o">,</span> <span class="s1">&#39;Almería&#39;</span><span class="o">,</span> <span class="s1">&#39;Avila&#39;</span><span class="o">,</span> <span class="s1">&#39;Badajoz&#39;</span><span class="o">,</span> <span class="s1">&#39;Islas Baleares&#39;</span><span class="o">,</span> <span class="s1">&#39;Barcelona&#39;</span><span class="o">,</span> <span class="s1">&#39;Burgos&#39;</span><span class="o">,</span> <span class="s1">&#39;Cáceres&#39;</span><span class="o">,</span> <span class="s1">&#39;Cádiz&#39;</span><span class="o">,</span> <span class="s1">&#39;Castellón&#39;</span><span class="o">,</span> <span class="s1">&#39;Ciudad Real&#39;</span><span class="o">,</span> <span class="s1">&#39;Córdoba&#39;</span><span class="o">,</span> <span class="s1">&#39;A Coruña/La Coruña&#39;</span><span class="o">,</span> <span class="s1">&#39;Cuenca&#39;</span><span class="o">,</span> <span class="s1">&#39;Gerona/Girona&#39;</span><span class="o">,</span> <span class="s1">&#39;Granada&#39;</span><span class="o">,</span> <span class="s1">&#39;Guadalajara&#39;</span><span class="o">,</span> <span class="s1">&#39;Gipuzkoa/Guipuzcoa&#39;</span><span class="o">,</span> <span class="s1">&#39;Huelva&#39;</span><span class="o">,</span> <span class="s1">&#39;Huesca&#39;</span><span class="o">,</span> <span class="s1">&#39;Jaen&#39;</span><span class="o">,</span> <span class="s1">&#39;León&#39;</span><span class="o">,</span> <span class="s1">&#39;Lérida/Lleida&#39;</span><span class="o">,</span> <span class="s1">&#39;La Rioja&#39;</span><span class="o">,</span> <span class="s1">&#39;Lugo&#39;</span><span class="o">,</span> <span class="s1">&#39;Madrid&#39;</span><span class="o">,</span> <span class="s1">&#39;Málaga&#39;</span><span class="o">,</span> <span class="s1">&#39;Murcia&#39;</span><span class="o">,</span> <span class="s1">&#39;Navarra&#39;</span><span class="o">,</span> <span class="s1">&#39;Orense/Ourense&#39;</span><span class="o">,</span> <span class="s1">&#39;Asturias&#39;</span><span class="o">,</span> <span class="s1">&#39;Palencia&#39;</span><span class="o">,</span> <span class="s1">&#39;Las Palmas&#39;</span><span class="o">,</span> <span class="s1">&#39;Pontevedra&#39;</span><span class="o">,</span> <span class="s1">&#39;Salamanca&#39;</span><span class="o">,</span> <span class="s1">&#39;S.C.Tenerife&#39;</span><span class="o">,</span> <span class="s1">&#39;Cantabria&#39;</span><span class="o">,</span> <span class="s1">&#39;Segovia&#39;</span><span class="o">,</span> <span class="s1">&#39;Sevilla&#39;</span><span class="o">,</span> <span class="s1">&#39;Soria&#39;</span><span class="o">,</span> <span class="s1">&#39;Tarragona&#39;</span><span class="o">,</span> <span class="s1">&#39;Teruel&#39;</span><span class="o">,</span> <span class="s1">&#39;Toledo&#39;</span><span class="o">,</span> <span class="s1">&#39;Valencia&#39;</span><span class="o">,</span> <span class="s1">&#39;Valladolid&#39;</span><span class="o">,</span> <span class="s1">&#39;Bizkaia/Vizcaya&#39;</span><span class="o">,</span> <span class="s1">&#39;Zamora&#39;</span><span class="o">,</span> <span class="s1">&#39;Zaragoza&#39;</span><span class="o">,</span> <span class="s1">&#39;Ceuta&#39;</span><span class="o">,</span> <span class="s1">&#39;Melilla&#39;</span><span class="o">];</span>
-
-    <span class="kd">private</span> <span class="kd">var</span> <span class="n">_stateName</span><span class="p">:</span><span class="kt">String</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kd">var</span> <span class="n">_stateCode</span><span class="p">:</span><span class="kt">String</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kd">var</span> <span class="n">_isValid</span><span class="p">:</span><span class="kt">Boolean</span><span class="o">;</span>
-
-    <span class="kd">public</span> <span class="kd">function </span><span class="nf">SpainPostalCodeValidator</span><span class="o">(</span><span class="n">codeOrStateName</span><span class="o">:</span><span class="kt">String</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="nf">isNaN</span><span class="o">(</span><span class="n">Number</span><span class="o">(</span><span class="n">codeOrStateName</span><span class="o">))</span> <span class="o">==</span> <span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
-            <span class="kd">var</span> <span class="n">result</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">search</span><span class="o">(</span><span class="n">codeOrStateName</span><span class="o">);</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">_isValid</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-                <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;000&#39;</span><span class="o">;</span>
-                <span class="n">_isValid</span> <span class="o">=</span> <span class="n">validate</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
-            <span class="o">}</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="n">_isValid</span> <span class="o">=</span> <span class="n">validate</span><span class="o">(</span><span class="n">codeOrStateName</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kd">function</span> <span class="kd">get</span> <span class="n">stateCode</span><span class="o">():</span><span class="n">String</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">_stateCode</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kd">function</span> <span class="kd">get</span> <span class="n">stateName</span><span class="o">():</span><span class="n">String</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">_stateName</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kd">function </span><span class="nf">isValid</span><span class="o">():</span><span class="kt">Boolean</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">_isValid</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">private</span> <span class="kd">function </span><span class="nf">validate</span><span class="o">(</span><span class="n">value</span><span class="o">:</span><span class="kt">String</span><span class="o">):</span><span class="kt">Boolean</span> <span class="o">{</span>
-
-        <span class="kd">var</span> <span class="n">str</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">length</span> <span class="o">!=</span> <span class="mi">5</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-
-        <span class="kd">var</span> <span class="n">regExp</span><span class="p">:</span><span class="kt">RegExp</span> <span class="o">=</span> <span class="sr">/((?&gt;^[5]{1})[0-2][0-9]{3})|((?&gt;^[0]{1})[1-9]{1}[0-9]{3})|((?&gt;^[1-4]{1})[0-9]{1}[0-9]{3})$/</span><span class="o">;</span>
-        <span class="kd">var</span> <span class="n">result</span><span class="p">:</span><span class="kt">Boolean</span> <span class="o">=</span> <span class="n">regExp</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">result</span><span class="o">)</span> <span class="o">{</span>
-            <span class="kd">var</span> <span class="n">codeInit</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="na">substr</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
-            <span class="kd">var</span> <span class="n">idx</span><span class="p">:</span><span class="kt">uint</span> <span class="o">=</span> <span class="n">Number</span><span class="o">(</span><span class="n">codeInit</span><span class="o">);</span>
-            <span class="n">_stateName</span> <span class="o">=</span> <span class="n">stateNames</span><span class="o">[</span><span class="n">idx</span> <span class="o">-</span> <span class="mi">1</span><span class="o">];</span>
-            <span class="n">_stateCode</span> <span class="o">=</span> <span class="n">codeInit</span><span class="o">;</span>
-        <span class="o">}</span>
-
-        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">private</span> <span class="kd">function </span><span class="nf">search</span><span class="o">(</span><span class="n">stateName</span><span class="o">:</span><span class="kt">String</span><span class="o">):</span><span class="kt">String</span> <span class="o">{</span>
-
-        <span class="n">stateName</span> <span class="o">=</span> <span class="n">stateName</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">();</span>
-        <span class="kd">var</span> <span class="n">state</span><span class="p">:</span><span class="kt">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
-
-        <span class="kd">var</span> <span class="n">l</span><span class="p">:</span><span class="kt">uint</span> <span class="o">=</span> <span class="n">stateNames</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
-        <span class="k">for</span> <span class="o">(</span><span class="kd">var</span> <span class="n">i</span><span class="p">:</span><span class="kt">uint</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">l</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-            <span class="kd">var</span> <span class="n">s</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">stateNames</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="n">search</span><span class="o">(</span><span class="n">stateName</span><span class="o">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">state</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
-                <span class="k">break</span><span class="o">;</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-        <span class="k">return</span> <span class="n">state</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">?</span> <span class="s1">&#39;&#39;</span> <span class="o">:</span> <span class="o">(</span><span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="o">(</span><span class="n">state</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)).</span><span class="n">substr</span><span class="o">(-</span><span class="mi">2</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
-
-<p>Algunos ejemplos <strong>v&aacute;lidos</strong>:</p>
-
-<div class="highlight"><pre><code class="as3"><span class="kd">var</span> <span class="n">sv1</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;Barcelona&#39;</span><span class="o">);</span>  
-<span class="n">sv1</span><span class="o">.</span><span class="na">stateName</span><span class="o">;</span> <span class="c1">//Barcelona  </span>
-<span class="n">sv1</span><span class="o">.</span><span class="na">stateCode</span><span class="o">;</span> <span class="c1">//08  </span>
-<span class="n">sv1</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
-  
-<span class="kd">var</span> <span class="n">sv2</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;28001&#39;</span><span class="o">);</span>  
-<span class="n">sv2</span><span class="o">.</span><span class="na">stateName</span><span class="o">;</span> <span class="c1">//Madrid  </span>
-<span class="n">sv2</span><span class="o">.</span><span class="na">stateCode</span><span class="o">;</span> <span class="c1">//28  </span>
-<span class="n">sv2</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true</span>
-</code></pre></div>
-
-<p>Y otros que son <strong>inv&aacute;lidos</strong>:</p>
-
-<div class="highlight"><pre><code class="as3"><span class="kd">var</span> <span class="n">sv3</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;New York&#39;</span><span class="o">);</span>
-<span class="n">sv3</span><span class="o">.</span><span class="na">stateName</span><span class="o">;</span> <span class="c1">//null  </span>
-<span class="n">sv3</span><span class="o">.</span><span class="na">stateCode</span><span class="o">;</span> <span class="c1">//null  </span>
-<span class="n">sv3</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//false  </span>
-  
-<span class="kd">var</span> <span class="n">sv4</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;80800&#39;</span><span class="o">);</span>  
-<span class="n">sv4</span><span class="o">.</span><span class="na">stateName</span><span class="o">;</span> <span class="c1">//null  </span>
-<span class="n">sv4</span><span class="o">.</span><span class="na">stateCode</span><span class="o">;</span> <span class="c1">//null  </span>
-<span class="n">sv4</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//false</span>
-</code></pre></div>
 
   </div>
   

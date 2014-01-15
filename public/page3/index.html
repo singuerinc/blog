@@ -102,6 +102,50 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/actionscript3/validation/2014/01/05/code-day-005-italy-phone-validation/">
+        Day 005 - Italy - Phone validation
+      </a>
+    </h1>
+
+    <span class="post-date">05 Jan 2014</span>
+
+    <p>Igual que el de ayer, pero para Italia y m&aacute;s complejo, una expresi&oacute;n regular para validar tel&eacute;fonos con ActionScript 3.</p>
+
+<div class="highlight"><pre><code class="as3"><span class="kd">private</span> <span class="kd">function </span><span class="nf">validate</span><span class="o">(</span><span class="n">value</span><span class="o">:</span><span class="kt">String</span><span class="o">):</span><span class="kt">Boolean</span> <span class="o">{</span>
+    
+    <span class="kd">var</span> <span class="n">a</span><span class="p">:</span><span class="kt">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})313[0-9]{7}$/</span><span class="o">,</span>
+    <span class="n">b</span><span class="o">:</span><span class="n">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})3{1}(((?&gt;3)[013456789]{1})|((?&gt;6)[0368]{1}))[0-9]{7}$/</span><span class="o">,</span>
+    <span class="n">c</span><span class="o">:</span><span class="n">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})3{1}(((?&gt;4)[02356789]{1}))[0-9]{7}$/</span><span class="o">,</span>
+    <span class="n">d</span><span class="o">:</span><span class="n">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})3{1}(((?&gt;2)[03789]{1})|((?&gt;8)[0389]{1}))[0-9]{7}$/</span><span class="o">,</span>
+    <span class="n">e</span><span class="o">:</span><span class="n">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})3{1}9{1}[0-3]{1}[0-9]{7}$/</span><span class="o">;</span>
+    
+
+    <span class="kd">var</span> <span class="n">str</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="na">replace</span><span class="o">(/^\+/,</span> <span class="s1">&#39;00&#39;</span><span class="o">);</span>
+    <span class="n">str</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="na">replace</span><span class="o">(/[^</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]/</span><span class="n">g</span><span class="o">,</span> <span class="s1">&#39;&#39;</span><span class="o">);</span>
+    
+    <span class="k">if</span> <span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">length</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    
+    <span class="kd">var</span> <span class="n">rx</span><span class="p">:</span><span class="kt">Array</span> <span class="o">=</span> <span class="o">[</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">c</span><span class="o">,</span> <span class="n">d</span><span class="o">,</span> <span class="n">e</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kd">var</span> <span class="n">i</span><span class="p">:</span><span class="kt">uint</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">rx</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">rx</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="n">test</span><span class="o">(</span><span class="n">str</span><span class="o">))</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;3934012345&#39;</span><span class="o">);</span>        <span class="c1">//true - &quot;Vodafone&quot;</span>
+<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;3936912345&#39;</span><span class="o">);</span>        <span class="c1">//true - &quot;Vodafone&quot;</span>
+<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;3933216547&#39;</span><span class="o">);</span>        <span class="c1">//true - &quot;Tre&quot;</span>
+<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;0039 368 1234567&#39;</span><span class="o">);</span>  <span class="c1">//true &quot;TIM&quot;</span>
+<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;380 4567321&#39;</span><span class="o">);</span>       <span class="c1">//true &quot;Wind&quot;</span>
+</code></pre></div>
+
+<p>Algo más completo y complejo pero útil puedes encontrarlo <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/ItalyPhoneValidator.as" target="_blank">aqu&iacute;</a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/javascript/validation/2014/01/04/code-day-004-spain-phone-validation/">
         Day 004 - Spain - Phone validation
       </a>
@@ -223,67 +267,6 @@
 </code></pre></div>
 
 <p><a href="/code/day-001/index.html" target="_blank">Demo</a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/actionscript3/flash/2013/04/03/flash-player-logs-mac-os/">
-        Flash Player Debug Logs on Mac OS
-      </a>
-    </h1>
-
-    <span class="post-date">03 Apr 2013</span>
-
-    <p>&iquest;C&oacute;mo puedo ver los <strong>trace</strong> de Flash Player?<br/>
-Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador.</p>
-
-<ul>
-<li>Primero tienes que instalar la versi&oacute;n de <a href="http://www.adobe.com/support/flashplayer/downloads.html">Flash Player Debug</a></li>
-<li>Luego configurar el <em>mm.cfg</em> y <em>flashlog.txt</em></li>
-</ul>
-
-<p>Pero siempre olvido d&oacute;nde colocarlos, por eso he escrito un peque&ntilde;o script que lo hace:</p>
-
-<div class="highlight"><pre><code class="sh"><span class="nv">$ MM_DIR</span><span class="o">=</span><span class="s2">&quot;/Library/Application Support/Macromedia&quot;</span>
-<span class="nv">$ LG_DIR</span><span class="o">=</span><span class="s2">&quot;${HOME}/Library/Preferences/Macromedia/Flash Player/Logs&quot;</span>
-<span class="nv">$ </span>sudo mkdir -vp <span class="nv">$MM_DIR</span>
-
-<span class="c"># create config file</span>
-<span class="nv">$ </span>sudo touch <span class="s2">&quot;${MM_DIR}/mm.cfg&quot;</span>
-
-<span class="c"># Write mm config</span>
-<span class="nv">$ </span>sudo <span class="nb">echo</span> <span class="s1">&#39;ErrorReportingEnable=1\nTraceOutputFileEnable=1&#39;</span> <span class="p">|</span> sudo tee <span class="s2">&quot;${MM_DIR}/mm.cfg&quot;</span>
-
-<span class="c"># Create Flash Player logs directory</span>
-<span class="nv">$ </span>mkdir -pv <span class="nv">$LG_DIR</span>
-
-<span class="c"># Create Flash Player logs file</span>
-<span class="nv">$ </span>touch <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
-
-<span class="c"># Add test message</span>
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;Flashlogs test&#39;</span> <span class="p">|</span> tee <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
-
-<span class="c"># Restart the browser (w/ Flash Player &quot;Debug&quot; version) and execute:</span>
-<span class="nv">$ </span>tail -f <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
-</code></pre></div>
-
-<p>Para ejecutarlo:</p>
-
-<ul>
-<li>Abre simplemente una ventana de Terminal y escribe:</li>
-</ul>
-
-<div class="highlight"><pre><code class="sh">curl -L https://gist.github.com/singuerinc/5296967/raw/logs.sh <span class="p">|</span> sh
-</code></pre></div>
-
-<ul>
-<li><p>Reinicia el navegador.</p></li>
-<li><p>Visualiza los logs ejecutando en el Terminal lo siguiente:</p></li>
-</ul>
-
-<div class="highlight"><pre><code class="sh">tail -f ~/Library/Preferences/Macromedia/Flash<span class="se">\ </span>Player/Logs/flashlog.txt
-</code></pre></div>
 
   </div>
   

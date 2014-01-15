@@ -1,5 +1,5 @@
 ---
-title: Day 013 - Format score
+title: Day 013 - Format number
 author: singuerinc
 layout: post
 categories:
