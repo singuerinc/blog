@@ -18,6 +18,7 @@
             position: absolute;
             top: 50%;
             margin-top: -115px;
+            width: 525px;
         }
         .center h1 {
             font-weight: 100;
@@ -67,14 +68,14 @@
     <script type="text/javascript">
 
         function validate(value){
-            
+
             var validChars = 'TRWAGMYFPDXBNJZSQVHLCKET',
             nifRexp = /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i,
             nieRexp = /^[XYZ]{1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i,
             str = value.toString().toUpperCase();
 
             if (!nifRexp.test(str) && !nieRexp.test(str)) return false;
-            
+
             var nie = str.replace(/^[X]/, '0').replace(/^[Y]/, '1').replace(/^[Z]/, '2'),
             letter = str.substr(-1),
             charIndex = parseInt(nie.substr(0, 8)) % 23;
