@@ -4,12 +4,14 @@ title: About
 ---
 
 <p class="message">
-  Hey there! This is my personal blog.<br/>Feel free to copy anything you need. Carry on!
+  Hey there! I'm Nahuel Scotti. This is my personal blog.<br/>Feel free to copy anything you need. Carry on!
 </p>
 
 ## A bit about myself
 
-I’m a dev living and working in Barcelona, I'm working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a>. I worked at <a href="http://www.doubleyou.com" target="_blank">DoubleYou</a> for several years, first as a Flash developer, then as a Frontend dev. Currently I make apps in javascript, ruby on rails, node.js, among others.<br/>I speak Spanish and sometimes Italian.
+![singuerinc](/public/images/singuerinc.png)
+
+I’m a dev living and working in Barcelona, I'm working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a>. I’ve worked at <a href="http://www.doubleyou.com" target="_blank">DoubleYou</a> for several years, first as a Flash developer, then as a Frontend dev. Currently I make apps in Javascript, Ruby on Rails, Node.js among others.<br/>I speak Spanish and sometimes Italian.
 
 ### Stay in touch
 
