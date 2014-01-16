@@ -10,7 +10,7 @@
 
   <title>
     
-      blog | singuerinc &middot; no rights reserved
+      Day 017 - Abbreviate String &middot; blog | singuerinc
     
   </title>
 
@@ -98,18 +98,10 @@
       </div>
 
       <div class="container content">
-        <div class="posts">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/2014/01/17/code-day-017-abbreviate-string/">
-        Day 017 - Abbreviate String
-      </a>
-    </h1>
-
-    <span class="post-date">17 Jan 2014</span>
-
-    <p>&quot;Abbreviate&quot; nos permite abreviar una cadena de texto usando puntos suspensivos.<br/>
+        <div class="post">
+  <h1 class="post-title">Day 017 - Abbreviate String</h1>
+  <span class="post-date">17 Jan 2014</span>
+  <p>&quot;Abbreviate&quot; nos permite abreviar una cadena de texto usando puntos suspensivos.<br/>
 Es una convesi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Commons/as3commons-lang/blob/master/src/main/actionscript/org/as3commons/lang/StringUtils.as#L1145"><em>StringUtils.abbreviate</em></a> de <strong>as3commons</strong> pero para Javascript.</p>
 
 <div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">abbreviate</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">offset</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="p">){</span>
@@ -139,151 +131,42 @@ Es una convesi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Comm
 
 <p><a href="/code/day-017/index.html" target="_blank">Demo</a></p>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
-        Day 016 - Install Node.js on Ubuntu
-      </a>
-    </h1>
-
-    <span class="post-date">16 Jan 2014</span>
-
-    <p>Hoy instalamos Node.js en Ubuntu!</p>
-
-<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo apt-get install python-software-properties python g++ make
-<span class="gp">$</span> sudo add-apt-repository ppa:chris-lea/node.js
-<span class="gp">$</span> sudo apt-get update
-<span class="gp">$</span> sudo apt-get install nodejs
-<span class="gp">$</span> node --version // v0.10.24
-</code></pre></div>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/2014/01/15/code-day-015-decimals/">
-        Day 015 - Decimals
-      </a>
-    </h1>
-
-    <span class="post-date">15 Jan 2014</span>
-
-    <p>Formateamos un n&uacute;mero con decimales.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">format</span><span class="p">(</span><span class="mf">5716645.406726573</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// 5716645.4</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">6738963.296086764</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 6738963.2</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">1393.8190264930017</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1393.819</span>
-</code></pre></div>
-
-<p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/">
-        Day 014 - SequelPro + Vagrant + MySQL
-      </a>
-    </h1>
-
-    <span class="post-date">14 Jan 2014</span>
-
-    <p>Connect SequelPro to Vagrant MySQL Database</p>
-
-<h3>Vagrant Options</h3>
-
-<div class="highlight"><pre><code class="js"><span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">3306</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">3306</span>
-<span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="nx">ip</span><span class="o">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
-</code></pre></div>
-
-<h3>SequelPro SSH Options</h3>
-
-<table>
-    <tbody>
-        <tr>
-            <td>Name</td>
-            <td>vagrant_connection</td>
-        </tr>
-        <tr>
-            <td>MySQL Host</td>
-            <td>127.0.0.1</td>
-        </tr>
-        <tr>
-            <td>Username</td>
-            <td>root</td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td>&lt;blank&gt;</td>
-        </tr>
-        <tr>
-            <td>Database</td>
-            <td>&lt;optional&gt;</td>
-        </tr>
-        <tr>
-            <td>Port</td>
-            <td>3306</td>
-        </tr>
-        <tr>
-            <td>SSH Host</td>
-            <td>192.168.50.4</td>
-        </tr>
-        <tr>
-            <td>SSH User</td>
-            <td>vagrant</td>
-        </tr>
-        <tr>
-            <td>SSH Password</td>
-            <td>vagrant</td>
-        </tr>
-        <tr>
-            <td>SSH Port</td>
-            <td>&lt;optional&gt;</td>
-        </tr>
-    </tbody>
-</table>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/2014/01/13/code-day-013-format-score/">
-        Day 013 - Format number
-      </a>
-    </h1>
-
-    <span class="post-date">13 Jan 2014</span>
-
-    <p>Vamos a formatear un n&uacute;mero de forma simple con una expresi&oacute;n regular.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
-    <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\B(?=(\d{3})+(?!\d))/g</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">format</span><span class="p">(</span><span class="mi">3601234</span><span class="p">);</span> <span class="c1">// &#39;3.601.234&#39;</span>
-</code></pre></div>
-
-<p><a href="/code/day-013/index.html" target="_blank">Demo</a></p>
-
-  </div>
-  
 </div>
 
-<div class="pagination">
-  
-    <a class="pagination-item older" href="/page2">Older</a>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
+            Day 016 - Install Node.js on Ubuntu
+            <small>16 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/javascript/2014/01/15/code-day-015-decimals/">
+            Day 015 - Decimals
+            <small>15 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/">
+            Day 014 - SequelPro + Vagrant + MySQL
+            <small>14 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
 </div>
+
       </div>
     </div>
 

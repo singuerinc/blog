@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Labs / singuerinc</title>
+    <link href='//fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
+    <link href='/public/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+
+        .lang {
+            font-weight: 100;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #666;
+        }
+
+        body {
+            background: #222;
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+        }
+
+        #main {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-weight: 100;
+            font-size: 90px;
+        }
+
+        h1#title {
+            color: #00CC00;
+        }
+
+        input.form-control {
+            display: block;
+            float: none;
+            margin: 5px 0;
+            width: 100px;
+            background-color: #333;
+            height: 60px;
+            font-size: 30px;
+            color: white;
+            border: 10px solid #333;
+        }
+
+        input#val, input#result {
+            width: 475px;
+        }
+
+        .form-control:focus {
+            border-color: #333;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        div.result {
+            margin-top: 50px;
+            color: white;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+            display: inline-block;
+            background-color: #007700;
+            color: white;
+            margin: 15px 0 0 0;
+            padding: 10px 20px 10px 20px;
+            border-top: 4px solid #00CC00;
+            border-left: 4px solid #008800;
+            border-bottom: 4px solid #004400;
+            border-right: 4px solid #006600;
+        }
+
+        a:hover {
+            background-color: #008800;
+            border-left: 4px solid #00CC00;
+            color: white;
+            text-decoration: none;
+        }
+
+        a:active {
+            background-color: #005500;
+            border-top: 4px solid #004400;
+            border-left: 4px solid #006600;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main" class="container">
+
+        <div class="row">
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                        <h1 id="title">abbreviate</h1>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="val" class="col-sm-2 control-label">value</label>
+                    <div class="col-sm-10">
+                        <input id="val" type="text" class="form-control" value="lorem ipsum">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="arg1" class="col-sm-2 control-label">offset</label>
+                    <div class="col-sm-10">
+                        <input id="arg1" type="text" class="form-control" value="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="arg2" class="col-sm-2 control-label">maxWidth</label>
+                    <div class="col-sm-10">
+                        <input id="arg2" type="text" class="form-control" value="7">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                        <a id="btn" href="#">abbreviate(text, offset, maxWidth);</a>
+                    </div>
+                </div>
+                <div class="form-group result">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                        <h1 id="result"></h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <span class="lang">javascript</span>
+
+
+    <script type="text/javascript">
+
+        function abbreviate(str, offset, maxWidth){
+
+            if(str == null) return str;
+            if(maxWidth < 4) throw new Error('Minimum abbreviation width is 4');
+            if(str.length <= maxWidth) return str;
+            if(offset > str.length) offset = str.length;
+            if((str.length - offset) < (maxWidth - 3)){
+                offset = str.length - (maxWidth -3);
+            }
+            if (offset <= 4) {
+                return str.substring(0, maxWidth - 3) + "...";
+            }
+
+            if (maxWidth < 7) {
+                throw new Error("Minimum abbreviation width with offset is 7");
+            }
+
+            if ((offset + (maxWidth - 3)) < str.length) {
+                return "..." + abbreviate(str.substring(offset), 0, maxWidth - 3);
+            }
+            return "..." + str.substring(str.length - (maxWidth - 3));
+        }
+
+        var input = document.getElementById('val');
+        var btn = document.getElementById('btn');
+        var result = document.getElementById('result');
+        btn.onclick = function(){
+            var val, arg1, arg2;
+            val = $('#val').val();
+            arg1 = $('#arg1').val();
+            arg2 = $('#arg2').val();
+            $('#result').text(abbreviate(val, arg1, arg2));
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-881783-8']);
+      _gaq.push(['_setDomainName', 'singuerinc.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</body>
+</html>
