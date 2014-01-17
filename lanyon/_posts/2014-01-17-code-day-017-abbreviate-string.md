@@ -1,5 +1,5 @@
 ---
-title: Day 017 - Abbreviate String
+title: <span>Day 017</span> Abbreviate String
 author: singuerinc
 layout: post
 categories:

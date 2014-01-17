@@ -315,6 +315,15 @@ a.sidebar-nav-item:focus {
 .post-title a {
   color: #303030;
 }
+.post-title span {
+    color: white;
+    background-color: #ccc;
+    padding: 7px 15px 5px 15px;
+    font-size: 0.5em;
+    position: relative;
+    top: -8px;
+    display: inline-block;
+}
 .page-title,
 .post-title {
   margin-top: 0;

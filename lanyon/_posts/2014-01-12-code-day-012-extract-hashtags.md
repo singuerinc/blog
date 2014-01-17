@@ -1,5 +1,5 @@
 ---
-title: Day 012 - Extract hashtags
+title: <span>Day 012</span> Extract hashtags
 author: singuerinc
 layout: post
 categories:

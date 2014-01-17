@@ -1,5 +1,5 @@
 ---
-title: Day 019 - Install Ubuntu desktop in Ubuntu Server
+title: <span>Day 019</span> Ubuntu desktop in Ubuntu Server
 author: singuerinc
 layout: post
 categories:
@@ -12,5 +12,7 @@ Pre-requisites:
 {% highlight js %}
 $ sudo apt-get update
 $ sudo apt-get install ubuntu-desktop // full version
-$ sudo apt-get install --no-install-recommends ubuntu-desktop // or without all the stuff...
+
+ // or without all the stuff...
+$ sudo apt-get install --no-install-recommends ubuntu-desktop
 {% endhighlight %}

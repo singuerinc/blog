@@ -1,5 +1,5 @@
 ---
-title: Day 013 - Format number
+title: <span>Day 013</span> Format number
 author: singuerinc
 layout: post
 categories:

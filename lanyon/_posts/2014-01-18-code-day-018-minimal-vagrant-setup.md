@@ -1,5 +1,5 @@
 ---
-title: Day 018 - Minimal Vagrant setup
+title: <span>Day 018</span> Minimal Vagrant setup
 author: singuerinc
 layout: post
 categories:

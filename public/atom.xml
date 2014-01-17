@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-01-17T16:53:36+01:00</updated>
+ <updated>2014-01-17T17:57:10+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>Day 019 - Install Ubuntu desktop in Ubuntu Server</title>
+   <title><span>Day 019</span> Ubuntu desktop in Ubuntu Server</title>
    <link href="http://blog.singuerinc.com/ubuntu/2014/01/19/code-day-019-install-ubuntu-desktop/"/>
    <updated>2014-01-19T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/ubuntu/2014/01/19/code-day-019-install-ubuntu-desktop</id>
@@ -25,13 +25,15 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;desktop&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// full version&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;recommends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;desktop&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// or without all the stuff...&lt;/span&gt;
+
+ &lt;span class=&quot;c1&quot;&gt;// or without all the stuff...&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;recommends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;desktop&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </content>
  </entry>
  
  <entry>
-   <title>Day 018 - Minimal Vagrant setup</title>
+   <title><span>Day 018</span> Minimal Vagrant setup</title>
    <link href="http://blog.singuerinc.com/vagrant/2014/01/18/code-day-018-minimal-vagrant-setup/"/>
    <updated>2014-01-18T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/vagrant/2014/01/18/code-day-018-minimal-vagrant-setup</id>
@@ -59,7 +61,7 @@
  </entry>
  
  <entry>
-   <title>Day 017 - Abbreviate String</title>
+   <title><span>Day 017</span> Abbreviate String</title>
    <link href="http://blog.singuerinc.com/javascript/2014/01/17/code-day-017-abbreviate-string/"/>
    <updated>2014-01-17T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/2014/01/17/code-day-017-abbreviate-string</id>
@@ -96,7 +98,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 016 - Install Node.js on Ubuntu</title>
+   <title><span>Day 016</span> Install Node.js on Ubuntu</title>
    <link href="http://blog.singuerinc.com/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/"/>
    <updated>2014-01-16T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu</id>
@@ -112,7 +114,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 015 - Decimals</title>
+   <title><span>Day 015</span> Decimals</title>
    <link href="http://blog.singuerinc.com/javascript/2014/01/15/code-day-015-decimals/"/>
    <updated>2014-01-15T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/2014/01/15/code-day-015-decimals</id>
@@ -133,7 +135,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 014 - SequelPro + Vagrant + MySQL</title>
+   <title><span>Day 014</span> SequelPro + Vagrant + MySQL</title>
    <link href="http://blog.singuerinc.com/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/"/>
    <updated>2014-01-14T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql</id>
@@ -195,7 +197,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 013 - Format number</title>
+   <title><span>Day 013</span> Format number</title>
    <link href="http://blog.singuerinc.com/javascript/2014/01/13/code-day-013-format-score/"/>
    <updated>2014-01-13T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/2014/01/13/code-day-013-format-score</id>
@@ -213,7 +215,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 012 - Extract hashtags</title>
+   <title><span>Day 012</span> Extract hashtags</title>
    <link href="http://blog.singuerinc.com/javascript/2014/01/12/code-day-012-extract-hashtags/"/>
    <updated>2014-01-12T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/2014/01/12/code-day-012-extract-hashtags</id>
@@ -232,10 +234,10 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 011 - mailto: !== new browser tab</title>
-   <link href="http://blog.singuerinc.com/javascript/html/2014/01/11/code-day-011-open-email-without-new-tab/"/>
+   <title>Code Day 011 Open Email Without New Tab</title>
+   <link href="http://blog.singuerinc.com/2014/01/11/code-day-011-open-email-without-new-tab/"/>
    <updated>2014-01-11T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/html/2014/01/11/code-day-011-open-email-without-new-tab</id>
+   <id>http://blog.singuerinc.com/2014/01/11/code-day-011-open-email-without-new-tab</id>
    <content type="html">&lt;p&gt;&amp;iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&amp;ntilde;a nueva? F&amp;aacute;cil.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;open_email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
@@ -252,7 +254,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 010 - Spain - Postal Code validation</title>
+   <title><span>Day 010</span> Spain - Postal Code validation</title>
    <link href="http://blog.singuerinc.com/actionscript3/validation/2014/01/10/code-day-010-spain-postalcode-validation/"/>
    <updated>2014-01-10T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/actionscript3/validation/2014/01/10/code-day-010-spain-postalcode-validation</id>
@@ -273,7 +275,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 009 - Any node version on OpenShift</title>
+   <title><span>Day 009</span> Any node version on OpenShift</title>
    <link href="http://blog.singuerinc.com/javascript/2014/01/09/code-day-009-any-nodejs-version-openshift/"/>
    <updated>2014-01-09T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/2014/01/09/code-day-009-any-nodejs-version-openshift</id>
@@ -290,7 +292,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 008 - Shuffle Javascript array</title>
+   <title><span>Day 008</span> Shuffle Javascript array</title>
    <link href="http://blog.singuerinc.com/javascript/2014/01/08/code-day-008-shuffle-array/"/>
    <updated>2014-01-08T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/2014/01/08/code-day-008-shuffle-array</id>
@@ -305,7 +307,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 007 - Extend with plain Javascript</title>
+   <title><span>Day 007</span> Extend with plain Javascript</title>
    <link href="http://blog.singuerinc.com/javascript/2014/01/07/code-day-007-extend-javascript-object+2/"/>
    <updated>2014-01-07T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/2014/01/07/code-day-007-extend-javascript-object 2</id>
@@ -356,7 +358,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 006 - Spain - dni/nie/nif validation</title>
+   <title><span>Day 006</span> Spain - dni/nie/nif validation</title>
    <link href="http://blog.singuerinc.com/javascript/validation/2014/01/06/code-day-006-spain-dni-validation/"/>
    <updated>2014-01-06T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/validation/2014/01/06/code-day-006-spain-dni-validation</id>
@@ -395,26 +397,26 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 005 - Italy - Phone validation</title>
+   <title><span>Day 005</span> Italy - Phone validation</title>
    <link href="http://blog.singuerinc.com/actionscript3/validation/2014/01/05/code-day-005-italy-phone-validation/"/>
    <updated>2014-01-05T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/actionscript3/validation/2014/01/05/code-day-005-italy-phone-validation</id>
    <content type="html">&lt;p&gt;Igual que el de ayer, pero para Italia y m&amp;aacute;s complejo, una expresi&amp;oacute;n regular para validar tel&amp;eacute;fonos con ActionScript 3.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;as3&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Boolean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    
+
     &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;RegExp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^((0039){0,1})313[0-9]{7}$/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RegExp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^((0039){0,1})3{1}(((?&amp;gt;3)[013456789]{1})|((?&amp;gt;6)[0368]{1}))[0-9]{7}$/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RegExp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^((0039){0,1})3{1}(((?&amp;gt;4)[02356789]{1}))[0-9]{7}$/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RegExp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^((0039){0,1})3{1}(((?&amp;gt;2)[03789]{1})|((?&amp;gt;8)[0389]{1}))[0-9]{7}$/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RegExp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^((0039){0,1})3{1}9{1}[0-3]{1}[0-9]{7}$/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    
+
 
     &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(/^\+/,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;00&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(/[^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    
+
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    
+
     &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -435,7 +437,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 004 - Spain - Phone validation</title>
+   <title><span>Day 004</span> Spain - Phone validation</title>
    <link href="http://blog.singuerinc.com/javascript/validation/2014/01/04/code-day-004-spain-phone-validation/"/>
    <updated>2014-01-04T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/validation/2014/01/04/code-day-004-spain-phone-validation</id>
@@ -459,7 +461,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 003 - Async "waterfall" / node.js</title>
+   <title><span>Day 003</span> Async "waterfall" / node.js</title>
    <link href="http://blog.singuerinc.com/nodejs/async/javascript/2014/01/03/code-day-003-node-async-waterfall/"/>
    <updated>2014-01-03T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/nodejs/async/javascript/2014/01/03/code-day-003-node-async-waterfall</id>
@@ -490,7 +492,7 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
  </entry>
  
  <entry>
-   <title>Day 002 - if condition Handlebars</title>
+   <title><span>Day 002</span> if condition Handlebars</title>
    <link href="http://blog.singuerinc.com/nodejs/handlebars/javascript/2014/01/02/code-day-002-if-condition-handlebars/"/>
    <updated>2014-01-02T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/nodejs/handlebars/javascript/2014/01/02/code-day-002-if-condition-handlebars</id>
@@ -518,11 +520,9 @@ Es una convesi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://gi
 
 &lt;p&gt;Ejemplo:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;  
-#ifCond blog &amp;#39;===&amp;#39; &amp;#39;singuerinc&amp;#39;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;#ifCond blog &amp;#39;===&amp;#39; &amp;#39;singuerinc&amp;#39;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;node&amp;gt;&lt;/span&gt;blog ok&lt;span class=&quot;nt&quot;&gt;&amp;lt;/node&amp;gt;&lt;/span&gt;
 /ifCond
-    
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </content>
  </entry>

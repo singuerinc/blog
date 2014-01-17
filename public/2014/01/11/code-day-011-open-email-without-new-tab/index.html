@@ -1,0 +1,12 @@
+<p>&iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&ntilde;a nueva? F&aacute;cil.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">open_email</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;iframe&#39;</span><span class="p">);</span>
+    <span class="nx">f</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
+    <span class="nx">f</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;mailto:email@addre.ss&#39;</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><a href="/code/day-011/index.html" target="_blank">Demo</a></p>
