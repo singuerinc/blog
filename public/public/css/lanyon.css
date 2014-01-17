@@ -316,13 +316,7 @@ a.sidebar-nav-item:focus {
   color: #303030;
 }
 .post-title span {
-    color: white;
-    background-color: #ccc;
-    padding: 7px 15px 5px 15px;
-    font-size: 0.5em;
-    position: relative;
-    top: -8px;
-    display: inline-block;
+    color: red;
 }
 .page-title,
 .post-title {
@@ -335,6 +329,14 @@ a.sidebar-nav-item:focus {
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
+}
+
+.post-categories span {
+  font-size: 1em;
+  display: inline-block;
+  padding: 2px 7px;
+  margin: 0 5px 0 0;
+  color: #ccc;
 }
 
 /* Related posts */

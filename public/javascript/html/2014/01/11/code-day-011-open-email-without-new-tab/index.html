@@ -10,7 +10,7 @@
 
   <title>
     
-      <span>Day 019</span> Ubuntu desktop in Ubuntu Server &middot; blog | singuerinc
+      <span>Day 011</span> mailto: !== new browser tab &middot; blog | singuerinc
     
   </title>
 
@@ -70,8 +70,6 @@
     
       
     
-      
-    
 
     <a class="sidebar-nav-item" href="https://github.com/singuerinc">GitHub</a>
     <a class="sidebar-nav-item" href="https://twitter.com/singuerinc">@singuerinc</a>
@@ -101,26 +99,31 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title"><span>Day 019</span> Ubuntu desktop in Ubuntu Server</h1>
-  <span class="post-date">19 Jan 2014</span>
-  <p>Pre-requisites:</p>
+  <h1 class="post-title"><span>Day 011</span> mailto: !== new browser tab</h1>
+  <span class="post-date">11 Jan 2014</span>
+  <p>&iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&ntilde;a nueva? F&aacute;cil.</p>
 
-<ul>
-<li>Ubuntu Server installed</li>
-</ul>
-
-<div class="highlight"><pre><code class="js"><span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
-<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span> <span class="c1">// full version</span>
-
- <span class="c1">// or without all the stuff...</span>
-<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">install</span><span class="o">-</span><span class="nx">recommends</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span>
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">open_email</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;iframe&#39;</span><span class="p">);</span>
+    <span class="nx">f</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
+    <span class="nx">f</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;mailto:email@addre.ss&#39;</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 
+<p><a href="/code/day-011/index.html" target="_blank">Demo</a></p>
+
+  <span class="post-categories"><span>#javascript</span><span>#html</span></span>
 </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'singuerinc-blog';
+    var disqus_identifier = '/javascript/html/2014/01/11/code-day-011-open-email-without-new-tab';
+    var disqus_title = '<span>Day 011</span> mailto: !== new browser tab';
+    var disqus_url = 'http://blog.singuerinc.com/javascript/html/2014/01/11/code-day-011-open-email-without-new-tab/';
+
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

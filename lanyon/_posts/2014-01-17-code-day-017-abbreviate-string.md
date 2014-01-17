@@ -6,7 +6,7 @@ categories:
   - javascript
 ---
 "Abbreviate" nos permite abreviar una cadena de texto usando puntos suspensivos.<br/>
-Es una convesi&oacute;n de la funci&oacute;n [_StringUtils.abbreviate_](https://github.com/AS3Commons/as3commons-lang/blob/master/src/main/actionscript/org/as3commons/lang/StringUtils.as#L1145) de **as3commons** pero para Javascript.
+Es una conversi&oacute;n de la funci&oacute;n [_StringUtils.abbreviate_](https://github.com/AS3Commons/as3commons-lang/blob/master/src/main/actionscript/org/as3commons/lang/StringUtils.as#L1145) de **as3commons** pero para Javascript.
 
 {% highlight js %}
 function abbreviate(str, offset, maxWidth){

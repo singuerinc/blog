@@ -70,8 +70,6 @@
     
       
     
-      
-    
 
     <a class="sidebar-nav-item" href="https://github.com/singuerinc">GitHub</a>
     <a class="sidebar-nav-item" href="https://twitter.com/singuerinc">@singuerinc</a>
@@ -110,25 +108,30 @@
 <li>VirtualBox</li>
 </ul>
 
-<div class="highlight"><pre><code class="ruby"><span class="no">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box</span>      <span class="o">=</span> <span class="s1">&#39;precise32&#39;</span>
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box_url</span>  <span class="o">=</span> <span class="s1">&#39;http://files.vagrantup.com/precise32.box&#39;</span>
+<div class="highlight"><pre><code class="js"><span class="nx">Vagrant</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nx">config</span><span class="o">|</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box</span>      <span class="o">=</span> <span class="s1">&#39;precise32&#39;</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box_url</span>  <span class="o">=</span> <span class="s1">&#39;http://files.vagrantup.com/precise32.box&#39;</span>
 
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="ss">:forwarded_port</span><span class="p">,</span> <span class="ss">guest</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span> <span class="ss">host</span><span class="p">:</span> <span class="mi">8080</span>
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="ss">ip</span><span class="p">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">8080</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">8080</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="nx">ip</span><span class="o">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
 
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="ss">:puppet</span> <span class="k">do</span> <span class="o">|</span><span class="n">puppet</span><span class="o">|</span>
-    <span class="n">puppet</span><span class="o">.</span><span class="n">manifests_path</span> <span class="o">=</span> <span class="s1">&#39;puppet/manifests&#39;</span>
-    <span class="n">puppet</span><span class="o">.</span><span class="n">module_path</span>    <span class="o">=</span> <span class="s1">&#39;puppet/modules&#39;</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">provision</span> <span class="o">:</span><span class="nx">puppet</span> <span class="k">do</span> <span class="o">|</span><span class="nx">puppet</span><span class="o">|</span>
+    <span class="nx">puppet</span><span class="p">.</span><span class="nx">manifests_path</span> <span class="o">=</span> <span class="s1">&#39;puppet/manifests&#39;</span>
+    <span class="nx">puppet</span><span class="p">.</span><span class="nx">module_path</span>    <span class="o">=</span> <span class="s1">&#39;puppet/modules&#39;</span>
+  <span class="nx">end</span>
+<span class="nx">end</span>
 </code></pre></div>
 
+  <span class="post-categories"><span>#vagrant</span></span>
 </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'singuerinc-blog';
+    var disqus_identifier = '/vagrant/2014/01/18/code-day-018-minimal-vagrant-setup';
+    var disqus_title = '<span>Day 018</span> Minimal Vagrant setup';
+    var disqus_url = 'http://blog.singuerinc.com/vagrant/2014/01/18/code-day-018-minimal-vagrant-setup/';
+
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -139,15 +142,6 @@
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/ubuntu/2014/01/19/code-day-019-install-ubuntu-desktop/">
-            <span>Day 019</span> Ubuntu desktop in Ubuntu Server
-            <small>19 Jan 2014</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -163,6 +157,15 @@
           <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
             <span>Day 016</span> Install Node.js on Ubuntu
             <small>16 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/javascript/numbers/2014/01/15/code-day-015-decimals/">
+            <span>Day 015</span> Decimals
+            <small>15 Jan 2014</small>
           </a>
         </h3>
       </li>

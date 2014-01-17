@@ -70,8 +70,6 @@
     
       
     
-      
-    
 
     <a class="sidebar-nav-item" href="https://github.com/singuerinc">GitHub</a>
     <a class="sidebar-nav-item" href="https://twitter.com/singuerinc">@singuerinc</a>
@@ -104,30 +102,6 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/ubuntu/2014/01/19/code-day-019-install-ubuntu-desktop/">
-        <span>Day 019</span> Ubuntu desktop in Ubuntu Server
-      </a>
-    </h1>
-
-    <span class="post-date">19 Jan 2014</span>
-
-    <p>Pre-requisites:</p>
-
-<ul>
-<li>Ubuntu Server installed</li>
-</ul>
-
-<div class="highlight"><pre><code class="js"><span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
-<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span> <span class="c1">// full version</span>
-
- <span class="c1">// or without all the stuff...</span>
-<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">install</span><span class="o">-</span><span class="nx">recommends</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span>
-</code></pre></div>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
       <a href="/vagrant/2014/01/18/code-day-018-minimal-vagrant-setup/">
         <span>Day 018</span> Minimal Vagrant setup
       </a>
@@ -142,19 +116,22 @@
 <li>VirtualBox</li>
 </ul>
 
-<div class="highlight"><pre><code class="ruby"><span class="no">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box</span>      <span class="o">=</span> <span class="s1">&#39;precise32&#39;</span>
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box_url</span>  <span class="o">=</span> <span class="s1">&#39;http://files.vagrantup.com/precise32.box&#39;</span>
+<div class="highlight"><pre><code class="js"><span class="nx">Vagrant</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nx">config</span><span class="o">|</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box</span>      <span class="o">=</span> <span class="s1">&#39;precise32&#39;</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box_url</span>  <span class="o">=</span> <span class="s1">&#39;http://files.vagrantup.com/precise32.box&#39;</span>
 
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="ss">:forwarded_port</span><span class="p">,</span> <span class="ss">guest</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span> <span class="ss">host</span><span class="p">:</span> <span class="mi">8080</span>
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="ss">ip</span><span class="p">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">8080</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">8080</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="nx">ip</span><span class="o">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
 
-  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="ss">:puppet</span> <span class="k">do</span> <span class="o">|</span><span class="n">puppet</span><span class="o">|</span>
-    <span class="n">puppet</span><span class="o">.</span><span class="n">manifests_path</span> <span class="o">=</span> <span class="s1">&#39;puppet/manifests&#39;</span>
-    <span class="n">puppet</span><span class="o">.</span><span class="n">module_path</span>    <span class="o">=</span> <span class="s1">&#39;puppet/modules&#39;</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">provision</span> <span class="o">:</span><span class="nx">puppet</span> <span class="k">do</span> <span class="o">|</span><span class="nx">puppet</span><span class="o">|</span>
+    <span class="nx">puppet</span><span class="p">.</span><span class="nx">manifests_path</span> <span class="o">=</span> <span class="s1">&#39;puppet/manifests&#39;</span>
+    <span class="nx">puppet</span><span class="p">.</span><span class="nx">module_path</span>    <span class="o">=</span> <span class="s1">&#39;puppet/modules&#39;</span>
+  <span class="nx">end</span>
+<span class="nx">end</span>
 </code></pre></div>
+
+
+    <span class="post-categories"><span>#vagrant</span></span>
 
   </div>
   
@@ -168,7 +145,7 @@
     <span class="post-date">17 Jan 2014</span>
 
     <p>&quot;Abbreviate&quot; nos permite abreviar una cadena de texto usando puntos suspensivos.<br/>
-Es una convesi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Commons/as3commons-lang/blob/master/src/main/actionscript/org/as3commons/lang/StringUtils.as#L1145"><em>StringUtils.abbreviate</em></a> de <strong>as3commons</strong> pero para Javascript.</p>
+Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Commons/as3commons-lang/blob/master/src/main/actionscript/org/as3commons/lang/StringUtils.as#L1145"><em>StringUtils.abbreviate</em></a> de <strong>as3commons</strong> pero para Javascript.</p>
 
 <div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">abbreviate</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">offset</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="p">){</span>
 
@@ -197,6 +174,9 @@ Es una convesi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Comm
 
 <p><a href="/code/day-017/index.html" target="_blank">Demo</a></p>
 
+
+    <span class="post-categories"><span>#javascript</span></span>
+
   </div>
   
   <div class="post">
@@ -217,11 +197,14 @@ Es una convesi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Comm
 <span class="gp">$</span> node --version // v0.10.24
 </code></pre></div>
 
+
+    <span class="post-categories"><span>#nodejs</span><span>#ubuntu</span></span>
+
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/javascript/2014/01/15/code-day-015-decimals/">
+      <a href="/javascript/numbers/2014/01/15/code-day-015-decimals/">
         <span>Day 015</span> Decimals
       </a>
     </h1>
@@ -241,6 +224,78 @@ Es una convesi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Comm
 </code></pre></div>
 
 <p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/">
+        <span>Day 014</span> SequelPro + Vagrant + MySQL
+      </a>
+    </h1>
+
+    <span class="post-date">14 Jan 2014</span>
+
+    <p>Connect SequelPro to Vagrant MySQL Database</p>
+
+<h3>Vagrant Options</h3>
+
+<div class="highlight"><pre><code class="js"><span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">3306</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">3306</span>
+<span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="nx">ip</span><span class="o">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
+</code></pre></div>
+
+<h3>SequelPro SSH Options</h3>
+
+<table>
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td>vagrant_connection</td>
+        </tr>
+        <tr>
+            <td>MySQL Host</td>
+            <td>127.0.0.1</td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td>root</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>&lt;blank&gt;</td>
+        </tr>
+        <tr>
+            <td>Database</td>
+            <td>&lt;optional&gt;</td>
+        </tr>
+        <tr>
+            <td>Port</td>
+            <td>3306</td>
+        </tr>
+        <tr>
+            <td>SSH Host</td>
+            <td>192.168.50.4</td>
+        </tr>
+        <tr>
+            <td>SSH User</td>
+            <td>vagrant</td>
+        </tr>
+        <tr>
+            <td>SSH Password</td>
+            <td>vagrant</td>
+        </tr>
+        <tr>
+            <td>SSH Port</td>
+            <td>&lt;optional&gt;</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    <span class="post-categories"><span>#mysql</span><span>#vagrant</span><span>#sequelpro</span></span>
 
   </div>
   

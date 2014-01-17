@@ -4,6 +4,7 @@ author: singuerinc
 layout: post
 categories:
   - javascript
+  - numbers
 ---
 Formateamos un n&uacute;mero con decimales.
 
