@@ -102,6 +102,43 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/actionscript3/as3-audio/2011/06/19/just-born-as3-audio/">
+        Just born: as3-audio
+      </a>
+    </h1>
+
+    <span class="post-date">19 Jun 2011</span>
+
+    <p>Hola, he comenzado a desarrollar <strong>as3-audio</strong> en una peque&ntilde;a librer&iacute;a para simplificar la reproducci&oacute;n y controlar sonidos.</p>
+
+<p>No tendr&aacute; la posibilidad de crear sonidos sino que est&aacute; pensada m&aacute;s para el desarrollo en websites/apps. La idea es simplificar un poco el trabajo con sonido en Actionscript, y tener algunas funciones b&aacute;sicas como <em>play, pause, resume, stop</em> y otras &uacute;tiles como * fadeIn, fadeOut, delay*, etc.</p>
+
+<p>Otra de las caracter&iacute;sticas que destacar&aacute; es la utilizaci&oacute;n de <a href="https://github.com/robertpenner/as3-signals">as3-signals</a> para notificar los eventos.</p>
+
+<p>De momento est&aacute; en desarrollo, puedes encontrar el c&oacute;digo en github: <a href="https://github.com/singuerinc/as3-audio">as3-audio</a>, la classe <strong>Audio</strong> ya es funcional. Si quieres puedes realizar un <em>fork</em> y cuando tengas algo interesante podemos incorporarlo a la librer&iacute;a!</p>
+
+<p>M&aacute;s o menos, la <em>syntax</em> ser&aacute; esta:</p>
+
+<div class="highlight"><pre><code class="as3"><span class="c1">//Mediante la carga de un mp3:</span>
+<span class="kd">var</span> <span class="n">audio1</span><span class="p">:</span><span class="kt">Audio</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">Audio</span><span class="o">(</span><span class="s1">&#39;audio1&#39;</span><span class="o">,</span> <span class="s1">&#39;audio.mp3&#39;</span><span class="o">);</span>
+<span class="n">audio1</span><span class="o">.</span><span class="na">volume</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="o">;</span>
+<span class="n">audio1</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+
+<span class="c1">//Con una Classe que extienda de Sound:</span>
+<span class="kd">var</span> <span class="n">audio2</span><span class="p">:</span><span class="kt">AudioDeluxe</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">AudioDeluxe</span><span class="o">(</span><span class="s1">&#39;audio2&#39;</span><span class="o">,</span> <span class="k">new</span> <span class="kt">AudioMP3</span><span class="o">());</span>
+<span class="n">audio2</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+<span class="n">audio2</span><span class="o">.</span><span class="na">fade</span><span class="o">(,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1500</span><span class="o">);</span> <span class="c1">//from, to, time</span>
+</code></pre></div>
+
+<p><a href="https://github.com/singuerinc/as3-audio">Source</a></p>
+
+
+    <span class="post-categories"><span>#actionscript3</span><span>#as3-audio</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/actionscript3/validators/2011/06/17/tip-validar-un-dninienif-de-espana-con-actionscript/">
         Validar un DNI/NIE/NIF de Espa&ntilde;a
       </a>
@@ -191,6 +228,9 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 
 <p>Puedes encontrar la &uacute;ltima versi&oacute;n en <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as">github</a>.</p>
 
+
+    <span class="post-categories"><span>#actionscript3</span><span>#validators</span></span>
+
   </div>
   
   <div class="post">
@@ -274,6 +314,9 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 </code></pre></div>
 
 <p>Puedes descargarte el c&oacute;digo desde <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPhoneValidator.as">github</a>.</p>
+
+
+    <span class="post-categories"><span>#actionscript3</span><span>#tip</span><span>#validators</span></span>
 
   </div>
   
@@ -385,6 +428,9 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 <span class="n">sv4</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//false</span>
 </code></pre></div>
 
+
+    <span class="post-categories"><span>#actionscript3</span><span>#tip</span><span>#validators</span></span>
+
   </div>
   
   <div class="post">
@@ -471,6 +517,9 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 
 <p>Listo, ahora cada vez que hagamos actualicemos <strong>user.name</strong> autom&aacute;ticamente <strong>Binder</strong> har&aacute; que ese valor se refleje en el <strong>TextField</strong>!<br>
 <a href="https://github.com/robertpenner/as3-signals/tree/binding">Source</a></p>
+
+
+    <span class="post-categories"><span>#actionscript3</span></span>
 
   </div>
   

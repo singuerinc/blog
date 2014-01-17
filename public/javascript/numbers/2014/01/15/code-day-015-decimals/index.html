@@ -10,7 +10,7 @@
 
   <title>
     
-      <span>Day 003</span> Async "waterfall" / node.js &middot; blog | singuerinc
+      <span>Day 015</span> Decimals &middot; blog | singuerinc
     
   </title>
 
@@ -99,41 +99,31 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title"><span>Day 003</span> Async "waterfall" / node.js</h1>
-  <span class="post-date">03 Jan 2014</span>
-  <p><strong>Waterfall</strong> es una funci&oacute;n de la librer&iacute;a <a href="https://github.com/caolan/async" target="_blank">async.js</a> que nos permite ejecutar una serie de funciones, cada una pasa su resultado a la siguiente funci&oacute;n en el array.</p>
+  <h1 class="post-title"><span>Day 015</span> Decimals</h1>
+  <span class="post-date">15 Jan 2014</span>
+  <p>Formateamos un n&uacute;mero con decimales.</p>
 
-<div class="highlight"><pre><code class="js"><span class="nx">async</span><span class="p">.</span><span class="nx">waterfall</span><span class="p">([</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">){</span>
-        <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">str</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
-        <span class="nx">arg1</span> <span class="o">+=</span> <span class="s2">&quot;l&quot;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arg1</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">arg2</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
-        <span class="nx">arg2</span> <span class="o">+=</span> <span class="s2">&quot;o&quot;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">arg3</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
-        <span class="nx">arg3</span> <span class="o">+=</span> <span class="s2">&quot;g&quot;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arg3</span><span class="p">);</span>
-    <span class="p">},</span>
-<span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
-   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// &quot;blog&quot;</span>
-<span class="p">});</span>
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">format</span><span class="p">(</span><span class="mf">5716645.406726573</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// 5716645.4</span>
+<span class="nx">format</span><span class="p">(</span><span class="mf">6738963.296086764</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 6738963.2</span>
+<span class="nx">format</span><span class="p">(</span><span class="mf">1393.8190264930017</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1393.819</span>
 </code></pre></div>
 
-  <span class="post-categories"><span>#nodejs</span><span>#async</span><span>#javascript</span></span>
+<p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
+
+  <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
 </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'singuerinc-blog';
-    var disqus_identifier = '/nodejs/async/javascript/2014/01/03/code-day-003-node-async-waterfall';
-    var disqus_title = '<span>Day 003</span> Async "waterfall" / node.js';
-    var disqus_url = 'http://blog.singuerinc.com/nodejs/async/javascript/2014/01/03/code-day-003-node-async-waterfall/';
+    var disqus_identifier = '/javascript/numbers/2014/01/15/code-day-015-decimals';
+    var disqus_title = '<span>Day 015</span> Decimals';
+    var disqus_url = 'http://blog.singuerinc.com/javascript/numbers/2014/01/15/code-day-015-decimals/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

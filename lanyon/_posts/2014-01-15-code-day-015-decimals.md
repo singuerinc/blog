@@ -1,9 +1,10 @@
 ---
-title: Day 015 - Decimals
+title: <span>Day 015</span> Decimals
 author: singuerinc
 layout: post
 categories:
   - javascript
+  - numbers
 ---
 Formateamos un n&uacute;mero con decimales.
 

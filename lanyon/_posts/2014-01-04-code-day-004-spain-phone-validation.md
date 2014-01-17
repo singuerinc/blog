@@ -1,10 +1,10 @@
 ---
-title: Day 004 - Spain - Phone validation
+title: <span>Day 004</span> Spain - Phone validation
 author: singuerinc
 layout: post
 categories:
   - javascript
-  - validation  
+  - validation
 ---
 Este es muy simple, una expresi&oacute;n regular para validar tel&eacute;fonos de Espa&ntilde;a en Javascript.
 

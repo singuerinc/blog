@@ -315,6 +315,9 @@ a.sidebar-nav-item:focus {
 .post-title a {
   color: #303030;
 }
+.post-title span {
+    color: red;
+}
 .page-title,
 .post-title {
   margin-top: 0;
@@ -326,6 +329,14 @@ a.sidebar-nav-item:focus {
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
+}
+
+.post-categories span {
+  font-size: 1em;
+  display: inline-block;
+  padding: 2px 7px;
+  margin: 0 5px 0 0;
+  color: #ccc;
 }
 
 /* Related posts */

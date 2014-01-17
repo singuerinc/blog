@@ -10,7 +10,7 @@
 
   <title>
     
-      Day 015 - Decimals &middot; blog | singuerinc
+      <span>Day 018</span> Minimal Vagrant setup &middot; blog | singuerinc
     
   </title>
 
@@ -99,23 +99,45 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Day 015 - Decimals</h1>
-  <span class="post-date">15 Jan 2014</span>
-  <p>Formateamos un n&uacute;mero con decimales.</p>
+  <h1 class="post-title"><span>Day 018</span> Minimal Vagrant setup</h1>
+  <span class="post-date">18 Jan 2014</span>
+  <p>Pre-requisites:</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
-<span class="p">}</span>
+<ul>
+<li>Vagrant</li>
+<li>VirtualBox</li>
+</ul>
 
-<span class="nx">format</span><span class="p">(</span><span class="mf">5716645.406726573</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// 5716645.4</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">6738963.296086764</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 6738963.2</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">1393.8190264930017</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1393.819</span>
+<div class="highlight"><pre><code class="js"><span class="nx">Vagrant</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nx">config</span><span class="o">|</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box</span>      <span class="o">=</span> <span class="s1">&#39;precise32&#39;</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box_url</span>  <span class="o">=</span> <span class="s1">&#39;http://files.vagrantup.com/precise32.box&#39;</span>
+
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">8080</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">8080</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="nx">ip</span><span class="o">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
+
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">provision</span> <span class="o">:</span><span class="nx">puppet</span> <span class="k">do</span> <span class="o">|</span><span class="nx">puppet</span><span class="o">|</span>
+    <span class="nx">puppet</span><span class="p">.</span><span class="nx">manifests_path</span> <span class="o">=</span> <span class="s1">&#39;puppet/manifests&#39;</span>
+    <span class="nx">puppet</span><span class="p">.</span><span class="nx">module_path</span>    <span class="o">=</span> <span class="s1">&#39;puppet/modules&#39;</span>
+  <span class="nx">end</span>
+<span class="nx">end</span>
 </code></pre></div>
 
-<p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
-
+  <span class="post-categories"><span>#vagrant</span></span>
 </div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'singuerinc-blog';
+    var disqus_identifier = '/vagrant/2014/01/18/code-day-018-minimal-vagrant-setup';
+    var disqus_title = '<span>Day 018</span> Minimal Vagrant setup';
+    var disqus_url = 'http://blog.singuerinc.com/vagrant/2014/01/18/code-day-018-minimal-vagrant-setup/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
 
 <div class="related">
   <h2>Related Posts</h2>
@@ -124,7 +146,7 @@
       <li>
         <h3>
           <a href="/javascript/2014/01/17/code-day-017-abbreviate-string/">
-            Day 017 - Abbreviate String
+            <span>Day 017</span> Abbreviate String
             <small>17 Jan 2014</small>
           </a>
         </h3>
@@ -133,7 +155,7 @@
       <li>
         <h3>
           <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
-            Day 016 - Install Node.js on Ubuntu
+            <span>Day 016</span> Install Node.js on Ubuntu
             <small>16 Jan 2014</small>
           </a>
         </h3>
@@ -141,9 +163,9 @@
     
       <li>
         <h3>
-          <a href="/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/">
-            Day 014 - SequelPro + Vagrant + MySQL
-            <small>14 Jan 2014</small>
+          <a href="/javascript/numbers/2014/01/15/code-day-015-decimals/">
+            <span>Day 015</span> Decimals
+            <small>15 Jan 2014</small>
           </a>
         </h3>
       </li>

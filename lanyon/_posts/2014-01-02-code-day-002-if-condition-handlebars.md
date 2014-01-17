@@ -1,5 +1,5 @@
 ---
-title: Day 002 - if condition Handlebars
+title: <span>Day 002</span> if condition Handlebars
 author: singuerinc
 layout: post
 categories:
@@ -33,9 +33,9 @@ handlebars.registerHelper('ifCond', function(v1, cond, v2, opt){
 Ejemplo:
 
 {% highlight xml %}
-	
+
 #ifCond blog '===' 'singuerinc'
 <node>blog ok</node>
 /ifCond
-	
+
 {% endhighlight %}
