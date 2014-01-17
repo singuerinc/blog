@@ -4,6 +4,7 @@ author: singuerinc
 layout: post
 categories:
   - javascript
+  - numbers
 ---
 Vamos a formatear un n&uacute;mero de forma simple con una expresi&oacute;n regular.
 

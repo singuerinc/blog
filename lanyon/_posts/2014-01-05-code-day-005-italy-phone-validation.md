@@ -5,6 +5,9 @@ layout: post
 categories:
   - actionscript3
   - validation
+  - italy
+  - phone
+  - regex
 ---
 Igual que el de ayer, pero para Italia y m&aacute;s complejo, una expresi&oacute;n regular para validar tel&eacute;fonos con ActionScript 3.
 

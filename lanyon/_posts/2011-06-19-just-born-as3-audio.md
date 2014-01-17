@@ -4,7 +4,7 @@ author: Nahuel Scotti
 layout: post
 categories:
   - actionscript3
-  - as3-audio
+  - audio
 tags:
   - as3
   - as3-signals

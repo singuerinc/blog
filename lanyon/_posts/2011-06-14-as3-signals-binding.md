@@ -4,6 +4,8 @@ author: Nahuel Scotti
 layout: post
 categories:
   - actionscript3
+  - as3-signals
+  - binding
 ---
 
 Estoy trabajando en un proyecto donde necesito actualizar la vista constantemente con informaci&oacute;n del modelo. En Flex esto es relativamente f&aacute;cil mediante la etiqueta [Bindable], pero en un proyeto puramente as3 no lo es tanto.

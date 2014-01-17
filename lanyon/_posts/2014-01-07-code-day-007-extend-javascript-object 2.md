@@ -4,6 +4,7 @@ author: singuerinc
 layout: post
 categories:
   - javascript
+  - prototype
 ---
 Hoy un m&eacute;todo r&aacute;pido para simular herencia en Javascript.
 

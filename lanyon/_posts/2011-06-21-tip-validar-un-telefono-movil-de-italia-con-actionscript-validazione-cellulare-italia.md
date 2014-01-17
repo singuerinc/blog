@@ -5,6 +5,9 @@ layout: post
 categories:
     - actionscript3
     - validators
+    - italy
+    - regex
+    - phone
 tags:
     - as3
     - cellulare

@@ -4,6 +4,7 @@ author: singuerinc
 layout: post
 categories:
   - vagrant
+  - puppet
 ---
 Pre-requisites:
 

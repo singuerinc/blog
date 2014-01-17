@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-01-17T23:33:42+01:00</updated>
+ <updated>2014-01-17T23:50:42+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title><span>Day 018</span> Minimal Vagrant setup</title>
-   <link href="http://blog.singuerinc.com/vagrant/2014/01/18/code-day-018-minimal-vagrant-setup/"/>
+   <link href="http://blog.singuerinc.com/vagrant/puppet/2014/01/18/code-day-018-minimal-vagrant-setup/"/>
    <updated>2014-01-18T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/vagrant/2014/01/18/code-day-018-minimal-vagrant-setup</id>
+   <id>http://blog.singuerinc.com/vagrant/puppet/2014/01/18/code-day-018-minimal-vagrant-setup</id>
    <content type="html">&lt;p&gt;Pre-requisites:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -42,9 +42,9 @@
  
  <entry>
    <title><span>Day 017</span> Abbreviate String</title>
-   <link href="http://blog.singuerinc.com/javascript/2014/01/17/code-day-017-abbreviate-string/"/>
+   <link href="http://blog.singuerinc.com/javascript/string/2014/01/17/code-day-017-abbreviate-string/"/>
    <updated>2014-01-17T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/2014/01/17/code-day-017-abbreviate-string</id>
+   <id>http://blog.singuerinc.com/javascript/string/2014/01/17/code-day-017-abbreviate-string</id>
    <content type="html">&lt;p&gt;&amp;quot;Abbreviate&amp;quot; nos permite abreviar una cadena de texto usando puntos suspensivos.&lt;br/&gt;
 Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://github.com/AS3Commons/as3commons-lang/blob/master/src/main/actionscript/org/as3commons/lang/StringUtils.as#L1145&quot;&gt;&lt;em&gt;StringUtils.abbreviate&lt;/em&gt;&lt;/a&gt; de &lt;strong&gt;as3commons&lt;/strong&gt; pero para Javascript.&lt;/p&gt;
 
@@ -178,9 +178,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 013</span> Format number</title>
-   <link href="http://blog.singuerinc.com/javascript/2014/01/13/code-day-013-format-score/"/>
+   <link href="http://blog.singuerinc.com/javascript/numbers/2014/01/13/code-day-013-format-score/"/>
    <updated>2014-01-13T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/2014/01/13/code-day-013-format-score</id>
+   <id>http://blog.singuerinc.com/javascript/numbers/2014/01/13/code-day-013-format-score</id>
    <content type="html">&lt;p&gt;Vamos a formatear un n&amp;uacute;mero de forma simple con una expresi&amp;oacute;n regular.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
@@ -196,9 +196,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 012</span> Extract hashtags</title>
-   <link href="http://blog.singuerinc.com/javascript/2014/01/12/code-day-012-extract-hashtags/"/>
+   <link href="http://blog.singuerinc.com/javascript/string/hashtags/regex/2014/01/12/code-day-012-extract-hashtags/"/>
    <updated>2014-01-12T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/2014/01/12/code-day-012-extract-hashtags</id>
+   <id>http://blog.singuerinc.com/javascript/string/hashtags/regex/2014/01/12/code-day-012-extract-hashtags</id>
    <content type="html">&lt;p&gt;Hoy: Extraer m&amp;uacute;ltiples hashtags de una cadena de texto.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;extract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
@@ -215,9 +215,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 011</span> mailto: !== new browser tab</title>
-   <link href="http://blog.singuerinc.com/javascript/html/2014/01/11/code-day-011-open-email-without-new-tab/"/>
+   <link href="http://blog.singuerinc.com/javascript/html/mailto/iframe/2014/01/11/code-day-011-open-email-without-new-tab/"/>
    <updated>2014-01-11T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/html/2014/01/11/code-day-011-open-email-without-new-tab</id>
+   <id>http://blog.singuerinc.com/javascript/html/mailto/iframe/2014/01/11/code-day-011-open-email-without-new-tab</id>
    <content type="html">&lt;p&gt;&amp;iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&amp;ntilde;a nueva? F&amp;aacute;cil.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;open_email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
@@ -235,9 +235,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 010</span> Spain - Postal Code validation</title>
-   <link href="http://blog.singuerinc.com/actionscript3/validation/2014/01/10/code-day-010-spain-postalcode-validation/"/>
+   <link href="http://blog.singuerinc.com/actionscript3/validation/spain/postal-code/regex/2014/01/10/code-day-010-spain-postalcode-validation/"/>
    <updated>2014-01-10T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/actionscript3/validation/2014/01/10/code-day-010-spain-postalcode-validation</id>
+   <id>http://blog.singuerinc.com/actionscript3/validation/spain/postal-code/regex/2014/01/10/code-day-010-spain-postalcode-validation</id>
    <content type="html">&lt;p&gt;Hoy: ¿Cómo saber si es un código postal válido y español? (ActionScript 3)&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;as3&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -256,9 +256,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 009</span> Any node version on OpenShift</title>
-   <link href="http://blog.singuerinc.com/javascript/2014/01/09/code-day-009-any-nodejs-version-openshift/"/>
+   <link href="http://blog.singuerinc.com/openshift/nodejs/2014/01/09/code-day-009-any-nodejs-version-openshift/"/>
    <updated>2014-01-09T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/2014/01/09/code-day-009-any-nodejs-version-openshift</id>
+   <id>http://blog.singuerinc.com/openshift/nodejs/2014/01/09/code-day-009-any-nodejs-version-openshift</id>
    <content type="html">&lt;p&gt;Hoy: &amp;iquest;C&amp;oacute;mo instalamos una versi&amp;oacute;n espec&amp;iacute;fica de Node.js en OpenShift?&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone REPO_URL
@@ -273,9 +273,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 008</span> Shuffle Javascript array</title>
-   <link href="http://blog.singuerinc.com/javascript/2014/01/08/code-day-008-shuffle-array/"/>
+   <link href="http://blog.singuerinc.com/javascript/array/2014/01/08/code-day-008-shuffle-array/"/>
    <updated>2014-01-08T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/2014/01/08/code-day-008-shuffle-array</id>
+   <id>http://blog.singuerinc.com/javascript/array/2014/01/08/code-day-008-shuffle-array</id>
    <content type="html">&lt;p&gt;Este no es m&amp;iacute;o, pero es genial: &amp;iquest;C&amp;oacute;mo desordenar un array?&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;shuffle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
@@ -288,9 +288,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 007</span> Extend with plain Javascript</title>
-   <link href="http://blog.singuerinc.com/javascript/2014/01/07/code-day-007-extend-javascript-object+2/"/>
+   <link href="http://blog.singuerinc.com/javascript/prototype/2014/01/07/code-day-007-extend-javascript-object+2/"/>
    <updated>2014-01-07T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/2014/01/07/code-day-007-extend-javascript-object 2</id>
+   <id>http://blog.singuerinc.com/javascript/prototype/2014/01/07/code-day-007-extend-javascript-object 2</id>
    <content type="html">&lt;p&gt;Hoy un m&amp;eacute;todo r&amp;aacute;pido para simular herencia en Javascript.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -339,9 +339,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 006</span> Spain - dni/nie/nif validation</title>
-   <link href="http://blog.singuerinc.com/javascript/validation/2014/01/06/code-day-006-spain-dni-validation/"/>
+   <link href="http://blog.singuerinc.com/javascript/validation/spain/dni/nie/nif/regex/2014/01/06/code-day-006-spain-dni-validation/"/>
    <updated>2014-01-06T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/validation/2014/01/06/code-day-006-spain-dni-validation</id>
+   <id>http://blog.singuerinc.com/javascript/validation/spain/dni/nie/nif/regex/2014/01/06/code-day-006-spain-dni-validation</id>
    <content type="html">&lt;p&gt;Hoy validamos un dni espa&amp;ntilde;ol, puede validar tanto nif como nie.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
@@ -378,9 +378,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 005</span> Italy - Phone validation</title>
-   <link href="http://blog.singuerinc.com/actionscript3/validation/2014/01/05/code-day-005-italy-phone-validation/"/>
+   <link href="http://blog.singuerinc.com/actionscript3/validation/italy/phone/regex/2014/01/05/code-day-005-italy-phone-validation/"/>
    <updated>2014-01-05T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/actionscript3/validation/2014/01/05/code-day-005-italy-phone-validation</id>
+   <id>http://blog.singuerinc.com/actionscript3/validation/italy/phone/regex/2014/01/05/code-day-005-italy-phone-validation</id>
    <content type="html">&lt;p&gt;Igual que el de ayer, pero para Italia y m&amp;aacute;s complejo, una expresi&amp;oacute;n regular para validar tel&amp;eacute;fonos con ActionScript 3.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;as3&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Boolean&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -418,9 +418,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title><span>Day 004</span> Spain - Phone validation</title>
-   <link href="http://blog.singuerinc.com/javascript/validation/2014/01/04/code-day-004-spain-phone-validation/"/>
+   <link href="http://blog.singuerinc.com/javascript/validation/spain/phone/regex/2014/01/04/code-day-004-spain-phone-validation/"/>
    <updated>2014-01-04T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/validation/2014/01/04/code-day-004-spain-phone-validation</id>
+   <id>http://blog.singuerinc.com/javascript/validation/spain/phone/regex/2014/01/04/code-day-004-spain-phone-validation</id>
    <content type="html">&lt;p&gt;Este es muy simple, una expresi&amp;oacute;n regular para validar tel&amp;eacute;fonos de Espa&amp;ntilde;a en Javascript.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
@@ -509,9 +509,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title>One script per day</title>
-   <link href="http://blog.singuerinc.com/javascript/2014/01/01/code-day-001-random-hex-color/"/>
+   <link href="http://blog.singuerinc.com/javascript/colors/random/2014/01/01/code-day-001-random-hex-color/"/>
    <updated>2014-01-01T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/javascript/2014/01/01/code-day-001-random-hex-color</id>
+   <id>http://blog.singuerinc.com/javascript/colors/random/2014/01/01/code-day-001-random-hex-color</id>
    <content type="html">&lt;p&gt;Un script por d&amp;iacute;a, eso es lo que me propongo para este 2014, no me centrar&amp;eacute; en ning&amp;uacute;n lenguaje, pondr&amp;eacute; un script que me haya servido en cada d&amp;iacute;a.&lt;/p&gt;
 
 &lt;p&gt;Y para empezar algo de Javascript simple: &lt;strong&gt;random hex color&lt;/strong&gt;.&lt;/p&gt;
@@ -526,9 +526,9 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  
  <entry>
    <title>Flash Player Debug Logs on Mac OS</title>
-   <link href="http://blog.singuerinc.com/actionscript3/flash/2013/04/03/flash-player-logs-mac-os/"/>
+   <link href="http://blog.singuerinc.com/actionscript3/flash/logs/osx/2013/04/03/flash-player-logs-mac-os/"/>
    <updated>2013-04-03T20:00:00+02:00</updated>
-   <id>http://blog.singuerinc.com/actionscript3/flash/2013/04/03/flash-player-logs-mac-os</id>
+   <id>http://blog.singuerinc.com/actionscript3/flash/logs/osx/2013/04/03/flash-player-logs-mac-os</id>
    <content type="html">&lt;p&gt;&amp;iquest;C&amp;oacute;mo puedo ver los &lt;strong&gt;trace&lt;/strong&gt; de Flash Player?&lt;br/&gt;
 Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador.&lt;/p&gt;
 
@@ -583,9 +583,9 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
  
  <entry>
    <title>Validar un tel&eacute;fono m&oacute;vil de Italia</title>
-   <link href="http://blog.singuerinc.com/actionscript3/validators/2011/06/21/tip-validar-un-telefono-movil-de-italia-con-actionscript-validazione-cellulare-italia/"/>
+   <link href="http://blog.singuerinc.com/actionscript3/validators/italy/regex/phone/2011/06/21/tip-validar-un-telefono-movil-de-italia-con-actionscript-validazione-cellulare-italia/"/>
    <updated>2011-06-21T00:00:00+02:00</updated>
-   <id>http://blog.singuerinc.com/actionscript3/validators/2011/06/21/tip-validar-un-telefono-movil-de-italia-con-actionscript-validazione-cellulare-italia</id>
+   <id>http://blog.singuerinc.com/actionscript3/validators/italy/regex/phone/2011/06/21/tip-validar-un-telefono-movil-de-italia-con-actionscript-validazione-cellulare-italia</id>
    <content type="html">&lt;p&gt;La mayoria de los sites que hago se traducen a alg&amp;uacute;n otro idioma, en este caso lo hemos traducido a italiano. Pero la traducci&amp;oacute;n no s&amp;oacute;lo se queda en los textos, cuando se tienen formularios y hay que validar formularios la cosa se complica un poco m&amp;aacute;s.  &lt;/p&gt;
 
 &lt;p&gt;Validar un tel&amp;eacute;fono de Italia es bastante m&amp;aacute;s complicado que uno de Espa&amp;ntilde;a, ya que cada compa&amp;ntilde;ia tiene asignado un rango de n&amp;uacute;meros y no son correlativos.&lt;/p&gt;
@@ -698,9 +698,9 @@ Si quer&amp;eacute;is hacer una prueba, os dejo un peque&amp;ntilde;o form para 
  
  <entry>
    <title>Just born: as3-audio</title>
-   <link href="http://blog.singuerinc.com/actionscript3/as3-audio/2011/06/19/just-born-as3-audio/"/>
+   <link href="http://blog.singuerinc.com/actionscript3/audio/2011/06/19/just-born-as3-audio/"/>
    <updated>2011-06-19T00:00:00+02:00</updated>
-   <id>http://blog.singuerinc.com/actionscript3/as3-audio/2011/06/19/just-born-as3-audio</id>
+   <id>http://blog.singuerinc.com/actionscript3/audio/2011/06/19/just-born-as3-audio</id>
    <content type="html">&lt;p&gt;Hola, he comenzado a desarrollar &lt;strong&gt;as3-audio&lt;/strong&gt; en una peque&amp;ntilde;a librer&amp;iacute;a para simplificar la reproducci&amp;oacute;n y controlar sonidos.&lt;/p&gt;
 
 &lt;p&gt;No tendr&amp;aacute; la posibilidad de crear sonidos sino que est&amp;aacute; pensada m&amp;aacute;s para el desarrollo en websites/apps. La idea es simplificar un poco el trabajo con sonido en Actionscript, y tener algunas funciones b&amp;aacute;sicas como &lt;em&gt;play, pause, resume, stop&lt;/em&gt; y otras &amp;uacute;tiles como * fadeIn, fadeOut, delay*, etc.&lt;/p&gt;
@@ -728,9 +728,9 @@ Si quer&amp;eacute;is hacer una prueba, os dejo un peque&amp;ntilde;o form para 
  
  <entry>
    <title>Validar un DNI/NIE/NIF de Espa&ntilde;a</title>
-   <link href="http://blog.singuerinc.com/actionscript3/validators/2011/06/17/tip-validar-un-dninienif-de-espana-con-actionscript/"/>
+   <link href="http://blog.singuerinc.com/actionscript3/validators/dni/nie/nif/2011/06/17/tip-validar-un-dninienif-de-espana-con-actionscript/"/>
    <updated>2011-06-17T00:00:00+02:00</updated>
-   <id>http://blog.singuerinc.com/actionscript3/validators/2011/06/17/tip-validar-un-dninienif-de-espana-con-actionscript</id>
+   <id>http://blog.singuerinc.com/actionscript3/validators/dni/nie/nif/2011/06/17/tip-validar-un-dninienif-de-espana-con-actionscript</id>
    <content type="html">&lt;p&gt;Hola, otra Class de validaci&amp;oacute;n, en este caso para validar un DNI espa&amp;ntilde;ol.&lt;br/&gt;
 Realic&amp;eacute; una classe porque quer&amp;iacute;a tener un set de funciones, y poder diferenciar si se trata de un nif o un nie.&lt;/p&gt;
 
@@ -817,9 +817,9 @@ Realic&amp;eacute; una classe porque quer&amp;iacute;a tener un set de funciones
  
  <entry>
    <title>Validar un tel&eacute;fono de Espa&ntilde;a</title>
-   <link href="http://blog.singuerinc.com/actionscript3/tip/validators/2011/06/14/tip-validar-un-telefono-espanol-con-actionscript/"/>
+   <link href="http://blog.singuerinc.com/actionscript3/validators/spain/2011/06/14/tip-validar-un-telefono-espanol-con-actionscript/"/>
    <updated>2011-06-14T00:00:00+02:00</updated>
-   <id>http://blog.singuerinc.com/actionscript3/tip/validators/2011/06/14/tip-validar-un-telefono-espanol-con-actionscript</id>
+   <id>http://blog.singuerinc.com/actionscript3/validators/spain/2011/06/14/tip-validar-un-telefono-espanol-con-actionscript</id>
    <content type="html">&lt;p&gt;Aqu&amp;iacute; os dejo otra Regular Expresion classe para validar tel&amp;eacute;fonos m&amp;oacute;viles en Espa&amp;ntilde;a, hasta hace poco, s&amp;oacute;lo existian n&amp;uacute;meros m&amp;oacute;viles que empezaban por &amp;quot;6&amp;quot;, ahora se ha agregado el &amp;quot;7&amp;quot;, la classe valida tanto m&amp;oacute;viles como fijos y pueden contener espacios:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;as3&quot;&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;net.singuerinc.labs.utils.validators&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -897,9 +897,9 @@ Realic&amp;eacute; una classe porque quer&amp;iacute;a tener un set de funciones
  
  <entry>
    <title>Validar un c&oacute;digo postal de Espa&ntilde;a</title>
-   <link href="http://blog.singuerinc.com/actionscript3/tip/validators/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/"/>
+   <link href="http://blog.singuerinc.com/actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/"/>
    <updated>2011-06-14T00:00:00+02:00</updated>
-   <id>http://blog.singuerinc.com/actionscript3/tip/validators/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript</id>
+   <id>http://blog.singuerinc.com/actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript</id>
    <content type="html">&lt;p&gt;Hola, aqu&amp;iacute; os dejo una peque&amp;ntilde;a classe con una Regular Expresion que he hecho para validar c&amp;oacute;digos postales espa&amp;ntilde;oles. Tambi&amp;eacute;n, puedes saber el nombre de la provincia al que pertenece:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;as3&quot;&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.singuerinc.labs.utils.validators&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -1003,9 +1003,9 @@ Realic&amp;eacute; una classe porque quer&amp;iacute;a tener un set de funciones
  
  <entry>
    <title>as3-signals + binding</title>
-   <link href="http://blog.singuerinc.com/actionscript3/2011/06/14/as3-signals-binding/"/>
+   <link href="http://blog.singuerinc.com/actionscript3/as3-signals/binding/2011/06/14/as3-signals-binding/"/>
    <updated>2011-06-14T00:00:00+02:00</updated>
-   <id>http://blog.singuerinc.com/actionscript3/2011/06/14/as3-signals-binding</id>
+   <id>http://blog.singuerinc.com/actionscript3/as3-signals/binding/2011/06/14/as3-signals-binding</id>
    <content type="html">&lt;p&gt;Estoy trabajando en un proyecto donde necesito actualizar la vista constantemente con informaci&amp;oacute;n del modelo. En Flex esto es relativamente f&amp;aacute;cil mediante la etiqueta [Bindable], pero en un proyeto puramente as3 no lo es tanto.&lt;/p&gt;
 
 &lt;p&gt;Aqu&amp;iacute; es donde as3-signals nos puede dar una mano, si sois como yo, que ando buscando siempre c&amp;oacute;digo nuevo que me facilite la vida habr&amp;eacute;is notado que existe un branch en &lt;a href=&quot;https://github.com/robertpenner/as3-signals/tree/binding&quot;&gt;as3-signals&lt;/a&gt; de Robert Penner llamado &amp;quot;binding&amp;quot;.&lt;/p&gt;

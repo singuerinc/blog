@@ -5,6 +5,11 @@ layout: post
 categories:
   - javascript
   - validation
+  - spain
+  - dni
+  - nie
+  - nif
+  - regex
 ---
 Hoy validamos un dni espa&ntilde;ol, puede validar tanto nif como nie.
 

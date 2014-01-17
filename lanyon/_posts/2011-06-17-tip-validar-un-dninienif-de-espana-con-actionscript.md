@@ -5,12 +5,9 @@ layout: post
 categories:
   - actionscript3
   - validators
-tags:
-  - as3
   - dni
   - nie
   - nif
-  - validaci&oacute;n
 ---
 # 
 

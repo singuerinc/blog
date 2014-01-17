@@ -5,6 +5,9 @@ layout: post
 categories:
   - javascript
   - validation
+  - spain
+  - phone
+  - regex
 ---
 Este es muy simple, una expresi&oacute;n regular para validar tel&eacute;fonos de Espa&ntilde;a en Javascript.
 

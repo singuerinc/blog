@@ -4,6 +4,7 @@ author: singuerinc
 layout: post
 categories:
   - javascript
+  - array
 ---
 Este no es m&iacute;o, pero es genial: &iquest;C&oacute;mo desordenar un array?
 

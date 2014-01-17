@@ -4,12 +4,8 @@ author: Nahuel Scotti
 layout: post
 categories:
   - actionscript3
-  - tip
   - validators
-tags:
-  - as3
-  - validaci&oacute;n
-  - validators
+  - spain
 ---
 # 
 

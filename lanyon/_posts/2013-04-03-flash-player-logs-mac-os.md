@@ -6,6 +6,8 @@ comments: true
 categories:
     - actionscript3
     - flash
+    - logs
+    - osx
 ---
 
 &iquest;C&oacute;mo puedo ver los **trace** de Flash Player?<br/>

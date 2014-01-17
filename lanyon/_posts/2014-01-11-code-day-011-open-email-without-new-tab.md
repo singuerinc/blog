@@ -5,6 +5,8 @@ layout: post
 categories:
   - javascript
   - html
+  - mailto
+  - iframe
 ---
  &iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&ntilde;a nueva? F&aacute;cil.
 

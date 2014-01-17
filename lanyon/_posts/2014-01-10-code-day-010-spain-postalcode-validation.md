@@ -5,6 +5,9 @@ layout: post
 categories:
   - actionscript3
   - validation
+  - spain
+  - postal-code
+  - regex
 ---
 Hoy: ¿Cómo saber si es un código postal válido y español? (ActionScript 3)
 

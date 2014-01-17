@@ -3,7 +3,8 @@ title: <span>Day 009</span> Any node version on OpenShift
 author: singuerinc
 layout: post
 categories:
-  - javascript
+  - openshift
+  - nodejs
 ---
 Hoy: &iquest;C&oacute;mo instalamos una versi&oacute;n espec&iacute;fica de Node.js en OpenShift?
 

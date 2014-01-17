@@ -4,6 +4,8 @@ author: singuerinc
 layout: post
 categories:
   - ubuntu
+  - desktop
+  - server
 ---
 Pre-requisites:
 

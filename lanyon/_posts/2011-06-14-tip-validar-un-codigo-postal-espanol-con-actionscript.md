@@ -4,13 +4,9 @@ author: Nahuel Scotti
 layout: post
 categories:
   - actionscript3
-  - tip
   - validators
-tags:
-  - as3
-  - postal code
-  - validaci&oacute;n
-  - validators
+  - postal-code
+  - spain
 ---
 # 
 

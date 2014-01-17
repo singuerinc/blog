@@ -4,6 +4,9 @@ author: singuerinc
 layout: post
 categories:
   - javascript
+  - string
+  - hashtags
+  - regex
 ---
 Hoy: Extraer m&uacute;ltiples hashtags de una cadena de texto.
 

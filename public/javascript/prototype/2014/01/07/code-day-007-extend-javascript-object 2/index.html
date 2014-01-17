@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      <span>Day 007</span> Extend with plain Javascript &middot; blog | singuerinc
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>Feel free to copy anything you need. Carry on!</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/singuerinc">GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/singuerinc">@singuerinc</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2014. No rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+          <h3 class="masthead-title">
+            <a href="/" title="Home">blog | singuerinc</a>
+            <small>no rights reserved</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title"><span>Day 007</span> Extend with plain Javascript</h1>
+  <span class="post-date">07 Jan 2014</span>
+  <p>Hoy un m&eacute;todo r&aacute;pido para simular herencia en Javascript.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">extend</span><span class="p">(</span><span class="nx">Child</span><span class="p">,</span> <span class="nx">Parent</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">Child</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="kd">function</span> <span class="p">(){</span>
+            <span class="kd">function</span> <span class="nx">F</span><span class="p">()</span> <span class="p">{};</span>
+            <span class="nx">F</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">Parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nx">F</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">)();</span>
+    <span class="nx">Child</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">Child</span><span class="p">;</span>
+    <span class="nx">Child</span><span class="p">.</span><span class="nx">parent</span> <span class="o">=</span> <span class="nx">Parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">Child</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+
+<p>Y c&oacute;mo lo usamos:</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">Animal</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">Clazz</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Animal&#39;</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">extend</span><span class="p">(</span><span class="nx">Clazz</span><span class="p">,</span> <span class="nb">Object</span><span class="p">);</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">run</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39; running.&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">Clazz</span><span class="p">;</span>
+<span class="p">})();</span>
+
+<span class="kd">var</span> <span class="nx">Dog</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">Clazz</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Dog&#39;</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="nx">extend</span><span class="p">(</span><span class="nx">Clazz</span><span class="p">,</span> <span class="nx">Animal</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">Clazz</span><span class="p">;</span>
+<span class="p">})();</span>
+
+<span class="kd">var</span> <span class="nx">cat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">();</span>
+<span class="nx">cat</span><span class="p">.</span><span class="nx">run</span><span class="p">()</span> <span class="c1">// &quot;Animal runnning&quot;</span>
+
+<span class="kd">var</span> <span class="nx">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dog</span><span class="p">();</span>
+<span class="nx">dog</span><span class="p">.</span><span class="nx">run</span><span class="p">()</span> <span class="c1">// &quot;Dog runnning&quot;</span>
+</code></pre></div>
+
+  <span class="post-categories"><span>#javascript</span><span>#prototype</span></span>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'singuerinc-blog';
+    var disqus_identifier = '/javascript/prototype/2014/01/07/code-day-007-extend-javascript-object 2';
+    var disqus_title = '<span>Day 007</span> Extend with plain Javascript';
+    var disqus_url = 'http://blog.singuerinc.com/javascript/prototype/2014/01/07/code-day-007-extend-javascript-object+2/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/vagrant/puppet/2014/01/18/code-day-018-minimal-vagrant-setup/">
+            <span>Day 018</span> Minimal Vagrant setup
+            <small>18 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/javascript/string/2014/01/17/code-day-017-abbreviate-string/">
+            <span>Day 017</span> Abbreviate String
+            <small>17 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
+            <span>Day 016</span> Install Node.js on Ubuntu
+            <small>16 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-881783-13', 'singuerinc.com');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>

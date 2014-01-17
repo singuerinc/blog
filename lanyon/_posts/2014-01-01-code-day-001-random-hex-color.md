@@ -4,6 +4,8 @@ author: singuerinc
 layout: post
 categories:
   - javascript
+  - colors
+  - random
 ---
 Un script por d&iacute;a, eso es lo que me propongo para este 2014, no me centrar&eacute; en ning&uacute;n lenguaje, pondr&eacute; un script que me haya servido en cada d&iacute;a.
 
