@@ -70,6 +70,8 @@
     
       
     
+      
+    
 
     <a class="sidebar-nav-item" href="https://github.com/singuerinc">GitHub</a>
     <a class="sidebar-nav-item" href="https://twitter.com/singuerinc">@singuerinc</a>
@@ -99,6 +101,159 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/actionscript3/validators/2011/06/21/tip-validar-un-telefono-movil-de-italia-con-actionscript-validazione-cellulare-italia/">
+        Validar un tel&eacute;fono m&oacute;vil de Italia
+      </a>
+    </h1>
+
+    <span class="post-date">21 Jun 2011</span>
+
+    <p>La mayoria de los sites que hago se traducen a alg&uacute;n otro idioma, en este caso lo hemos traducido a italiano. Pero la traducci&oacute;n no s&oacute;lo se queda en los textos, cuando se tienen formularios y hay que validar formularios la cosa se complica un poco m&aacute;s.  </p>
+
+<p>Validar un tel&eacute;fono de Italia es bastante m&aacute;s complicado que uno de Espa&ntilde;a, ya que cada compa&ntilde;ia tiene asignado un rango de n&uacute;meros y no son correlativos.</p>
+
+<p>Para complicarme a&uacute;n m&aacute;s la existencia, me pareci&oacute; que ser&iacute;a &uacute;til que tuviera la capacidad de decirnos a qu&eacute; compa&ntilde;ia corresponde.</p>
+
+<p>Aqu&iacute; la Class:</p>
+
+<div class="highlight"><pre><code class="js"><span class="kr">package</span> <span class="nx">net</span><span class="p">.</span><span class="nx">singuerinc</span><span class="p">.</span><span class="nx">labs</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">validators</span> <span class="p">{</span>
+<span class="kr">public</span> <span class="kr">class</span> <span class="nx">ItalyPhoneValidator</span> <span class="kr">implements</span> <span class="nx">IPhoneValidator</span> <span class="p">{</span>
+
+    <span class="kr">private</span> <span class="kd">var</span> <span class="nx">operators</span><span class="o">:</span><span class="nb">Array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TIM&#39;</span><span class="p">,</span> <span class="s1">&#39;Vodafone&#39;</span><span class="p">,</span> <span class="s1">&#39;Wind&#39;</span><span class="p">,</span> <span class="s1">&#39;Tre&#39;</span><span class="p">,</span> <span class="s1">&#39;TrenItalia&#39;</span><span class="p">];</span>
+
+    <span class="kr">private</span> <span class="kd">var</span> <span class="nx">_phoneNumber</span><span class="o">:</span><span class="nb">String</span><span class="p">;</span>
+    <span class="kr">private</span> <span class="kd">var</span> <span class="nx">_isValid</span><span class="o">:</span><span class="nb">Boolean</span><span class="p">;</span>
+    <span class="kr">private</span> <span class="kd">var</span> <span class="nx">_operatorIndex</span><span class="o">:</span><span class="kr">int</span><span class="p">;</span>
+    <span class="kr">private</span> <span class="kd">var</span> <span class="nx">_isFixed</span><span class="o">:</span><span class="nb">Boolean</span><span class="p">;</span>
+    <span class="kr">private</span> <span class="kd">var</span> <span class="nx">_isMobile</span><span class="o">:</span><span class="nb">Boolean</span><span class="p">;</span>
+
+    <span class="kr">private</span> <span class="kr">const</span> <span class="nx">TIM_REx</span><span class="o">:</span><span class="nb">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})3{1}(((?&gt;3)[013456789]{1})|((?&gt;6)[0368]{1}))[0-9]{7}$/</span><span class="p">;</span>
+    <span class="kr">private</span> <span class="kr">const</span> <span class="nx">VODAFONE_REx</span><span class="o">:</span><span class="nb">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})3{1}(((?&gt;4)[02356789]{1}))[0-9]{7}$/</span><span class="p">;</span>
+    <span class="kr">private</span> <span class="kr">const</span> <span class="nx">WIND_REx</span><span class="o">:</span><span class="nb">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})3{1}(((?&gt;2)[03789]{1})|((?&gt;8)[0389]{1}))[0-9]{7}$/</span><span class="p">;</span>
+    <span class="kr">private</span> <span class="kr">const</span> <span class="nx">TRE_REx</span><span class="o">:</span><span class="nb">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})3{1}9{1}[0-3]{1}[0-9]{7}$/</span><span class="p">;</span>
+    <span class="kr">private</span> <span class="kr">const</span> <span class="nx">TRENITALIA_REx</span><span class="o">:</span><span class="nb">RegExp</span> <span class="o">=</span> <span class="sr">/^((0039){0,1})313[0-9]{7}$/</span><span class="p">;</span>
+
+    <span class="kr">private</span> <span class="kd">var</span> <span class="nx">__rx</span><span class="o">:</span><span class="nb">Array</span> <span class="o">=</span> <span class="p">[</span><span class="nx">TIM_REx</span><span class="p">,</span> <span class="nx">VODAFONE_REx</span><span class="p">,</span> <span class="nx">WIND_REx</span><span class="p">,</span> <span class="nx">TRE_REx</span><span class="p">,</span> <span class="nx">TRENITALIA_REx</span><span class="p">];</span>
+
+    <span class="kr">public</span> <span class="kd">function</span> <span class="nx">ItalyPhoneValidator</span><span class="p">(</span><span class="nx">phoneNumber</span><span class="o">:</span><span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">_phoneNumber</span> <span class="o">=</span> <span class="nx">phoneNumber</span><span class="p">;</span>
+        <span class="nx">_phoneNumber</span> <span class="o">=</span> <span class="nx">_phoneNumber</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^\+/</span><span class="p">,</span> <span class="s1">&#39;00&#39;</span><span class="p">);</span>
+        <span class="nx">_phoneNumber</span> <span class="o">=</span> <span class="nx">_phoneNumber</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[^0-9]/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+        <span class="nx">_isValid</span> <span class="o">=</span> <span class="nx">validate</span><span class="p">(</span><span class="nx">_phoneNumber</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kr">public</span> <span class="kd">function</span> <span class="nx">isValid</span><span class="p">()</span><span class="o">:</span><span class="nb">Boolean</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_isValid</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kr">public</span> <span class="kd">function</span> <span class="nx">get</span> <span class="nx">phoneNumber</span><span class="p">()</span><span class="o">:</span><span class="nb">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_phoneNumber</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kr">public</span> <span class="kd">function</span> <span class="nx">get</span> <span class="nx">operatorName</span><span class="p">()</span><span class="o">:</span><span class="nb">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">operators</span><span class="p">[</span><span class="nx">_operatorIndex</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="kr">private</span> <span class="kd">function</span> <span class="nx">validate</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="nb">String</span><span class="p">)</span><span class="o">:</span><span class="nb">Boolean</span> <span class="p">{</span>
+
+        <span class="kd">var</span> <span class="nx">str</span><span class="o">:</span><span class="nb">String</span> <span class="o">=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">_operatorIndex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kd">var</span> <span class="nx">l</span><span class="o">:</span><span class="nx">uint</span> <span class="o">=</span> <span class="nx">__rx</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">:</span><span class="nx">uint</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">success</span><span class="o">:</span><span class="nb">Boolean</span> <span class="o">=</span> <span class="nx">__rx</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">_isMobile</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                <span class="nx">_operatorIndex</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="nx">_isMobile</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="nx">_operatorIndex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kr">public</span> <span class="kd">function</span> <span class="nx">isFixed</span><span class="p">()</span><span class="o">:</span><span class="nb">Boolean</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_isFixed</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kr">public</span> <span class="kd">function</span> <span class="nx">isMobile</span><span class="p">()</span><span class="o">:</span><span class="nb">Boolean</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_isMobile</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>C&oacute;mo usarlo:</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">val1</span><span class="o">:</span><span class="nx">ItalyPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItalyPhoneValidator</span><span class="p">(</span><span class="s1">&#39; 393401234567&#39;</span><span class="p">);</span>  
+<span class="nx">val1</span><span class="p">.</span><span class="nx">isValid</span><span class="p">();</span> <span class="c1">//true  </span>
+<span class="nx">val1</span><span class="p">.</span><span class="nx">operatorName</span><span class="p">;</span> <span class="c1">//Vodafone  </span>
+<span class="nx">val1</span><span class="p">.</span><span class="nx">isMobile</span><span class="p">();</span> <span class="c1">//true  </span>
+    
+<span class="kd">var</span> <span class="nx">val2</span><span class="o">:</span><span class="nx">ItalyPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItalyPhoneValidator</span><span class="p">(</span><span class="s1">&#39;0039 368 1234567&#39;</span><span class="p">);</span>  
+<span class="nx">val2</span><span class="p">.</span><span class="nx">isValid</span><span class="p">();</span> <span class="c1">//true  </span>
+<span class="nx">val2</span><span class="p">.</span><span class="nx">operatorName</span><span class="p">;</span> <span class="c1">//TIM  </span>
+<span class="nx">val2</span><span class="p">.</span><span class="nx">isMobile</span><span class="p">();</span> <span class="c1">//true  </span>
+    
+<span class="kd">var</span> <span class="nx">val3</span><span class="o">:</span><span class="nx">ItalyPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItalyPhoneValidator</span><span class="p">(</span><span class="s1">&#39;380 4567321&#39;</span><span class="p">);</span>  
+<span class="nx">val3</span><span class="p">.</span><span class="nx">isValid</span><span class="p">();</span> <span class="c1">//true  </span>
+<span class="nx">val3</span><span class="p">.</span><span class="nx">operatorName</span><span class="p">;</span> <span class="c1">//Wind  </span>
+<span class="nx">val3</span><span class="p">.</span><span class="nx">isMobile</span><span class="p">();</span> <span class="c1">//true  </span>
+    
+<span class="kd">var</span> <span class="nx">val4</span><span class="o">:</span><span class="nx">ItalyPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItalyPhoneValidator</span><span class="p">(</span><span class="s1">&#39;3933216547&#39;</span><span class="p">);</span>  
+<span class="nx">val4</span><span class="p">.</span><span class="nx">isValid</span><span class="p">();</span> <span class="c1">//true  </span>
+<span class="nx">val4</span><span class="p">.</span><span class="nx">operatorName</span><span class="p">;</span> <span class="c1">//Tre  </span>
+<span class="nx">val4</span><span class="p">.</span><span class="nx">isMobile</span><span class="p">();</span> <span class="c1">//true</span>
+</code></pre></div>
+
+<p>Como veis, se puede utilizar tanto el prefijo ** 39** como <strong>0039</strong> o sin prefijo, y con y sin espacios.<br>
+Si quer&eacute;is hacer una prueba, os dejo un peque&ntilde;o form para chequearlo:</p>
+
+<p>Puedes encontrar la &uacute;ltima versi&oacute;n en <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/ItalyPhoneValidator.as">github</a>.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/actionscript3/as3-audio/2011/06/19/just-born-as3-audio/">
+        Just born: as3-audio
+      </a>
+    </h1>
+
+    <span class="post-date">19 Jun 2011</span>
+
+    <p>Hola, he comenzado a desarrollar <strong>as3-audio</strong> en una peque&ntilde;a librer&iacute;a para simplificar la reproducci&oacute;n y controlar sonidos.</p>
+
+<p>No tendr&aacute; la posibilidad de crear sonidos sino que est&aacute; pensada m&aacute;s para el desarrollo en websites/apps. La idea es simplificar un poco el trabajo con sonido en Actionscript, y tener algunas funciones b&aacute;sicas como <em>play, pause, resume, stop</em> y otras &uacute;tiles como * fadeIn, fadeOut, delay*, etc.</p>
+
+<p>Otra de las caracter&iacute;sticas que destacar&aacute; es la utilizaci&oacute;n de <a href="https://github.com/robertpenner/as3-signals">as3-signals</a> para notificar los eventos.</p>
+
+<p>De momento est&aacute; en desarrollo, puedes encontrar el c&oacute;digo en github: <a href="https://github.com/singuerinc/as3-audio">as3-audio</a>, la classe <strong>Audio</strong> ya es funcional. Si quieres puedes realizar un <em>fork</em> y cuando tengas algo interesante podemos incorporarlo a la librer&iacute;a!</p>
+
+<p>M&aacute;s o menos, la <em>syntax</em> ser&aacute; esta:</p>
+
+<div class="highlight"><pre><code class="as3"><span class="c1">//Mediante la carga de un mp3:</span>
+<span class="kd">var</span> <span class="n">audio1</span><span class="p">:</span><span class="kt">Audio</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">Audio</span><span class="o">(</span><span class="s1">&#39;audio1&#39;</span><span class="o">,</span> <span class="s1">&#39;audio.mp3&#39;</span><span class="o">);</span>
+<span class="n">audio1</span><span class="o">.</span><span class="na">volume</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="o">;</span>
+<span class="n">audio1</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+
+<span class="c1">//Con una Classe que extienda de Sound:</span>
+<span class="kd">var</span> <span class="n">audio2</span><span class="p">:</span><span class="kt">AudioDeluxe</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">AudioDeluxe</span><span class="o">(</span><span class="s1">&#39;audio2&#39;</span><span class="o">,</span> <span class="k">new</span> <span class="kt">AudioMP3</span><span class="o">());</span>
+<span class="n">audio2</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+<span class="n">audio2</span><span class="o">.</span><span class="na">fade</span><span class="o">(,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1500</span><span class="o">);</span> <span class="c1">//from, to, time</span>
+</code></pre></div>
+
+<p><a href="https://github.com/singuerinc/as3-audio">Source</a></p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -387,98 +542,11 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/actionscript3/2011/06/14/as3-signals-binding/">
-        as3-signals + binding
-      </a>
-    </h1>
-
-    <span class="post-date">14 Jun 2011</span>
-
-    <p>Estoy trabajando en un proyecto donde necesito actualizar la vista constantemente con informaci&oacute;n del modelo. En Flex esto es relativamente f&aacute;cil mediante la etiqueta [Bindable], pero en un proyeto puramente as3 no lo es tanto.</p>
-
-<p>Aqu&iacute; es donde as3-signals nos puede dar una mano, si sois como yo, que ando buscando siempre c&oacute;digo nuevo que me facilite la vida habr&eacute;is notado que existe un branch en <a href="https://github.com/robertpenner/as3-signals/tree/binding">as3-signals</a> de Robert Penner llamado &quot;binding&quot;.</p>
-
-<p>Es un set de classes que nos permiten vincular una propiedad de un objeto a otra propiedad de otro objecto. Me explico: por ejemplo, cada vez que actualizo la propiedad &quot;name&quot; del objeto <strong>User</strong> quiero que se actualice la propiedad &quot;text&quot; de un &quot;TextField&quot;.</p>
-
-<p>Para hacer esto necesitamos que nuestro objeto <strong>User</strong> implemente la interface <strong>IBindable</strong> que se encuentra dentro del paquete de as3-signals, entonces tendremos una nueva propiedad dentro de <strong>User</strong> llamada <em>changeSignal</em> que ser&aacute; la encargada de notificar sobre los cambios en el objeto. Veamos un poco el c&oacute;digo, la classe <strong>User</strong> nos quedar&iacute;a as&iacute;:</p>
-
-<div class="highlight"><pre><code class="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.signals.binding</span> <span class="o">{</span>  
-    <span class="k">import</span> <span class="nn">org.osflash.signals.binding.ChangeSignal</span><span class="o">;</span>
-    <span class="k">import</span> <span class="nn">org.osflash.signals.binding.IBindable</span><span class="o">;</span>  
-    <span class="k">import</span> <span class="nn">org.osflash.signals.binding.IChangeSignal</span><span class="o">;</span>  
-  
-    <span class="kd">public</span> <span class="kd">class</span> <span class="n">User</span> <span class="kd">implements</span> <span class="n">IBindable</span> <span class="o">{</span>  
-  
-        <span class="kd">private</span> <span class="kd">var</span> <span class="n">_name</span><span class="p">:</span><span class="kt">String</span><span class="o">;</span>  
-        <span class="kd">private</span> <span class="kd">var</span> <span class="n">_changeSignal</span><span class="p">:</span><span class="kt">ChangeSignal</span><span class="o">;</span>  
-  
-        <span class="kd">public</span> <span class="kd">function </span><span class="nf">User</span><span class="o">()</span> <span class="o">{</span>  
-        <span class="o">}</span>  
-  
-        <span class="kd">public</span> <span class="kd">function</span> <span class="kd">set</span> <span class="n">name</span><span class="o">(</span><span class="n">value</span><span class="o">:</span><span class="n">String</span><span class="o">):</span><span class="kc">void</span> <span class="o">{</span>  
-            <span class="n">_name</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>  
-            <span class="n">changeSignal</span><span class="o">.</span><span class="na">dispatch</span><span class="o">(</span><span class="s1">&#39;name&#39;</span><span class="o">,</span> <span class="n">_name</span><span class="o">);</span>  
-        <span class="o">}</span>  
-  
-        <span class="kd">public</span> <span class="kd">function</span> <span class="kd">get</span> <span class="n">name</span><span class="o">():</span><span class="n">String</span> <span class="o">{</span>  
-            <span class="k">return</span> <span class="n">_name</span><span class="o">;</span>  
-        <span class="o">}</span>  
-  
-        <span class="kd">public</span> <span class="kd">function</span> <span class="kd">get</span> <span class="n">changeSignal</span><span class="o">():</span><span class="n">IChangeSignal</span> <span class="o">{</span>  
-            <span class="k">return</span> <span class="n">_changeSignal</span> <span class="o">||=</span> <span class="k">new</span> <span class="kt">ChangeSignal</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>  
-        <span class="o">}</span>  
-    <span class="o">}</span>  
-<span class="o">}</span>
-</code></pre></div>
-
-<p>Ahora, para vincular el <strong>TextField</strong> con <strong>User</strong> necesitamos de <strong>Binder</strong>, esta vincular&aacute; los dos objetos:</p>
-
-<div class="highlight"><pre><code class="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.signals.binding</span> <span class="o">{</span>  
-    <span class="k">import</span> <span class="nn">com.bit101.components.PushButton</span><span class="o">;</span>
-    <span class="k">import</span> <span class="nn">org.osflash.signals.binding.Binder</span><span class="o">;</span>  
-    <span class="k">import</span> <span class="nn">flash.display.Sprite</span><span class="o">;</span>  
-    <span class="k">import</span> <span class="nn">flash.events.MouseEvent</span><span class="o">;</span>  
-    <span class="k">import</span> <span class="nn">flash.text.TextField</span><span class="o">;</span>  
-    <span class="k">import</span> <span class="nn">flash.text.TextFieldAutoSize</span><span class="o">;</span>  
-  
-    <span class="kd">public</span> <span class="kd">class</span> <span class="n">SignalsBindingExample</span> <span class="kd">extends</span> <span class="o">[</span><span class="n">Sprite</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span> <span class="o">{</span>  
-  
-        <span class="kd">public</span> <span class="kd">var</span> <span class="n">user</span><span class="p">:</span><span class="kt">User</span><span class="o">;</span>  
-  
-        <span class="kd">public</span> <span class="kd">function </span><span class="nf">SignalsBindingExample</span><span class="o">()</span> <span class="o">{</span>  
-  
-            <span class="k">new</span> <span class="kt">PushButton</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="s1">&#39;change user name&#39;</span><span class="o">,</span> <span class="n">onClick</span><span class="o">);</span>  
-  
-            <span class="kd">var</span> <span class="n">txt1</span><span class="p">:</span><span class="kt">TextField</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">TextField</span><span class="o">();</span>  
-            <span class="n">txt1</span><span class="o">.</span><span class="na">autoSize</span> <span class="o">=</span> <span class="n">TextFieldAutoSize</span><span class="o">.</span><span class="na">LEFT</span><span class="o">;</span>  
-            <span class="n">addChild</span><span class="o">(</span><span class="n">txt1</span><span class="o">);</span>  
-  
-            <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">User</span><span class="o">();</span>  
-            <span class="n">user</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;User1&#39;</span><span class="o">;</span>  
-  
-            <span class="kd">var</span> <span class="n">binder</span><span class="p">:</span><span class="kt">Binder</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">Binder</span><span class="o">();</span>  
-            <span class="n">binder</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">txt1</span><span class="o">,</span> <span class="s1">&#39;text&#39;</span><span class="o">,</span> <span class="n">user</span><span class="o">,</span> <span class="s1">&#39;name&#39;</span><span class="o">);</span>  
-        <span class="o">}</span>  
-  
-        <span class="kd">private</span> <span class="kd">function </span><span class="nf">onClick</span><span class="o">(</span><span class="n">event</span><span class="o">:</span><span class="kt">MouseEvent</span><span class="o">):</span><span class="kt">void</span> <span class="o">{</span>  
-            <span class="n">user</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;User&#39;</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="na">random</span><span class="o">();</span>  
-        <span class="o">}</span>  
-    <span class="o">}</span>  
-<span class="o">}</span>
-</code></pre></div>
-
-<p>Listo, ahora cada vez que hagamos actualicemos <strong>user.name</strong> autom&aacute;ticamente <strong>Binder</strong> har&aacute; que ese valor se refleje en el <strong>TextField</strong>!<br>
-<a href="https://github.com/robertpenner/as3-signals/tree/binding">Source</a></p>
-
-  </div>
-  
 </div>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page6">Older</a>
   
   
     
