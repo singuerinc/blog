@@ -10,7 +10,7 @@
 
   <title>
     
-      <span>Day 015</span> Decimals &middot; blog | singuerinc
+      <span>Day 019</span> Ubuntu desktop in Ubuntu Server &middot; blog | singuerinc
     
   </title>
 
@@ -101,31 +101,30 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title"><span>Day 015</span> Decimals</h1>
-  <span class="post-date">15 Jan 2014</span>
-  <p>Formateamos un n&uacute;mero con decimales.</p>
+  <h1 class="post-title"><span>Day 019</span> Ubuntu desktop in Ubuntu Server</h1>
+  <span class="post-date">19 Jan 2014</span>
+  <p>Pre-requisites:</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
-<span class="p">}</span>
+<ul>
+<li>Ubuntu Server installed</li>
+</ul>
 
-<span class="nx">format</span><span class="p">(</span><span class="mf">5716645.406726573</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// 5716645.4</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">6738963.296086764</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 6738963.2</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">1393.8190264930017</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1393.819</span>
+<div class="highlight"><pre><code class="js"><span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
+<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span> <span class="c1">// full version</span>
+
+ <span class="c1">// or without all the stuff...</span>
+<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">install</span><span class="o">-</span><span class="nx">recommends</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span>
 </code></pre></div>
 
-<p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
-
-  <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
+  <span class="post-categories"><span>#ubuntu</span><span>#desktop</span><span>#server</span></span>
 </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'singuerinc-blog';
-    var disqus_identifier = '/javascript/numbers/2014/01/15/code-day-015-decimals';
-    var disqus_title = '<span>Day 015</span> Decimals';
-    var disqus_url = 'http://blog.singuerinc.com/javascript/numbers/2014/01/15/code-day-015-decimals/';
+    var disqus_identifier = '/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop';
+    var disqus_title = '<span>Day 019</span> Ubuntu desktop in Ubuntu Server';
+    var disqus_url = 'http://blog.singuerinc.com/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -137,15 +136,6 @@
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop/">
-            <span>Day 019</span> Ubuntu desktop in Ubuntu Server
-            <small>19 Jan 2014</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -161,6 +151,15 @@
           <a href="/javascript/string/2014/01/17/code-day-017-abbreviate-string/">
             <span>Day 017</span> Abbreviate String
             <small>17 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
+            <span>Day 016</span> Install Node.js on Ubuntu
+            <small>16 Jan 2014</small>
           </a>
         </h3>
       </li>
