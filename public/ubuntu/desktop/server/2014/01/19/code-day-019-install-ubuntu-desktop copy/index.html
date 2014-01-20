@@ -10,7 +10,7 @@
 
   <title>
     
-      Flash Player Debug Logs on Mac OS &middot; blog | singuerinc
+      <span>Day 019</span> Ubuntu desktop in Ubuntu Server &middot; blog | singuerinc
     
   </title>
 
@@ -101,67 +101,30 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Flash Player Debug Logs on Mac OS</h1>
-  <span class="post-date">03 Apr 2013</span>
-  <p>&iquest;C&oacute;mo puedo ver los <strong>trace</strong> de Flash Player?<br/>
-Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador.</p>
+  <h1 class="post-title"><span>Day 019</span> Ubuntu desktop in Ubuntu Server</h1>
+  <span class="post-date">19 Jan 2014</span>
+  <p>Pre-requisites:</p>
 
 <ul>
-<li>Primero tienes que instalar la versi&oacute;n de <a href="http://www.adobe.com/support/flashplayer/downloads.html">Flash Player Debug</a></li>
-<li>Luego configurar el <em>mm.cfg</em> y <em>flashlog.txt</em></li>
+<li>Ubuntu Server installed</li>
 </ul>
 
-<p>Pero siempre olvido d&oacute;nde colocarlos, por eso he escrito un peque&ntilde;o script que lo hace:</p>
+<div class="highlight"><pre><code class="js"><span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
+<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span> <span class="c1">// full version</span>
 
-<div class="highlight"><pre><code class="sh"><span class="nv">$ MM_DIR</span><span class="o">=</span><span class="s2">&quot;/Library/Application Support/Macromedia&quot;</span>
-<span class="nv">$ LG_DIR</span><span class="o">=</span><span class="s2">&quot;${HOME}/Library/Preferences/Macromedia/Flash Player/Logs&quot;</span>
-<span class="nv">$ </span>sudo mkdir -vp <span class="nv">$MM_DIR</span>
-
-<span class="c"># create config file</span>
-<span class="nv">$ </span>sudo touch <span class="s2">&quot;${MM_DIR}/mm.cfg&quot;</span>
-
-<span class="c"># Write mm config</span>
-<span class="nv">$ </span>sudo <span class="nb">echo</span> <span class="s1">&#39;ErrorReportingEnable=1\nTraceOutputFileEnable=1&#39;</span> <span class="p">|</span> sudo tee <span class="s2">&quot;${MM_DIR}/mm.cfg&quot;</span>
-
-<span class="c"># Create Flash Player logs directory</span>
-<span class="nv">$ </span>mkdir -pv <span class="nv">$LG_DIR</span>
-
-<span class="c"># Create Flash Player logs file</span>
-<span class="nv">$ </span>touch <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
-
-<span class="c"># Add test message</span>
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;Flashlogs test&#39;</span> <span class="p">|</span> tee <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
-
-<span class="c"># Restart the browser (w/ Flash Player &quot;Debug&quot; version) and execute:</span>
-<span class="nv">$ </span>tail -f <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
+ <span class="c1">// or without all the stuff...</span>
+<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">install</span><span class="o">-</span><span class="nx">recommends</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span>
 </code></pre></div>
 
-<p>Para ejecutarlo:</p>
-
-<ul>
-<li>Abre simplemente una ventana de Terminal y escribe:</li>
-</ul>
-
-<div class="highlight"><pre><code class="sh">curl -L https://gist.github.com/singuerinc/5296967/raw/logs.sh <span class="p">|</span> sh
-</code></pre></div>
-
-<ul>
-<li><p>Reinicia el navegador.</p></li>
-<li><p>Visualiza los logs ejecutando en el Terminal lo siguiente:</p></li>
-</ul>
-
-<div class="highlight"><pre><code class="sh">tail -f ~/Library/Preferences/Macromedia/Flash<span class="se">\ </span>Player/Logs/flashlog.txt
-</code></pre></div>
-
-  <span class="post-categories"><span>#actionscript3</span><span>#flash</span><span>#logs</span><span>#osx</span></span>
+  <span class="post-categories"><span>#ubuntu</span><span>#desktop</span><span>#server</span></span>
 </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'singuerinc-blog';
-    var disqus_identifier = '/actionscript3/flash/logs/osx/2013/04/03/flash-player-logs-mac-os';
-    var disqus_title = 'Flash Player Debug Logs on Mac OS';
-    var disqus_url = 'http://blog.singuerinc.com/actionscript3/flash/logs/osx/2013/04/03/flash-player-logs-mac-os/';
+    var disqus_identifier = '/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop copy';
+    var disqus_title = '<span>Day 019</span> Ubuntu desktop in Ubuntu Server';
+    var disqus_url = 'http://blog.singuerinc.com/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop+copy/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -185,18 +148,18 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
     
       <li>
         <h3>
-          <a href="/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop+copy/">
-            <span>Day 019</span> Ubuntu desktop in Ubuntu Server
-            <small>19 Jan 2014</small>
+          <a href="/vagrant/puppet/2014/01/18/code-day-018-minimal-vagrant-setup/">
+            <span>Day 018</span> Minimal Vagrant setup
+            <small>18 Jan 2014</small>
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/vagrant/puppet/2014/01/18/code-day-018-minimal-vagrant-setup/">
-            <span>Day 018</span> Minimal Vagrant setup
-            <small>18 Jan 2014</small>
+          <a href="/javascript/string/2014/01/17/code-day-017-abbreviate-string/">
+            <span>Day 017</span> Abbreviate String
+            <small>17 Jan 2014</small>
           </a>
         </h3>
       </li>

@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-01-19T14:31:51+01:00</updated>
+ <updated>2014-01-20T23:36:58+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -13,10 +13,42 @@
 
  
  <entry>
+   <title><span>Day 020</span> Autologin in Lubuntu</title>
+   <link href="http://blog.singuerinc.com/ubuntu/lubuntu/login/2014/01/20/code-day-020-autologin-lubuntu/"/>
+   <updated>2014-01-20T00:00:00+01:00</updated>
+   <id>http://blog.singuerinc.com/ubuntu/lubuntu/login/2014/01/20/code-day-020-autologin-lubuntu</id>
+   <content type="html">&lt;p&gt;Pre-requisites:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lubuntu&lt;/li&gt;
+&lt;li&gt;Vim or Nano&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For &lt;strong&gt;Lubuntu 12.04&lt;/strong&gt; or below&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo vim /etc/lxdm/default.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And change the line:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;autologin=yourusernamehere&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;For &lt;strong&gt;Lubuntu 12.10&lt;/strong&gt; and above&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo vim /etc/lightdm/lightdm.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And then change this line:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;autologin-user=yourusernamehere&lt;/code&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title><span>Day 019</span> Ubuntu desktop in Ubuntu Server</title>
-   <link href="http://blog.singuerinc.com/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop/"/>
+   <link href="http://blog.singuerinc.com/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop+copy/"/>
    <updated>2014-01-19T00:00:00+01:00</updated>
-   <id>http://blog.singuerinc.com/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop</id>
+   <id>http://blog.singuerinc.com/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop copy</id>
    <content type="html">&lt;p&gt;Pre-requisites:&lt;/p&gt;
 
 &lt;ul&gt;

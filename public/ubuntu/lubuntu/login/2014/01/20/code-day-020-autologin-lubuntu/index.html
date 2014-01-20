@@ -10,7 +10,7 @@
 
   <title>
     
-      <span>Day 019</span> Ubuntu desktop in Ubuntu Server &middot; blog | singuerinc
+      <span>Day 020</span> Autologin in Lubuntu &middot; blog | singuerinc
     
   </title>
 
@@ -101,30 +101,42 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title"><span>Day 019</span> Ubuntu desktop in Ubuntu Server</h1>
-  <span class="post-date">19 Jan 2014</span>
+  <h1 class="post-title"><span>Day 020</span> Autologin in Lubuntu</h1>
+  <span class="post-date">20 Jan 2014</span>
   <p>Pre-requisites:</p>
 
 <ul>
-<li>Ubuntu Server installed</li>
+<li>Lubuntu</li>
+<li>Vim or Nano</li>
 </ul>
 
-<div class="highlight"><pre><code class="js"><span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
-<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span> <span class="c1">// full version</span>
+<p>For <strong>Lubuntu 12.04</strong> or below</p>
 
- <span class="c1">// or without all the stuff...</span>
-<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">install</span><span class="o">-</span><span class="nx">recommends</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span>
+<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lxdm/default.conf
 </code></pre></div>
 
-  <span class="post-categories"><span>#ubuntu</span><span>#desktop</span><span>#server</span></span>
+<p>And change the line:</p>
+
+<p><code>autologin=yourusernamehere</code></p>
+
+<p>For <strong>Lubuntu 12.10</strong> and above</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lightdm/lightdm.conf
+</code></pre></div>
+
+<p>And then change this line:</p>
+
+<p><code>autologin-user=yourusernamehere</code></p>
+
+  <span class="post-categories"><span>#ubuntu</span><span>#lubuntu</span><span>#login</span></span>
 </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'singuerinc-blog';
-    var disqus_identifier = '/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop';
-    var disqus_title = '<span>Day 019</span> Ubuntu desktop in Ubuntu Server';
-    var disqus_url = 'http://blog.singuerinc.com/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop/';
+    var disqus_identifier = '/ubuntu/lubuntu/login/2014/01/20/code-day-020-autologin-lubuntu';
+    var disqus_title = '<span>Day 020</span> Autologin in Lubuntu';
+    var disqus_url = 'http://blog.singuerinc.com/ubuntu/lubuntu/login/2014/01/20/code-day-020-autologin-lubuntu/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -136,6 +148,15 @@
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop+copy/">
+            <span>Day 019</span> Ubuntu desktop in Ubuntu Server
+            <small>19 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -151,15 +172,6 @@
           <a href="/javascript/string/2014/01/17/code-day-017-abbreviate-string/">
             <span>Day 017</span> Abbreviate String
             <small>17 Jan 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
-            <span>Day 016</span> Install Node.js on Ubuntu
-            <small>16 Jan 2014</small>
           </a>
         </h3>
       </li>

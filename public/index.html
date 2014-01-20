@@ -104,7 +104,46 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop/">
+      <a href="/ubuntu/lubuntu/login/2014/01/20/code-day-020-autologin-lubuntu/">
+        <span>Day 020</span> Autologin in Lubuntu
+      </a>
+    </h1>
+
+    <span class="post-date">20 Jan 2014</span>
+
+    <p>Pre-requisites:</p>
+
+<ul>
+<li>Lubuntu</li>
+<li>Vim or Nano</li>
+</ul>
+
+<p>For <strong>Lubuntu 12.04</strong> or below</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lxdm/default.conf
+</code></pre></div>
+
+<p>And change the line:</p>
+
+<p><code>autologin=yourusernamehere</code></p>
+
+<p>For <strong>Lubuntu 12.10</strong> and above</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lightdm/lightdm.conf
+</code></pre></div>
+
+<p>And then change this line:</p>
+
+<p><code>autologin-user=yourusernamehere</code></p>
+
+
+    <span class="post-categories"><span>#ubuntu</span><span>#lubuntu</span><span>#login</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop+copy/">
         <span>Day 019</span> Ubuntu desktop in Ubuntu Server
       </a>
     </h1>
@@ -228,34 +267,6 @@ Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Com
 
 
     <span class="post-categories"><span>#nodejs</span><span>#ubuntu</span></span>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/numbers/2014/01/15/code-day-015-decimals/">
-        <span>Day 015</span> Decimals
-      </a>
-    </h1>
-
-    <span class="post-date">15 Jan 2014</span>
-
-    <p>Formateamos un n&uacute;mero con decimales.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">format</span><span class="p">(</span><span class="mf">5716645.406726573</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// 5716645.4</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">6738963.296086764</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 6738963.2</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">1393.8190264930017</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1393.819</span>
-</code></pre></div>
-
-<p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
 
   </div>
   
