@@ -104,6 +104,50 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/javascript/string/2014/01/17/code-day-017-abbreviate-string/">
+        <span>Day 017</span> Abbreviate String
+      </a>
+    </h1>
+
+    <span class="post-date">17 Jan 2014</span>
+
+    <p>&quot;Abbreviate&quot; nos permite abreviar una cadena de texto usando puntos suspensivos.<br/>
+Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Commons/as3commons-lang/blob/master/src/main/actionscript/org/as3commons/lang/StringUtils.as#L1145"><em>StringUtils.abbreviate</em></a> de <strong>as3commons</strong> pero para Javascript.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">abbreviate</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">offset</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="p">){</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="nx">str</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="k">return</span> <span class="nx">str</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">maxWidth</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Minimum width is 4&#39;</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;=</span> <span class="nx">maxWidth</span><span class="p">)</span> <span class="k">return</span> <span class="nx">str</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">offset</span> <span class="o">&gt;</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="nx">offset</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">((</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">offset</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)){</span>
+    <span class="nx">offset</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">-</span><span class="mi">3</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">offset</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">)</span> <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;Minimum width with offset is 7&quot;</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">((</span><span class="nx">offset</span> <span class="o">+</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">))</span> <span class="o">&lt;</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">abbreviate</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">offset</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="k">return</span> <span class="s2">&quot;...&quot;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="s2">&quot;...&quot;</span> <span class="o">+</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="nx">abbreviate</span><span class="p">(</span><span class="s2">&quot;abcdefghijklmno&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">// &quot;abcdefg...&quot;</span>
+<span class="nx">abbreviate</span><span class="p">(</span><span class="s2">&quot;abcdefghijklmno&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">// &quot;...ijklmno&quot;</span>
+</code></pre></div>
+
+<p><a href="/code/day-017/index.html" target="_blank">Demo</a></p>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#string</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
         <span>Day 016</span> Install Node.js on Ubuntu
       </a>
@@ -244,32 +288,6 @@
 
 
     <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/string/hashtags/regex/2014/01/12/code-day-012-extract-hashtags/">
-        <span>Day 012</span> Extract hashtags
-      </a>
-    </h1>
-
-    <span class="post-date">12 Jan 2014</span>
-
-    <p>Hoy: Extraer m&uacute;ltiples hashtags de una cadena de texto.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">extract</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
-    <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\B#\w*[a-zA-Z]+\w*/ig</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="nx">extract</span><span class="p">(</span><span class="s2">&quot;lorem #tag1 #tag2 diem #tag3&quot;</span><span class="p">);</span>
-<span class="nx">tags</span><span class="p">;</span> <span class="c1">// [&#39;#tag1&#39;, &#39;#tag2&#39;, &#39;#tag3&#39;]</span>
-</code></pre></div>
-
-<p><a href="/code/day-012/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#string</span><span>#hashtags</span><span>#regex</span></span>
 
   </div>
   
