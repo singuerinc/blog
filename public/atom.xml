@@ -4,13 +4,50 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-01-20T23:36:58+01:00</updated>
+ <updated>2014-01-24T16:44:42+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title><span>Day 021</span> Video + iPad = How to fix click.</title>
+   <link href="http://blog.singuerinc.com/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix/"/>
+   <updated>2014-01-21T00:00:00+01:00</updated>
+   <id>http://blog.singuerinc.com/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix</id>
+   <content type="html">&lt;p&gt;You want a video on your html, an overlay layer with some information and a button.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The problem:&lt;/strong&gt; You can&amp;#39;t click on the button, because the click event is captured by the video element.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;play&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Lorem ipsum Duis sit nisi occaecat ut&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;video&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;video&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;controls&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;video.mp4&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/video&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;The solution:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Remove the &amp;quot;controls&amp;quot; property from the video html tag.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;video id=&amp;quot;video&amp;quot; src=&amp;quot;video.mp4&amp;quot;&amp;gt;&amp;lt;/video&amp;gt;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You need also specify the correct event on the iPad:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;var ua = navigator.userAgent,
+    event = (ua.match(/iPad/i)) ? &amp;quot;touchstart&amp;quot; : &amp;quot;click&amp;quot;,
+    video = document.getElementsByTagName(&amp;quot;video&amp;quot;)[0];
+    btn   = document.getElementById(&amp;#39;btn&amp;#39;);
+
+btn.addEventListener(event, function(e){
+    video.play();
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;/code/day-021/index.html&quot; target=&quot;_blank&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title><span>Day 020</span> Autologin in Lubuntu</title>

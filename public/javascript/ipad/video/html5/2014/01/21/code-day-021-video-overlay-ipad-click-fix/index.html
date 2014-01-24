@@ -10,7 +10,7 @@
 
   <title>
     
-      <span>Day 009</span> Any node version on OpenShift &middot; blog | singuerinc
+      <span>Day 021</span> Video + iPad = How to fix click. &middot; blog | singuerinc
     
   </title>
 
@@ -101,27 +101,47 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title"><span>Day 009</span> Any node version on OpenShift</h1>
-  <span class="post-date">09 Jan 2014</span>
-  <p>Hoy: &iquest;C&oacute;mo instalamos una versi&oacute;n espec&iacute;fica de Node.js en OpenShift?</p>
+  <h1 class="post-title"><span>Day 021</span> Video + iPad = How to fix click.</h1>
+  <span class="post-date">21 Jan 2014</span>
+  <p>You want a video on your html, an overlay layer with some information and a button.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git clone REPO_URL
-<span class="nv">$ </span>git remote add upstream -m master git://github.com/openshift/nodejs-custom-version-openshift.git
-<span class="nv">$ </span>git pull -s recursive -X theirs upstream master
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;0.10.15&quot;</span> &gt;&gt; .openshift/markers/NODEJS_VERSION
-<span class="nv">$ </span>git commit . -m <span class="s1">&#39;use Node version 0.10.15&#39;</span>
-<span class="nv">$ </span>git push origin master
+<p><strong>The problem:</strong> You can&#39;t click on the button, because the click event is captured by the video element.</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>play<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;p&gt;</span>Lorem ipsum Duis sit nisi occaecat ut<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;video</span> <span class="na">id=</span><span class="s">&quot;video&quot;</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;video.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span>
 </code></pre></div>
 
-  <span class="post-categories"><span>#openshift</span><span>#nodejs</span></span>
+<p><strong>The solution:</strong></p>
+
+<ol>
+<li><p>Remove the &quot;controls&quot; property from the video html tag.</p>
+
+<p><code>&lt;video id=&quot;video&quot; src=&quot;video.mp4&quot;&gt;&lt;/video&gt;</code></p></li>
+<li><p>You need also specify the correct event on the iPad:</p></li>
+</ol>
+
+<div class="highlight"><pre><code class="html">var ua = navigator.userAgent,
+    event = (ua.match(/iPad/i)) ? &quot;touchstart&quot; : &quot;click&quot;,
+    video = document.getElementsByTagName(&quot;video&quot;)[0];
+    btn   = document.getElementById(&#39;btn&#39;);
+
+btn.addEventListener(event, function(e){
+    video.play();
+});
+</code></pre></div>
+
+<p><a href="/code/day-021/index.html" target="_blank">Demo</a></p>
+
+  <span class="post-categories"><span>#javascript</span><span>#ipad</span><span>#video</span><span>#html5</span></span>
 </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'singuerinc-blog';
-    var disqus_identifier = '/openshift/nodejs/2014/01/09/code-day-009-any-nodejs-version-openshift';
-    var disqus_title = '<span>Day 009</span> Any node version on OpenShift';
-    var disqus_url = 'http://blog.singuerinc.com/openshift/nodejs/2014/01/09/code-day-009-any-nodejs-version-openshift/';
+    var disqus_identifier = '/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix';
+    var disqus_title = '<span>Day 021</span> Video + iPad = How to fix click.';
+    var disqus_url = 'http://blog.singuerinc.com/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -133,15 +153,6 @@
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix/">
-            <span>Day 021</span> Video + iPad = How to fix click.
-            <small>21 Jan 2014</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -157,6 +168,15 @@
           <a href="/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop+copy/">
             <span>Day 019</span> Ubuntu desktop in Ubuntu Server
             <small>19 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/vagrant/puppet/2014/01/18/code-day-018-minimal-vagrant-setup/">
+            <span>Day 018</span> Minimal Vagrant setup
+            <small>18 Jan 2014</small>
           </a>
         </h3>
       </li>
