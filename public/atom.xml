@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-01-24T17:42:09+01:00</updated>
+ <updated>2014-01-24T17:46:31+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -93,7 +93,7 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Remove the &amp;quot;controls&amp;quot; property from the video html tag.&lt;/p&gt;
 
-&lt;p&gt;`&lt;video id=&quot;video&quot; src=&quot;video.mp4&quot;&gt;&lt;/video&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;video id=&amp;quot;video&amp;quot; src=&amp;quot;video.mp4&amp;quot;&amp;gt;&amp;lt;/video&amp;gt;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;You need also specify the correct event on the iPad:&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
