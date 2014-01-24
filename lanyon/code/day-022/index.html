@@ -33,24 +33,13 @@
     </style>
 </head>
 <body>
-<video id="video" src="test_film_counter.mp4" width="1282" height="720" autoplay></video>
 <button id="btn">Play/Pause</button>
 <div id="time"></div>
 <div id="frames"></div>
 <div id="binary"></div>
+<video id="video" src="test_film_counter.mp4" width="1282" height="720" autoplay></video>
 
-<script type="text/javascript" src="stats.min.js"></script>
 <script type="text/javascript">
-    var stats = new Stats();
-    stats.setMode(0); // 0: fps, 1: ms
-
-    // Align top-left
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.right = '0px';
-    stats.domElement.style.top = '0px';
-
-    document.body.appendChild(stats.domElement);
-
 
     (function () {
         var lastTime = 0;
@@ -97,8 +86,6 @@
 
     var draw = function () {
 
-        stats.begin();
-
         // draw the top-right 1px x 48px of the video in a tmp canvas
         ctx.drawImage(video, videoWidth - 1, 0, 1, numPixToRead * 4, 0, 0, 1, numPixToRead * 4);
 
@@ -128,8 +115,6 @@
         binary.innerText = binStr;
         frames.innerText = frame.toString();
         time.innerText = secs;
-
-        stats.end();
     };
 
     var animate = function () {
