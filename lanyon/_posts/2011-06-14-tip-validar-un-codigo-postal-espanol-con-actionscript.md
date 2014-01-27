@@ -1,5 +1,5 @@
 ---
-title: Validar un c&oacute;digo postal de Espa&ntilde;a
+title: Validate Spain postal code
 author: Nahuel Scotti
 layout: post
 categories:

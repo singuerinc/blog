@@ -1,5 +1,5 @@
 ---
-title: Validar un tel&eacute;fono m&oacute;vil de Italia
+title: Validate Italy telephone number
 author: Nahuel Scotti
 layout: post
 categories:

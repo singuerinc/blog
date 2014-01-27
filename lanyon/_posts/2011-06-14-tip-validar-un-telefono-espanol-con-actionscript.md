@@ -1,5 +1,5 @@
 ---
-title: Validar un tel&eacute;fono de Espa&ntilde;a
+title: Validate Spain telephone number
 author: Nahuel Scotti
 layout: post
 categories:

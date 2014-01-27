@@ -1,5 +1,5 @@
 ---
-title: Validar un DNI/NIE/NIF de Espa&ntilde;a
+title: Validate Spain DNI/NIE/NIF
 author: Nahuel Scotti
 layout: post
 categories:

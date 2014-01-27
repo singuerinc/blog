@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-01-24T18:04:49+01:00</updated>
+ <updated>2014-01-27T22:28:30+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -733,7 +733,7 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
  </entry>
  
  <entry>
-   <title>Validar un tel&eacute;fono m&oacute;vil de Italia</title>
+   <title>Validate Italy telephone number</title>
    <link href="http://blog.singuerinc.com/actionscript3/validators/italy/regex/phone/2011/06/21/tip-validar-un-telefono-movil-de-italia-con-actionscript-validazione-cellulare-italia/"/>
    <updated>2011-06-21T00:00:00+02:00</updated>
    <id>http://blog.singuerinc.com/actionscript3/validators/italy/regex/phone/2011/06/21/tip-validar-un-telefono-movil-de-italia-con-actionscript-validazione-cellulare-italia</id>
@@ -878,7 +878,7 @@ Si quer&amp;eacute;is hacer una prueba, os dejo un peque&amp;ntilde;o form para 
  </entry>
  
  <entry>
-   <title>Validar un DNI/NIE/NIF de Espa&ntilde;a</title>
+   <title>Validate Spain DNI/NIE/NIF</title>
    <link href="http://blog.singuerinc.com/actionscript3/validators/dni/nie/nif/2011/06/17/tip-validar-un-dninienif-de-espana-con-actionscript/"/>
    <updated>2011-06-17T00:00:00+02:00</updated>
    <id>http://blog.singuerinc.com/actionscript3/validators/dni/nie/nif/2011/06/17/tip-validar-un-dninienif-de-espana-con-actionscript</id>
@@ -967,7 +967,7 @@ Realic&amp;eacute; una classe porque quer&amp;iacute;a tener un set de funciones
  </entry>
  
  <entry>
-   <title>Validar un tel&eacute;fono de Espa&ntilde;a</title>
+   <title>Validate Spain telephone number</title>
    <link href="http://blog.singuerinc.com/actionscript3/validators/spain/2011/06/14/tip-validar-un-telefono-espanol-con-actionscript/"/>
    <updated>2011-06-14T00:00:00+02:00</updated>
    <id>http://blog.singuerinc.com/actionscript3/validators/spain/2011/06/14/tip-validar-un-telefono-espanol-con-actionscript</id>
@@ -1047,7 +1047,7 @@ Realic&amp;eacute; una classe porque quer&amp;iacute;a tener un set de funciones
  </entry>
  
  <entry>
-   <title>Validar un c&oacute;digo postal de Espa&ntilde;a</title>
+   <title>Validate Spain postal code</title>
    <link href="http://blog.singuerinc.com/actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/"/>
    <updated>2011-06-14T00:00:00+02:00</updated>
    <id>http://blog.singuerinc.com/actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript</id>
