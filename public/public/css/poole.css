@@ -85,7 +85,9 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  line-height: 1;
 }
 h2 {
   margin-top: 1rem;
@@ -314,6 +316,7 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title {
   margin-top: 0;
+  letter-spacing: -2px;
 }
 
 /* Meta data line below post title */

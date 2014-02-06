@@ -313,10 +313,10 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: aquamarine;
 }
 .post-title span {
-    color: red;
+    color: #444;
 }
 .page-title,
 .post-title {
@@ -326,7 +326,7 @@ a.sidebar-nav-item:focus {
 /* Meta data line below post title */
 .post-date {
   display: block;
-  margin-top: -.5rem;
+  margin-top: 0rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
 }
