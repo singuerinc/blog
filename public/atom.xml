@@ -4,13 +4,153 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-02-06T22:32:28+01:00</updated>
+ <updated>2014-02-06T22:57:42+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title><span>Day 023</span> Step by step Redmine installation</title>
+   <link href="http://blog.singuerinc.com/redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/"/>
+   <updated>2014-01-23T00:00:00+01:00</updated>
+   <id>http://blog.singuerinc.com/redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step</id>
+   <content type="html">&lt;h3&gt;1. Install Apache&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ apt-get install apache2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2. Install rmagick &amp;amp; nokigiri dependencies&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ apt-get install -y build-essential imagemagick libmagickcore-dev libmagickwand-dev libxml2 libxml2-dev libxslt1-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;3. Install MySQL&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ apt-get update
+$ apt-get install -y mysql-client-core-5.5 mysql-server mysql-client libmysqlclient-dev
+// enter your top-secret-password
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;4. Restart MySQL&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ /etc/init.d/mysql stop
+$ /etc/init.d/mysql start
+$ /usr/bin/mysqld_safe --user=mysql --skip-grant-tables
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;5. Download Redmine&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;curl -O http://www.redmine.org/releases/redmine-2.3.4.zip
+unzip redmine-2.3.4.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;6. Change database configuration&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ cp /config/database.yml.example /config/database.yml
+$ vim /config/database.yml
+// user: redmine
+// pass: redminepassword
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;7. Install RVM + Ruby&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ curl -L https://get.rvm.io | bash -s stable
+// logout or source here
+$ rvm install 2.1.0 --autolibs=enabled &amp;amp;&amp;amp; rvm --fuzzy alias create default 2.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;8. Install Pusion Passenger&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Install Pussion Passenger + Apache mod&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ apt-get install -y libcurl4-openssl-dev apache2-threaded-dev libapr1-dev libaprutil1-dev
+$ gem install passenger
+$ passenger-install-apache2-module
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add the following lines to &lt;code&gt;/etc/apache2/mods-available/passenger.load&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;LoadModule passenger_module /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36/buildout/apache2/mod_passenger.so
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add the following lines to &lt;code&gt;/etc/apache2/mods-available/passenger.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;IfModule mod_passenger.c&amp;gt;
+  PassengerRoot /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36
+  PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.1.0/wrappers/ruby
+&amp;lt;/IfModule&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enable Passenger as Apache module:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;sudo a2enmod passenger  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add a virtual host to your Apache configuration file and set its DocumentRoot to &lt;code&gt;/var/sites/redmine.domain.com/public&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;VirtualHost *:80&amp;gt;
+   ServerName redmine.domain.com
+   DocumentRoot /var/sites/redmine.domain.com/public
+   &amp;lt;Directory /var/sites/redmine.domain.com/public&amp;gt;
+      Require all granted
+      Options FollowSymLinks
+      AllowOverride none
+      Order allow,deny
+      Allow from all
+      PassengerUser root
+   &amp;lt;/Directory&amp;gt;
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;8. Enable Apache site&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo a2ensite redmine
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;9. Install dependencies&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ gem install bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;10. Install Redmine dependencies&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;11. Session store secret generation&lt;/h3&gt;
+
+&lt;p&gt;This step generates a random key used by Rails to encode cookies storing session data thus preventing their tampering.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ rake generate_secret_token
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;12. Database schema objects creation&lt;/h3&gt;
+
+&lt;p&gt;Create the database structure&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ RAILS_ENV=production rake db:migrate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;13. File system permissions&lt;/h3&gt;
+
+&lt;p&gt;The user account running the application must have write permission on the following subdirectories:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;files (storage of attachments)&lt;/li&gt;
+&lt;li&gt;log (application log file production.log)&lt;/li&gt;
+&lt;li&gt;tmp and tmp/pdf (create these ones if not present, used to generate PDF documents among other things)&lt;/li&gt;
+&lt;li&gt;public/plugin_assets (assets of plugins).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ mkdir -p tmp tmp/pdf public/plugin_assets
+$ sudo chown -R nobody:nogroup files log tmp public/plugin_assets
+$ sudo chmod -R 755 files log tmp public/plugin_assets
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;14. Email configuration (gmail)&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ cp config/configuration.yml.example config/configuration.yml
+$ vim config/configuration.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Edit &lt;code&gt;configuration.yml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;production:
+  email_delivery:
+    delivery_method: :smtp
+    smtp_settings:
+      enable_starttls_auto: true
+      address: &amp;quot;smtp.gmail.com&amp;quot; 
+      port: &amp;#39;587&amp;#39;
+      domain: &amp;quot;smtp.gmail.com&amp;quot; 
+      authentication: :plain
+      user_name: &amp;quot;redmine.domain@gmail.com&amp;quot; 
+      password: &amp;quot;secret&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;15. Theme (optional)&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ cd public/themes/
+$ curl -O http://www.redminecrm.com/license_manager/9722/circle_theme-1_0_1.zip
+$ unzip circle_theme-1_0_1.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;16. Test Redmine&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ ruby script/rails server webrick -e production
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Webrick is not suitable for production use, please only use webrick for testing that the installation up to this point is functional.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Fatto!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title><span>Day 022</span> Perfect HTML5 Video Sync</title>

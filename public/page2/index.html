@@ -104,6 +104,41 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/vagrant/puppet/2014/01/18/code-day-018-minimal-vagrant-setup/">
+        <span>Day 018</span> Minimal Vagrant setup
+      </a>
+    </h1>
+
+    <span class="post-date">18 Jan 2014</span>
+
+    <p>Pre-requisites:</p>
+
+<ul>
+<li>Vagrant</li>
+<li>VirtualBox</li>
+</ul>
+
+<div class="highlight"><pre><code class="js"><span class="nx">Vagrant</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nx">config</span><span class="o">|</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box</span>      <span class="o">=</span> <span class="s1">&#39;precise32&#39;</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box_url</span>  <span class="o">=</span> <span class="s1">&#39;http://files.vagrantup.com/precise32.box&#39;</span>
+
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">8080</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">8080</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="nx">ip</span><span class="o">:</span> <span class="s2">&quot;192.168.50.4&quot;</span>
+
+  <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">provision</span> <span class="o">:</span><span class="nx">puppet</span> <span class="k">do</span> <span class="o">|</span><span class="nx">puppet</span><span class="o">|</span>
+    <span class="nx">puppet</span><span class="p">.</span><span class="nx">manifests_path</span> <span class="o">=</span> <span class="s1">&#39;puppet/manifests&#39;</span>
+    <span class="nx">puppet</span><span class="p">.</span><span class="nx">module_path</span>    <span class="o">=</span> <span class="s1">&#39;puppet/modules&#39;</span>
+  <span class="nx">end</span>
+<span class="nx">end</span>
+</code></pre></div>
+
+
+    <span class="post-categories"><span>#vagrant</span><span>#puppet</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/javascript/string/2014/01/17/code-day-017-abbreviate-string/">
         <span>Day 017</span> Abbreviate String
       </a>
@@ -263,31 +298,6 @@ Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Com
 
 
     <span class="post-categories"><span>#mysql</span><span>#vagrant</span><span>#sequelpro</span></span>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/numbers/2014/01/13/code-day-013-format-score/">
-        <span>Day 013</span> Format number
-      </a>
-    </h1>
-
-    <span class="post-date">13 Jan 2014</span>
-
-    <p>Vamos a formatear un n&uacute;mero de forma simple con una expresi&oacute;n regular.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
-    <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\B(?=(\d{3})+(?!\d))/g</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">format</span><span class="p">(</span><span class="mi">3601234</span><span class="p">);</span> <span class="c1">// &#39;3.601.234&#39;</span>
-</code></pre></div>
-
-<p><a href="/code/day-013/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
 
   </div>
   
