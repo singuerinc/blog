@@ -106,6 +106,89 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix/">
+        <span>Day 021</span> Video + iPad = How to fix click.
+      </a>
+    </h1>
+
+    <span class="post-date">21 Jan 2014</span>
+
+    <p>You want a video on your html, an overlay layer with some information and a button.</p>
+
+<p><strong>The problem:</strong> You can&#39;t click on the button, because the click event is captured by the video element.</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>play<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;p&gt;</span>Lorem ipsum Duis sit nisi occaecat ut<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;video</span> <span class="na">id=</span><span class="s">&quot;video&quot;</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;video.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span>
+</code></pre></div>
+
+<p><strong>The solution:</strong></p>
+
+<ol>
+<li><p>Remove the &quot;controls&quot; property from the video html tag.</p>
+
+<p><code>&lt;video id=&quot;video&quot; src=&quot;video.mp4&quot;&gt;&lt;/video&gt;</code></p></li>
+<li><p>You need also specify the correct event on the iPad:</p></li>
+</ol>
+
+<div class="highlight"><pre><code class="html">var ua = navigator.userAgent,
+    event = (ua.match(/iPad/i)) ? &quot;touchstart&quot; : &quot;click&quot;,
+    video = document.getElementsByTagName(&quot;video&quot;)[0];
+    btn   = document.getElementById(&#39;btn&#39;);
+
+btn.addEventListener(event, function(e){
+    video.play();
+});
+</code></pre></div>
+
+<p><a href="/code/day-021/index.html" target="_blank">Demo</a></p>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#ipad</span><span>#video</span><span>#html5</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/ubuntu/lubuntu/login/2014/01/20/code-day-020-autologin-lubuntu/">
+        <span>Day 020</span> Autologin in Lubuntu
+      </a>
+    </h1>
+
+    <span class="post-date">20 Jan 2014</span>
+
+    <p>Pre-requisites:</p>
+
+<ul>
+<li>Lubuntu</li>
+<li>Vim or Nano</li>
+</ul>
+
+<p>For <strong>Lubuntu 12.04</strong> or below</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lxdm/default.conf
+</code></pre></div>
+
+<p>And change the line:</p>
+
+<p><code>autologin=yourusernamehere</code></p>
+
+<p>For <strong>Lubuntu 12.10</strong> and above</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lightdm/lightdm.conf
+</code></pre></div>
+
+<p>And then change this line:</p>
+
+<p><code>autologin-user=yourusernamehere</code></p>
+
+
+    <span class="post-categories"><span>#ubuntu</span><span>#lubuntu</span><span>#login</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop+copy/">
         <span>Day 019</span> Ubuntu desktop in Ubuntu Server
       </a>
@@ -207,57 +290,6 @@ Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Com
 
 
     <span class="post-categories"><span>#javascript</span><span>#string</span></span>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
-        <span>Day 016</span> Install Node.js on Ubuntu
-      </a>
-    </h1>
-
-    <span class="post-date">16 Jan 2014</span>
-
-    <p>Hoy instalamos Node.js en Ubuntu!</p>
-
-<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo apt-get install python-software-properties python g++ make
-<span class="gp">$</span> sudo add-apt-repository ppa:chris-lea/node.js
-<span class="gp">$</span> sudo apt-get update
-<span class="gp">$</span> sudo apt-get install nodejs
-<span class="gp">$</span> node --version // v0.10.24
-</code></pre></div>
-
-
-    <span class="post-categories"><span>#nodejs</span><span>#ubuntu</span></span>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/numbers/2014/01/15/code-day-015-decimals/">
-        <span>Day 015</span> Decimals
-      </a>
-    </h1>
-
-    <span class="post-date">15 Jan 2014</span>
-
-    <p>Formateamos un n&uacute;mero con decimales.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">format</span><span class="p">(</span><span class="mf">5716645.406726573</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// 5716645.4</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">6738963.296086764</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 6738963.2</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">1393.8190264930017</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1393.819</span>
-</code></pre></div>
-
-<p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
 
   </div>
   

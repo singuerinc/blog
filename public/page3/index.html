@@ -106,6 +106,57 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
+        <span>Day 016</span> Install Node.js on Ubuntu
+      </a>
+    </h1>
+
+    <span class="post-date">16 Jan 2014</span>
+
+    <p>Hoy instalamos Node.js en Ubuntu!</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo apt-get install python-software-properties python g++ make
+<span class="gp">$</span> sudo add-apt-repository ppa:chris-lea/node.js
+<span class="gp">$</span> sudo apt-get update
+<span class="gp">$</span> sudo apt-get install nodejs
+<span class="gp">$</span> node --version // v0.10.24
+</code></pre></div>
+
+
+    <span class="post-categories"><span>#nodejs</span><span>#ubuntu</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/javascript/numbers/2014/01/15/code-day-015-decimals/">
+        <span>Day 015</span> Decimals
+      </a>
+    </h1>
+
+    <span class="post-date">15 Jan 2014</span>
+
+    <p>Formateamos un n&uacute;mero con decimales.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">format</span><span class="p">(</span><span class="mf">5716645.406726573</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// 5716645.4</span>
+<span class="nx">format</span><span class="p">(</span><span class="mf">6738963.296086764</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 6738963.2</span>
+<span class="nx">format</span><span class="p">(</span><span class="mf">1393.8190264930017</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1393.819</span>
+</code></pre></div>
+
+<p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/">
         <span>Day 014</span> SequelPro + Vagrant + MySQL
       </a>
@@ -221,61 +272,6 @@
 
 
     <span class="post-categories"><span>#javascript</span><span>#string</span><span>#hashtags</span><span>#regex</span></span>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/html/mailto/iframe/2014/01/11/code-day-011-open-email-without-new-tab/">
-        <span>Day 011</span> mailto: !== new browser tab
-      </a>
-    </h1>
-
-    <span class="post-date">11 Jan 2014</span>
-
-    <p>&iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&ntilde;a nueva? F&aacute;cil.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">open_email</span><span class="p">(){</span>
-    <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;iframe&#39;</span><span class="p">);</span>
-    <span class="nx">f</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
-    <span class="nx">f</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;mailto:email@addre.ss&#39;</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p><a href="/code/day-011/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#html</span><span>#mailto</span><span>#iframe</span></span>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/actionscript3/validation/spain/postal-code/regex/2014/01/10/code-day-010-spain-postalcode-validation/">
-        <span>Day 010</span> Spain - Postal Code validation
-      </a>
-    </h1>
-
-    <span class="post-date">10 Jan 2014</span>
-
-    <p>Hoy: ¿Cómo saber si es un código postal válido y español? (ActionScript 3)</p>
-
-<div class="highlight"><pre><code class="as3"><span class="kd">function </span><span class="nf">validate</span><span class="o">(</span><span class="n">value</span><span class="o">:</span><span class="kt">String</span><span class="o">):</span><span class="kt">Boolean</span><span class="o">{</span>
-    <span class="kd">var</span> <span class="n">str</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="n">replace</span><span class="o">(/\</span><span class="n">s</span><span class="o">/</span><span class="n">g</span><span class="o">,</span> <span class="s1">&#39;&#39;</span><span class="o">);</span>
-    <span class="kd">var</span> <span class="n">rExp</span><span class="p">:</span><span class="kt">RegExp</span> <span class="o">=</span> <span class="sr">/((?&gt;^[5]{1})[0-2][0-9]{3})|((?&gt;^[0]{1})[1-9]{1}[0-9]{3})|((?&gt;^[1-4]{1})[0-9]{1}[0-9]{3})$/</span><span class="o">;</span>
-    <span class="k">return</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span> <span class="o">===</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">rExp</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
-<span class="o">}</span>
-
-<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;08019&#39;</span><span class="o">);</span> <span class="c1">//true - &quot;Barcelona&quot;</span>
-<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;28001&#39;</span><span class="o">);</span> <span class="c1">//true - &quot;Madrid&quot;</span>
-</code></pre></div>
-
-<p>La clase completa la puedes encontrar <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPostalCodeValidator.as" target="_blank">aqu&iacute;</a></p>
-
-
-    <span class="post-categories"><span>#actionscript3</span><span>#validation</span><span>#spain</span><span>#postal-code</span><span>#regex</span></span>
 
   </div>
   
