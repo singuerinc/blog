@@ -1,5 +1,5 @@
 ---
-title: <span>Day 016</span> Install Node.js on Ubuntu
+title: Install Node.js on Ubuntu
 author: singuerinc
 layout: post
 categories:

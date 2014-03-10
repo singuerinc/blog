@@ -1,5 +1,5 @@
 ---
-title: <span>Day 019</span> Ubuntu desktop in Ubuntu Server
+title: Ubuntu desktop in Ubuntu Server
 author: singuerinc
 layout: post
 categories:

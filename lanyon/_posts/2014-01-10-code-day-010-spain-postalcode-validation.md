@@ -1,5 +1,5 @@
 ---
-title: <span>Day 010</span> Spain - Postal Code validation
+title: Spain - Postal Code validation
 author: singuerinc
 layout: post
 categories:

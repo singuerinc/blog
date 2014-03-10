@@ -1,5 +1,5 @@
 ---
-title: <span>Day 022</span> Perfect HTML5 Video Sync
+title: Perfect HTML5 Video Sync
 author: singuerinc
 layout: post
 categories:

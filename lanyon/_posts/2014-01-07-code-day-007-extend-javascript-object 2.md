@@ -1,5 +1,5 @@
 ---
-title: <span>Day 007</span> Extend with plain Javascript
+title: Extend with plain Javascript
 author: singuerinc
 layout: post
 categories:

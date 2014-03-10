@@ -1,5 +1,5 @@
 ---
-title: <span>Day 026</span> Batch image generation with Node.js
+title: Batch image generation with Node.js
 author: singuerinc
 layout: post
 categories:

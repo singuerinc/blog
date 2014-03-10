@@ -1,5 +1,5 @@
 ---
-title: <span>Day 023</span> Step by step Redmine installation
+title: Step by step Redmine installation
 author: singuerinc
 layout: post
 categories:

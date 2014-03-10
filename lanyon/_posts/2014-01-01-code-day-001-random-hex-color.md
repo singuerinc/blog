@@ -1,5 +1,5 @@
 ---
-title: One script per day
+title: Random Color
 author: singuerinc
 layout: post
 categories:
@@ -7,9 +7,7 @@ categories:
   - colors
   - random
 ---
-Un script por d&iacute;a, eso es lo que me propongo para este 2014, no me centrar&eacute; en ning&uacute;n lenguaje, pondr&eacute; un script que me haya servido en cada d&iacute;a.
-
-Y para empezar algo de Javascript simple: **random hex color**.
+Para empezar algo de Javascript simple: **random hex color**.
 
 {% highlight js %}
 var color = '#'+Math.floor(Math.random()*16777215).toString(16);

@@ -1,5 +1,5 @@
 ---
-title: <span>Day 004</span> Spain - Phone validation
+title: Spain - Phone validation
 author: singuerinc
 layout: post
 categories:

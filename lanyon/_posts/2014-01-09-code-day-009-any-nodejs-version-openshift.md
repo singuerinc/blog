@@ -1,5 +1,5 @@
 ---
-title: <span>Day 009</span> Any node version on OpenShift
+title: Any node version on OpenShift
 author: singuerinc
 layout: post
 categories:

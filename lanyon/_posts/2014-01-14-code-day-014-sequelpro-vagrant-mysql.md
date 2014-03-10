@@ -1,5 +1,5 @@
 ---
-title: <span>Day 014</span> SequelPro + Vagrant + MySQL
+title: SequelPro + Vagrant + MySQL
 author: singuerinc
 layout: post
 categories:

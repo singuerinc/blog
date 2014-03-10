@@ -1,5 +1,5 @@
 ---
-title: <span>Day 006</span> Spain - dni/nie/nif validation
+title: Spain - dni/nie/nif validation
 author: singuerinc
 layout: post
 categories:

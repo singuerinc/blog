@@ -1,5 +1,5 @@
 ---
-title: <span>Day 002</span> if condition Handlebars
+title: if condition Handlebars
 author: singuerinc
 layout: post
 categories:

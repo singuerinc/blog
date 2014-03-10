@@ -1,5 +1,5 @@
 ---
-title: <span>Day 003</span> Async "waterfall" / node.js
+title: Async "waterfall" / node.js
 author: singuerinc
 layout: post
 categories:

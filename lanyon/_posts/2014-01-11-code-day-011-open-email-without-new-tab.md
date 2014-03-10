@@ -1,5 +1,5 @@
 ---
-title: "<span>Day 011</span> mailto: !== new browser tab"
+title: "mailto: !== new browser tab"
 author: singuerinc
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: <span>Day 008</span> Shuffle Javascript array
+title: Shuffle Javascript array
 author: singuerinc
 layout: post
 categories:

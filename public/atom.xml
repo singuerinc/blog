@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-02-09T01:03:43+01:00</updated>
+ <updated>2014-03-10T15:05:48+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title><span>Day 026</span> Batch image generation with Node.js</title>
+   <title>Batch image generation with Node.js</title>
    <link href="http://blog.singuerinc.com/nodejs/async/fabricjs/canvas/png/2014/01/26/code-day-026-batch-image-generation-with-nodejs/"/>
    <updated>2014-01-26T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/nodejs/async/fabricjs/canvas/png/2014/01/26/code-day-026-batch-image-generation-with-nodejs</id>
@@ -59,7 +59,7 @@
  </entry>
  
  <entry>
-   <title><span>Day 025</span> Update Boxen</title>
+   <title>Update Boxen</title>
    <link href="http://blog.singuerinc.com/boxen/2014/01/25/code-day-025-update-boxen/"/>
    <updated>2014-01-25T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/boxen/2014/01/25/code-day-025-update-boxen</id>
@@ -73,7 +73,7 @@
  </entry>
  
  <entry>
-   <title><span>Day 024</span> Alternative when npm registry is down</title>
+   <title>Alternative when npm registry is down</title>
    <link href="http://blog.singuerinc.com/npm/nodejs/nodejitsu/registry/2014/01/24/code-day-024-try-this-ir-npm-registry-is-down/"/>
    <updated>2014-01-24T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/npm/nodejs/nodejitsu/registry/2014/01/24/code-day-024-try-this-ir-npm-registry-is-down</id>
@@ -82,7 +82,7 @@
  </entry>
  
  <entry>
-   <title><span>Day 023</span> Step by step Redmine installation</title>
+   <title>Step by step Redmine installation</title>
    <link href="http://blog.singuerinc.com/redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/"/>
    <updated>2014-01-23T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step</id>
@@ -222,7 +222,7 @@ $ unzip circle_theme-1_0_1.zip
  </entry>
  
  <entry>
-   <title><span>Day 022</span> Perfect HTML5 Video Sync</title>
+   <title>Perfect HTML5 Video Sync</title>
    <link href="http://blog.singuerinc.com/javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/"/>
    <updated>2014-01-22T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync</id>
@@ -284,7 +284,7 @@ $ unzip circle_theme-1_0_1.zip
  </entry>
  
  <entry>
-   <title><span>Day 021</span> Video + iPad = How to fix click.</title>
+   <title>Video + iPad = How to fix click.</title>
    <link href="http://blog.singuerinc.com/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix/"/>
    <updated>2014-01-21T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix</id>
@@ -321,7 +321,7 @@ btn.addEventListener(event, function(e){
  </entry>
  
  <entry>
-   <title><span>Day 020</span> Autologin in Lubuntu</title>
+   <title>Autologin in Lubuntu</title>
    <link href="http://blog.singuerinc.com/ubuntu/lubuntu/login/2014/01/20/code-day-020-autologin-lubuntu/"/>
    <updated>2014-01-20T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/ubuntu/lubuntu/login/2014/01/20/code-day-020-autologin-lubuntu</id>
@@ -353,7 +353,7 @@ btn.addEventListener(event, function(e){
  </entry>
  
  <entry>
-   <title><span>Day 019</span> Ubuntu desktop in Ubuntu Server</title>
+   <title>Ubuntu desktop in Ubuntu Server</title>
    <link href="http://blog.singuerinc.com/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop+copy/"/>
    <updated>2014-01-19T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop copy</id>
@@ -373,7 +373,7 @@ btn.addEventListener(event, function(e){
  </entry>
  
  <entry>
-   <title><span>Day 018</span> Minimal Vagrant setup</title>
+   <title>Minimal Vagrant setup</title>
    <link href="http://blog.singuerinc.com/vagrant/puppet/2014/01/18/code-day-018-minimal-vagrant-setup/"/>
    <updated>2014-01-18T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/vagrant/puppet/2014/01/18/code-day-018-minimal-vagrant-setup</id>
@@ -401,7 +401,7 @@ btn.addEventListener(event, function(e){
  </entry>
  
  <entry>
-   <title><span>Day 017</span> Abbreviate String</title>
+   <title>Abbreviate String</title>
    <link href="http://blog.singuerinc.com/javascript/string/2014/01/17/code-day-017-abbreviate-string/"/>
    <updated>2014-01-17T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/string/2014/01/17/code-day-017-abbreviate-string</id>
@@ -438,7 +438,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 016</span> Install Node.js on Ubuntu</title>
+   <title>Install Node.js on Ubuntu</title>
    <link href="http://blog.singuerinc.com/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/"/>
    <updated>2014-01-16T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu</id>
@@ -454,7 +454,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 015</span> Decimals</title>
+   <title>Decimals</title>
    <link href="http://blog.singuerinc.com/javascript/numbers/2014/01/15/code-day-015-decimals/"/>
    <updated>2014-01-15T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/numbers/2014/01/15/code-day-015-decimals</id>
@@ -475,7 +475,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 014</span> SequelPro + Vagrant + MySQL</title>
+   <title>SequelPro + Vagrant + MySQL</title>
    <link href="http://blog.singuerinc.com/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/"/>
    <updated>2014-01-14T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql</id>
@@ -537,7 +537,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 013</span> Format number</title>
+   <title>Format number</title>
    <link href="http://blog.singuerinc.com/javascript/numbers/2014/01/13/code-day-013-format-score/"/>
    <updated>2014-01-13T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/numbers/2014/01/13/code-day-013-format-score</id>
@@ -555,7 +555,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 012</span> Extract hashtags</title>
+   <title>Extract hashtags</title>
    <link href="http://blog.singuerinc.com/javascript/string/hashtags/regex/2014/01/12/code-day-012-extract-hashtags/"/>
    <updated>2014-01-12T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/string/hashtags/regex/2014/01/12/code-day-012-extract-hashtags</id>
@@ -574,7 +574,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 011</span> mailto: !== new browser tab</title>
+   <title>mailto: !== new browser tab</title>
    <link href="http://blog.singuerinc.com/javascript/html/mailto/iframe/2014/01/11/code-day-011-open-email-without-new-tab/"/>
    <updated>2014-01-11T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/html/mailto/iframe/2014/01/11/code-day-011-open-email-without-new-tab</id>
@@ -594,7 +594,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 010</span> Spain - Postal Code validation</title>
+   <title>Spain - Postal Code validation</title>
    <link href="http://blog.singuerinc.com/actionscript3/validation/spain/postal-code/regex/2014/01/10/code-day-010-spain-postalcode-validation/"/>
    <updated>2014-01-10T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/actionscript3/validation/spain/postal-code/regex/2014/01/10/code-day-010-spain-postalcode-validation</id>
@@ -615,7 +615,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 009</span> Any node version on OpenShift</title>
+   <title>Any node version on OpenShift</title>
    <link href="http://blog.singuerinc.com/openshift/nodejs/2014/01/09/code-day-009-any-nodejs-version-openshift/"/>
    <updated>2014-01-09T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/openshift/nodejs/2014/01/09/code-day-009-any-nodejs-version-openshift</id>
@@ -632,7 +632,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 008</span> Shuffle Javascript array</title>
+   <title>Shuffle Javascript array</title>
    <link href="http://blog.singuerinc.com/javascript/array/2014/01/08/code-day-008-shuffle-array/"/>
    <updated>2014-01-08T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/array/2014/01/08/code-day-008-shuffle-array</id>
@@ -647,7 +647,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 007</span> Extend with plain Javascript</title>
+   <title>Extend with plain Javascript</title>
    <link href="http://blog.singuerinc.com/javascript/prototype/2014/01/07/code-day-007-extend-javascript-object+2/"/>
    <updated>2014-01-07T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/prototype/2014/01/07/code-day-007-extend-javascript-object 2</id>
@@ -698,7 +698,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 006</span> Spain - dni/nie/nif validation</title>
+   <title>Spain - dni/nie/nif validation</title>
    <link href="http://blog.singuerinc.com/javascript/validation/spain/dni/nie/nif/regex/2014/01/06/code-day-006-spain-dni-validation/"/>
    <updated>2014-01-06T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/validation/spain/dni/nie/nif/regex/2014/01/06/code-day-006-spain-dni-validation</id>
@@ -737,7 +737,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 005</span> Italy - Phone validation</title>
+   <title>Italy - Phone validation</title>
    <link href="http://blog.singuerinc.com/actionscript3/validation/italy/phone/regex/2014/01/05/code-day-005-italy-phone-validation/"/>
    <updated>2014-01-05T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/actionscript3/validation/italy/phone/regex/2014/01/05/code-day-005-italy-phone-validation</id>
@@ -777,7 +777,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 004</span> Spain - Phone validation</title>
+   <title>Spain - Phone validation</title>
    <link href="http://blog.singuerinc.com/javascript/validation/spain/phone/regex/2014/01/04/code-day-004-spain-phone-validation/"/>
    <updated>2014-01-04T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/validation/spain/phone/regex/2014/01/04/code-day-004-spain-phone-validation</id>
@@ -801,7 +801,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 003</span> Async "waterfall" / node.js</title>
+   <title>Async "waterfall" / node.js</title>
    <link href="http://blog.singuerinc.com/nodejs/async/javascript/2014/01/03/code-day-003-node-async-waterfall/"/>
    <updated>2014-01-03T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/nodejs/async/javascript/2014/01/03/code-day-003-node-async-waterfall</id>
@@ -832,7 +832,7 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title><span>Day 002</span> if condition Handlebars</title>
+   <title>if condition Handlebars</title>
    <link href="http://blog.singuerinc.com/nodejs/handlebars/javascript/2014/01/02/code-day-002-if-condition-handlebars/"/>
    <updated>2014-01-02T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/nodejs/handlebars/javascript/2014/01/02/code-day-002-if-condition-handlebars</id>
@@ -868,13 +868,11 @@ Es una conversi&amp;oacute;n de la funci&amp;oacute;n &lt;a href=&quot;https://g
  </entry>
  
  <entry>
-   <title>One script per day</title>
+   <title>Random Color</title>
    <link href="http://blog.singuerinc.com/javascript/colors/random/2014/01/01/code-day-001-random-hex-color/"/>
    <updated>2014-01-01T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/javascript/colors/random/2014/01/01/code-day-001-random-hex-color</id>
-   <content type="html">&lt;p&gt;Un script por d&amp;iacute;a, eso es lo que me propongo para este 2014, no me centrar&amp;eacute; en ning&amp;uacute;n lenguaje, pondr&amp;eacute; un script que me haya servido en cada d&amp;iacute;a.&lt;/p&gt;
-
-&lt;p&gt;Y para empezar algo de Javascript simple: &lt;strong&gt;random hex color&lt;/strong&gt;.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Para empezar algo de Javascript simple: &lt;strong&gt;random hex color&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16777215&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;

@@ -1,5 +1,5 @@
 ---
-title: <span>Day 024</span> Alternative when npm registry is down
+title: Alternative when npm registry is down
 author: singuerinc
 layout: post
 categories:

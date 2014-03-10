@@ -1,5 +1,5 @@
 ---
-title: <span>Day 021</span> Video + iPad = How to fix click.
+title: Video + iPad = How to fix click.
 author: singuerinc
 layout: post
 categories:

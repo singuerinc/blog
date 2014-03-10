@@ -1,5 +1,5 @@
 ---
-title: <span>Day 005</span> Italy - Phone validation
+title: Italy - Phone validation
 author: singuerinc
 layout: post
 categories:

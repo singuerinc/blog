@@ -1,5 +1,5 @@
 ---
-title: <span>Day 020</span> Autologin in Lubuntu
+title: Autologin in Lubuntu
 author: singuerinc
 layout: post
 categories:

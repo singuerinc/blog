@@ -1,5 +1,5 @@
 ---
-title: <span>Day 025</span> Update Boxen
+title: Update Boxen
 author: singuerinc
 layout: post
 categories:

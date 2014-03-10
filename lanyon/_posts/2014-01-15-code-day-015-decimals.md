@@ -1,5 +1,5 @@
 ---
-title: <span>Day 015</span> Decimals
+title: Decimals
 author: singuerinc
 layout: post
 categories:
