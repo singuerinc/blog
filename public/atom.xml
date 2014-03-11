@@ -4,13 +4,28 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-03-10T15:05:48+01:00</updated>
+ <updated>2014-03-11T16:36:31+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Nokogiri + Ubuntu installation</title>
+   <link href="http://blog.singuerinc.com/ubuntu/nokogiri/rails/redmine/2014/03/04/nokogiri-on-ubuntu/"/>
+   <updated>2014-03-04T00:00:00+01:00</updated>
+   <id>http://blog.singuerinc.com/ubuntu/nokogiri/rails/redmine/2014/03/04/nokogiri-on-ubuntu</id>
+   <content type="html">&lt;p&gt;Before you install Nokogiri make sure you have all this libs installed:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get update
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install build-essential
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install libxml2 libxslt1-dev libxml2-dev
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo gem install nokogiri -v &lt;span class=&quot;s1&quot;&gt;&amp;#39;1.5.11&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Batch image generation with Node.js</title>

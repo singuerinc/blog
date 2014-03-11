@@ -106,6 +106,75 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/">
+        Perfect HTML5 Video Sync
+      </a>
+    </h1>
+
+    <span class="post-date">22 Jan 2014</span>
+
+    <p>When you work with video and Javascript and you need to tracking an object you can&#39;t trust in video events or time, you need to identify each frame, because if the frame rate drops or anything else happends you need to stay in sync.</p>
+
+<p>There are a lot of tutorials of how to do this in ActionScript:
+<a href="http://labs.eric-decker.com/2011/08/video-sync-issues-with-flash-as3/">1</a>
+<a href="http://zehfernando.com/2011/flash-video-frame-time-woes/">2</a>
+<a href="http://nikohelle.net/2011/11/25/as3-perfect-video-sync-with-embedded-frame-numbers/">3</a></p>
+
+<p>But I want to focus on JavaScript, as described in these tutorials you need to write in each frame the frame number in binary (with black and white). There is a script for After Effect that do the job for you.</p>
+
+<p>So, how we get this data?</p>
+
+<div class="highlight"><pre><code class="js"><span class="c1">// get the video element</span>
+<span class="kd">var</span> <span class="nx">video</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;video&#39;</span><span class="p">);</span>
+
+<span class="c1">// create a tmp canvas element and get the context</span>
+<span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;canvas&#39;</span><span class="p">),</span>
+    <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">loop</span><span class="p">(){</span>
+
+    <span class="c1">// draw from the video those pixels that contains binary data</span>
+    <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">video</span><span class="p">,</span> <span class="mi">1281</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">48</span><span class="p">);</span>
+
+    <span class="c1">// get pixels data</span>
+    <span class="kd">var</span> <span class="nx">pixData</span> <span class="o">=</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">numPixToRead</span><span class="p">).</span><span class="nx">data</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">binStr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">pixData</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//the pixel data has 4 values by pixel read (r,g,b,a)</span>
+
+        <span class="c1">// after the video compression the pixels</span>
+        <span class="c1">// aren&#39;t black (0) or white (255) so we need to</span>
+        <span class="c1">// separate them by luminosity and convert in 0s and 1s</span>
+        <span class="kd">var</span> <span class="nx">binNum</span> <span class="o">=</span> <span class="nx">pixData</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">127</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// store binary num in reverse order</span>
+        <span class="nx">binStr</span> <span class="o">=</span> <span class="nx">binNum</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span> <span class="o">+</span> <span class="nx">binStr</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// convert binary string into decimal, you have the FRAME number</span>
+    <span class="kd">var</span> <span class="nx">frame</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">binStr</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">//1,2,3,4,5....</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">animate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">loop</span><span class="p">();</span>
+    <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">animate</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">animate</span><span class="p">();</span>
+</code></pre></div>
+
+<p><a href="https://gist.github.com/singuerinc/8600823" target="_blank">Code source</a></p>
+
+<p><a href="/code/day-022/index.html" target="_blank">Demo</a> (binary pixels are on top-right)</p>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#video</span><span>#html5</span><span>#sync</span></span>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix/">
         Video + iPad = How to fix click.
       </a>
@@ -246,50 +315,6 @@ btn.addEventListener(event, function(e){
 
 
     <span class="post-categories"><span>#vagrant</span><span>#puppet</span></span>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/javascript/string/2014/01/17/code-day-017-abbreviate-string/">
-        Abbreviate String
-      </a>
-    </h1>
-
-    <span class="post-date">17 Jan 2014</span>
-
-    <p>&quot;Abbreviate&quot; nos permite abreviar una cadena de texto usando puntos suspensivos.<br/>
-Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Commons/as3commons-lang/blob/master/src/main/actionscript/org/as3commons/lang/StringUtils.as#L1145"><em>StringUtils.abbreviate</em></a> de <strong>as3commons</strong> pero para Javascript.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">abbreviate</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">offset</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="p">){</span>
-
-  <span class="k">if</span><span class="p">(</span><span class="nx">str</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="k">return</span> <span class="nx">str</span><span class="p">;</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">maxWidth</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Minimum width is 4&#39;</span><span class="p">);</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;=</span> <span class="nx">maxWidth</span><span class="p">)</span> <span class="k">return</span> <span class="nx">str</span><span class="p">;</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">offset</span> <span class="o">&gt;</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="nx">offset</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-  <span class="k">if</span><span class="p">((</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">offset</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)){</span>
-    <span class="nx">offset</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">-</span><span class="mi">3</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">offset</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">)</span> <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span><span class="p">;</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">)</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;Minimum width with offset is 7&quot;</span><span class="p">);</span>
-
-  <span class="k">if</span> <span class="p">((</span><span class="nx">offset</span> <span class="o">+</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">))</span> <span class="o">&lt;</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">abbreviate</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">offset</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">);</span>
-    <span class="k">return</span> <span class="s2">&quot;...&quot;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="s2">&quot;...&quot;</span> <span class="o">+</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">-</span> <span class="mi">3</span><span class="p">));</span>
-<span class="p">}</span>
-
-<span class="nx">abbreviate</span><span class="p">(</span><span class="s2">&quot;abcdefghijklmno&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">// &quot;abcdefg...&quot;</span>
-<span class="nx">abbreviate</span><span class="p">(</span><span class="s2">&quot;abcdefghijklmno&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">// &quot;...ijklmno&quot;</span>
-</code></pre></div>
-
-<p><a href="/code/day-017/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#string</span></span>
 
   </div>
   
