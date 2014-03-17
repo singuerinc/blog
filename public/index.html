@@ -106,23 +106,105 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/ubuntu/nokogiri/rails/redmine/2014/03/04/nokogiri-on-ubuntu/">
-        Nokogiri + Ubuntu installation
+      <a href="/javascript/requirejs/2014/03/17/requirejs-and-javascript-inheritance/">
+        Require.js and Javascript inheritance
       </a>
     </h1>
 
-    <span class="post-date">04 Mar 2014</span>
+    <span class="post-date">17 Mar 2014</span>
 
-    <p>Before you install Nokogiri make sure you have all this libs installed:</p>
+    <p>Quick example, Require.js + Javascript inheritance:</p>
 
-<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get install build-essential
-<span class="nv">$ </span>sudo apt-get install libxml2 libxslt1-dev libxml2-dev
-<span class="nv">$ </span>sudo gem install nokogiri -v <span class="s1">&#39;1.5.11&#39;</span>
+<div class="highlight"><pre><code class="js"><span class="c1">// Human.js</span>
+<span class="nx">define</span><span class="p">(</span><span class="s1">&#39;Human&#39;</span><span class="p">,</span> <span class="p">[],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="c1">// private var</span>
+    <span class="kd">var</span> <span class="nx">_numEyes</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// constructor</span>
+    <span class="kd">var</span> <span class="nx">Human</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// public var</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+
+        <span class="c1">// pseudo-protected var</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="c1">// instance method</span>
+    <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">walk</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39; is walking&#39;</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setAge</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_age</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getAge</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_age</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getNumEyes</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_numEyes</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="c1">// class static method</span>
+    <span class="nx">Human</span><span class="p">.</span><span class="nx">GET_TYPE</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;biped&#39;</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="c1">// class static const</span>
+    <span class="nx">Human</span><span class="p">.</span><span class="nx">NUM_LEGS</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="nx">Human</span><span class="p">;</span>
+
+<span class="p">});</span>
+</code></pre></div>
+
+<div class="highlight"><pre><code class="js"><span class="c1">// John.js</span>
+<span class="nx">define</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Human&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Human</span><span class="p">){</span>
+
+    <span class="kd">var</span> <span class="nx">John</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">Human</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_age</span> <span class="o">=</span> <span class="mi">28</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="nx">John</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">_super_</span> <span class="o">=</span> <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+
+    <span class="nx">John</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">walk</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_super_</span><span class="p">.</span><span class="nx">walk</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; quickly&#39;</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">John</span><span class="p">;</span>
+
+<span class="p">});</span>
+</code></pre></div>
+
+<div class="highlight"><pre><code class="js"><span class="c1">// main.js</span>
+<span class="nx">require</span><span class="p">([</span><span class="s1">&#39;Human&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Human</span><span class="p">,</span> <span class="nx">John</span><span class="p">){</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">Human</span><span class="p">.</span><span class="nx">GET_TYPE</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// biped</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">Human</span><span class="p">.</span><span class="nx">NUM_LEGS</span> <span class="p">);</span> <span class="c1">// 2</span>
+
+
+    <span class="kd">var</span> <span class="nx">human</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Human</span><span class="p">(</span><span class="s1">&#39;Peter&#39;</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">human</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span> <span class="c1">// Peter</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">human</span><span class="p">.</span><span class="nx">walk</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// Peter is walking</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">human</span><span class="p">.</span><span class="nx">getAge</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// 0</span>
+
+
+    <span class="kd">var</span> <span class="nx">john</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">John</span><span class="p">();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span> <span class="c1">// John</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">walk</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// John is walking quickly</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">getAge</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// 28</span>
+
+<span class="p">});</span>
 </code></pre></div>
 
 
-    <span class="post-categories"><span>#ubuntu</span><span>#nokogiri</span><span>#rails</span><span>#redmine</span></span>
+    <span class="post-categories"><span>#javascript</span><span>#requirejs</span></span>
 
   </div>
   
