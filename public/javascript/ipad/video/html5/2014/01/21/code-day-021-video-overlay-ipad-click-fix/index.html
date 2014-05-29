@@ -111,8 +111,7 @@
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>play<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;p&gt;</span>Lorem ipsum Duis sit nisi occaecat ut<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;video</span> <span class="na">id=</span><span class="s">&quot;video&quot;</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;video.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;video</span> <span class="na">id=</span><span class="s">&quot;video&quot;</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;video.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span></code></pre></div>
 
 <p><strong>The solution:</strong></p>
 
@@ -130,8 +129,7 @@
 
 btn.addEventListener(event, function(e){
     video.play();
-});
-</code></pre></div>
+});</code></pre></div>
 
 <p><a href="/code/day-021/index.html" target="_blank">Demo</a></p>
 
@@ -196,6 +194,7 @@ btn.addEventListener(event, function(e){
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-881783-13', 'singuerinc.com');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
 
     </script>

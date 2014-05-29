@@ -150,12 +150,11 @@
         <span class="k">return</span> <span class="n">_isMobile</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
+<span class="o">}</span></code></pre></div>
 
 <p>Algunos ejemplos:</p>
 
-<div class="highlight"><pre><code class="as3">  <span class="kd">var</span> <span class="n">val1</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;639 125 230&#39;</span><span class="o">);</span>  
+<div class="highlight"><pre><code class="as3"><span class="kd">var</span> <span class="n">val1</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;639 125 230&#39;</span><span class="o">);</span>  
     <span class="n">val1</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
     <span class="n">val1</span><span class="o">.</span><span class="na">isFixed</span><span class="o">();</span> <span class="c1">//false  </span>
     <span class="n">val1</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//true  </span>
@@ -173,8 +172,7 @@
     <span class="kd">var</span> <span class="n">val4</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;932 510 258&#39;</span><span class="o">);</span>  
     <span class="n">val4</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
     <span class="n">val4</span><span class="o">.</span><span class="na">isFixed</span><span class="o">();</span> <span class="c1">//true  </span>
-    <span class="n">val4</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//false</span>
-</code></pre></div>
+    <span class="n">val4</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//false</span></code></pre></div>
 
 <p>Puedes descargarte el c&oacute;digo desde <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPhoneValidator.as">github</a>.</p>
 
@@ -239,6 +237,7 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-881783-13', 'singuerinc.com');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
 
     </script>

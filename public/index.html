@@ -158,8 +158,7 @@
 
     <span class="k">return</span> <span class="nx">Human</span><span class="p">;</span>
 
-<span class="p">});</span>
-</code></pre></div>
+<span class="p">});</span></code></pre></div>
 
 <div class="highlight"><pre><code class="js"><span class="c1">// John.js</span>
 <span class="nx">define</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Human&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Human</span><span class="p">){</span>
@@ -179,8 +178,7 @@
 
     <span class="k">return</span> <span class="nx">John</span><span class="p">;</span>
 
-<span class="p">});</span>
-</code></pre></div>
+<span class="p">});</span></code></pre></div>
 
 <div class="highlight"><pre><code class="js"><span class="c1">// main.js</span>
 <span class="nx">require</span><span class="p">([</span><span class="s1">&#39;Human&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Human</span><span class="p">,</span> <span class="nx">John</span><span class="p">){</span>
@@ -200,8 +198,7 @@
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">walk</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// John is walking quickly</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">getAge</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// 28</span>
 
-<span class="p">});</span>
-</code></pre></div>
+<span class="p">});</span></code></pre></div>
 
 
     <span class="post-categories"><span>#javascript</span><span>#requirejs</span></span>
@@ -253,8 +250,7 @@
 
 <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done!&#39;</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></div>
+<span class="p">});</span></code></pre></div>
 
 
     <span class="post-categories"><span>#nodejs</span><span>#async</span><span>#fabricjs</span><span>#canvas</span><span>#png</span></span>
@@ -274,8 +270,7 @@
 
 <div class="highlight"><pre><code class="sh"><span class="nv">$ </span>rm -rf /opt/boxen/repo/<span class="o">{</span>.librarian,.tmp<span class="o">}</span>
 <span class="nv">$ </span>rm -rf /opt/boxen/repo/Puppetfile.lock
-<span class="nv">$ </span>boxen --no-fde --debug
-</code></pre></div>
+<span class="nv">$ </span>boxen --no-fde --debug</code></pre></div>
 
 
     <span class="post-categories"><span>#boxen</span></span>
@@ -308,33 +303,33 @@
     <span class="post-date">23 Jan 2014</span>
 
     <h3>1. Install Apache</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ apt-get install apache2
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ apt-get install apache2
 </code></pre></div>
 <h3>2. Install rmagick &amp; nokigiri dependencies</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ apt-get install -y build-essential imagemagick libmagickcore-dev libmagickwand-dev libxml2 libxml2-dev libxslt1-dev
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ apt-get install -y build-essential imagemagick libmagickcore-dev libmagickwand-dev libxml2 libxml2-dev libxslt1-dev
 </code></pre></div>
 <h3>3. Install MySQL</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ apt-get update
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ apt-get update
 $ apt-get install -y mysql-client-core-5.5 mysql-server mysql-client libmysqlclient-dev
 // enter your top-secret-password
 </code></pre></div>
 <h3>4. Restart MySQL</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ /etc/init.d/mysql stop
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ /etc/init.d/mysql stop
 $ /etc/init.d/mysql start
 $ /usr/bin/mysqld_safe --user=mysql --skip-grant-tables
 </code></pre></div>
 <h3>5. Download Redmine</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">curl -O http://www.redmine.org/releases/redmine-2.3.4.zip
+<div class="highlight"><pre><code class="language-text" data-lang="text">curl -O http://www.redmine.org/releases/redmine-2.3.4.zip
 unzip redmine-2.3.4.zip
 </code></pre></div>
 <h3>6. Change database configuration</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ cp /config/database.yml.example /config/database.yml
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cp /config/database.yml.example /config/database.yml
 $ vim /config/database.yml
 // user: redmine
 // pass: redminepassword
 </code></pre></div>
 <h3>7. Install RVM + Ruby</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ curl -L https://get.rvm.io | bash -s stable
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ curl -L https://get.rvm.io | bash -s stable
 // logout or source here
 $ rvm install 2.1.0 --autolibs=enabled &amp;&amp; rvm --fuzzy alias create default 2.1.0
 </code></pre></div>
@@ -342,24 +337,24 @@ $ rvm install 2.1.0 --autolibs=enabled &amp;&amp; rvm --fuzzy alias create defau
 
 <ol>
 <li><p>Install Pussion Passenger + Apache mod</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ apt-get install -y libcurl4-openssl-dev apache2-threaded-dev libapr1-dev libaprutil1-dev
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ apt-get install -y libcurl4-openssl-dev apache2-threaded-dev libapr1-dev libaprutil1-dev
 $ gem install passenger
 $ passenger-install-apache2-module
 </code></pre></div></li>
 <li><p>Add the following lines to <code>/etc/apache2/mods-available/passenger.load</code>:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">LoadModule passenger_module /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36/buildout/apache2/mod_passenger.so
+<div class="highlight"><pre><code class="language-text" data-lang="text">LoadModule passenger_module /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36/buildout/apache2/mod_passenger.so
 </code></pre></div></li>
 <li><p>Add the following lines to <code>/etc/apache2/mods-available/passenger.conf</code>:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;IfModule mod_passenger.c&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;IfModule mod_passenger.c&gt;
   PassengerRoot /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36
   PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.1.0/wrappers/ruby
 &lt;/IfModule&gt; 
 </code></pre></div></li>
 <li><p>Enable Passenger as Apache module:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">sudo a2enmod passenger  
+<div class="highlight"><pre><code class="language-text" data-lang="text">sudo a2enmod passenger  
 </code></pre></div></li>
 <li><p>Add a virtual host to your Apache configuration file and set its DocumentRoot to <code>/var/sites/redmine.domain.com/public</code>:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;VirtualHost *:80&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;VirtualHost *:80&gt;
    ServerName redmine.domain.com
    DocumentRoot /var/sites/redmine.domain.com/public
    &lt;Directory /var/sites/redmine.domain.com/public&gt;
@@ -375,23 +370,23 @@ $ passenger-install-apache2-module
 </ol>
 
 <h3>8. Enable Apache site</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ sudo a2ensite redmine
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ sudo a2ensite redmine
 </code></pre></div>
 <h3>9. Install dependencies</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ gem install bundler
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ gem install bundler
 </code></pre></div>
 <h3>10. Install Redmine dependencies</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ bundle install
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ bundle install
 </code></pre></div>
 <h3>11. Session store secret generation</h3>
 
 <p>This step generates a random key used by Rails to encode cookies storing session data thus preventing their tampering.</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ rake generate_secret_token
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ rake generate_secret_token
 </code></pre></div>
 <h3>12. Database schema objects creation</h3>
 
 <p>Create the database structure</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ RAILS_ENV=production rake db:migrate
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ RAILS_ENV=production rake db:migrate
 </code></pre></div>
 <h3>13. File system permissions</h3>
 
@@ -405,16 +400,16 @@ $ passenger-install-apache2-module
 </ol>
 
 <p><b></b></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ mkdir -p tmp tmp/pdf public/plugin_assets
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ mkdir -p tmp tmp/pdf public/plugin_assets
 $ sudo chown -R nobody:nogroup files log tmp public/plugin_assets
 $ sudo chmod -R 755 files log tmp public/plugin_assets
 </code></pre></div>
 <h3>14. Email configuration (gmail)</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ cp config/configuration.yml.example config/configuration.yml
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cp config/configuration.yml.example config/configuration.yml
 $ vim config/configuration.yml
 </code></pre></div>
 <p>Edit <code>configuration.yml</code></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">production:
+<div class="highlight"><pre><code class="language-text" data-lang="text">production:
   email_delivery:
     delivery_method: :smtp
     smtp_settings:
@@ -427,12 +422,12 @@ $ vim config/configuration.yml
       password: &quot;secret&quot;
 </code></pre></div>
 <h3>15. Theme (optional)</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ cd public/themes/
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cd public/themes/
 $ curl -O http://www.redminecrm.com/license_manager/9722/circle_theme-1_0_1.zip
 $ unzip circle_theme-1_0_1.zip
 </code></pre></div>
 <h3>16. Test Redmine</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ ruby script/rails server webrick -e production
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ ruby script/rails server webrick -e production
 </code></pre></div>
 <blockquote>
 <p>Note: Webrick is not suitable for production use, please only use webrick for testing that the installation up to this point is functional.</p>
@@ -465,6 +460,7 @@ $ unzip circle_theme-1_0_1.zip
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-881783-13', 'singuerinc.com');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
 
     </script>

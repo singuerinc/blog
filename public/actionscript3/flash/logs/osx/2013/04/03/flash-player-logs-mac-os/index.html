@@ -135,8 +135,7 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
 <span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;Flashlogs test&#39;</span> <span class="p">|</span> tee <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
 
 <span class="c"># Restart the browser (w/ Flash Player &quot;Debug&quot; version) and execute:</span>
-<span class="nv">$ </span>tail -f <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span>
-</code></pre></div>
+<span class="nv">$ </span>tail -f <span class="s2">&quot;${LG_DIR}/flashlog.txt&quot;</span></code></pre></div>
 
 <p>Para ejecutarlo:</p>
 
@@ -144,16 +143,14 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
 <li>Abre simplemente una ventana de Terminal y escribe:</li>
 </ul>
 
-<div class="highlight"><pre><code class="sh">curl -L https://gist.github.com/singuerinc/5296967/raw/logs.sh <span class="p">|</span> sh
-</code></pre></div>
+<div class="highlight"><pre><code class="sh">curl -L https://gist.github.com/singuerinc/5296967/raw/logs.sh <span class="p">|</span> sh</code></pre></div>
 
 <ul>
 <li><p>Reinicia el navegador.</p></li>
 <li><p>Visualiza los logs ejecutando en el Terminal lo siguiente:</p></li>
 </ul>
 
-<div class="highlight"><pre><code class="sh">tail -f ~/Library/Preferences/Macromedia/Flash<span class="se">\ </span>Player/Logs/flashlog.txt
-</code></pre></div>
+<div class="highlight"><pre><code class="sh">tail -f ~/Library/Preferences/Macromedia/Flash<span class="se">\ </span>Player/Logs/flashlog.txt</code></pre></div>
 
   <span class="post-categories"><span>#actionscript3</span><span>#flash</span><span>#logs</span><span>#osx</span></span>
 </div>
@@ -216,6 +213,7 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-881783-13', 'singuerinc.com');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
 
     </script>

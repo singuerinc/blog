@@ -161,8 +161,7 @@
     <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">animate</span><span class="p">);</span>
 <span class="p">};</span>
 
-<span class="nx">animate</span><span class="p">();</span>
-</code></pre></div>
+<span class="nx">animate</span><span class="p">();</span></code></pre></div>
 
 <p><a href="https://gist.github.com/singuerinc/8600823" target="_blank">Code source</a></p>
 
@@ -188,8 +187,7 @@
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>play<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;p&gt;</span>Lorem ipsum Duis sit nisi occaecat ut<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;video</span> <span class="na">id=</span><span class="s">&quot;video&quot;</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;video.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;video</span> <span class="na">id=</span><span class="s">&quot;video&quot;</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;video.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span></code></pre></div>
 
 <p><strong>The solution:</strong></p>
 
@@ -207,8 +205,7 @@
 
 btn.addEventListener(event, function(e){
     video.play();
-});
-</code></pre></div>
+});</code></pre></div>
 
 <p><a href="/code/day-021/index.html" target="_blank">Demo</a></p>
 
@@ -235,8 +232,7 @@ btn.addEventListener(event, function(e){
 
 <p>For <strong>Lubuntu 12.04</strong> or below</p>
 
-<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lxdm/default.conf
-</code></pre></div>
+<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lxdm/default.conf</code></pre></div>
 
 <p>And change the line:</p>
 
@@ -244,8 +240,7 @@ btn.addEventListener(event, function(e){
 
 <p>For <strong>Lubuntu 12.10</strong> and above</p>
 
-<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lightdm/lightdm.conf
-</code></pre></div>
+<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lightdm/lightdm.conf</code></pre></div>
 
 <p>And then change this line:</p>
 
@@ -258,7 +253,7 @@ btn.addEventListener(event, function(e){
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop+copy/">
+      <a href="/ubuntu/desktop/server/2014/01/19/code-day-019-install-ubuntu-desktop%20copy/">
         Ubuntu desktop in Ubuntu Server
       </a>
     </h1>
@@ -275,8 +270,7 @@ btn.addEventListener(event, function(e){
 <span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span> <span class="c1">// full version</span>
 
  <span class="c1">// or without all the stuff...</span>
-<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">install</span><span class="o">-</span><span class="nx">recommends</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span>
-</code></pre></div>
+<span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">install</span><span class="o">-</span><span class="nx">recommends</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span></code></pre></div>
 
 
     <span class="post-categories"><span>#ubuntu</span><span>#desktop</span><span>#server</span></span>
@@ -310,8 +304,7 @@ btn.addEventListener(event, function(e){
     <span class="nx">puppet</span><span class="p">.</span><span class="nx">manifests_path</span> <span class="o">=</span> <span class="s1">&#39;puppet/manifests&#39;</span>
     <span class="nx">puppet</span><span class="p">.</span><span class="nx">module_path</span>    <span class="o">=</span> <span class="s1">&#39;puppet/modules&#39;</span>
   <span class="nx">end</span>
-<span class="nx">end</span>
-</code></pre></div>
+<span class="nx">end</span></code></pre></div>
 
 
     <span class="post-categories"><span>#vagrant</span><span>#puppet</span></span>
@@ -340,6 +333,7 @@ btn.addEventListener(event, function(e){
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-881783-13', 'singuerinc.com');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
 
     </script>

@@ -150,8 +150,7 @@
 
     <span class="k">return</span> <span class="nx">Human</span><span class="p">;</span>
 
-<span class="p">});</span>
-</code></pre></div>
+<span class="p">});</span></code></pre></div>
 
 <div class="highlight"><pre><code class="js"><span class="c1">// John.js</span>
 <span class="nx">define</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Human&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Human</span><span class="p">){</span>
@@ -171,8 +170,7 @@
 
     <span class="k">return</span> <span class="nx">John</span><span class="p">;</span>
 
-<span class="p">});</span>
-</code></pre></div>
+<span class="p">});</span></code></pre></div>
 
 <div class="highlight"><pre><code class="js"><span class="c1">// main.js</span>
 <span class="nx">require</span><span class="p">([</span><span class="s1">&#39;Human&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Human</span><span class="p">,</span> <span class="nx">John</span><span class="p">){</span>
@@ -192,8 +190,7 @@
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">walk</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// John is walking quickly</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">getAge</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// 28</span>
 
-<span class="p">});</span>
-</code></pre></div>
+<span class="p">});</span></code></pre></div>
 
   <span class="post-categories"><span>#javascript</span><span>#requirejs</span></span>
 </div>
@@ -256,6 +253,7 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-881783-13', 'singuerinc.com');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
 
     </script>

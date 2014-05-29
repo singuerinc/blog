@@ -177,8 +177,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
         <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>  
     <span class="o">}</span>  
 <span class="o">}</span>  
-<span class="o">}</span>
-</code></pre></div>
+<span class="o">}</span></code></pre></div>
 
 <p>Y algunos ejemplos:</p>
 
@@ -190,8 +189,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 <span class="kd">var</span> <span class="n">val2</span><span class="p">:</span><span class="kt">SpainDNIValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainDNIValidator</span><span class="o">(</span><span class="s1">&#39;12345678Z&#39;</span><span class="o">);</span>
 <span class="n">val2</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true</span>
 <span class="n">val2</span><span class="o">.</span><span class="na">isNIF</span><span class="o">();</span> <span class="c1">//true</span>
-<span class="n">val2</span><span class="o">.</span><span class="na">isNIE</span><span class="o">();</span> <span class="c1">//false</span>
-</code></pre></div>
+<span class="n">val2</span><span class="o">.</span><span class="na">isNIE</span><span class="o">();</span> <span class="c1">//false</span></code></pre></div>
 
 <p>Puedes encontrar la &uacute;ltima versi&oacute;n en <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as">github</a>.</p>
 
@@ -254,12 +252,11 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
         <span class="k">return</span> <span class="n">_isMobile</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
+<span class="o">}</span></code></pre></div>
 
 <p>Algunos ejemplos:</p>
 
-<div class="highlight"><pre><code class="as3">  <span class="kd">var</span> <span class="n">val1</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;639 125 230&#39;</span><span class="o">);</span>  
+<div class="highlight"><pre><code class="as3"><span class="kd">var</span> <span class="n">val1</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;639 125 230&#39;</span><span class="o">);</span>  
     <span class="n">val1</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
     <span class="n">val1</span><span class="o">.</span><span class="na">isFixed</span><span class="o">();</span> <span class="c1">//false  </span>
     <span class="n">val1</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//true  </span>
@@ -277,8 +274,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
     <span class="kd">var</span> <span class="n">val4</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;932 510 258&#39;</span><span class="o">);</span>  
     <span class="n">val4</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
     <span class="n">val4</span><span class="o">.</span><span class="na">isFixed</span><span class="o">();</span> <span class="c1">//true  </span>
-    <span class="n">val4</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//false</span>
-</code></pre></div>
+    <span class="n">val4</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//false</span></code></pre></div>
 
 <p>Puedes descargarte el c&oacute;digo desde <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPhoneValidator.as">github</a>.</p>
 
@@ -366,8 +362,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
         <span class="k">return</span> <span class="n">state</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">?</span> <span class="s1">&#39;&#39;</span> <span class="o">:</span> <span class="o">(</span><span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="o">(</span><span class="n">state</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)).</span><span class="n">substr</span><span class="o">(-</span><span class="mi">2</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
+<span class="o">}</span></code></pre></div>
 
 <p>Algunos ejemplos <strong>v&aacute;lidos</strong>:</p>
 
@@ -379,8 +374,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 <span class="kd">var</span> <span class="n">sv2</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;28001&#39;</span><span class="o">);</span>  
 <span class="n">sv2</span><span class="o">.</span><span class="na">stateName</span><span class="o">;</span> <span class="c1">//Madrid  </span>
 <span class="n">sv2</span><span class="o">.</span><span class="na">stateCode</span><span class="o">;</span> <span class="c1">//28  </span>
-<span class="n">sv2</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true</span>
-</code></pre></div>
+<span class="n">sv2</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true</span></code></pre></div>
 
 <p>Y otros que son <strong>inv&aacute;lidos</strong>:</p>
 
@@ -392,8 +386,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 <span class="kd">var</span> <span class="n">sv4</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;80800&#39;</span><span class="o">);</span>  
 <span class="n">sv4</span><span class="o">.</span><span class="na">stateName</span><span class="o">;</span> <span class="c1">//null  </span>
 <span class="n">sv4</span><span class="o">.</span><span class="na">stateCode</span><span class="o">;</span> <span class="c1">//null  </span>
-<span class="n">sv4</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//false</span>
-</code></pre></div>
+<span class="n">sv4</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//false</span></code></pre></div>
 
 
     <span class="post-categories"><span>#actionscript3</span><span>#validators</span><span>#postal-code</span><span>#spain</span></span>
@@ -443,8 +436,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
             <span class="k">return</span> <span class="n">_changeSignal</span> <span class="o">||=</span> <span class="k">new</span> <span class="kt">ChangeSignal</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>  
         <span class="o">}</span>  
     <span class="o">}</span>  
-<span class="o">}</span>
-</code></pre></div>
+<span class="o">}</span></code></pre></div>
 
 <p>Ahora, para vincular el <strong>TextField</strong> con <strong>User</strong> necesitamos de <strong>Binder</strong>, esta vincular&aacute; los dos objetos:</p>
 
@@ -479,8 +471,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
             <span class="n">user</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;User&#39;</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="na">random</span><span class="o">();</span>  
         <span class="o">}</span>  
     <span class="o">}</span>  
-<span class="o">}</span>
-</code></pre></div>
+<span class="o">}</span></code></pre></div>
 
 <p>Listo, ahora cada vez que hagamos actualicemos <strong>user.name</strong> autom&aacute;ticamente <strong>Binder</strong> har&aacute; que ese valor se refleje en el <strong>TextField</strong>!<br>
 <a href="https://github.com/robertpenner/as3-signals/tree/binding">Source</a></p>
@@ -512,6 +503,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-881783-13', 'singuerinc.com');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
 
     </script>
