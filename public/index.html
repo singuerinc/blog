@@ -5,7 +5,6 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
@@ -18,7 +17,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/lanyon.css">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link href='//fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
@@ -38,7 +37,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>Feel free to copy anything you need. Carry on!</p>
+    <p>I’m a full stack developer living in Barcelona. I’m currently working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a>.<br/>I make apps in HTML5, Javascript, Node.js, Ruby on Rails among others technologies.<br/>Feel free to copy anything you need. Carry on!</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -105,13 +104,13 @@
         <div class="posts">
   
   <div class="post">
+    <span class="post-date">26 Jul 2014</span>
     <h1 class="post-title">
       <a href="/javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/">
         Mix of RequireJS, Marionette.js and Facebook API
       </a>
     </h1>
 
-    <span class="post-date">26 Jul 2014</span>
 
     <p>This is a quick example of use a serie of libraries that work great together.<br/>I like a lot <a href="http://requirejs.org" target="_blank">RequireJS</a>, the way I can organize my modules/code with it. <a href="http://marionettejs.com/">Marionette.js</a> do a great work with the views, it takes care about everything: listeners, selectors, events, etc. And with the <a href="https://developers.facebook.com/docs/javascript" target="_blank">Facebook SDK</a> we have a lot of info to build complex or simple applications like the next one.</p>
 
@@ -119,7 +118,7 @@
 
 <p>Search for your Facebook ID or, for example: &quot;obama&quot; or &quot;mickeymouse&quot;</p>
 
-<iframe src="code/labs/require-marionette-facebook/index.html" style="border: 1px solid grey; width: 100%; height: 263px; background-color: aliceblue"></iframe>
+<iframe src="/code/labs/require-marionette-facebook/index.html" style="border: 1px solid grey; width: 100%; height: 263px; background-color: aliceblue"></iframe>
 
 <h3>How it works?</h3>
 
@@ -143,100 +142,21 @@ Let configure RequireJS, resolve some dependencies and start our application:
   </div>
   
   <div class="post">
+    <span class="post-date">17 Mar 2014</span>
     <h1 class="post-title">
       <a href="/javascript/requirejs/2014/03/17/requirejs-and-javascript-inheritance/">
         Require.js and Javascript inheritance
       </a>
     </h1>
 
-    <span class="post-date">17 Mar 2014</span>
 
     <p>Quick example, Require.js + Javascript inheritance:</p>
 
-<div class="highlight"><pre><code class="js"><span class="c1">// Human.js</span>
-<span class="nx">define</span><span class="p">(</span><span class="s1">&#39;Human&#39;</span><span class="p">,</span> <span class="p">[],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<script src="https://gist.github.com/singuerinc/9599996.js?file=Human.js"></script>
 
-    <span class="c1">// private var</span>
-    <span class="kd">var</span> <span class="nx">_numEyes</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<script src="https://gist.github.com/singuerinc/9599996.js?file=John.js"></script>
 
-    <span class="c1">// constructor</span>
-    <span class="kd">var</span> <span class="nx">Human</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-
-        <span class="c1">// public var</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-
-        <span class="c1">// pseudo-protected var</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">_age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="p">};</span>
-
-    <span class="c1">// instance method</span>
-    <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">walk</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39; is walking&#39;</span><span class="p">;</span>
-    <span class="p">};</span>
-
-    <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setAge</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">_age</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-    <span class="p">};</span>
-
-    <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getAge</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_age</span><span class="p">;</span>
-    <span class="p">};</span>
-
-    <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getNumEyes</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">_numEyes</span><span class="p">;</span>
-    <span class="p">};</span>
-
-    <span class="c1">// class static method</span>
-    <span class="nx">Human</span><span class="p">.</span><span class="nx">GET_TYPE</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s1">&#39;biped&#39;</span><span class="p">;</span>
-    <span class="p">};</span>
-
-    <span class="c1">// class static const</span>
-    <span class="nx">Human</span><span class="p">.</span><span class="nx">NUM_LEGS</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-
-    <span class="k">return</span> <span class="nx">Human</span><span class="p">;</span>
-
-<span class="p">});</span></code></pre></div>
-
-<div class="highlight"><pre><code class="js"><span class="c1">// John.js</span>
-<span class="nx">define</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Human&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Human</span><span class="p">){</span>
-
-    <span class="kd">var</span> <span class="nx">John</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="nx">Human</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">_age</span> <span class="o">=</span> <span class="mi">28</span><span class="p">;</span>
-    <span class="p">};</span>
-
-    <span class="nx">John</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
-
-    <span class="kd">var</span> <span class="nx">_super_</span> <span class="o">=</span> <span class="nx">Human</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
-
-    <span class="nx">John</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">walk</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">_super_</span><span class="p">.</span><span class="nx">walk</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; quickly&#39;</span><span class="p">;</span>
-    <span class="p">};</span>
-
-    <span class="k">return</span> <span class="nx">John</span><span class="p">;</span>
-
-<span class="p">});</span></code></pre></div>
-
-<div class="highlight"><pre><code class="js"><span class="c1">// main.js</span>
-<span class="nx">require</span><span class="p">([</span><span class="s1">&#39;Human&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Human</span><span class="p">,</span> <span class="nx">John</span><span class="p">){</span>
-
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">Human</span><span class="p">.</span><span class="nx">GET_TYPE</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// biped</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">Human</span><span class="p">.</span><span class="nx">NUM_LEGS</span> <span class="p">);</span> <span class="c1">// 2</span>
-
-
-    <span class="kd">var</span> <span class="nx">human</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Human</span><span class="p">(</span><span class="s1">&#39;Peter&#39;</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">human</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span> <span class="c1">// Peter</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">human</span><span class="p">.</span><span class="nx">walk</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// Peter is walking</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">human</span><span class="p">.</span><span class="nx">getAge</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// 0</span>
-
-
-    <span class="kd">var</span> <span class="nx">john</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">John</span><span class="p">();</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span> <span class="c1">// John</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">walk</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// John is walking quickly</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">john</span><span class="p">.</span><span class="nx">getAge</span><span class="p">()</span> <span class="p">);</span> <span class="c1">// 28</span>
-
-<span class="p">});</span></code></pre></div>
+<script src="https://gist.github.com/singuerinc/9599996.js?file=main.js"></script>
 
 
     <span class="post-categories"><span>#javascript</span><span>#requirejs</span></span>
@@ -244,51 +164,17 @@ Let configure RequireJS, resolve some dependencies and start our application:
   </div>
   
   <div class="post">
+    <span class="post-date">26 Jan 2014</span>
     <h1 class="post-title">
       <a href="/nodejs/async/fabricjs/canvas/png/2014/01/26/code-day-026-batch-image-generation-with-nodejs/">
         Batch image generation with Node.js
       </a>
     </h1>
 
-    <span class="post-date">26 Jan 2014</span>
 
-    <p>I wanted to generate up to 2000 pngs with random names, do that in Photoshop is a pain in the a... So I wrote this little code with Node.js, async and Fabricjs:</p>
+    <p>I wanted to generate up to 2000 pngs with random names, do that in Photoshop is a pain in the a... So I wrote this little code with Node.js, async and <a href="http://fabricjs.com/" target="_blank">Fabric.js</a>:</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">),</span>
-    <span class="nx">fabric</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fabric&#39;</span><span class="p">).</span><span class="nx">fabric</span><span class="p">,</span>
-    <span class="nx">async</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;async&#39;</span><span class="p">);</span>
-
-<span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Coleman&quot;</span><span class="p">,</span> <span class="s2">&quot;Simon&quot;</span><span class="p">,</span> <span class="p">...];</span>
-
-<span class="nx">async</span><span class="p">.</span><span class="nx">eachSeries</span><span class="p">(</span><span class="nx">names</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-
-  <span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/images/&#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">out</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">fabric</span><span class="p">.</span><span class="nx">createCanvasForNode</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">fabric</span><span class="p">.</span><span class="nx">Text</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="p">{</span>
-      <span class="nx">fontFamily</span><span class="o">:</span> <span class="s1">&#39;Christopherhand&#39;</span><span class="p">,</span>
-      <span class="nx">fontSize</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
-      <span class="nx">fill</span><span class="o">:</span> <span class="s1">&#39;#FF0000&#39;</span><span class="p">,</span>
-      <span class="nx">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="nx">top</span><span class="o">:</span> <span class="mi">0</span>
-  <span class="p">});</span>
-
-  <span class="nx">canvas</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">stream</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">createPNGStream</span><span class="p">();</span>
-  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">out</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span>
-  <span class="p">});</span>
-
-  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">callback</span><span class="p">()</span>
-  <span class="p">});</span>
-
-<span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done!&#39;</span><span class="p">);</span>
-<span class="p">});</span></code></pre></div>
+<script src="https://gist.github.com/singuerinc/994d413e41cdeace4766.js?file=app.js"></script>
 
 
     <span class="post-categories"><span>#nodejs</span><span>#async</span><span>#fabricjs</span><span>#canvas</span><span>#png</span></span>
@@ -296,13 +182,13 @@ Let configure RequireJS, resolve some dependencies and start our application:
   </div>
   
   <div class="post">
+    <span class="post-date">25 Jan 2014</span>
     <h1 class="post-title">
       <a href="/boxen/2014/01/25/code-day-025-update-boxen/">
         Update Boxen
       </a>
     </h1>
 
-    <span class="post-date">25 Jan 2014</span>
 
     <p>If you have any problem to update Boxen, try this:</p>
 
@@ -316,13 +202,13 @@ Let configure RequireJS, resolve some dependencies and start our application:
   </div>
   
   <div class="post">
+    <span class="post-date">24 Jan 2014</span>
     <h1 class="post-title">
       <a href="/npm/nodejs/nodejitsu/registry/2014/01/24/code-day-024-try-this-ir-npm-registry-is-down/">
         Alternative when npm registry is down
       </a>
     </h1>
 
-    <span class="post-date">24 Jan 2014</span>
 
     <p><code>$ npm install --reg http://registry.nodejitsu.com</code></p>
 

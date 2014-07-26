@@ -11,7 +11,7 @@ title: About
 
 ![singuerinc](/public/images/singuerinc.png)
 
-I’m a dev living and working in Barcelona, I'm working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a>.<br/>I’ve worked at <a href="http://www.doubleyou.com" target="_blank">DoubleYou</a> for several years as a Flash developer. Currently I make front and back-end apps in Javascript, Ruby on Rails and Node.js among others.<br/>I speak Spanish and sometimes Italian.
+I'm a full stack developer living in Barcelona. I'm currently working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a>.<br/>I've worked at <a href="http://www.doubleyou.com" target="_blank">DoubleYou</a> for several years as Flash developer.<br/>I make apps in HTML5, Javascript, Node.js, Ruby on Rails among others technologies.<br/><br/>I speak Spanish and sometimes Italian.
 
 ### Stay in touch
 

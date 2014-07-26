@@ -5,7 +5,6 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
@@ -18,7 +17,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/lanyon.css">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link href='//fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
@@ -38,7 +37,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>I’m a dev living and working in Barcelona, I’m working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a><br/>Feel free to copy anything you need. Carry on!</p>
+    <p>I’m a full stack developer living in Barcelona. I’m currently working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a>.<br/>I make apps in HTML5, Javascript, Node.js, Ruby on Rails among others technologies.<br/>Feel free to copy anything you need. Carry on!</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -103,45 +102,11 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Batch image generation with Node.js</h1>
   <span class="post-date">26 Jan 2014</span>
-  <p>I wanted to generate up to 2000 pngs with random names, do that in Photoshop is a pain in the a... So I wrote this little code with Node.js, async and Fabricjs:</p>
+  <h1 class="post-title">Batch image generation with Node.js</h1>
+  <p>I wanted to generate up to 2000 pngs with random names, do that in Photoshop is a pain in the a... So I wrote this little code with Node.js, async and <a href="http://fabricjs.com/" target="_blank">Fabric.js</a>:</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">),</span>
-    <span class="nx">fabric</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fabric&#39;</span><span class="p">).</span><span class="nx">fabric</span><span class="p">,</span>
-    <span class="nx">async</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;async&#39;</span><span class="p">);</span>
-
-<span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Coleman&quot;</span><span class="p">,</span> <span class="s2">&quot;Simon&quot;</span><span class="p">,</span> <span class="p">...];</span>
-
-<span class="nx">async</span><span class="p">.</span><span class="nx">eachSeries</span><span class="p">(</span><span class="nx">names</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-
-  <span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/images/&#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">out</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">fabric</span><span class="p">.</span><span class="nx">createCanvasForNode</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">fabric</span><span class="p">.</span><span class="nx">Text</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="p">{</span>
-      <span class="nx">fontFamily</span><span class="o">:</span> <span class="s1">&#39;Christopherhand&#39;</span><span class="p">,</span>
-      <span class="nx">fontSize</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
-      <span class="nx">fill</span><span class="o">:</span> <span class="s1">&#39;#FF0000&#39;</span><span class="p">,</span>
-      <span class="nx">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="nx">top</span><span class="o">:</span> <span class="mi">0</span>
-  <span class="p">});</span>
-
-  <span class="nx">canvas</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">stream</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">createPNGStream</span><span class="p">();</span>
-  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">out</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span>
-  <span class="p">});</span>
-
-  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">callback</span><span class="p">()</span>
-  <span class="p">});</span>
-
-<span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done!&#39;</span><span class="p">);</span>
-<span class="p">});</span></code></pre></div>
+<script src="https://gist.github.com/singuerinc/994d413e41cdeace4766.js?file=app.js"></script>
 
   <span class="post-categories"><span>#nodejs</span><span>#async</span><span>#fabricjs</span><span>#canvas</span><span>#png</span></span>
 </div>
