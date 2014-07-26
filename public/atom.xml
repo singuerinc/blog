@@ -4,13 +4,44 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-05-29T23:44:55+02:00</updated>
+ <updated>2014-07-26T15:09:04+02:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Mix of RequireJS, Marionette.js and Facebook API</title>
+   <link href="http://blog.singuerinc.com/javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/"/>
+   <updated>2014-07-26T00:00:00+02:00</updated>
+   <id>http://blog.singuerinc.com/javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook</id>
+   <content type="html">&lt;p&gt;This is a quick example of use a serie of libraries that work great together.&lt;br/&gt;I like a lot &lt;a href=&quot;http://requirejs.org&quot; target=&quot;_blank&quot;&gt;RequireJS&lt;/a&gt;, the way I can organize my modules/code with it. &lt;a href=&quot;http://marionettejs.com/&quot;&gt;Marionette.js&lt;/a&gt; do a great work with the views, it takes care about everything: listeners, selectors, events, etc. And with the &lt;a href=&quot;https://developers.facebook.com/docs/javascript&quot; target=&quot;_blank&quot;&gt;Facebook SDK&lt;/a&gt; we have a lot of info to build complex or simple applications like the next one.&lt;/p&gt;
+
+&lt;p&gt;The example is very straightforward:&lt;/p&gt;
+
+&lt;p&gt;Search for your Facebook ID or, for example: &amp;quot;obama&amp;quot; or &amp;quot;mickeymouse&amp;quot;&lt;/p&gt;
+
+&lt;iframe src=&quot;code/labs/require-marionette-facebook/index.html&quot; style=&quot;border: 1px solid grey; width: 100%; height: 263px; background-color: aliceblue&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;How it works?&lt;/h3&gt;
+
+&lt;p&gt;This is our basic layout:
+&lt;script src=&quot;https://gist.github.com/singuerinc/7f3c46af46752ae2aa81.js?file=index.html&quot;&gt;&lt;/script&gt;
+Let configure RequireJS, resolve some dependencies and start our application:
+&lt;script src=&quot;https://gist.github.com/singuerinc/7f3c46af46752ae2aa81.js?file=main.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://gist.github.com/singuerinc/7f3c46af46752ae2aa81.js?file=app.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The SearchView listens the &amp;quot;keyup&amp;quot; event and dispatches the current input value. It also listens when the model is updated and changes the style of himself.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/singuerinc/7f3c46af46752ae2aa81.js?file=SearchView.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The UserView displays the information every time that the model is updated.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/singuerinc/7f3c46af46752ae2aa81.js?file=UserView.js&quot;&gt;&lt;/script&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Require.js and Javascript inheritance</title>
