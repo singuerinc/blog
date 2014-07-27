@@ -19,9 +19,8 @@ body {
 #search-box-input {
     width: 300px;
     margin-bottom: 10px;
-    border: 0;
-    background: #3b5998;
-    color: white;
+    border: 1px solid #ccc;
+    color: black;
     font-size: 2.5em;
     font-family: 'Roboto';
     font-weight: 300;
@@ -30,7 +29,8 @@ body {
 }
 
 #search-box.valid #search-box-input {
-    background-color: green;
+    border: 1px solid springgreen;
+    background-color: springgreen;
 }
 
 ul {
@@ -45,6 +45,11 @@ img.picture {
     border: 0;
 }
 
+ul li, ul li a {
+    color: black;
+}
+
 ul li span {
+    color: grey;
     font-weight: 400;
 }

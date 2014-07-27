@@ -15,7 +15,7 @@ The example is very straightforward:
 
 Search for your Facebook ID or, for example: "obama" or "mickeymouse"
 
-<iframe src="/code/labs/require-marionette-facebook/index.html" style="border: 1px solid grey; width: 100%; height: 263px; background-color: aliceblue"></iframe>
+<iframe src="/code/labs/require-marionette-facebook/index.html" style="border: 1px solid grey; width: 100%; height: 263px;"></iframe>
 
 ### How it works?
 This is our basic layout:

@@ -73,6 +73,8 @@
     
       
     
+      
+    
 
     <a class="sidebar-nav-item" href="https://github.com/singuerinc">GitHub</a>
     <a class="sidebar-nav-item" href="https://twitter.com/singuerinc">@singuerinc</a>
@@ -104,6 +106,53 @@
         <div class="posts">
   
   <div class="post">
+    <span class="post-date">27 Jul 2014</span>
+    <h1 class="post-title">
+      <a href="/javascript/requirejs/marionette/flickr/2014/07/27/requirejs-marionette-flickr/">
+        Photogallery: RequireJS, Marionette.js and Flickr API
+      </a>
+    </h1>
+
+
+    <p>Another quick example of use <a href="http://requirejs.org" target="_blank">RequireJS</a> and <a href="http://marionettejs.com/">Marionette.js</a> together.
+In this application the user can search public photos on by tags Flickr.</p>
+
+<iframe src="/code/labs/require-marionette-flickr/index.html" style="border: 1px solid grey; width: 100%; height: 735px;"></iframe>
+
+<h3>How it works?</h3>
+
+<p>This is our basic layout:</p>
+
+<script src="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=index.html"></script>
+
+<p>Let configure RequireJS, resolve some dependencies and start our application:</p>
+
+<script src="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=main.js"></script>
+
+<p>Create a Marionette application and put this code:</p>
+
+<script src="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=app.js"></script>
+
+<p>The SearchView listens the &quot;keyup&quot; event and dispatches the current input value.</p>
+
+<script src="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=SearchView.js"></script>
+
+<p>The GalleryView is very simple: it has a collection and uses an &quot;ul&quot; as tag:</p>
+
+<script src="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=GalleryView.js"></script>
+
+<p>The GalleryItemView is the childView of GalleryView, it defines a basic template to display the image:</p>
+
+<script src="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=GalleryItemView.js"></script>
+
+<p>You can download the code from: <a href="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e" taget="_blank">Gist</a></p>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#requirejs</span><span>#marionette</span><span>#flickr</span></span>
+
+  </div>
+  
+  <div class="post">
     <span class="post-date">26 Jul 2014</span>
     <h1 class="post-title">
       <a href="/javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/">
@@ -118,7 +167,7 @@
 
 <p>Search for your Facebook ID or, for example: &quot;obama&quot; or &quot;mickeymouse&quot;</p>
 
-<iframe src="/code/labs/require-marionette-facebook/index.html" style="border: 1px solid grey; width: 100%; height: 263px; background-color: aliceblue"></iframe>
+<iframe src="/code/labs/require-marionette-facebook/index.html" style="border: 1px solid grey; width: 100%; height: 263px;"></iframe>
 
 <h3>How it works?</h3>
 
@@ -198,22 +247,6 @@ Let configure RequireJS, resolve some dependencies and start our application:
 
 
     <span class="post-categories"><span>#boxen</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">24 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/npm/nodejs/nodejitsu/registry/2014/01/24/code-day-024-try-this-ir-npm-registry-is-down/">
-        Alternative when npm registry is down
-      </a>
-    </h1>
-
-
-    <p><code>$ npm install --reg http://registry.nodejitsu.com</code></p>
-
-
-    <span class="post-categories"><span>#npm</span><span>#nodejs</span><span>#nodejitsu</span><span>#registry</span></span>
 
   </div>
   

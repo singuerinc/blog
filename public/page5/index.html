@@ -73,6 +73,8 @@
     
       
     
+      
+    
 
     <a class="sidebar-nav-item" href="https://github.com/singuerinc">GitHub</a>
     <a class="sidebar-nav-item" href="https://twitter.com/singuerinc">@singuerinc</a>
@@ -102,6 +104,29 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <span class="post-date">09 Jan 2014</span>
+    <h1 class="post-title">
+      <a href="/openshift/nodejs/2014/01/09/code-day-009-any-nodejs-version-openshift/">
+        Any node version on OpenShift
+      </a>
+    </h1>
+
+
+    <p>Hoy: &iquest;C&oacute;mo instalamos una versi&oacute;n espec&iacute;fica de Node.js en OpenShift?</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git clone REPO_URL
+<span class="nv">$ </span>git remote add upstream -m master git://github.com/openshift/nodejs-custom-version-openshift.git
+<span class="nv">$ </span>git pull -s recursive -X theirs upstream master
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;0.10.15&quot;</span> &gt;&gt; .openshift/markers/NODEJS_VERSION
+<span class="nv">$ </span>git commit . -m <span class="s1">&#39;use Node version 0.10.15&#39;</span>
+<span class="nv">$ </span>git push origin master</code></pre></div>
+
+
+    <span class="post-categories"><span>#openshift</span><span>#nodejs</span></span>
+
+  </div>
   
   <div class="post">
     <span class="post-date">08 Jan 2014</span>
@@ -268,36 +293,6 @@
 
 
     <span class="post-categories"><span>#actionscript3</span><span>#validation</span><span>#italy</span><span>#phone</span><span>#regex</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">04 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/javascript/validation/spain/phone/regex/2014/01/04/code-day-004-spain-phone-validation/">
-        Spain - Phone validation
-      </a>
-    </h1>
-
-
-    <p>Este es muy simple, una expresi&oacute;n regular para validar tel&eacute;fonos de Espa&ntilde;a en Javascript.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">validate</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\s/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">9</span> <span class="o">&amp;&amp;</span> <span class="sr">/^[679]{1}[0-9]{8}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;639 125 230&#39;</span><span class="p">);</span> <span class="c1">//true</span>
-<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;668515187&#39;</span><span class="p">);</span>   <span class="c1">//true</span>
-<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;133 560 158&#39;</span><span class="p">);</span> <span class="c1">//false</span>
-<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;932 510 258&#39;</span><span class="p">);</span> <span class="c1">//true</span></code></pre></div>
-
-<p>Y en ActionScript 3 la clase completa puedes encontrarla <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPhoneValidator.as" target="_blank">aqu&iacute;</a></p>
-
-<p><a href="/code/day-004/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#validation</span><span>#spain</span><span>#phone</span><span>#regex</span></span>
 
   </div>
   
