@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Movies</h1>
+
+<div id="search"></div>
+<div id="layout"></div>
+
+<script id="search-box-tpl" type="text/template">
+    <input type="text" id="search-box-input" name="search-box-input" placeholder="tags..."/>
+</script>
+
+<script id="gallery-item-view-tpl" type="text/template">
+    <div class="movie-poster">
+        <% if(backdropImage() !== null){ %>
+        <img src="<%= backdropImage() %>" alt="<%= original_title %>"/>
+        <% } %>
+    </div>
+    <span class="popularity"><span class="inner" style="<%= popularityWidth() %>"></span></span>
+    <div class="movie-info">
+        <% if(title !== original_title){ %>
+        <span class="title"><em>"<%= title %>"</em></span>
+        <% } %>
+        <span class="release_date"><strong><%= release_date %></strong></span>
+        <a href="#/movie/<%= id %>" target="_blank"><h2><%= original_title %></h2></a>
+        <span class="vote_average">Vote average: <%= vote_average %></span>
+    </div>
+</script>
+
+<script id="gallery-item-view-tpl2" type="text/template">
+    <div class="movie-poster">
+        <img src="<%= posterImage() %>" alt="<%= original_title %>"/>
+    </div>
+    <div class="movie-info">
+        <a href="#/movie/<%= id %>" target="_blank"><h2><%= original_title %></h2></a>
+        <% if(title !== original_title){ %>
+        <span class="title"><em><%= title %></em></span>
+        <% } %>
+        <span class="release_date">Release date: <strong><%= release_date %></strong></span>
+        <span class="popularity"><span class="inner" style="<%= popularityWidth() %>"></span></span>
+        <span class="vote_average">Vote average: <%= vote_average %></span>
+    </div>
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js" data-main="js/main"></script>
+</body>
+</html>

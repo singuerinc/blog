@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    margin: 25px;
+    font-weight: 300;
+    color: #474747;
+}
+
+:focus {
+    outline: 0;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+h1 {
+    margin: 0 0 5px 4px;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+#layout {
+    margin: 0 4px;
+}
+
+ul.gallery-view {
+    font-size: 0;
+    overflow: hidden;
+    height: 1%;
+}
+
+li.gallery-item-view {
+    font-size: 1rem;
+    list-style: none;
+    border: 1px solid #eee;
+    border-bottom-width: 3px;
+    padding: 0 0 10px 0;
+    float: left;
+    width: 300px;
+    margin: 0 10px 10px 0;
+    border-radius: 4px;
+}
+
+li.gallery-item-view:hover {
+    border: 1px solid #777;
+    border-bottom: 3px #444;
+}
+
+li.gallery-item-view .movie-poster {
+    position: relative;
+    width: 298px;
+    height: 180px;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+li.gallery-item-view .movie-poster img {
+    position: absolute;
+    margin: -96px 0 0 -171px;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #ccc;
+}
+
+li.gallery-item-view .movie-info {
+    margin: 14px;
+}
+
+li.gallery-item-view .movie-info a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+li.gallery-item-view .movie-info a h2 {
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 2.3rem;
+    margin-bottom: 10px;
+}
+
+li.gallery-item-view .movie-info span {
+    display: block;
+}
+
+li.gallery-item-view span.popularity {
+    display: block;
+    width: 298px;
+    background-color: #eee;
+}
+
+li.gallery-item-view span.popularity .inner {
+    display: block;
+    height: 5px;
+    background-color: tomato;
+}
+
+input#search-box-input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 5px 10px;
+    margin: 0 0 5px 4px;
+}
