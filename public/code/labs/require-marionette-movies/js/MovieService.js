@@ -38,12 +38,14 @@ define(['underscore', 'marionette'], function (_, Marionette) {
                     },
                     success: function (data) {
                         console.log(data);
+                        var images = this.configuration.images;
+                        var baseUrl = images.base_url + images.poster_sizes[3];
                         _.each(data.results, function (item, i, arr) {
                             if(item.backdrop_path){
-                                item.backdrop_path = this.configuration.images.base_url + this.configuration.images.poster_sizes[3] + item.backdrop_path;
+                                item.backdrop_path = baseUrl + item.backdrop_path;
                             }
                             if(item.poster_path){
-                                item.poster_path = this.configuration.images.base_url + this.configuration.images.poster_sizes[0] + item.poster_path;
+                                item.poster_path = baseUrl + item.poster_path;
                             }
                             console.log(item);
                         }, this);

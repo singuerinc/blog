@@ -1,9 +1,16 @@
-define(['underscore', 'marionette'], function (_, Marionette) {
+define([
+    'underscore',
+    'marionette',
+    "hbs!views/search-box"
+    ], function (_, Marionette, tpl) {
 
   return Marionette.ItemView.extend({
 
     id: 'search-box',
-    template: '#search-box-tpl',
+    template: {
+      type: 'handlebars',
+      template: tpl
+    },
 
     ui: {
       input: '#search-box-input'

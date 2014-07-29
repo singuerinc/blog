@@ -1,6 +1,6 @@
-define(['jquery', 'underscore', 'marionette', 'SearchView', 'GalleryView', 'MovieService'],
+define(['jquery', 'underscore', 'marionette', 'nprogress', 'SearchView', 'GalleryView', 'MovieService'],
 
-    function ($, _, Marionette, SearchView, GalleryView, MovieService) {
+    function ($, _, Marionette, NProgress, SearchView, GalleryView, MovieService) {
 
         var app = new Marionette.Application();
 
@@ -15,8 +15,10 @@ define(['jquery', 'underscore', 'marionette', 'SearchView', 'GalleryView', 'Movi
 
             this.searchBox = new SearchView();
             this.searchBox.on('search:value:changed', _.bind(function (value) {
+                NProgress.start();
                 this.movieService.searchMovie(value, _.bind(function (data) {
                     this.galleryView.collection.reset(data);
+                    NProgress.done();
                 }, this));
             }, this));
 
