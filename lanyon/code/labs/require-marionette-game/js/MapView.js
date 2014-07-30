@@ -12,7 +12,8 @@ define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Ba
     model: new Backbone.Model({
       currentCells: [],
       history: [],
-      cellsResolved: []
+      cellsResolved: [],
+      movements: 0
     }),
 
     CONCURRENT_CELLS: 2,
@@ -70,7 +71,7 @@ define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Ba
         // all the codes must be match!
         if (withTheSameCode.length === this.CONCURRENT_CELLS) {
           this._resolveCells();
-
+          this.model.set('movements', this.model.get('movements') + (this.CONCURRENT_CELLS * 2));
           if (this.model.get('cellsResolved').length === this.collection.length) {
             setTimeout(this._restart.bind(this), 1500);
           }
@@ -131,13 +132,14 @@ define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Ba
 
       var total = this.collection.length / this.CONCURRENT_CELLS;
       var resolved = this.model.get('cellsResolved').length / this.CONCURRENT_CELLS;
-      var movements = this.MAX_MOVEMENTS - this.model.get('history').length;
+      var movements = this.model.get('movements') - this.model.get('history').length;
 
       this.trigger('score:changed', total, resolved, movements);
     },
 
     _restart: function () {
 
+      this.model.set('movements', this.MAX_MOVEMENTS);
       this.model.set('history', []);
 
       this._cleanCells();
