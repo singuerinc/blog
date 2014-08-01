@@ -1,6 +1,6 @@
-define(['jquery', 'underscore', 'backbone', 'backbone.marionette', 'views/MapView', 'models/CellModel'],
+define(['jquery', 'underscore', 'backbone', 'backbone.marionette', 'views/MapView', 'controllers/DebugController'],
 
-  function ($, _, Backbone, Marionette, MapView, CellModel) {
+  function ($, _, Backbone, Marionette, MapView, DebugController) {
 
     var app = new Marionette.Application();
 
@@ -9,6 +9,7 @@ define(['jquery', 'underscore', 'backbone', 'backbone.marionette', 'views/MapVie
     });
 
     app.on('start', function () {
+
 
       this.map = new MapView();
 
@@ -22,7 +23,14 @@ define(['jquery', 'underscore', 'backbone', 'backbone.marionette', 'views/MapVie
       }, this));
 
       this.layout.show(this.map);
+
+      new DebugController({
+        map: this.map
+      });
+
     });
+
+
 
     return app;
 

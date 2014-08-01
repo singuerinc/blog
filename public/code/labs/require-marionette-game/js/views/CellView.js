@@ -22,14 +22,17 @@ define(['backbone.marionette', 'underscore'], function (Marionette, _) {
 
       e.preventDefault();
 
-      if (this.model.get('marked') === false) {
-        this.trigger('cell:intent');
-      }
+      // fixme: tal vez mejor mirar una variable en el modelo map
+      if(this.$el.parent().hasClass('disabled')) { return; }
+
+      soundManager.play('beep-audio');
+      this.trigger('cell:intent');
     },
 
     onMarkedChanged: function (model, value) {
       this.$el.toggleClass('marked', value);
       this._backgroundColor(value);
+      if(!value) soundManager.play('nice-beep');
     },
 
     onResolvedChanged: function (model, value) {

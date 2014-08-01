@@ -23,6 +23,13 @@ define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/Cell
     MAX_TIME_SELECTION: 1500,
     RESTART_TIME: 4000,
 
+    initialize: function(){
+      console.log('------------------------------- init');
+      soundManager.createSound({ multiShotEvents: true, id: 'beep-audio', url: './audio/21862_beep1.mp3'});
+      soundManager.createSound({ multiShotEvents: true, id: 'nice-beep', url: './audio/65057_nicebeep.mp3' });
+      soundManager.createSound({ multiShotEvents: true, id: 'cell-resolved', url: './audio/Powerup37.wav' });
+    },
+
     onShow: function () {
       this._restart();
     },
@@ -34,10 +41,10 @@ define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/Cell
     onChildIntent: function (childView) {
 
       // restart if reach max movements
-//      if (this.model.get('history').length >= this.MAX_MOVEMENTS) {
-//        this._restart();
-//        return;
-//      }
+      if (this.model.get('history').length >= this.MAX_MOVEMENTS) {
+        this._restart();
+        return;
+      }
 
       // don't allow to click more than CONCURRENT_CELLS
       if (this.model.get('currentCells').length >= this.CONCURRENT_CELLS) {
@@ -101,6 +108,8 @@ define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/Cell
 
     _resolveCells: function () {
 
+      soundManager.play('cell-resolved');
+
       _.each(this.model.get('currentCells'), function (el) {
 
         // mark cell as resolved
@@ -117,8 +126,9 @@ define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/Cell
     _cleanCells: function () {
 
       // deselect the current cells
-      _.each(this.model.get('currentCells'), function (el) {
-        el.model.set('marked', false);
+      _.each(this.model.get('currentCells'), function (el, idx) {
+        setTimeout(_.bind(el.model.set, el.model, 'marked', false), 250*idx);
+//        el.model.set('marked', false);
       }, this);
 
       this._startNewTurn();
@@ -151,6 +161,10 @@ define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/Cell
       var movements = this.model.get('movements') - this.model.get('history').length;
 
       this.trigger('game:score:changed', total, resolved, movements);
+    },
+
+    restart: function(){
+      this._restart();
     },
 
     _restart: function () {

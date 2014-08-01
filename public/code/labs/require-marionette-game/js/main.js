@@ -11,10 +11,11 @@ require.config({
     'modernizr': 'vendor/modernizr.custom.32874',
     'backbone.marionette': '//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.0.3/backbone.marionette',
     'text': '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text',
-    'less': 'vendor/less'
+    'less': 'vendor/less',
+    'dat.gui': 'vendor/dat.gui.min'
   },
 
-  deps: [ 'modernizr', 'less!../styles' ],
+  deps: [ 'modernizr', 'less!../styles', 'dat.gui' ],
 
   map: {
     '*': {
@@ -36,7 +37,11 @@ require.config({
     'marionette': {
       'deps': ['backbone'],
       'exports': 'Marionette'
+    },
+    'dat.gui': {
+      'exports': 'dat.gui'
     }
+
   }
 });
 
