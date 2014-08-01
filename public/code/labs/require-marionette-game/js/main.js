@@ -11,10 +11,16 @@ require.config({
     'modernizr': 'vendor/modernizr.custom.32874',
     'backbone.marionette': '//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.0.3/backbone.marionette',
     'text': '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text',
-    'less': 'less'
+    'less': 'vendor/less'
   },
 
   deps: [ 'modernizr', 'less!../styles' ],
+
+  map: {
+    '*': {
+      'less': 'vendor/less'
+    }
+  },
 
   shim: {
     'jquery': {
@@ -36,7 +42,7 @@ require.config({
 
 require(['app'], function (app) {
 
-  yepnope.injectCss('//fonts.googleapis.com/css?family=Roboto:300,700', function () {
+  yepnope.injectCss('//fonts.googleapis.com/css?family=Open+Sans:300,600,700', function () {
 
       app.start();
 

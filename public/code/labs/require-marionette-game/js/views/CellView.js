@@ -2,7 +2,7 @@ define(['backbone.marionette', 'underscore'], function (Marionette, _) {
   return Marionette.ItemView.extend({
 
     tagName: 'li',
-    className: 'cell',
+    className: 'cell pulse',
     template: _.template('<span><%= code %></span>'),
 
     events: {
@@ -13,6 +13,10 @@ define(['backbone.marionette', 'underscore'], function (Marionette, _) {
       'change:resolved': 'onResolvedChanged',
       'change:marked': 'onMarkedChanged'
     },
+
+//    onRender: function(){
+//      this._backgroundColor(true);
+//    },
 
     onClick: function (e) {
 

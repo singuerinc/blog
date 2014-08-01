@@ -1,9 +1,10 @@
-define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Backbone, CellView) {
+define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/CellView'], function (Marionette, Backbone, CellsCollection, CellView) {
   return Marionette.CollectionView.extend({
 
     tagName: 'ul',
     className: 'map',
     childView: CellView,
+    collection: new CellsCollection(),
 
     childEvents: {
       'cell:intent': 'onChildIntent'
@@ -19,6 +20,9 @@ define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Ba
     CONCURRENT_CELLS: 2,
     MAX_MOVEMENTS: 50,
 
+    MAX_TIME_SELECTION: 1500,
+    RESTART_TIME: 4000,
+
     onShow: function () {
       this._restart();
     },
@@ -29,10 +33,11 @@ define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Ba
      */
     onChildIntent: function (childView) {
 
-      if (this.model.get('history').length >= this.MAX_MOVEMENTS) {
-        this._restart();
-        return;
-      }
+      // restart if reach max movements
+//      if (this.model.get('history').length >= this.MAX_MOVEMENTS) {
+//        this._restart();
+//        return;
+//      }
 
       // don't allow to click more than CONCURRENT_CELLS
       if (this.model.get('currentCells').length >= this.CONCURRENT_CELLS) {
@@ -70,18 +75,25 @@ define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Ba
 
         // all the codes must be match!
         if (withTheSameCode.length === this.CONCURRENT_CELLS) {
+
+          this.trigger('game:cells:match');
+
           this._resolveCells();
           this.model.set('movements', this.model.get('movements') + (this.CONCURRENT_CELLS * 2));
+
           if (this.model.get('cellsResolved').length === this.collection.length) {
-            setTimeout(this._restart.bind(this), 1500);
+            this.trigger('game:over');
+            setTimeout(this._restart.bind(this), this.MAX_TIME_SELECTION);
           }
 
         } else {
-          setTimeout(this._cleanCells.bind(this), 1500);
+          setTimeout(this._cleanCells.bind(this), this.MAX_TIME_SELECTION);
+          this.$el.addClass('disabled');
         }
 
+
       } else {
-        this.cleanTimeout = setTimeout(this._cleanCells.bind(this), 4000);
+        this.cleanTimeout = setTimeout(this._cleanCells.bind(this), this.RESTART_TIME);
       }
 
       this._updateScore();
@@ -125,7 +137,11 @@ define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Ba
     },
 
     _startNewTurn: function () {
+      // set the map interactive
+      this.$el.removeClass('disabled');
+
       this.model.set('currentCells', []);
+      this.trigger('game:new:turn');
     },
 
     _updateScore: function () {
@@ -134,10 +150,15 @@ define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Ba
       var resolved = this.model.get('cellsResolved').length / this.CONCURRENT_CELLS;
       var movements = this.model.get('movements') - this.model.get('history').length;
 
-      this.trigger('score:changed', total, resolved, movements);
+      this.trigger('game:score:changed', total, resolved, movements);
     },
 
     _restart: function () {
+
+      this.trigger('game:restart');
+
+      // shuffle collection
+      this.collection.sort();
 
       this.model.set('movements', this.MAX_MOVEMENTS);
       this.model.set('history', []);
@@ -149,6 +170,8 @@ define(['backbone.marionette', 'backbone', 'CellView'], function (Marionette, Ba
       this.model.set('cellsResolved', []);
 
       this._updateScore();
+
+      this.trigger('game:restarted');
     }
 
   });
