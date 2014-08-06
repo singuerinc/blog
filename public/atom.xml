@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-08-06T11:27:38+02:00</updated>
+ <updated>2014-08-06T11:31:57+02:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -19,7 +19,7 @@
    <id>http://blog.singuerinc.com/javascript/validation/spain/dni/nie/nif/regex/2014/08/06/code-day-006-spain-dni-validation</id>
    <content type="html">&lt;p&gt;Hoy validamos un dni espa&amp;ntilde;ol, puede validar tanto nif como nie.&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=main.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://gist.github.com/singuerinc/02be0d8ca129a218c079.js?file=spain_nie_validation.js&quot;&gt;&lt;/script&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;12345678Z&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//true - &amp;quot;nif&amp;quot;&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;X9464187D&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//true - &amp;quot;nie&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;

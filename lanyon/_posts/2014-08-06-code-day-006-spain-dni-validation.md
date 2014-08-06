@@ -13,7 +13,7 @@ categories:
 ---
 Hoy validamos un dni espa&ntilde;ol, puede validar tanto nif como nie.
 
-<script src="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=main.js"></script>
+<script src="https://gist.github.com/singuerinc/02be0d8ca129a218c079.js?file=spain_nie_validation.js"></script>
 
 {% highlight js %}
 validate('12345678Z');  //true - "nif"
