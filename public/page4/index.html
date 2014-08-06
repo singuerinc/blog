@@ -106,6 +106,28 @@
         <div class="posts">
   
   <div class="post">
+    <span class="post-date">16 Jan 2014</span>
+    <h1 class="post-title">
+      <a href="/nodejs/ubuntu/2014/01/16/code-day-016-node-ubuntu/">
+        Install Node.js on Ubuntu
+      </a>
+    </h1>
+
+
+    <p>Hoy instalamos Node.js en Ubuntu!</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo apt-get install python-software-properties python g++ make
+<span class="gp">$</span> sudo add-apt-repository ppa:chris-lea/node.js
+<span class="gp">$</span> sudo apt-get update
+<span class="gp">$</span> sudo apt-get install nodejs
+<span class="gp">$</span> node --version // v0.10.24</code></pre></div>
+
+
+    <span class="post-categories"><span>#nodejs</span><span>#ubuntu</span></span>
+
+  </div>
+  
+  <div class="post">
     <span class="post-date">15 Jan 2014</span>
     <h1 class="post-title">
       <a href="/javascript/numbers/2014/01/15/code-day-015-decimals/">
@@ -246,32 +268,6 @@
 
 
     <span class="post-categories"><span>#javascript</span><span>#string</span><span>#hashtags</span><span>#regex</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">11 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/javascript/html/mailto/iframe/2014/01/11/code-day-011-open-email-without-new-tab/">
-        mailto: !== new browser tab
-      </a>
-    </h1>
-
-
-    <p>&iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&ntilde;a nueva? F&aacute;cil.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">open_email</span><span class="p">(){</span>
-    <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;iframe&#39;</span><span class="p">);</span>
-    <span class="nx">f</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
-    <span class="nx">f</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;mailto:email@addre.ss&#39;</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
-
-<p><a href="/code/day-011/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#html</span><span>#mailto</span><span>#iframe</span></span>
 
   </div>
   

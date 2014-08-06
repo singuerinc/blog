@@ -12,6 +12,7 @@ require.config({
     'backbone.marionette': '//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.0.3/backbone.marionette',
     'text': '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text',
     'less': 'vendor/less',
+    'soundManager': 'vendor/soundmanager2-nodebug-jsmin',
     'dat.gui': 'vendor/dat.gui.min'
   },
 
@@ -38,6 +39,9 @@ require.config({
       'deps': ['backbone'],
       'exports': 'Marionette'
     },
+    'soundManager': {
+      'exports': 'soundManager'
+    },
     'dat.gui': {
       'exports': 'dat.gui'
     }
@@ -45,12 +49,17 @@ require.config({
   }
 });
 
-require(['app'], function (app) {
+require(['app', 'soundManager'], function (app, soundManager) {
 
-  yepnope.injectCss('//fonts.googleapis.com/css?family=Open+Sans:300,600,700', function () {
-
-      app.start();
-
+  soundManager.setup({
+    url: 'js/vendor/',
+    flashVersion: 9,
+    onready: function() {
+      yepnope.injectCss('//fonts.googleapis.com/css?family=Open+Sans:300,600,700', function () {
+          app.start();
+      });
+    }
   });
+
 
 });

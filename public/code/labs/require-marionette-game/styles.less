@@ -16,12 +16,13 @@ html {
 }
 
 body {
+  width: 720px;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
-  margin: 40px 0 0 0;
+  margin: 0;
   font-weight: 600;
-  color: white;
-  background: #222;
+  color: black;
+  background: white;
 }
 
 :focus {
@@ -40,33 +41,46 @@ h1 {
   color: #B10DC9;
 }
 
-h2 {
-  font-size: 8rem;
-  line-height: 4rem;
-  color: #555;
-}
-
 h1, h2 {
   font-weight: 300;
   text-align: center;
   margin: 0;
 }
 
+h2 {
+  font-size: 3rem;
+  line-height: 4rem;
+  display: table;
+  margin: 10px auto;
+  background-color: #01FF70;
+  border-radius: 35px;
+  padding: 2px 20px;
+  color: white;
+}
+
 .border(@color, @size:2px){
   border: @size solid @color;
 }
 
-ul.map.disabled li.cell {
+
+ul.map.disabled li.cell:not(.marked) {
   cursor: default;
+  background-color: #f8f8f8;
   &:hover {
-    .border(grey);
+    .border(transparent);
+    cursor: default;
   }
 }
 
-@map_width: 800px;
-@map_height: 612px;
+@map_width: 660px;
+@map_height: 512px;
 @cell_width: (@map_width/4)-12;
 @cell_height: @cell_width;
+
+#layout {
+  position: relative;
+  height: 512px;
+}
 
 ul.map {
 
@@ -93,9 +107,9 @@ ul.map {
     border-radius: 50%;
     transition-property: background-color, border-color;
     transition-duration: 0.4s;
-    background-color: #555;
+    background-color: #EEE;
 
-    .border(grey);
+    .border(transparent);
     .animated();
 
     span {
@@ -110,8 +124,8 @@ ul.map {
       top: 50%;
       margin-top: @cell_height * -0.5;
       text-transform: uppercase;
-      font-size: 9rem;
-      line-height: 182px;
+      font-size: 7rem;
+      line-height: 147px;
     }
 
     &:hover {

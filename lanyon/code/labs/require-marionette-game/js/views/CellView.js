@@ -14,18 +14,13 @@ define(['backbone.marionette', 'underscore'], function (Marionette, _) {
       'change:marked': 'onMarkedChanged'
     },
 
-//    onRender: function(){
-//      this._backgroundColor(true);
-//    },
-
     onClick: function (e) {
 
       e.preventDefault();
 
-      // fixme: tal vez mejor mirar una variable en el modelo map
       if(this.$el.parent().hasClass('disabled')) { return; }
 
-      soundManager.play('cell:intent');
+      soundManager.play('cell-intent');
       this.trigger('cell:intent');
     },
 

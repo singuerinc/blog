@@ -9,7 +9,7 @@
 
   <title>
     
-      Decimals &middot; blog | singuerinc
+      Numbers: Game in RequireJS + Marionette.js &middot; blog | singuerinc
     
   </title>
 
@@ -104,30 +104,22 @@
 
       <div class="container content">
         <div class="post">
-  <span class="post-date">15 Jan 2014</span>
-  <h1 class="post-title">Decimals</h1>
-  <p>Formateamos un n&uacute;mero con decimales.</p>
+  <span class="post-date">07 Aug 2014</span>
+  <h1 class="post-title">Numbers: Game in RequireJS + Marionette.js</h1>
+  <p>My kid has 3 years old and is learning the numbers, so I thought that would be a good idea create a game related to this topic.
+This is a classic... basic simple game, you have to find two cells with the same number, when all cells are paired the game is over.</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
-<span class="p">}</span>
+<iframe src="/code/labs/require-marionette-game/index.html" style="border: 0; width: 100%; height: 600px;"></iframe>
 
-<span class="nx">format</span><span class="p">(</span><span class="mf">5716645.406726573</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// 5716645.4</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">6738963.296086764</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 6738963.2</span>
-<span class="nx">format</span><span class="p">(</span><span class="mf">1393.8190264930017</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1393.819</span></code></pre></div>
-
-<p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
-
-  <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
+  <span class="post-categories"><span>#javascript</span><span>#requirejs</span><span>#marionette</span><span>#game</span></span>
 </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'singuerinc-blog';
-    var disqus_identifier = '/javascript/numbers/2014/01/15/code-day-015-decimals';
-    var disqus_title = 'Decimals';
-    var disqus_url = 'http://blog.singuerinc.com/javascript/numbers/2014/01/15/code-day-015-decimals/';
+    var disqus_identifier = '/javascript/requirejs/marionette/game/2014/08/07/requirejs-marionette-games-numbers';
+    var disqus_title = 'Numbers: Game in RequireJS + Marionette.js';
+    var disqus_url = 'http://blog.singuerinc.com/javascript/requirejs/marionette/game/2014/08/07/requirejs-marionette-games-numbers/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -139,15 +131,6 @@
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/javascript/requirejs/marionette/game/2014/08/07/requirejs-marionette-games-numbers/">
-            Numbers: Game in RequireJS + Marionette.js
-            <small>07 Aug 2014</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -163,6 +146,15 @@
           <a href="/javascript/requirejs/marionette/flickr/2014/07/27/requirejs-marionette-flickr/">
             Photogallery: RequireJS, Marionette.js and Flickr API
             <small>27 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/">
+            Mix of RequireJS, Marionette.js and Facebook API
+            <small>26 Jul 2014</small>
           </a>
         </h3>
       </li>

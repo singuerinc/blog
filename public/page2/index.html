@@ -106,6 +106,24 @@
         <div class="posts">
   
   <div class="post">
+    <span class="post-date">26 Jan 2014</span>
+    <h1 class="post-title">
+      <a href="/nodejs/async/fabricjs/canvas/png/2014/01/26/code-day-026-batch-image-generation-with-nodejs/">
+        Batch image generation with Node.js
+      </a>
+    </h1>
+
+
+    <p>I wanted to generate up to 2000 pngs with random names, do that in Photoshop is a pain in the a... So I wrote this little code with Node.js, async and <a href="http://fabricjs.com/" target="_blank">Fabric.js</a>:</p>
+
+<script src="https://gist.github.com/singuerinc/994d413e41cdeace4766.js?file=app.js"></script>
+
+
+    <span class="post-categories"><span>#nodejs</span><span>#async</span><span>#fabricjs</span><span>#canvas</span><span>#png</span></span>
+
+  </div>
+  
+  <div class="post">
     <span class="post-date">25 Jan 2014</span>
     <h1 class="post-title">
       <a href="/boxen/2014/01/25/code-day-025-update-boxen/">
@@ -353,48 +371,6 @@ $ unzip circle_theme-1_0_1.zip
 
 
     <span class="post-categories"><span>#javascript</span><span>#video</span><span>#html5</span><span>#sync</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">21 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/javascript/ipad/video/html5/2014/01/21/code-day-021-video-overlay-ipad-click-fix/">
-        Video + iPad = How to fix click.
-      </a>
-    </h1>
-
-
-    <p>You want a video on your html, an overlay layer with some information and a button.</p>
-
-<p><strong>The problem:</strong> You can&#39;t click on the button, because the click event is captured by the video element.</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>play<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;p&gt;</span>Lorem ipsum Duis sit nisi occaecat ut<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;video</span> <span class="na">id=</span><span class="s">&quot;video&quot;</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;video.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span></code></pre></div>
-
-<p><strong>The solution:</strong></p>
-
-<ol>
-<li><p>Remove the &quot;controls&quot; property from the video html tag.</p>
-
-<p><code>&lt;video id=&quot;video&quot; src=&quot;video.mp4&quot;&gt;&lt;/video&gt;</code></p></li>
-<li><p>You need also specify the correct event on the iPad:</p></li>
-</ol>
-
-<div class="highlight"><pre><code class="html">var ua = navigator.userAgent,
-    event = (ua.match(/iPad/i)) ? &quot;touchstart&quot; : &quot;click&quot;,
-    video = document.getElementsByTagName(&quot;video&quot;)[0];
-    btn   = document.getElementById(&#39;btn&#39;);
-
-btn.addEventListener(event, function(e){
-    video.play();
-});</code></pre></div>
-
-<p><a href="/code/day-021/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#ipad</span><span>#video</span><span>#html5</span></span>
 
   </div>
   
