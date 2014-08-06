@@ -106,6 +106,33 @@
         <div class="posts">
   
   <div class="post">
+    <span class="post-date">10 Jan 2014</span>
+    <h1 class="post-title">
+      <a href="/actionscript3/validation/spain/postal-code/regex/2014/01/10/code-day-010-spain-postalcode-validation/">
+        Spain - Postal Code validation
+      </a>
+    </h1>
+
+
+    <p>Hoy: ¿Cómo saber si es un código postal válido y español? (ActionScript 3)</p>
+
+<div class="highlight"><pre><code class="as3"><span class="kd">function </span><span class="nf">validate</span><span class="o">(</span><span class="n">value</span><span class="o">:</span><span class="kt">String</span><span class="o">):</span><span class="kt">Boolean</span><span class="o">{</span>
+    <span class="kd">var</span> <span class="n">str</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="n">replace</span><span class="o">(/\</span><span class="n">s</span><span class="o">/</span><span class="n">g</span><span class="o">,</span> <span class="s1">&#39;&#39;</span><span class="o">);</span>
+    <span class="kd">var</span> <span class="n">rExp</span><span class="p">:</span><span class="kt">RegExp</span> <span class="o">=</span> <span class="sr">/((?&gt;^[5]{1})[0-2][0-9]{3})|((?&gt;^[0]{1})[1-9]{1}[0-9]{3})|((?&gt;^[1-4]{1})[0-9]{1}[0-9]{3})$/</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span> <span class="o">===</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">rExp</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;08019&#39;</span><span class="o">);</span> <span class="c1">//true - &quot;Barcelona&quot;</span>
+<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;28001&#39;</span><span class="o">);</span> <span class="c1">//true - &quot;Madrid&quot;</span></code></pre></div>
+
+<p>La clase completa la puedes encontrar <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPostalCodeValidator.as" target="_blank">aqu&iacute;</a></p>
+
+
+    <span class="post-categories"><span>#actionscript3</span><span>#validation</span><span>#spain</span><span>#postal-code</span><span>#regex</span></span>
+
+  </div>
+  
+  <div class="post">
     <span class="post-date">09 Jan 2014</span>
     <h1 class="post-title">
       <a href="/openshift/nodejs/2014/01/09/code-day-009-any-nodejs-version-openshift/">
@@ -202,51 +229,6 @@
 
 
     <span class="post-categories"><span>#javascript</span><span>#prototype</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">06 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/javascript/validation/spain/dni/nie/nif/regex/2014/01/06/code-day-006-spain-dni-validation/">
-        Spain - dni/nie/nif validation
-      </a>
-    </h1>
-
-
-    <p>Hoy validamos un dni espa&ntilde;ol, puede validar tanto nif como nie.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">validate</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
-
-  <span class="kd">var</span> <span class="nx">validChars</span> <span class="o">=</span> <span class="s1">&#39;TRWAGMYFPDXBNJZSQVHLCKET&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">nifRexp</span> <span class="o">=</span> <span class="sr">/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">nieRexp</span> <span class="o">=</span> <span class="sr">/^[XYZ]{1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toUpperCase</span><span class="p">();</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">nifRexp</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">nieRexp</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">))</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-
-  <span class="kd">var</span> <span class="nx">nie</span> <span class="o">=</span> <span class="nx">str</span>
-      <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^[X]/</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^[Y]/</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^[Z]/</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">letter</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-  <span class="kd">var</span> <span class="nx">charIndex</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">nie</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> <span class="o">%</span> <span class="mi">23</span><span class="p">;</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="nx">validChars</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">charIndex</span><span class="p">)</span> <span class="o">==</span> <span class="nx">letter</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-
-  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;12345678Z&#39;</span><span class="p">);</span>  <span class="c1">//true - &quot;nif&quot;</span>
-<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;X9464187D&#39;</span><span class="p">);</span>  <span class="c1">//true - &quot;nie&quot;</span></code></pre></div>
-
-<p>Y en ActionScript 3 la clase completa puedes encontrarla <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as" target="_blank">aqu&iacute;</a></p>
-
-<p><a href="/code/day-006/index.html" target="_blank">Demo</a></p>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#validation</span><span>#spain</span><span>#dni</span><span>#nie</span><span>#nif</span><span>#regex</span></span>
 
   </div>
   

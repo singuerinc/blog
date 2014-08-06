@@ -106,6 +106,31 @@
         <div class="posts">
   
   <div class="post">
+    <span class="post-date">06 Aug 2014</span>
+    <h1 class="post-title">
+      <a href="/javascript/validation/spain/dni/nie/nif/regex/2014/08/06/code-day-006-spain-dni-validation/">
+        Validar DNI/NIE/NIF de Espa&ntilde;a
+      </a>
+    </h1>
+
+
+    <p>Hoy validamos un dni espa&ntilde;ol, puede validar tanto nif como nie.</p>
+
+<script src="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=main.js"></script>
+
+<div class="highlight"><pre><code class="js"><span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;12345678Z&#39;</span><span class="p">);</span>  <span class="c1">//true - &quot;nif&quot;</span>
+<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;X9464187D&#39;</span><span class="p">);</span>  <span class="c1">//true - &quot;nie&quot;</span></code></pre></div>
+
+<p>Y en ActionScript 3 puedes encontrar la clase completa <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as" target="_blank">aqu&iacute;</a></p>
+
+<p><a href="/code/day-006/index.html" target="_blank">Demo</a></p>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#validation</span><span>#spain</span><span>#dni</span><span>#nie</span><span>#nif</span><span>#regex</span></span>
+
+  </div>
+  
+  <div class="post">
     <span class="post-date">27 Jul 2014</span>
     <h1 class="post-title">
       <a href="/javascript/requirejs/marionette/flickr/2014/07/27/requirejs-marionette-flickr/">
@@ -227,26 +252,6 @@ Let configure RequireJS, resolve some dependencies and start our application:
 
 
     <span class="post-categories"><span>#nodejs</span><span>#async</span><span>#fabricjs</span><span>#canvas</span><span>#png</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">25 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/boxen/2014/01/25/code-day-025-update-boxen/">
-        Update Boxen
-      </a>
-    </h1>
-
-
-    <p>If you have any problem to update Boxen, try this:</p>
-
-<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>rm -rf /opt/boxen/repo/<span class="o">{</span>.librarian,.tmp<span class="o">}</span>
-<span class="nv">$ </span>rm -rf /opt/boxen/repo/Puppetfile.lock
-<span class="nv">$ </span>boxen --no-fde --debug</code></pre></div>
-
-
-    <span class="post-categories"><span>#boxen</span></span>
 
   </div>
   

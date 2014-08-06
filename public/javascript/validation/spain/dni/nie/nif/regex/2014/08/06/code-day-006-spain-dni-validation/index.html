@@ -9,7 +9,7 @@
 
   <title>
     
-      Spain - dni/nie/nif validation &middot; blog | singuerinc
+      Validar DNI/NIE/NIF de Espa&ntilde;a &middot; blog | singuerinc
     
   </title>
 
@@ -104,36 +104,16 @@
 
       <div class="container content">
         <div class="post">
-  <span class="post-date">06 Jan 2014</span>
-  <h1 class="post-title">Spain - dni/nie/nif validation</h1>
+  <span class="post-date">06 Aug 2014</span>
+  <h1 class="post-title">Validar DNI/NIE/NIF de Espa&ntilde;a</h1>
   <p>Hoy validamos un dni espa&ntilde;ol, puede validar tanto nif como nie.</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">validate</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+<script src="https://gist.github.com/singuerinc/1fa7b07d1e95bb22485e.js?file=main.js"></script>
 
-  <span class="kd">var</span> <span class="nx">validChars</span> <span class="o">=</span> <span class="s1">&#39;TRWAGMYFPDXBNJZSQVHLCKET&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">nifRexp</span> <span class="o">=</span> <span class="sr">/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">nieRexp</span> <span class="o">=</span> <span class="sr">/^[XYZ]{1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toUpperCase</span><span class="p">();</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">nifRexp</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">nieRexp</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">))</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-
-  <span class="kd">var</span> <span class="nx">nie</span> <span class="o">=</span> <span class="nx">str</span>
-      <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^[X]/</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^[Y]/</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^[Z]/</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">letter</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-  <span class="kd">var</span> <span class="nx">charIndex</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">nie</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> <span class="o">%</span> <span class="mi">23</span><span class="p">;</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="nx">validChars</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">charIndex</span><span class="p">)</span> <span class="o">==</span> <span class="nx">letter</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-
-  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;12345678Z&#39;</span><span class="p">);</span>  <span class="c1">//true - &quot;nif&quot;</span>
+<div class="highlight"><pre><code class="js"><span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;12345678Z&#39;</span><span class="p">);</span>  <span class="c1">//true - &quot;nif&quot;</span>
 <span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;X9464187D&#39;</span><span class="p">);</span>  <span class="c1">//true - &quot;nie&quot;</span></code></pre></div>
 
-<p>Y en ActionScript 3 la clase completa puedes encontrarla <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as" target="_blank">aqu&iacute;</a></p>
+<p>Y en ActionScript 3 puedes encontrar la clase completa <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as" target="_blank">aqu&iacute;</a></p>
 
 <p><a href="/code/day-006/index.html" target="_blank">Demo</a></p>
 
@@ -143,9 +123,9 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'singuerinc-blog';
-    var disqus_identifier = '/javascript/validation/spain/dni/nie/nif/regex/2014/01/06/code-day-006-spain-dni-validation';
-    var disqus_title = 'Spain - dni/nie/nif validation';
-    var disqus_url = 'http://blog.singuerinc.com/javascript/validation/spain/dni/nie/nif/regex/2014/01/06/code-day-006-spain-dni-validation/';
+    var disqus_identifier = '/javascript/validation/spain/dni/nie/nif/regex/2014/08/06/code-day-006-spain-dni-validation';
+    var disqus_title = 'Validar DNI/NIE/NIF de Espa&ntilde;a';
+    var disqus_url = 'http://blog.singuerinc.com/javascript/validation/spain/dni/nie/nif/regex/2014/08/06/code-day-006-spain-dni-validation/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

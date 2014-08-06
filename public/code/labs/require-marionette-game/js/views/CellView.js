@@ -25,14 +25,14 @@ define(['backbone.marionette', 'underscore'], function (Marionette, _) {
       // fixme: tal vez mejor mirar una variable en el modelo map
       if(this.$el.parent().hasClass('disabled')) { return; }
 
-      soundManager.play('beep-audio');
+      soundManager.play('cell:intent');
       this.trigger('cell:intent');
     },
 
     onMarkedChanged: function (model, value) {
       this.$el.toggleClass('marked', value);
       this._backgroundColor(value);
-      if(!value) soundManager.play('nice-beep');
+      if(!value) soundManager.play('cell-unmarked');
     },
 
     onResolvedChanged: function (model, value) {

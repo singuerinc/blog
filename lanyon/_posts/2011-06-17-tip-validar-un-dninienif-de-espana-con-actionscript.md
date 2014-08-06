@@ -1,8 +1,9 @@
 ---
-title: Validate Spain DNI/NIE/NIF
+title: "Validar DNI/NIE/NIF de Espa&ntilde;a"
 author: Nahuel Scotti
 layout: post
 categories:
+  - javascript
   - actionscript3
   - validators
   - dni

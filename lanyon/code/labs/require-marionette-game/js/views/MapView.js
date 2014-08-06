@@ -20,14 +20,13 @@ define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/Cell
     CONCURRENT_CELLS: 2,
     MAX_MOVEMENTS: 50,
 
-    MAX_TIME_SELECTION: 1500,
+    MAX_TIME_BETWEEN_SELECTION: 1500,
     RESTART_TIME: 4000,
 
-    initialize: function(){
-      console.log('------------------------------- init');
-      soundManager.createSound({ multiShotEvents: true, id: 'beep-audio', url: './audio/21862_beep1.mp3'});
-      soundManager.createSound({ multiShotEvents: true, id: 'nice-beep', url: './audio/65057_nicebeep.mp3' });
-      soundManager.createSound({ multiShotEvents: true, id: 'cell-resolved', url: './audio/Powerup37.wav' });
+    initialize: function () {
+      soundManager.createSound({ multiShotEvents: true, id: 'cell-intent', url: './audio/21862_beep1.mp3'});
+      soundManager.createSound({ multiShotEvents: true, id: 'cell-unmarked', url: './audio/65057_nicebeep.mp3' });
+      soundManager.createSound({ multiShotEvents: true, id: 'cell-resolved', url: './audio/Pickup-coin 14.wav' });
     },
 
     onShow: function () {
@@ -90,11 +89,11 @@ define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/Cell
 
           if (this.model.get('cellsResolved').length === this.collection.length) {
             this.trigger('game:over');
-            setTimeout(this._restart.bind(this), this.MAX_TIME_SELECTION);
+            setTimeout(this._restart.bind(this), this.MAX_TIME_BETWEEN_SELECTION);
           }
 
         } else {
-          setTimeout(this._cleanCells.bind(this), this.MAX_TIME_SELECTION);
+          setTimeout(this._cleanCells.bind(this), this.MAX_TIME_BETWEEN_SELECTION);
           this.$el.addClass('disabled');
         }
 
@@ -127,7 +126,7 @@ define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/Cell
 
       // deselect the current cells
       _.each(this.model.get('currentCells'), function (el, idx) {
-        setTimeout(_.bind(el.model.set, el.model, 'marked', false), 250*idx);
+        setTimeout(_.bind(el.model.set, el.model, 'marked', false), 250 * idx);
 //        el.model.set('marked', false);
       }, this);
 
@@ -163,7 +162,7 @@ define(['backbone.marionette', 'backbone', 'models/CellsCollection', 'views/Cell
       this.trigger('game:score:changed', total, resolved, movements);
     },
 
-    restart: function(){
+    restart: function () {
       this._restart();
     },
 

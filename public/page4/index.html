@@ -106,6 +106,33 @@
         <div class="posts">
   
   <div class="post">
+    <span class="post-date">15 Jan 2014</span>
+    <h1 class="post-title">
+      <a href="/javascript/numbers/2014/01/15/code-day-015-decimals/">
+        Decimals
+      </a>
+    </h1>
+
+
+    <p>Formateamos un n&uacute;mero con decimales.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">format</span><span class="p">(</span><span class="mf">5716645.406726573</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>  <span class="c1">// 5716645.4</span>
+<span class="nx">format</span><span class="p">(</span><span class="mf">6738963.296086764</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// 6738963.2</span>
+<span class="nx">format</span><span class="p">(</span><span class="mf">1393.8190264930017</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1393.819</span></code></pre></div>
+
+<p><a href="/code/day-015/index.html" target="_blank">Demo</a></p>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#numbers</span></span>
+
+  </div>
+  
+  <div class="post">
     <span class="post-date">14 Jan 2014</span>
     <h1 class="post-title">
       <a href="/mysql/vagrant/sequelpro/2014/01/14/code-day-014-sequelpro-vagrant-mysql/">
@@ -245,33 +272,6 @@
 
 
     <span class="post-categories"><span>#javascript</span><span>#html</span><span>#mailto</span><span>#iframe</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">10 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/actionscript3/validation/spain/postal-code/regex/2014/01/10/code-day-010-spain-postalcode-validation/">
-        Spain - Postal Code validation
-      </a>
-    </h1>
-
-
-    <p>Hoy: ¿Cómo saber si es un código postal válido y español? (ActionScript 3)</p>
-
-<div class="highlight"><pre><code class="as3"><span class="kd">function </span><span class="nf">validate</span><span class="o">(</span><span class="n">value</span><span class="o">:</span><span class="kt">String</span><span class="o">):</span><span class="kt">Boolean</span><span class="o">{</span>
-    <span class="kd">var</span> <span class="n">str</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="n">replace</span><span class="o">(/\</span><span class="n">s</span><span class="o">/</span><span class="n">g</span><span class="o">,</span> <span class="s1">&#39;&#39;</span><span class="o">);</span>
-    <span class="kd">var</span> <span class="n">rExp</span><span class="p">:</span><span class="kt">RegExp</span> <span class="o">=</span> <span class="sr">/((?&gt;^[5]{1})[0-2][0-9]{3})|((?&gt;^[0]{1})[1-9]{1}[0-9]{3})|((?&gt;^[1-4]{1})[0-9]{1}[0-9]{3})$/</span><span class="o">;</span>
-    <span class="k">return</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span> <span class="o">===</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">rExp</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
-<span class="o">}</span>
-
-<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;08019&#39;</span><span class="o">);</span> <span class="c1">//true - &quot;Barcelona&quot;</span>
-<span class="n">validate</span><span class="o">(</span><span class="s1">&#39;28001&#39;</span><span class="o">);</span> <span class="c1">//true - &quot;Madrid&quot;</span></code></pre></div>
-
-<p>La clase completa la puedes encontrar <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPostalCodeValidator.as" target="_blank">aqu&iacute;</a></p>
-
-
-    <span class="post-categories"><span>#actionscript3</span><span>#validation</span><span>#spain</span><span>#postal-code</span><span>#regex</span></span>
 
   </div>
   

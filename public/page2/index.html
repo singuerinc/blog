@@ -106,6 +106,26 @@
         <div class="posts">
   
   <div class="post">
+    <span class="post-date">25 Jan 2014</span>
+    <h1 class="post-title">
+      <a href="/boxen/2014/01/25/code-day-025-update-boxen/">
+        Update Boxen
+      </a>
+    </h1>
+
+
+    <p>If you have any problem to update Boxen, try this:</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>rm -rf /opt/boxen/repo/<span class="o">{</span>.librarian,.tmp<span class="o">}</span>
+<span class="nv">$ </span>rm -rf /opt/boxen/repo/Puppetfile.lock
+<span class="nv">$ </span>boxen --no-fde --debug</code></pre></div>
+
+
+    <span class="post-categories"><span>#boxen</span></span>
+
+  </div>
+  
+  <div class="post">
     <span class="post-date">24 Jan 2014</span>
     <h1 class="post-title">
       <a href="/npm/nodejs/nodejitsu/registry/2014/01/24/code-day-024-try-this-ir-npm-registry-is-down/">
@@ -375,43 +395,6 @@ btn.addEventListener(event, function(e){
 
 
     <span class="post-categories"><span>#javascript</span><span>#ipad</span><span>#video</span><span>#html5</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">20 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/ubuntu/lubuntu/login/2014/01/20/code-day-020-autologin-lubuntu/">
-        Autologin in Lubuntu
-      </a>
-    </h1>
-
-
-    <p>Pre-requisites:</p>
-
-<ul>
-<li>Lubuntu</li>
-<li>Vim or Nano</li>
-</ul>
-
-<p>For <strong>Lubuntu 12.04</strong> or below</p>
-
-<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lxdm/default.conf</code></pre></div>
-
-<p>And change the line:</p>
-
-<p><code>autologin=yourusernamehere</code></p>
-
-<p>For <strong>Lubuntu 12.10</strong> and above</p>
-
-<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lightdm/lightdm.conf</code></pre></div>
-
-<p>And then change this line:</p>
-
-<p><code>autologin-user=yourusernamehere</code></p>
-
-
-    <span class="post-categories"><span>#ubuntu</span><span>#lubuntu</span><span>#login</span></span>
 
   </div>
   
