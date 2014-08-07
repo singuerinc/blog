@@ -1,5 +1,5 @@
-define(['backbone.marionette', 'backbone', 'soundManager', 'models/CellsCollection', 'views/CellView'],
-  function (Marionette, Backbone, soundManager, CellsCollection, CellView) {
+define(['backbone.marionette', 'backbone', 'TweenLite', 'nprogress', 'soundManager', 'models/CellsCollection', 'views/CellView'],
+  function (Marionette, Backbone, TweenLite, NProgress, soundManager, CellsCollection, CellView) {
     return Marionette.CollectionView.extend({
 
       tagName: 'ul',
@@ -24,8 +24,9 @@ define(['backbone.marionette', 'backbone', 'soundManager', 'models/CellsCollecti
         movements: this.MAX_MOVEMENTS
       }),
 
-
       initialize: function () {
+        this.tween = null;
+        NProgress.configure({ showSpinner: false, trickle: false, minimum: 0.01 });
         soundManager.createSound({ multiShotEvents: true, id: 'cell-intent', url: './audio/Pickup-coin 19.wav'});
         soundManager.createSound({ multiShotEvents: true, id: 'cell-unmarked', url: './audio/65057_nicebeep.mp3' });
         soundManager.createSound({ multiShotEvents: true, id: 'cell-resolved', url: './audio/Pickup-coin 14.wav' });
@@ -37,7 +38,7 @@ define(['backbone.marionette', 'backbone', 'soundManager', 'models/CellsCollecti
 
       onChildIntent: function (childView) {
 
-        // don't allow to click more than CONCURRENT_CELLS
+        // don't allow click more than CONCURRENT_CELLS
         if (this.model.get('currentCells').length >= this.CONCURRENT_CELLS) {
           return;
         }
@@ -46,7 +47,7 @@ define(['backbone.marionette', 'backbone', 'soundManager', 'models/CellsCollecti
         var movements = this.model.get('movements') - 1;
         this.model.set('movements', movements);
 
-         // mark the clicked cell
+        // mark the clicked cell
         childView.model.set('marked', true);
 
         // save all the user interactions
@@ -58,7 +59,7 @@ define(['backbone.marionette', 'backbone', 'soundManager', 'models/CellsCollecti
 
         // every time the user clicks on a cell
         // renew the turn timer
-        clearTimeout(this.cleanTimeout);
+        NProgress.remove();
 
         if (this.model.get('currentCells').length === this.CONCURRENT_CELLS) {
 
@@ -73,10 +74,11 @@ define(['backbone.marionette', 'backbone', 'soundManager', 'models/CellsCollecti
           // get all the models that has equal codes
           var withTheSameCode = models.where({code: code1});
 
-          // all the codes must be match!
+          // all the codes must match!
           if (withTheSameCode.length === this.CONCURRENT_CELLS) {
 
             this.trigger('game:cells:match');
+            this.tween && this.tween.kill();
 
             // mark cell as resolved
             this._resolveCells();
@@ -85,32 +87,40 @@ define(['backbone.marionette', 'backbone', 'soundManager', 'models/CellsCollecti
             this.model.set('movements', this.model.get('movements') + (this.CONCURRENT_CELLS * 2));
 
           } else {
-            // restart the turn
-            this.cleanTimeout = setTimeout(this._cleanCells.bind(this), this.MAX_TIME_BETWEEN_SELECTION);
             this.$el.addClass('disabled');
+            this.tween && this.tween.kill();
+            NProgress.remove();
+            TweenLite.delayedCall(this.MAX_TIME_BETWEEN_SELECTION / 1000, this._cleanCells.bind(this));
           }
 
-
         } else {
-          this.cleanTimeout = setTimeout(this._cleanCells.bind(this), this.RESTART_TIME);
+
+          NProgress.remove();
+          NProgress.start();
+
+          this.t = 0;
+          this.tween = TweenLite.to(this, this.RESTART_TIME / 1000, {t: 1, ease: 'Linear.easeNone', onUpdateParams: [this], onUpdate: function (map) {
+            NProgress.set(map.t);
+          }, onComplete: this._cleanCells.bind(this)});
         }
 
         this._updateScore();
 
         if ((this.model.get('cellsResolved').length === this.collection.length) || (this.model.get('movements') === 0)) {
-          clearTimeout(this.cleanTimeout);
           // all the cells are resolved
           this.trigger('game:over');
-          setTimeout(this._restart.bind(this), this.MAX_TIME_BETWEEN_SELECTION);
+          NProgress.remove();
+          TweenLite.delayedCall(this.MAX_TIME_BETWEEN_SELECTION / 1000, this._restart.bind(this));
         }
       },
 
       _resolveCells: function () {
 
         soundManager.play('cell-resolved');
+
         _.each(this.model.get('currentCells'), function (el) {
           el.model.set('resolved', true);
-          //save resolved cells
+          // save resolved cells
           this.model.get('cellsResolved').push(el);
         }, this);
 
@@ -141,7 +151,7 @@ define(['backbone.marionette', 'backbone', 'soundManager', 'models/CellsCollecti
 
       _startNewTurn: function () {
 
-        // restart if reach max movements
+        // restart if player has reached max movements
         if (this.model.get('movements') === 0) {
           this._restart();
           return;
@@ -169,7 +179,6 @@ define(['backbone.marionette', 'backbone', 'soundManager', 'models/CellsCollecti
       _restart: function () {
 
         // restart the game
-
         this.trigger('game:restart');
 
         // shuffle collection

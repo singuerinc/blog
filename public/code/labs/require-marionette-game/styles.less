@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  width: 720px;
+  width: 718px;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   margin: 0;
@@ -107,7 +107,7 @@ ul.map {
     border-radius: 50%;
     transition-property: background-color, border-color;
     transition-duration: 0.4s;
-    background-color: #EEE;
+    background-color: #CCC;
 
     .border(transparent);
     .animated();
@@ -438,4 +438,45 @@ ul.map {
 .pulse2 {
   -webkit-animation-name: pulse2;
   animation-name: pulse2;
+}
+
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #01FF70;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #01FF70, 0 0 5px #01FF70;
+  opacity: 1.0;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
 }

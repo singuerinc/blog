@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2014-08-06T17:02:50+02:00</updated>
+ <updated>2014-08-07T02:02:15+02:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -17,12 +17,23 @@
    <link href="http://blog.singuerinc.com/javascript/requirejs/marionette/game/2014/08/07/requirejs-marionette-games-numbers/"/>
    <updated>2014-08-07T00:00:00+02:00</updated>
    <id>http://blog.singuerinc.com/javascript/requirejs/marionette/game/2014/08/07/requirejs-marionette-games-numbers</id>
-   <content type="html">&lt;p&gt;My kid has 3 years old and is learning the numbers, so I thought that would be a good idea create a game related to this topic.
+   <content type="html">&lt;p&gt;My kid (3 yrs old) is learning the numbers, so I thought that would be a good idea create a game related to this topic.
 This is a classic... basic simple game, you have to find two cells with the same number, when all cells are paired the game is over.&lt;/p&gt;
 
-&lt;iframe src=&quot;/code/labs/require-marionette-game/index.html&quot; style=&quot;border: 0; width: 100%; height: 600px;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;/code/labs/require-marionette-game/index.html&quot; style=&quot;border: 1px solid grey; width: 100%; height: 625px;&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;You could find the source at &lt;a href=&quot;Github&quot;&gt;https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-game&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You could find the source at &lt;a href=&quot;https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-game&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two main classes: MapView.js and CellView.js&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MapView&lt;/strong&gt; contains the game logic, it controls when the game restarts or has ended, if the player can click or not, how much movements you have left.&lt;br/&gt;
+Also, it stores the score, renews the turns and marks the cells as resolved when two or more cells match.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/singuerinc/2dcd4e8e8a2cb6742e0a.js?file=MapView.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;CellView&lt;/strong&gt; listen to the model changes, updates it own view and play the sounds.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/singuerinc/2dcd4e8e8a2cb6742e0a.js?file=CellView.js&quot;&gt;&lt;/script&gt;
 </content>
  </entry>
  

@@ -18,6 +18,7 @@ define(['backbone.marionette', 'underscore'], function (Marionette, _) {
 
       e.preventDefault();
 
+      if(this.model.get('marked') === true) { return; }
       if(this.$el.parent().hasClass('disabled')) { return; }
 
       soundManager.play('cell-intent');

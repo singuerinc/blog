@@ -13,6 +13,8 @@ require.config({
     'text': '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text',
     'less': 'vendor/less',
     'soundManager': 'vendor/soundmanager2-nodebug-jsmin',
+    'TweenLite' : '//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min',
+    'nprogress': '//cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.3/nprogress.min',
     'dat.gui': 'vendor/dat.gui.min'
   },
 
