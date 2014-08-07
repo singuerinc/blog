@@ -106,6 +106,31 @@
         <div class="posts">
   
   <div class="post">
+    <span class="post-date">12 Jan 2014</span>
+    <h1 class="post-title">
+      <a href="/javascript/string/hashtags/regex/2014/01/12/code-day-012-extract-hashtags/">
+        Extract hashtags
+      </a>
+    </h1>
+
+
+    <p>Hoy: Extraer m&uacute;ltiples hashtags de una cadena de texto.</p>
+
+<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">extract</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\B#\w*[a-zA-Z]+\w*/ig</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="nx">extract</span><span class="p">(</span><span class="s2">&quot;lorem #tag1 #tag2 diem #tag3&quot;</span><span class="p">);</span>
+<span class="nx">tags</span><span class="p">;</span> <span class="c1">// [&#39;#tag1&#39;, &#39;#tag2&#39;, &#39;#tag3&#39;]</span></code></pre></div>
+
+<p><a href="/code/day-012/index.html" target="_blank">Demo</a></p>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#string</span><span>#hashtags</span><span>#regex</span></span>
+
+  </div>
+  
+  <div class="post">
     <span class="post-date">11 Jan 2014</span>
     <h1 class="post-title">
       <a href="/javascript/html/mailto/iframe/2014/01/11/code-day-011-open-email-without-new-tab/">
@@ -199,62 +224,6 @@
 
 
     <span class="post-categories"><span>#javascript</span><span>#array</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">07 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/javascript/prototype/2014/01/07/code-day-007-extend-javascript-object%202/">
-        Extend with plain Javascript
-      </a>
-    </h1>
-
-
-    <p>Hoy un m&eacute;todo r&aacute;pido para simular herencia en Javascript.</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">extend</span><span class="p">(</span><span class="nx">Child</span><span class="p">,</span> <span class="nx">Parent</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">Child</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="kd">function</span> <span class="p">(){</span>
-            <span class="kd">function</span> <span class="nx">F</span><span class="p">()</span> <span class="p">{};</span>
-            <span class="nx">F</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">Parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
-            <span class="k">return</span> <span class="k">new</span> <span class="nx">F</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">)();</span>
-    <span class="nx">Child</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">Child</span><span class="p">;</span>
-    <span class="nx">Child</span><span class="p">.</span><span class="nx">parent</span> <span class="o">=</span> <span class="nx">Parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
-    <span class="k">return</span> <span class="nx">Child</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
-<span class="p">};</span></code></pre></div>
-
-<p>Y c&oacute;mo lo usamos:</p>
-
-<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">Animal</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="kd">var</span> <span class="nx">Clazz</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Animal&#39;</span><span class="p">;</span>
-    <span class="p">};</span>
-    <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">extend</span><span class="p">(</span><span class="nx">Clazz</span><span class="p">,</span> <span class="nb">Object</span><span class="p">);</span>
-    <span class="nx">p</span><span class="p">.</span><span class="nx">run</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39; running.&#39;</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="nx">Clazz</span><span class="p">;</span>
-<span class="p">})();</span>
-
-<span class="kd">var</span> <span class="nx">Dog</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="kd">var</span> <span class="nx">Clazz</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Dog&#39;</span><span class="p">;</span>
-    <span class="p">};</span>
-    <span class="nx">extend</span><span class="p">(</span><span class="nx">Clazz</span><span class="p">,</span> <span class="nx">Animal</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nx">Clazz</span><span class="p">;</span>
-<span class="p">})();</span>
-
-<span class="kd">var</span> <span class="nx">cat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">();</span>
-<span class="nx">cat</span><span class="p">.</span><span class="nx">run</span><span class="p">()</span> <span class="c1">// &quot;Animal runnning&quot;</span>
-
-<span class="kd">var</span> <span class="nx">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dog</span><span class="p">();</span>
-<span class="nx">dog</span><span class="p">.</span><span class="nx">run</span><span class="p">()</span> <span class="c1">// &quot;Dog runnning&quot;</span></code></pre></div>
-
-
-    <span class="post-categories"><span>#javascript</span><span>#prototype</span></span>
 
   </div>
   
