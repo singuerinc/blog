@@ -3,7 +3,7 @@ define(['backbone.marionette', 'underscore'], function (Marionette, _) {
 
     tagName: 'li',
     className: 'cell pulse',
-    template: _.template('<span><%= code %></span>'),
+    template: _.template(''),
 
     events: {
       'click': 'onClick'
@@ -37,6 +37,7 @@ define(['backbone.marionette', 'underscore'], function (Marionette, _) {
     },
 
     _backgroundColor: function (value) {
+      this.$el.toggleClass('asset-type-0', value);
       this.$el.toggleClass(this.model.get('css'), value);
     }
   })

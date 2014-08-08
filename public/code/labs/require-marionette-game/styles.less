@@ -52,7 +52,7 @@ h2 {
   line-height: 4rem;
   display: table;
   margin: 10px auto;
-  background-color: #01FF70;
+  background-color: #00eeae;
   border-radius: 35px;
   padding: 2px 20px;
   color: white;
@@ -101,7 +101,7 @@ ul.map {
     list-style: none;
     float: left;
     width: @cell_width;
-    padding-top: @cell_height;
+    height: @cell_height;
     overflow: hidden;
     position: relative;
     border-radius: 50%;
@@ -112,24 +112,8 @@ ul.map {
     .border(transparent);
     .animated();
 
-    span {
-
-      display: none;
-
-      color: white;
-      position: absolute;
-      width: 100%;
-      height: @cell_width;
-      text-align: center;
-      top: 50%;
-      margin-top: @cell_height * -0.5;
-      text-transform: uppercase;
-      font-size: 7rem;
-      line-height: 147px;
-    }
-
     &:hover {
-      .border(#01FF70);
+      .border(#00eeae);
     }
 
     &.marked {
@@ -149,8 +133,35 @@ ul.map {
         display: block;
       }
     }
-  ;
   }
+}
+
+.asset-type-0 {
+  background: url(assets-numbers.png) no-repeat;
+}
+
+.asset-0 {
+  background-position: -2px -2px;
+}
+
+.asset-1 {
+  background-position: -155px -2px;
+}
+
+.asset-2 {
+  background-position: -308px -2px;
+}
+
+.asset-3 {
+  background-position: -461px -2px;
+}
+
+.asset-4 {
+  background-position: -614px -2px;
+}
+
+.asset-5 {
+  background-position: -767px -2px;
 }
 
 /*
@@ -446,7 +457,7 @@ ul.map {
 }
 
 #nprogress .bar {
-  background: #01FF70;
+  background: #00eeae;
 
   position: fixed;
   z-index: 1031;
@@ -464,7 +475,7 @@ ul.map {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #01FF70, 0 0 5px #01FF70;
+  box-shadow: 0 0 10px #00eeae, 0 0 5px #00eeae;
   opacity: 1.0;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);

@@ -14,22 +14,22 @@ define(['underscore', 'backbone', 'models/CellModel'], function (_, Backbone, Ce
 
     _getCells: function () {
 
-      var styles = [
-        "bg-blue", "bg-teal", "bg-green",
-        "bg-orange", "bg-red",
-        "bg-maroon"
-      ];
+//      var styles = [
+//        "bg-blue", "bg-teal", "bg-green",
+//        "bg-orange", "bg-red",
+//        "bg-maroon"
+//      ];
 
       var cells = [];
 
-      var randStyles = _.sample(_.shuffle(styles), 6);
+//      var randStyles = _.sample(_.shuffle(styles), 6);
 
       for (var i = 0; i < 6; i++) {
-        var style = randStyles.shift();
+//        var style = randStyles.shift();
         for (var j = 0; j < 2; j++) {
           cells.push({
             code: i,
-            css: style
+            css: 'asset-' + i
           });
         }
       }
