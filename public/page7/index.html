@@ -116,7 +116,7 @@
 
     <p>Para empezar algo de Javascript simple: <strong>random hex color</strong>.</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">16777215</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">16777215</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">color</span><span class="p">);</span></code></pre></div>
 
 <p><a href="/code/day-001/index.html" target="_blank">Demo</a></p>
@@ -145,7 +145,7 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
 
 <p>Pero siempre olvido d&oacute;nde colocarlos, por eso he escrito un peque&ntilde;o script que lo hace:</p>
 
-<div class="highlight"><pre><code class="sh"><span class="nv">$ MM_DIR</span><span class="o">=</span><span class="s2">&quot;/Library/Application Support/Macromedia&quot;</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ MM_DIR</span><span class="o">=</span><span class="s2">&quot;/Library/Application Support/Macromedia&quot;</span>
 <span class="nv">$ LG_DIR</span><span class="o">=</span><span class="s2">&quot;${HOME}/Library/Preferences/Macromedia/Flash Player/Logs&quot;</span>
 <span class="nv">$ </span>sudo mkdir -vp <span class="nv">$MM_DIR</span>
 
@@ -173,14 +173,14 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
 <li>Abre simplemente una ventana de Terminal y escribe:</li>
 </ul>
 
-<div class="highlight"><pre><code class="sh">curl -L https://gist.github.com/singuerinc/5296967/raw/logs.sh <span class="p">|</span> sh</code></pre></div>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">curl -L https://gist.github.com/singuerinc/5296967/raw/logs.sh <span class="p">|</span> sh</code></pre></div>
 
 <ul>
 <li><p>Reinicia el navegador.</p></li>
 <li><p>Visualiza los logs ejecutando en el Terminal lo siguiente:</p></li>
 </ul>
 
-<div class="highlight"><pre><code class="sh">tail -f ~/Library/Preferences/Macromedia/Flash<span class="se">\ </span>Player/Logs/flashlog.txt</code></pre></div>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">tail -f ~/Library/Preferences/Macromedia/Flash<span class="se">\ </span>Player/Logs/flashlog.txt</code></pre></div>
 
 
     <span class="post-categories"><span>#actionscript3</span><span>#flash</span><span>#logs</span><span>#osx</span></span>
@@ -204,7 +204,7 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
 
 <p>Aqu&iacute; la Class:</p>
 
-<div class="highlight"><pre><code class="js"><span class="kr">package</span> <span class="nx">net</span><span class="p">.</span><span class="nx">singuerinc</span><span class="p">.</span><span class="nx">labs</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">validators</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">package</span> <span class="nx">net</span><span class="p">.</span><span class="nx">singuerinc</span><span class="p">.</span><span class="nx">labs</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">validators</span> <span class="p">{</span>
 <span class="kr">public</span> <span class="kr">class</span> <span class="nx">ItalyPhoneValidator</span> <span class="kr">implements</span> <span class="nx">IPhoneValidator</span> <span class="p">{</span>
 
     <span class="kr">private</span> <span class="kd">var</span> <span class="nx">operators</span><span class="o">:</span><span class="nb">Array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TIM&#39;</span><span class="p">,</span> <span class="s1">&#39;Vodafone&#39;</span><span class="p">,</span> <span class="s1">&#39;Wind&#39;</span><span class="p">,</span> <span class="s1">&#39;Tre&#39;</span><span class="p">,</span> <span class="s1">&#39;TrenItalia&#39;</span><span class="p">];</span>
@@ -277,7 +277,7 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
 
 <p>C&oacute;mo usarlo:</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">val1</span><span class="o">:</span><span class="nx">ItalyPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItalyPhoneValidator</span><span class="p">(</span><span class="s1">&#39; 393401234567&#39;</span><span class="p">);</span>  
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">val1</span><span class="o">:</span><span class="nx">ItalyPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItalyPhoneValidator</span><span class="p">(</span><span class="s1">&#39; 393401234567&#39;</span><span class="p">);</span>  
 <span class="nx">val1</span><span class="p">.</span><span class="nx">isValid</span><span class="p">();</span> <span class="c1">//true  </span>
 <span class="nx">val1</span><span class="p">.</span><span class="nx">operatorName</span><span class="p">;</span> <span class="c1">//Vodafone  </span>
 <span class="nx">val1</span><span class="p">.</span><span class="nx">isMobile</span><span class="p">();</span> <span class="c1">//true  </span>
@@ -326,7 +326,7 @@ Si quer&eacute;is hacer una prueba, os dejo un peque&ntilde;o form para chequear
 
 <p>M&aacute;s o menos, la <em>syntax</em> ser&aacute; esta:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="c1">//Mediante la carga de un mp3:</span>
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="c1">//Mediante la carga de un mp3:</span>
 <span class="kd">var</span> <span class="n">audio1</span><span class="p">:</span><span class="kt">Audio</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">Audio</span><span class="o">(</span><span class="s1">&#39;audio1&#39;</span><span class="o">,</span> <span class="s1">&#39;audio.mp3&#39;</span><span class="o">);</span>
 <span class="n">audio1</span><span class="o">.</span><span class="na">volume</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="o">;</span>
 <span class="n">audio1</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
@@ -347,7 +347,7 @@ Si quer&eacute;is hacer una prueba, os dejo un peque&ntilde;o form para chequear
     <span class="post-date">17 Jun 2011</span>
     <h1 class="post-title">
       <a href="/javascript/actionscript3/validators/dni/nie/nif/2011/06/17/tip-validar-un-dninienif-de-espana-con-actionscript/">
-        Validar DNI/NIE/NIF de Espa&ntilde;a
+        Validar DNI/NIE/NIF de España
       </a>
     </h1>
 
@@ -359,7 +359,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 
 <p>Aqu&iacute; el c&oacute;digo:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.utils.validators</span> <span class="o">{</span>  
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.utils.validators</span> <span class="o">{</span>  
 <span class="kd">public</span> <span class="kd">class</span> <span class="n">SpainDNIValidator</span> <span class="o">{</span>  
 
     <span class="kd">private</span> <span class="kd">var</span> <span class="n">_dni</span><span class="p">:</span><span class="kt">String</span><span class="o">;</span>  
@@ -420,7 +420,7 @@ Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y pode
 
 <p>Y algunos ejemplos:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="kd">var</span> <span class="n">val1</span><span class="p">:</span><span class="kt">SpainDNIValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainDNIValidator</span><span class="o">(</span><span class="s1">&#39;x9464186p&#39;</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="kd">var</span> <span class="n">val1</span><span class="p">:</span><span class="kt">SpainDNIValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainDNIValidator</span><span class="o">(</span><span class="s1">&#39;x9464186p&#39;</span><span class="o">);</span>
 <span class="n">val1</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true</span>
 <span class="n">val1</span><span class="o">.</span><span class="na">isNIF</span><span class="o">();</span> <span class="c1">//false</span>
 <span class="n">val1</span><span class="o">.</span><span class="na">isNIE</span><span class="o">();</span> <span class="c1">//true</span>

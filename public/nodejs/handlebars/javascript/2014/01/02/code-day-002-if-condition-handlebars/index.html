@@ -108,7 +108,7 @@
   <h1 class="post-title">if condition Handlebars</h1>
   <p>Hoy: Handlebars/Javascript, <strong>if condition helper</strong></p>
 
-<div class="highlight"><pre><code class="js"><span class="nx">handlebars</span><span class="p">.</span><span class="nx">registerHelper</span><span class="p">(</span><span class="s1">&#39;ifCond&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">v1</span><span class="p">,</span> <span class="nx">cond</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">opt</span><span class="p">){</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">handlebars</span><span class="p">.</span><span class="nx">registerHelper</span><span class="p">(</span><span class="s1">&#39;ifCond&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">v1</span><span class="p">,</span> <span class="nx">cond</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">opt</span><span class="p">){</span>
     <span class="k">switch</span> <span class="p">(</span><span class="nx">cond</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">case</span> <span class="s1">&#39;==&#39;</span><span class="o">:</span>
             <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">==</span>  <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
@@ -129,7 +129,7 @@
 
 <p>Ejemplo:</p>
 
-<div class="highlight"><pre><code class="xml">#ifCond blog &#39;===&#39; &#39;singuerinc&#39;
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">#ifCond blog &#39;===&#39; &#39;singuerinc&#39;
 <span class="nt">&lt;node&gt;</span>blog ok<span class="nt">&lt;/node&gt;</span>
 /ifCond</code></pre></div>
 
@@ -175,7 +175,7 @@
       <li>
         <h3>
           <a href="/javascript/validation/spain/dni/nie/nif/regex/2014/08/06/code-day-006-spain-dni-validation/">
-            Validar DNI/NIE/NIF de Espa&ntilde;a
+            Validar DNI/NIE/NIF de España
             <small>06 Aug 2014</small>
           </a>
         </h3>

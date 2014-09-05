@@ -1,5 +1,5 @@
 ---
-title: "Validar DNI/NIE/NIF de Espa&ntilde;a"
+title: "Validar DNI/NIE/NIF de España"
 author: singuerinc
 layout: post
 categories:

@@ -117,7 +117,7 @@
     <p>&quot;Abbreviate&quot; nos permite abreviar una cadena de texto usando puntos suspensivos.<br/>
 Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Commons/as3commons-lang/blob/master/src/main/actionscript/org/as3commons/lang/StringUtils.as#L1145"><em>StringUtils.abbreviate</em></a> de <strong>as3commons</strong> pero para Javascript.</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">abbreviate</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">offset</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="p">){</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">abbreviate</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">offset</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="p">){</span>
 
   <span class="k">if</span><span class="p">(</span><span class="nx">str</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="k">return</span> <span class="nx">str</span><span class="p">;</span>
   <span class="k">if</span><span class="p">(</span><span class="nx">maxWidth</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Minimum width is 4&#39;</span><span class="p">);</span>
@@ -159,7 +159,7 @@ Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Com
 
     <p>Hoy instalamos Node.js en Ubuntu!</p>
 
-<div class="highlight"><pre><code class="console"><span class="gp">$</span> sudo apt-get install python-software-properties python g++ make
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> sudo apt-get install python-software-properties python g++ make
 <span class="gp">$</span> sudo add-apt-repository ppa:chris-lea/node.js
 <span class="gp">$</span> sudo apt-get update
 <span class="gp">$</span> sudo apt-get install nodejs
@@ -181,7 +181,7 @@ Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Com
 
     <p>Formateamos un n&uacute;mero con decimales.</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">){</span>
     <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">decimals</span><span class="p">);</span>
     <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">n</span><span class="p">)</span> <span class="o">/</span> <span class="nx">n</span><span class="p">;</span>
 <span class="p">}</span>
@@ -210,7 +210,7 @@ Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Com
 
 <h3>Vagrant Options</h3>
 
-<div class="highlight"><pre><code class="js"><span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">3306</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">3306</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="o">:</span><span class="nx">forwarded_port</span><span class="p">,</span> <span class="nx">guest</span><span class="o">:</span> <span class="mi">3306</span><span class="p">,</span> <span class="nx">host</span><span class="o">:</span> <span class="mi">3306</span>
 <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="nx">ip</span><span class="o">:</span> <span class="s2">&quot;192.168.50.4&quot;</span></code></pre></div>
 
 <h3>SequelPro SSH Options</h3>
@@ -276,7 +276,7 @@ Es una conversi&oacute;n de la funci&oacute;n <a href="https://github.com/AS3Com
 
     <p>Vamos a formatear un n&uacute;mero de forma simple con una expresi&oacute;n regular.</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
     <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\B(?=(\d{3})+(?!\d))/g</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 

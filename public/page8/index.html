@@ -116,7 +116,7 @@
 
     <p>Aqu&iacute; os dejo otra Regular Expresion classe para validar tel&eacute;fonos m&oacute;viles en Espa&ntilde;a, hasta hace poco, s&oacute;lo existian n&uacute;meros m&oacute;viles que empezaban por &quot;6&quot;, ahora se ha agregado el &quot;7&quot;, la classe valida tanto m&oacute;viles como fijos y pueden contener espacios:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.utils.validators</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.utils.validators</span> <span class="o">{</span>
 <span class="cm">/**</span>
 <span class="cm"> * @author nahuel.scotti</span>
 <span class="cm"> */</span>
@@ -163,7 +163,7 @@
 
 <p>Algunos ejemplos:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="kd">var</span> <span class="n">val1</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;639 125 230&#39;</span><span class="o">);</span>  
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="kd">var</span> <span class="n">val1</span><span class="p">:</span><span class="kt">SpainPhoneValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPhoneValidator</span><span class="o">(</span><span class="s1">&#39;639 125 230&#39;</span><span class="o">);</span>  
     <span class="n">val1</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
     <span class="n">val1</span><span class="o">.</span><span class="na">isFixed</span><span class="o">();</span> <span class="c1">//false  </span>
     <span class="n">val1</span><span class="o">.</span><span class="na">isMobile</span><span class="o">();</span> <span class="c1">//true  </span>
@@ -201,7 +201,7 @@
 
     <p>Hola, aqu&iacute; os dejo una peque&ntilde;a classe con una Regular Expresion que he hecho para validar c&oacute;digos postales espa&ntilde;oles. Tambi&eacute;n, puedes saber el nombre de la provincia al que pertenece:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="k">package</span> <span class="nn">com.singuerinc.labs.utils.validators</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="k">package</span> <span class="nn">com.singuerinc.labs.utils.validators</span> <span class="o">{</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="n">SpainPostalCodeValidator</span> <span class="o">{</span>
 
     <span class="kd">public</span> <span class="kd">var</span> <span class="n">stateNames</span><span class="p">:</span><span class="kt">Array</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;Alava/Araba&#39;</span><span class="o">,</span> <span class="s1">&#39;Albacete&#39;</span><span class="o">,</span> <span class="s1">&#39;Alicante&#39;</span><span class="o">,</span> <span class="s1">&#39;Almería&#39;</span><span class="o">,</span> <span class="s1">&#39;Avila&#39;</span><span class="o">,</span> <span class="s1">&#39;Badajoz&#39;</span><span class="o">,</span> <span class="s1">&#39;Islas Baleares&#39;</span><span class="o">,</span> <span class="s1">&#39;Barcelona&#39;</span><span class="o">,</span> <span class="s1">&#39;Burgos&#39;</span><span class="o">,</span> <span class="s1">&#39;Cáceres&#39;</span><span class="o">,</span> <span class="s1">&#39;Cádiz&#39;</span><span class="o">,</span> <span class="s1">&#39;Castellón&#39;</span><span class="o">,</span> <span class="s1">&#39;Ciudad Real&#39;</span><span class="o">,</span> <span class="s1">&#39;Córdoba&#39;</span><span class="o">,</span> <span class="s1">&#39;A Coruña/La Coruña&#39;</span><span class="o">,</span> <span class="s1">&#39;Cuenca&#39;</span><span class="o">,</span> <span class="s1">&#39;Gerona/Girona&#39;</span><span class="o">,</span> <span class="s1">&#39;Granada&#39;</span><span class="o">,</span> <span class="s1">&#39;Guadalajara&#39;</span><span class="o">,</span> <span class="s1">&#39;Gipuzkoa/Guipuzcoa&#39;</span><span class="o">,</span> <span class="s1">&#39;Huelva&#39;</span><span class="o">,</span> <span class="s1">&#39;Huesca&#39;</span><span class="o">,</span> <span class="s1">&#39;Jaen&#39;</span><span class="o">,</span> <span class="s1">&#39;León&#39;</span><span class="o">,</span> <span class="s1">&#39;Lérida/Lleida&#39;</span><span class="o">,</span> <span class="s1">&#39;La Rioja&#39;</span><span class="o">,</span> <span class="s1">&#39;Lugo&#39;</span><span class="o">,</span> <span class="s1">&#39;Madrid&#39;</span><span class="o">,</span> <span class="s1">&#39;Málaga&#39;</span><span class="o">,</span> <span class="s1">&#39;Murcia&#39;</span><span class="o">,</span> <span class="s1">&#39;Navarra&#39;</span><span class="o">,</span> <span class="s1">&#39;Orense/Ourense&#39;</span><span class="o">,</span> <span class="s1">&#39;Asturias&#39;</span><span class="o">,</span> <span class="s1">&#39;Palencia&#39;</span><span class="o">,</span> <span class="s1">&#39;Las Palmas&#39;</span><span class="o">,</span> <span class="s1">&#39;Pontevedra&#39;</span><span class="o">,</span> <span class="s1">&#39;Salamanca&#39;</span><span class="o">,</span> <span class="s1">&#39;S.C.Tenerife&#39;</span><span class="o">,</span> <span class="s1">&#39;Cantabria&#39;</span><span class="o">,</span> <span class="s1">&#39;Segovia&#39;</span><span class="o">,</span> <span class="s1">&#39;Sevilla&#39;</span><span class="o">,</span> <span class="s1">&#39;Soria&#39;</span><span class="o">,</span> <span class="s1">&#39;Tarragona&#39;</span><span class="o">,</span> <span class="s1">&#39;Teruel&#39;</span><span class="o">,</span> <span class="s1">&#39;Toledo&#39;</span><span class="o">,</span> <span class="s1">&#39;Valencia&#39;</span><span class="o">,</span> <span class="s1">&#39;Valladolid&#39;</span><span class="o">,</span> <span class="s1">&#39;Bizkaia/Vizcaya&#39;</span><span class="o">,</span> <span class="s1">&#39;Zamora&#39;</span><span class="o">,</span> <span class="s1">&#39;Zaragoza&#39;</span><span class="o">,</span> <span class="s1">&#39;Ceuta&#39;</span><span class="o">,</span> <span class="s1">&#39;Melilla&#39;</span><span class="o">];</span>
@@ -273,7 +273,7 @@
 
 <p>Algunos ejemplos <strong>v&aacute;lidos</strong>:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="kd">var</span> <span class="n">sv1</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;Barcelona&#39;</span><span class="o">);</span>  
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="kd">var</span> <span class="n">sv1</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;Barcelona&#39;</span><span class="o">);</span>  
 <span class="n">sv1</span><span class="o">.</span><span class="na">stateName</span><span class="o">;</span> <span class="c1">//Barcelona  </span>
 <span class="n">sv1</span><span class="o">.</span><span class="na">stateCode</span><span class="o">;</span> <span class="c1">//08  </span>
 <span class="n">sv1</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//true  </span>
@@ -285,7 +285,7 @@
 
 <p>Y otros que son <strong>inv&aacute;lidos</strong>:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="kd">var</span> <span class="n">sv3</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;New York&#39;</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="kd">var</span> <span class="n">sv3</span><span class="p">:</span><span class="kt">SpainPostalCodeValidator</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">SpainPostalCodeValidator</span><span class="o">(</span><span class="s1">&#39;New York&#39;</span><span class="o">);</span>
 <span class="n">sv3</span><span class="o">.</span><span class="na">stateName</span><span class="o">;</span> <span class="c1">//null  </span>
 <span class="n">sv3</span><span class="o">.</span><span class="na">stateCode</span><span class="o">;</span> <span class="c1">//null  </span>
 <span class="n">sv3</span><span class="o">.</span><span class="na">isValid</span><span class="o">();</span> <span class="c1">//false  </span>
@@ -317,7 +317,7 @@
 
 <p>Para hacer esto necesitamos que nuestro objeto <strong>User</strong> implemente la interface <strong>IBindable</strong> que se encuentra dentro del paquete de as3-signals, entonces tendremos una nueva propiedad dentro de <strong>User</strong> llamada <em>changeSignal</em> que ser&aacute; la encargada de notificar sobre los cambios en el objeto. Veamos un poco el c&oacute;digo, la classe <strong>User</strong> nos quedar&iacute;a as&iacute;:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.signals.binding</span> <span class="o">{</span>  
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.signals.binding</span> <span class="o">{</span>  
     <span class="k">import</span> <span class="nn">org.osflash.signals.binding.ChangeSignal</span><span class="o">;</span>
     <span class="k">import</span> <span class="nn">org.osflash.signals.binding.IBindable</span><span class="o">;</span>  
     <span class="k">import</span> <span class="nn">org.osflash.signals.binding.IChangeSignal</span><span class="o">;</span>  
@@ -347,7 +347,7 @@
 
 <p>Ahora, para vincular el <strong>TextField</strong> con <strong>User</strong> necesitamos de <strong>Binder</strong>, esta vincular&aacute; los dos objetos:</p>
 
-<div class="highlight"><pre><code class="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.signals.binding</span> <span class="o">{</span>  
+<div class="highlight"><pre><code class="language-as3" data-lang="as3"><span class="k">package</span> <span class="nn">net.singuerinc.labs.signals.binding</span> <span class="o">{</span>  
     <span class="k">import</span> <span class="nn">com.bit101.components.PushButton</span><span class="o">;</span>
     <span class="k">import</span> <span class="nn">org.osflash.signals.binding.Binder</span><span class="o">;</span>  
     <span class="k">import</span> <span class="nn">flash.display.Sprite</span><span class="o">;</span>  

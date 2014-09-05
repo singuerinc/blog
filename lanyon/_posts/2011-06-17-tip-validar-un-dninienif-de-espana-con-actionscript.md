@@ -1,5 +1,5 @@
 ---
-title: "Validar DNI/NIE/NIF de Espa&ntilde;a"
+title: "Validar DNI/NIE/NIF de España"
 author: Nahuel Scotti
 layout: post
 categories:
@@ -10,7 +10,7 @@ categories:
   - nie
   - nif
 ---
-# 
+#
 
 Hola, otra Class de validaci&oacute;n, en este caso para validar un DNI espa&ntilde;ol.<br/>
 Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y poder diferenciar si se trata de un nif o un nie.

@@ -108,7 +108,7 @@
   <h1 class="post-title">Spain - Phone validation</h1>
   <p>Este es muy simple, una expresi&oacute;n regular para validar tel&eacute;fonos de Espa&ntilde;a en Javascript.</p>
 
-<div class="highlight"><pre><code class="js"><span class="kd">function</span> <span class="nx">validate</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">validate</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
     <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\s/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
     <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">9</span> <span class="o">&amp;&amp;</span> <span class="sr">/^[679]{1}[0-9]{8}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
 <span class="p">}</span>
@@ -164,7 +164,7 @@
       <li>
         <h3>
           <a href="/javascript/validation/spain/dni/nie/nif/regex/2014/08/06/code-day-006-spain-dni-validation/">
-            Validar DNI/NIE/NIF de Espa&ntilde;a
+            Validar DNI/NIE/NIF de España
             <small>06 Aug 2014</small>
           </a>
         </h3>

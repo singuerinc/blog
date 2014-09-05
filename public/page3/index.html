@@ -125,7 +125,7 @@
 
 <p>So, how we get this data?</p>
 
-<div class="highlight"><pre><code class="js"><span class="c1">// get the video element</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// get the video element</span>
 <span class="kd">var</span> <span class="nx">video</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;video&#39;</span><span class="p">);</span>
 
 <span class="c1">// create a tmp canvas element and get the context</span>
@@ -186,7 +186,7 @@
 
 <p><strong>The problem:</strong> You can&#39;t click on the button, because the click event is captured by the video element.</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>play<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>play<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;p&gt;</span>Lorem ipsum Duis sit nisi occaecat ut<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;video</span> <span class="na">id=</span><span class="s">&quot;video&quot;</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;video.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span></code></pre></div>
 
@@ -199,7 +199,7 @@
 <li><p>You need also specify the correct event on the iPad:</p></li>
 </ol>
 
-<div class="highlight"><pre><code class="html">var ua = navigator.userAgent,
+<div class="highlight"><pre><code class="language-html" data-lang="html">var ua = navigator.userAgent,
     event = (ua.match(/iPad/i)) ? &quot;touchstart&quot; : &quot;click&quot;,
     video = document.getElementsByTagName(&quot;video&quot;)[0];
     btn   = document.getElementById(&#39;btn&#39;);
@@ -233,7 +233,7 @@ btn.addEventListener(event, function(e){
 
 <p>For <strong>Lubuntu 12.04</strong> or below</p>
 
-<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lxdm/default.conf</code></pre></div>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo vim /etc/lxdm/default.conf</code></pre></div>
 
 <p>And change the line:</p>
 
@@ -241,7 +241,7 @@ btn.addEventListener(event, function(e){
 
 <p>For <strong>Lubuntu 12.10</strong> and above</p>
 
-<div class="highlight"><pre><code class="sh"><span class="nv">$ </span>sudo vim /etc/lightdm/lightdm.conf</code></pre></div>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo vim /etc/lightdm/lightdm.conf</code></pre></div>
 
 <p>And then change this line:</p>
 
@@ -267,7 +267,7 @@ btn.addEventListener(event, function(e){
 <li>Ubuntu Server installed</li>
 </ul>
 
-<div class="highlight"><pre><code class="js"><span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
 <span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span> <span class="c1">// full version</span>
 
  <span class="c1">// or without all the stuff...</span>
@@ -294,7 +294,7 @@ btn.addEventListener(event, function(e){
 <li>VirtualBox</li>
 </ul>
 
-<div class="highlight"><pre><code class="js"><span class="nx">Vagrant</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nx">config</span><span class="o">|</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Vagrant</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nx">config</span><span class="o">|</span>
   <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box</span>      <span class="o">=</span> <span class="s1">&#39;precise32&#39;</span>
   <span class="nx">config</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">box_url</span>  <span class="o">=</span> <span class="s1">&#39;http://files.vagrantup.com/precise32.box&#39;</span>
 

@@ -110,7 +110,7 @@
 
 <p><strong>The problem:</strong> You can&#39;t click on the button, because the click event is captured by the video element.</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>play<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>play<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;p&gt;</span>Lorem ipsum Duis sit nisi occaecat ut<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;video</span> <span class="na">id=</span><span class="s">&quot;video&quot;</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;video.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span></code></pre></div>
 
@@ -123,7 +123,7 @@
 <li><p>You need also specify the correct event on the iPad:</p></li>
 </ol>
 
-<div class="highlight"><pre><code class="html">var ua = navigator.userAgent,
+<div class="highlight"><pre><code class="language-html" data-lang="html">var ua = navigator.userAgent,
     event = (ua.match(/iPad/i)) ? &quot;touchstart&quot; : &quot;click&quot;,
     video = document.getElementsByTagName(&quot;video&quot;)[0];
     btn   = document.getElementById(&#39;btn&#39;);
@@ -176,7 +176,7 @@ btn.addEventListener(event, function(e){
       <li>
         <h3>
           <a href="/javascript/validation/spain/dni/nie/nif/regex/2014/08/06/code-day-006-spain-dni-validation/">
-            Validar DNI/NIE/NIF de Espa&ntilde;a
+            Validar DNI/NIE/NIF de España
             <small>06 Aug 2014</small>
           </a>
         </h3>
