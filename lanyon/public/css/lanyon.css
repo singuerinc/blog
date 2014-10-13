@@ -41,16 +41,21 @@ body {
 }
 
 html {
-  font-family: "Roboto", Georgia, "Times New Roman", serif;
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   color: #313131;
   letter-spacing: -.025rem;
 }
 
+p {
+    font-size: 1rem;
+}
 
 /*
  * Wrapper
@@ -148,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
@@ -313,7 +318,8 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-
+    font-size: 3rem;
+    line-height: 3.5rem;
 }
 .post-title span {
     color: #444;
@@ -377,7 +383,7 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
