@@ -83,7 +83,7 @@
 
   <div class="sidebar-item">
     <p>
-      &copy; 2014. No rights reserved.
+      &copy; 2015. No rights reserved.
     </p>
   </div>
 </div>
@@ -105,6 +105,27 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <span class="post-date">08 Jan 2014</span>
+    <h1 class="post-title">
+      <a href="/javascript/array/2014/01/08/code-day-008-shuffle-array/">
+        Shuffle Javascript array
+      </a>
+    </h1>
+
+
+    <p>Este no es m&iacute;o, pero es genial: &iquest;C&oacute;mo desordenar un array?</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">shuffle</span><span class="p">(</span><span class="nx">o</span><span class="p">){</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">o</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">j</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">i</span><span class="p">),</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">o</span><span class="p">[</span><span class="o">--</span><span class="nx">i</span><span class="p">],</span> <span class="nx">o</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">o</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">o</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">x</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">o</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+
+    <span class="post-categories"><span>#javascript</span><span>#array</span></span>
+
+  </div>
   
   <div class="post">
     <span class="post-date">07 Jan 2014</span>
@@ -272,47 +293,6 @@
 
 
     <span class="post-categories"><span>#nodejs</span><span>#async</span><span>#javascript</span></span>
-
-  </div>
-  
-  <div class="post">
-    <span class="post-date">02 Jan 2014</span>
-    <h1 class="post-title">
-      <a href="/nodejs/handlebars/javascript/2014/01/02/code-day-002-if-condition-handlebars/">
-        if condition Handlebars
-      </a>
-    </h1>
-
-
-    <p>Hoy: Handlebars/Javascript, <strong>if condition helper</strong></p>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">handlebars</span><span class="p">.</span><span class="nx">registerHelper</span><span class="p">(</span><span class="s1">&#39;ifCond&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">v1</span><span class="p">,</span> <span class="nx">cond</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">opt</span><span class="p">){</span>
-    <span class="k">switch</span> <span class="p">(</span><span class="nx">cond</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="s1">&#39;==&#39;</span><span class="o">:</span>
-            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">==</span>  <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-        <span class="k">case</span> <span class="s1">&#39;===&#39;</span><span class="o">:</span>
-            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">===</span> <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-        <span class="k">case</span> <span class="s1">&#39;&lt;&#39;</span><span class="o">:</span>
-            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">&lt;</span>   <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-        <span class="k">case</span> <span class="s1">&#39;&lt;=&#39;</span><span class="o">:</span>
-            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">&lt;=</span>  <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-        <span class="k">case</span> <span class="s1">&#39;&gt;&#39;</span><span class="o">:</span>
-            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">&gt;</span>   <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-        <span class="k">case</span> <span class="s1">&#39;&gt;=&#39;</span><span class="o">:</span>
-            <span class="k">return</span> <span class="p">(</span><span class="nx">v1</span> <span class="o">&gt;=</span>  <span class="nx">v2</span><span class="p">)</span> <span class="o">?</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="o">:</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-        <span class="k">default</span><span class="o">:</span>
-            <span class="k">return</span> <span class="nx">opt</span><span class="p">.</span><span class="nx">inverse</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">});</span></code></pre></div>
-
-<p>Ejemplo:</p>
-
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">#ifCond blog &#39;===&#39; &#39;singuerinc&#39;
-<span class="nt">&lt;node&gt;</span>blog ok<span class="nt">&lt;/node&gt;</span>
-/ifCond</code></pre></div>
-
-
-    <span class="post-categories"><span>#nodejs</span><span>#handlebars</span><span>#javascript</span></span>
 
   </div>
   

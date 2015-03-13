@@ -1,6 +1,14 @@
 [
  
  {
+   "title": "Monospaced font selection",
+   "link": "http://blog.singuerinc.com/fonts/2015/03/13/my-font-selection/",
+   "updated":"2015-03-13T00:00:00+01:00",
+   "id": "http://blog.singuerinc.com/fonts/2015/03/13/my-font-selection",
+   "tags": ["fonts"]
+ },
+ 
+ {
    "title": "Movies: RequireJS + Marionette.js + The Movie DB api",
    "link": "http://blog.singuerinc.com/javascript/requirejs/marionette/movies/themoviedb-api/2014/08/10/requirejs-marionette-movies/",
    "updated":"2014-08-10T00:00:00+02:00",
