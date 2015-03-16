@@ -4,6 +4,8 @@ author: singuerinc
 layout: post
 categories:
   - fonts
+  - monospaced
+  - fixed width
 ---
 
 I like to change from time to time the font and theme in my editor.
