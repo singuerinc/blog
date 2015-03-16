@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2015-03-16T12:20:53+01:00</updated>
+ <updated>2015-03-16T21:54:47+01:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -21,53 +21,53 @@
 I want to show you a quick look about the fonts I have used to code in the last years, I hope it makes easy for you to select your favorite font from this selection:&lt;/p&gt;
 
 &lt;p&gt;Andale Mono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/AndaleMono.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/AndaleMono.png&quot;&gt;
 Anonymous Pro&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/Anonymous-Pro.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/Anonymous-Pro.png&quot;&gt;
 BPmono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/BPmono.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/BPmono.png&quot;&gt;
 Cousine&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/Cousine.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/Cousine.png&quot;&gt;
 DejaVu Sans Mono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/DejaVuSansMono.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/DejaVuSansMono.png&quot;&gt;
 Droid Sans Mono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/DroidSansMono.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/DroidSansMono.png&quot;&gt;
 Envy Code R VS&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/EnvyCodeRVS.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/EnvyCodeRVS.png&quot;&gt;
 Inconsolata&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/Inconsolata.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/Inconsolata.png&quot;&gt;
 Input Mono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/InputMono.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/InputMono.png&quot;&gt;
 Input Mono Compressed&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/InputMonoCompressed.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/InputMonoCompressed.png&quot;&gt;
 Input Mono Condensed&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/InputMonoCondensed.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/InputMonoCondensed.png&quot;&gt;
 Input Mono Narrow&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/InputMonoNarrow.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/InputMonoNarrow.png&quot;&gt;
 Latin Modern Mono Prop 10 Regular&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/LatinModernMonoProp10Regular.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/LatinModernMonoProp10Regular.png&quot;&gt;
 Lekton&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/Lekton.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/Lekton.png&quot;&gt;
 Liberation Mono Regular&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/LiberationMonoRegular.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/LiberationMonoRegular.png&quot;&gt;
 Luxi Mono Regular&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/LuxiMonoRegular.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/LuxiMonoRegular.png&quot;&gt;
 Menlo&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/Menlo.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/Menlo.png&quot;&gt;
 Monaco&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/Monaco.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/Monaco.png&quot;&gt;
 NotCourier&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/NotCourier.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/NotCourier.png&quot;&gt;
 NovaMono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/NovaMono.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/NovaMono.png&quot;&gt;
 Oxygen Mono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/OxygenMono.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/OxygenMono.png&quot;&gt;
 PT Mono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/PTMono.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/PTMono.png&quot;&gt;
 Share Tech Mono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/ShareTechMono.png&quot;&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/ShareTechMono.png&quot;&gt;
 TeX Gyre Cursor&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;public/images/posts-assets/fonts-selection/TeXGyreCursor.png&quot;&gt;&lt;/p&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/TeXGyreCursor.png&quot;&gt;&lt;/p&gt;
 </content>
  </entry>
  
