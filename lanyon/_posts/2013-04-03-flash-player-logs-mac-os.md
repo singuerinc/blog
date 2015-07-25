@@ -10,6 +10,7 @@ categories:
     - osx
 ---
 
+
 &iquest;C&oacute;mo puedo ver los **trace** de Flash Player?<br/>
 Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador.
 

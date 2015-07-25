@@ -12,6 +12,8 @@ tags:
   - lib
   - sound
 ---
+
+
 Hola, he comenzado a desarrollar **as3-audio** en una peque&ntilde;a librer&iacute;a para simplificar la reproducci&oacute;n y controlar sonidos.
 
 No tendr&aacute; la posibilidad de crear sonidos sino que est&aacute; pensada m&aacute;s para el desarrollo en websites/apps. La idea es simplificar un poco el trabajo con sonido en Actionscript, y tener algunas funciones b&aacute;sicas como *play, pause, resume, stop* y otras &uacute;tiles como * fadeIn, fadeOut, delay*, etc.

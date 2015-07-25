@@ -8,7 +8,6 @@ categories:
   - postal-code
   - spain
 ---
-# 
 
 Hola, aqu&iacute; os dejo una peque&ntilde;a classe con una Regular Expresion que he hecho para validar c&oacute;digos postales espa&ntilde;oles. Tambi&eacute;n, puedes saber el nombre de la provincia al que pertenece:
 
@@ -91,7 +90,7 @@ var sv1:SpainPostalCodeValidator = new SpainPostalCodeValidator('Barcelona');
 sv1.stateName; //Barcelona  
 sv1.stateCode; //08  
 sv1.isValid(); //true  
-  
+
 var sv2:SpainPostalCodeValidator = new SpainPostalCodeValidator('28001');  
 sv2.stateName; //Madrid  
 sv2.stateCode; //28  
@@ -106,7 +105,7 @@ var sv3:SpainPostalCodeValidator = new SpainPostalCodeValidator('New York');
 sv3.stateName; //null  
 sv3.stateCode; //null  
 sv3.isValid(); //false  
-  
+
 var sv4:SpainPostalCodeValidator = new SpainPostalCodeValidator('80800');  
 sv4.stateName; //null  
 sv4.stateCode; //null  

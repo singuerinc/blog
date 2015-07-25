@@ -7,6 +7,8 @@ categories:
   - colors
   - random
 ---
+
+
 Para empezar algo de Javascript simple: **random hex color**.
 
 {% highlight js %}

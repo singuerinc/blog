@@ -7,9 +7,10 @@ categories:
   - validators
   - spain
 ---
-# 
+
 
 Aqu&iacute; os dejo otra Regular Expresion classe para validar tel&eacute;fonos m&oacute;viles en Espa&ntilde;a, hasta hace poco, s&oacute;lo existian n&uacute;meros m&oacute;viles que empezaban por "6", ahora se ha agregado el "7", la classe valida tanto m&oacute;viles como fijos y pueden contener espacios:
+
 {% highlight as3 %}
 package net.singuerinc.labs.utils.validators {
 /**
@@ -63,17 +64,17 @@ Algunos ejemplos:
 	val1.isValid(); //true  
 	val1.isFixed(); //false  
 	val1.isMobile(); //true  
-	  
+
 	var val2:SpainPhoneValidator = new SpainPhoneValidator('668515187');  
 	val2.isValid(); //true  
 	val2.isFixed(); //false  
 	val2.isMobile(); //true  
-	  
+
 	var val3:SpainPhoneValidator = new SpainPhoneValidator('133 560 158');  
 	val3.isValid(); //false  
 	val3.isFixed(); //false  
 	val3.isMobile(); //false  
-	  
+
 	var val4:SpainPhoneValidator = new SpainPhoneValidator('932 510 258');  
 	val4.isValid(); //true  
 	val4.isFixed(); //true  
