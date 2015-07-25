@@ -13,7 +13,12 @@ layout: default
     </h1>
 
 
-    {{ post.content }}
+    {{ post.content | split:'<!--break-->' | first }}
+    {% if post.content contains '<!--break-->' %}
+      <a href="{{ post.url }}">READ MORE</a><br/>
+    {% endif %}
+
+
 
     <span class="post-categories">{{ post.categories | join: '</span><span>#' | prepend: '<span>#' | append: '</span>' }}</span>
 

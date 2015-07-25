@@ -107,7 +107,9 @@
         <div class="post">
   <span class="post-date">23 Jan 2014</span>
   <h1 class="post-title">Step by step Redmine installation</h1>
-  <h3>1. Install Apache</h3>
+  <!--break-->
+
+<h3>1. Install Apache</h3>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ apt-get install apache2
 </code></pre></div>
 <h3>2. Install rmagick &amp; nokigiri dependencies</h3>
@@ -153,7 +155,7 @@ $ passenger-install-apache2-module
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;IfModule mod_passenger.c&gt;
   PassengerRoot /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36
   PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.1.0/wrappers/ruby
-&lt;/IfModule&gt; 
+&lt;/IfModule&gt;
 </code></pre></div></li>
 <li><p>Enable Passenger as Apache module:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">sudo a2enmod passenger  
@@ -219,11 +221,11 @@ $ vim config/configuration.yml
     delivery_method: :smtp
     smtp_settings:
       enable_starttls_auto: true
-      address: &quot;smtp.gmail.com&quot; 
+      address: &quot;smtp.gmail.com&quot;
       port: &#39;587&#39;
-      domain: &quot;smtp.gmail.com&quot; 
+      domain: &quot;smtp.gmail.com&quot;
       authentication: :plain
-      user_name: &quot;redmine.domain@gmail.com&quot; 
+      user_name: &quot;redmine.domain@gmail.com&quot;
       password: &quot;secret&quot;
 </code></pre></div>
 <h3>15. Theme (optional)</h3>

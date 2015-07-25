@@ -318,7 +318,7 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-    font-size: 3rem;
+    font-size: 3.3rem;
     line-height: 3.5rem;
 }
 .post-title span {
@@ -341,8 +341,8 @@ a.sidebar-nav-item:focus {
 .post-categories span {
   font-size: 1em;
   display: inline-block;
-  padding: 2px 7px;
-  margin: 0 5px 0 0;
+  padding: 2px 0px;
+  margin: 0 10px 0 0;
   color: #ccc;
 }
 

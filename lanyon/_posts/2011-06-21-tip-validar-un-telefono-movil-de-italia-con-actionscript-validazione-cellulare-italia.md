@@ -21,6 +21,8 @@ tags:
 
 La mayoria de los sites que hago se traducen a alg&uacute;n otro idioma, en este caso lo hemos traducido a italiano. Pero la traducci&oacute;n no s&oacute;lo se queda en los textos, cuando se tienen formularios y hay que validar formularios la cosa se complica un poco m&aacute;s.  
 
+<!--break-->
+
 Validar un tel&eacute;fono de Italia es bastante m&aacute;s complicado que uno de Espa&ntilde;a, ya que cada compa&ntilde;ia tiene asignado un rango de n&uacute;meros y no son correlativos.
 
 Para complicarme a&uacute;n m&aacute;s la existencia, me pareci&oacute; que ser&iacute;a &uacute;til que tuviera la capacidad de decirnos a qu&eacute; compa&ntilde;ia corresponde.
@@ -107,17 +109,17 @@ var val1:ItalyPhoneValidator = new ItalyPhoneValidator(' 393401234567');
 val1.isValid(); //true  
 val1.operatorName; //Vodafone  
 val1.isMobile(); //true  
-    
+
 var val2:ItalyPhoneValidator = new ItalyPhoneValidator('0039 368 1234567');  
 val2.isValid(); //true  
 val2.operatorName; //TIM  
 val2.isMobile(); //true  
-    
+
 var val3:ItalyPhoneValidator = new ItalyPhoneValidator('380 4567321');  
 val3.isValid(); //true  
 val3.operatorName; //Wind  
 val3.isMobile(); //true  
-    
+
 var val4:ItalyPhoneValidator = new ItalyPhoneValidator('3933216547');  
 val4.isValid(); //true  
 val4.operatorName; //Tre  

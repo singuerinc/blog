@@ -13,6 +13,9 @@ I want to show you a quick look about the fonts I have used to code in the last 
 
 Andale Mono<br/>
 <img width="720" src="/public/images/posts-assets/fonts-selection/AndaleMono.png">
+
+<!--break-->
+
 Anonymous Pro<br/>
 <img width="720" src="/public/images/posts-assets/fonts-selection/Anonymous-Pro.png">
 BPmono<br/>
