@@ -16,6 +16,8 @@ Hola, he comenzado a desarrollar **as3-audio** en una peque&ntilde;a librer&iacu
 
 No tendr&aacute; la posibilidad de crear sonidos sino que est&aacute; pensada m&aacute;s para el desarrollo en websites/apps. La idea es simplificar un poco el trabajo con sonido en Actionscript, y tener algunas funciones b&aacute;sicas como *play, pause, resume, stop* y otras &uacute;tiles como * fadeIn, fadeOut, delay*, etc.
 
+<!--break-->
+
 Otra de las caracter&iacute;sticas que destacar&aacute; es la utilizaci&oacute;n de [as3-signals][2] para notificar los eventos.
 
 De momento est&aacute; en desarrollo, puedes encontrar el c&oacute;digo en github: [as3-audio][3], la classe **Audio** ya es funcional. Si quieres puedes realizar un *fork* y cuando tengas algo interesante podemos incorporarlo a la librer&iacute;a!
