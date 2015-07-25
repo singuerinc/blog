@@ -4,7 +4,7 @@
  <title>blog | singuerinc</title>
  <link href="http://blog.singuerinc.com/atom.xml" rel="self"/>
  <link href="http://blog.singuerinc.com/"/>
- <updated>2015-03-16T21:54:47+01:00</updated>
+ <updated>2015-07-25T16:17:44+02:00</updated>
  <id>http://blog.singuerinc.com</id>
  <author>
    <name>Nahuel Scotti</name>
@@ -21,8 +21,11 @@
 I want to show you a quick look about the fonts I have used to code in the last years, I hope it makes easy for you to select your favorite font from this selection:&lt;/p&gt;
 
 &lt;p&gt;Andale Mono&lt;br/&gt;
-&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/AndaleMono.png&quot;&gt;
-Anonymous Pro&lt;br/&gt;
+&lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/AndaleMono.png&quot;&gt;&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;Anonymous Pro&lt;br/&gt;
 &lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/Anonymous-Pro.png&quot;&gt;
 BPmono&lt;br/&gt;
 &lt;img width=&quot;720&quot; src=&quot;/public/images/posts-assets/fonts-selection/BPmono.png&quot;&gt;
@@ -76,8 +79,11 @@ TeX Gyre Cursor&lt;br/&gt;
    <link href="http://blog.singuerinc.com/javascript/requirejs/marionette/movies/themoviedb-api/2014/08/10/requirejs-marionette-movies/"/>
    <updated>2014-08-10T00:00:00+02:00</updated>
    <id>http://blog.singuerinc.com/javascript/requirejs/marionette/movies/themoviedb-api/2014/08/10/requirejs-marionette-movies</id>
-   <content type="html">&lt;p&gt;Long time ago I had have a catalog with all my movies... it was impossible to keep track of all of them I&amp;#39;ve purchased.&lt;br/&gt;
-Yesterday I found that &amp;quot;The Movie DB&amp;quot; is one of the best options to search movies info. So, I&amp;#39;ve made a quick example of how to use it, and like in the last 3 apps I&amp;#39;ve used &lt;a href=&quot;http://requirejs.org&quot; target=&quot;_blank&quot;&gt;RequireJS&lt;/a&gt; and &lt;a href=&quot;http://marionettejs.com/&quot;&gt;Marionette.js&lt;/a&gt;.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Long time ago I had have a catalog with all my movies... it was impossible to keep track of all of them I&amp;#39;ve purchased.&lt;br/&gt;&lt;/p&gt;
+
+&lt;!--break--&gt;
+
+&lt;p&gt;Yesterday I found that &amp;quot;The Movie DB&amp;quot; is one of the best options to search movies info. So, I&amp;#39;ve made a quick example of how to use it, and like in the last 3 apps I&amp;#39;ve used &lt;a href=&quot;http://requirejs.org&quot; target=&quot;_blank&quot;&gt;RequireJS&lt;/a&gt; and &lt;a href=&quot;http://marionettejs.com/&quot;&gt;Marionette.js&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;You could find the source at &lt;a href=&quot;https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-movies&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
 
@@ -95,7 +101,9 @@ This is a classic... basic simple game, you have to find two cells with the same
 
 &lt;iframe src=&quot;/code/labs/require-marionette-game/index.html&quot; style=&quot;border: 1px solid grey; width: 100%; height: 625px;&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;You could find the source at &lt;a href=&quot;https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-game&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You could find the source at &lt;a href=&quot;https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-game&quot; target=&quot;\_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--break--&gt;
 
 &lt;p&gt;There are two main classes: MapView.js and CellView.js&lt;/p&gt;
 
@@ -133,10 +141,12 @@ Also, it stores the score, renews the turns and marks the cells as resolved when
    <link href="http://blog.singuerinc.com/javascript/requirejs/marionette/flickr/2014/07/27/requirejs-marionette-flickr/"/>
    <updated>2014-07-27T00:00:00+02:00</updated>
    <id>http://blog.singuerinc.com/javascript/requirejs/marionette/flickr/2014/07/27/requirejs-marionette-flickr</id>
-   <content type="html">&lt;p&gt;Another quick example of use &lt;a href=&quot;http://requirejs.org&quot; target=&quot;_blank&quot;&gt;RequireJS&lt;/a&gt; and &lt;a href=&quot;http://marionettejs.com/&quot;&gt;Marionette.js&lt;/a&gt; together.
+   <content type="html">&lt;p&gt;Another quick example of use &lt;a href=&quot;http://requirejs.org&quot; target=&quot;\_blank&quot;&gt;RequireJS&lt;/a&gt; and &lt;a href=&quot;http://marionettejs.com/&quot;&gt;Marionette.js&lt;/a&gt; together.
 In this application the user can search public photos on by tags Flickr.&lt;/p&gt;
 
 &lt;iframe src=&quot;/code/labs/require-marionette-flickr/index.html&quot; style=&quot;border: 1px solid grey; width: 100%; height: 735px;&quot;&gt;&lt;/iframe&gt;
+
+&lt;!--break--&gt;
 
 &lt;h3&gt;How it works?&lt;/h3&gt;
 
@@ -173,13 +183,15 @@ In this application the user can search public photos on by tags Flickr.&lt;/p&g
    <link href="http://blog.singuerinc.com/javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/"/>
    <updated>2014-07-26T00:00:00+02:00</updated>
    <id>http://blog.singuerinc.com/javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook</id>
-   <content type="html">&lt;p&gt;This is a quick example of use a serie of libraries that work great together.&lt;br/&gt;I like a lot &lt;a href=&quot;http://requirejs.org&quot; target=&quot;_blank&quot;&gt;RequireJS&lt;/a&gt;, the way I can organize my modules/code with it. &lt;a href=&quot;http://marionettejs.com/&quot;&gt;Marionette.js&lt;/a&gt; do a great work with the views, it takes care about everything: listeners, selectors, events, etc. And with the &lt;a href=&quot;https://developers.facebook.com/docs/javascript&quot; target=&quot;_blank&quot;&gt;Facebook SDK&lt;/a&gt; we have a lot of info to build complex or simple applications like the next one.&lt;/p&gt;
+   <content type="html">&lt;p&gt;This is a quick example of use a serie of libraries that work great together.&lt;br/&gt;I like a lot &lt;a href=&quot;http://requirejs.org&quot; target=&quot;\_blank&quot;&gt;RequireJS&lt;/a&gt;, the way I can organize my modules/code with it. &lt;a href=&quot;http://marionettejs.com/&quot;&gt;Marionette.js&lt;/a&gt; do a great work with the views, it takes care about everything: listeners, selectors, events, etc. And with the &lt;a href=&quot;https://developers.facebook.com/docs/javascript&quot; target=&quot;\_blank&quot;&gt;Facebook SDK&lt;/a&gt; we have a lot of info to build complex or simple applications like the next one.&lt;/p&gt;
 
 &lt;p&gt;The example is very straightforward:&lt;/p&gt;
 
 &lt;p&gt;Search for your Facebook ID or, for example: &amp;quot;obama&amp;quot; or &amp;quot;mickeymouse&amp;quot;&lt;/p&gt;
 
 &lt;iframe src=&quot;/code/labs/require-marionette-facebook/index.html&quot; style=&quot;border: 1px solid grey; width: 100%; height: 263px;&quot;&gt;&lt;/iframe&gt;
+
+&lt;!--break--&gt;
 
 &lt;h3&gt;How it works?&lt;/h3&gt;
 
@@ -252,7 +264,9 @@ Let configure RequireJS, resolve some dependencies and start our application:
    <link href="http://blog.singuerinc.com/redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/"/>
    <updated>2014-01-23T00:00:00+01:00</updated>
    <id>http://blog.singuerinc.com/redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step</id>
-   <content type="html">&lt;h3&gt;1. Install Apache&lt;/h3&gt;
+   <content type="html">&lt;!--break--&gt;
+
+&lt;h3&gt;1. Install Apache&lt;/h3&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ apt-get install apache2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;2. Install rmagick &amp;amp; nokigiri dependencies&lt;/h3&gt;
@@ -298,7 +312,7 @@ $ passenger-install-apache2-module
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;IfModule mod_passenger.c&amp;gt;
   PassengerRoot /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36
   PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.1.0/wrappers/ruby
-&amp;lt;/IfModule&amp;gt; 
+&amp;lt;/IfModule&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Enable Passenger as Apache module:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;sudo a2enmod passenger  
@@ -364,11 +378,11 @@ $ vim config/configuration.yml
     delivery_method: :smtp
     smtp_settings:
       enable_starttls_auto: true
-      address: &amp;quot;smtp.gmail.com&amp;quot; 
+      address: &amp;quot;smtp.gmail.com&amp;quot;
       port: &amp;#39;587&amp;#39;
-      domain: &amp;quot;smtp.gmail.com&amp;quot; 
+      domain: &amp;quot;smtp.gmail.com&amp;quot;
       authentication: :plain
-      user_name: &amp;quot;redmine.domain@gmail.com&amp;quot; 
+      user_name: &amp;quot;redmine.domain@gmail.com&amp;quot;
       password: &amp;quot;secret&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;15. Theme (optional)&lt;/h3&gt;
@@ -1045,6 +1059,8 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
    <id>http://blog.singuerinc.com/actionscript3/validators/italy/regex/phone/2011/06/21/tip-validar-un-telefono-movil-de-italia-con-actionscript-validazione-cellulare-italia</id>
    <content type="html">&lt;p&gt;La mayoria de los sites que hago se traducen a alg&amp;uacute;n otro idioma, en este caso lo hemos traducido a italiano. Pero la traducci&amp;oacute;n no s&amp;oacute;lo se queda en los textos, cuando se tienen formularios y hay que validar formularios la cosa se complica un poco m&amp;aacute;s.  &lt;/p&gt;
 
+&lt;!--break--&gt;
+
 &lt;p&gt;Validar un tel&amp;eacute;fono de Italia es bastante m&amp;aacute;s complicado que uno de Espa&amp;ntilde;a, ya que cada compa&amp;ntilde;ia tiene asignado un rango de n&amp;uacute;meros y no son correlativos.&lt;/p&gt;
 
 &lt;p&gt;Para complicarme a&amp;uacute;n m&amp;aacute;s la existencia, me pareci&amp;oacute; que ser&amp;iacute;a &amp;uacute;til que tuviera la capacidad de decirnos a qu&amp;eacute; compa&amp;ntilde;ia corresponde.&lt;/p&gt;
@@ -1128,17 +1144,17 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
 &lt;span class=&quot;nx&quot;&gt;val1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isValid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//true  &lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;val1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;operatorName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Vodafone  &lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;val1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isMobile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//true  &lt;/span&gt;
-    
+
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;val2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ItalyPhoneValidator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ItalyPhoneValidator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;0039 368 1234567&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
 &lt;span class=&quot;nx&quot;&gt;val2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isValid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//true  &lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;val2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;operatorName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//TIM  &lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;val2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isMobile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//true  &lt;/span&gt;
-    
+
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;val3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ItalyPhoneValidator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ItalyPhoneValidator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;380 4567321&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
 &lt;span class=&quot;nx&quot;&gt;val3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isValid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//true  &lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;val3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;operatorName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Wind  &lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;val3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isMobile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//true  &lt;/span&gt;
-    
+
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;val4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ItalyPhoneValidator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ItalyPhoneValidator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;3933216547&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
 &lt;span class=&quot;nx&quot;&gt;val4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isValid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//true  &lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;val4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;operatorName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Tre  &lt;/span&gt;
@@ -1159,6 +1175,8 @@ Si quer&amp;eacute;is hacer una prueba, os dejo un peque&amp;ntilde;o form para 
    <content type="html">&lt;p&gt;Hola, he comenzado a desarrollar &lt;strong&gt;as3-audio&lt;/strong&gt; en una peque&amp;ntilde;a librer&amp;iacute;a para simplificar la reproducci&amp;oacute;n y controlar sonidos.&lt;/p&gt;
 
 &lt;p&gt;No tendr&amp;aacute; la posibilidad de crear sonidos sino que est&amp;aacute; pensada m&amp;aacute;s para el desarrollo en websites/apps. La idea es simplificar un poco el trabajo con sonido en Actionscript, y tener algunas funciones b&amp;aacute;sicas como &lt;em&gt;play, pause, resume, stop&lt;/em&gt; y otras &amp;uacute;tiles como * fadeIn, fadeOut, delay*, etc.&lt;/p&gt;
+
+&lt;!--break--&gt;
 
 &lt;p&gt;Otra de las caracter&amp;iacute;sticas que destacar&amp;aacute; es la utilizaci&amp;oacute;n de &lt;a href=&quot;https://github.com/robertpenner/as3-signals&quot;&gt;as3-signals&lt;/a&gt; para notificar los eventos.&lt;/p&gt;
 
@@ -1457,6 +1475,8 @@ Realic&amp;eacute; una classe porque quer&amp;iacute;a tener un set de funciones
 
 &lt;p&gt;Aqu&amp;iacute; es donde as3-signals nos puede dar una mano, si sois como yo, que ando buscando siempre c&amp;oacute;digo nuevo que me facilite la vida habr&amp;eacute;is notado que existe un branch en &lt;a href=&quot;https://github.com/robertpenner/as3-signals/tree/binding&quot;&gt;as3-signals&lt;/a&gt; de Robert Penner llamado &amp;quot;binding&amp;quot;.&lt;/p&gt;
 
+&lt;!--break--&gt;
+
 &lt;p&gt;Es un set de classes que nos permiten vincular una propiedad de un objeto a otra propiedad de otro objecto. Me explico: por ejemplo, cada vez que actualizo la propiedad &amp;quot;name&amp;quot; del objeto &lt;strong&gt;User&lt;/strong&gt; quiero que se actualice la propiedad &amp;quot;text&amp;quot; de un &amp;quot;TextField&amp;quot;.&lt;/p&gt;
 
 &lt;p&gt;Para hacer esto necesitamos que nuestro objeto &lt;strong&gt;User&lt;/strong&gt; implemente la interface &lt;strong&gt;IBindable&lt;/strong&gt; que se encuentra dentro del paquete de as3-signals, entonces tendremos una nueva propiedad dentro de &lt;strong&gt;User&lt;/strong&gt; llamada &lt;em&gt;changeSignal&lt;/em&gt; que ser&amp;aacute; la encargada de notificar sobre los cambios en el objeto. Veamos un poco el c&amp;oacute;digo, la classe &lt;strong&gt;User&lt;/strong&gt; nos quedar&amp;iacute;a as&amp;iacute;:&lt;/p&gt;
@@ -1465,24 +1485,24 @@ Realic&amp;eacute; una classe porque quer&amp;iacute;a tener un set de funciones
     &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.osflash.signals.binding.ChangeSignal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.osflash.signals.binding.IBindable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
     &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.osflash.signals.binding.IChangeSignal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
-  
+
     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IBindable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
-  
+
         &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
         &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_changeSignal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ChangeSignal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
-  
+
         &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  
-  
+
         &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
             &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
             &lt;span class=&quot;n&quot;&gt;changeSignal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  
-  
+
         &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;():&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
             &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  
-  
+
         &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeSignal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;():&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IChangeSignal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
             &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_changeSignal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ChangeSignal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  
@@ -1498,26 +1518,26 @@ Realic&amp;eacute; una classe porque quer&amp;iacute;a tener un set de funciones
     &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;flash.events.MouseEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
     &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;flash.text.TextField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
     &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;flash.text.TextFieldAutoSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
-  
+
     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SignalsBindingExample&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sprite&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
-  
+
         &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
-  
+
         &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;SignalsBindingExample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
-  
+
             &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PushButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;change user name&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  
-  
+
             &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;TextField&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;TextField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;  
             &lt;span class=&quot;n&quot;&gt;txt1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;autoSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextFieldAutoSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LEFT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
             &lt;span class=&quot;n&quot;&gt;addChild&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txt1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  
-  
+
             &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;  
             &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;User1&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
-  
+
             &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;binder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Binder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Binder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;  
             &lt;span class=&quot;n&quot;&gt;binder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txt1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  
-  
+
         &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;MouseEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
             &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;User&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;  
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  

@@ -12,14 +12,16 @@ categories:
   - ruby
 ---
 
+<!--break-->
+
 ### 1. Install Apache
 
     $ apt-get install apache2
-    
+
 ### 2. Install rmagick & nokigiri dependencies
 
     $ apt-get install -y build-essential imagemagick libmagickcore-dev libmagickwand-dev libxml2 libxml2-dev libxslt1-dev
-    
+
 ### 3. Install MySQL
     $ apt-get update
     $ apt-get install -y mysql-client-core-5.5 mysql-server mysql-client libmysqlclient-dev
@@ -52,18 +54,18 @@ categories:
         $ apt-get install -y libcurl4-openssl-dev apache2-threaded-dev libapr1-dev libaprutil1-dev
         $ gem install passenger
         $ passenger-install-apache2-module
-    
+
 
 2. Add the following lines to `/etc/apache2/mods-available/passenger.load`:
-    
+
         LoadModule passenger_module /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36/buildout/apache2/mod_passenger.so
-        
+
 3. Add the following lines to `/etc/apache2/mods-available/passenger.conf`:
-    
+
         <IfModule mod_passenger.c>
           PassengerRoot /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36
           PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.1.0/wrappers/ruby
-        </IfModule> 
+        </IfModule>
 
 4. Enable Passenger as Apache module:
 
@@ -105,7 +107,7 @@ This step generates a random key used by Rails to encode cookies storing session
 Create the database structure
 
     $ RAILS_ENV=production rake db:migrate
-    
+
 ### 13. File system permissions
 The user account running the application must have write permission on the following subdirectories:
 
@@ -132,11 +134,11 @@ Edit `configuration.yml`
         delivery_method: :smtp
         smtp_settings:
           enable_starttls_auto: true
-          address: "smtp.gmail.com" 
+          address: "smtp.gmail.com"
           port: '587'
-          domain: "smtp.gmail.com" 
+          domain: "smtp.gmail.com"
           authentication: :plain
-          user_name: "redmine.domain@gmail.com" 
+          user_name: "redmine.domain@gmail.com"
           password: "secret"
 
 ### 15. Theme (optional)
@@ -148,7 +150,7 @@ Edit `configuration.yml`
 ### 16. Test Redmine
 
     $ ruby script/rails server webrick -e production
-    
+
 > Note: Webrick is not suitable for production use, please only use webrick for testing that the installation up to this point is functional.
 
 Fatto!

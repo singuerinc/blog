@@ -115,138 +115,11 @@
     </h1>
 
 
-    <h3>1. Install Apache</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ apt-get install apache2
-</code></pre></div>
-<h3>2. Install rmagick &amp; nokigiri dependencies</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ apt-get install -y build-essential imagemagick libmagickcore-dev libmagickwand-dev libxml2 libxml2-dev libxslt1-dev
-</code></pre></div>
-<h3>3. Install MySQL</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ apt-get update
-$ apt-get install -y mysql-client-core-5.5 mysql-server mysql-client libmysqlclient-dev
-// enter your top-secret-password
-</code></pre></div>
-<h3>4. Restart MySQL</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ /etc/init.d/mysql stop
-$ /etc/init.d/mysql start
-$ /usr/bin/mysqld_safe --user=mysql --skip-grant-tables
-</code></pre></div>
-<h3>5. Download Redmine</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">curl -O http://www.redmine.org/releases/redmine-2.3.4.zip
-unzip redmine-2.3.4.zip
-</code></pre></div>
-<h3>6. Change database configuration</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ cp /config/database.yml.example /config/database.yml
-$ vim /config/database.yml
-// user: redmine
-// pass: redminepassword
-</code></pre></div>
-<h3>7. Install RVM + Ruby</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ curl -L https://get.rvm.io | bash -s stable
-// logout or source here
-$ rvm install 2.1.0 --autolibs=enabled &amp;&amp; rvm --fuzzy alias create default 2.1.0
-</code></pre></div>
-<h3>8. Install Pusion Passenger</h3>
+    
+    
+      <a href="/redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/">READ MORE</a><br/>
+    
 
-<ol>
-<li><p>Install Pussion Passenger + Apache mod</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ apt-get install -y libcurl4-openssl-dev apache2-threaded-dev libapr1-dev libaprutil1-dev
-$ gem install passenger
-$ passenger-install-apache2-module
-</code></pre></div></li>
-<li><p>Add the following lines to <code>/etc/apache2/mods-available/passenger.load</code>:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">LoadModule passenger_module /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36/buildout/apache2/mod_passenger.so
-</code></pre></div></li>
-<li><p>Add the following lines to <code>/etc/apache2/mods-available/passenger.conf</code>:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;IfModule mod_passenger.c&gt;
-  PassengerRoot /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36
-  PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.1.0/wrappers/ruby
-&lt;/IfModule&gt; 
-</code></pre></div></li>
-<li><p>Enable Passenger as Apache module:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">sudo a2enmod passenger  
-</code></pre></div></li>
-<li><p>Add a virtual host to your Apache configuration file and set its DocumentRoot to <code>/var/sites/redmine.domain.com/public</code>:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;VirtualHost *:80&gt;
-   ServerName redmine.domain.com
-   DocumentRoot /var/sites/redmine.domain.com/public
-   &lt;Directory /var/sites/redmine.domain.com/public&gt;
-      Require all granted
-      Options FollowSymLinks
-      AllowOverride none
-      Order allow,deny
-      Allow from all
-      PassengerUser root
-   &lt;/Directory&gt;
-&lt;/VirtualHost&gt;
-</code></pre></div></li>
-</ol>
-
-<h3>8. Enable Apache site</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ sudo a2ensite redmine
-</code></pre></div>
-<h3>9. Install dependencies</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ gem install bundler
-</code></pre></div>
-<h3>10. Install Redmine dependencies</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ bundle install
-</code></pre></div>
-<h3>11. Session store secret generation</h3>
-
-<p>This step generates a random key used by Rails to encode cookies storing session data thus preventing their tampering.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ rake generate_secret_token
-</code></pre></div>
-<h3>12. Database schema objects creation</h3>
-
-<p>Create the database structure</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ RAILS_ENV=production rake db:migrate
-</code></pre></div>
-<h3>13. File system permissions</h3>
-
-<p>The user account running the application must have write permission on the following subdirectories:</p>
-
-<ol>
-<li>files (storage of attachments)</li>
-<li>log (application log file production.log)</li>
-<li>tmp and tmp/pdf (create these ones if not present, used to generate PDF documents among other things)</li>
-<li>public/plugin_assets (assets of plugins).</li>
-</ol>
-
-<p><b></b></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ mkdir -p tmp tmp/pdf public/plugin_assets
-$ sudo chown -R nobody:nogroup files log tmp public/plugin_assets
-$ sudo chmod -R 755 files log tmp public/plugin_assets
-</code></pre></div>
-<h3>14. Email configuration (gmail)</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ cp config/configuration.yml.example config/configuration.yml
-$ vim config/configuration.yml
-</code></pre></div>
-<p>Edit <code>configuration.yml</code></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">production:
-  email_delivery:
-    delivery_method: :smtp
-    smtp_settings:
-      enable_starttls_auto: true
-      address: &quot;smtp.gmail.com&quot; 
-      port: &#39;587&#39;
-      domain: &quot;smtp.gmail.com&quot; 
-      authentication: :plain
-      user_name: &quot;redmine.domain@gmail.com&quot; 
-      password: &quot;secret&quot;
-</code></pre></div>
-<h3>15. Theme (optional)</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ cd public/themes/
-$ curl -O http://www.redminecrm.com/license_manager/9722/circle_theme-1_0_1.zip
-$ unzip circle_theme-1_0_1.zip
-</code></pre></div>
-<h3>16. Test Redmine</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ ruby script/rails server webrick -e production
-</code></pre></div>
-<blockquote>
-<p>Note: Webrick is not suitable for production use, please only use webrick for testing that the installation up to this point is functional.</p>
-</blockquote>
-
-<p>Fatto!</p>
 
 
     <span class="post-categories"><span>#redmine</span><span>#apache</span><span>#pusion</span><span>#passenger</span><span>#mysql</span><span>#rvm</span><span>#ruby</span></span>
@@ -316,6 +189,9 @@ $ unzip circle_theme-1_0_1.zip
 
 <p><a href="/code/day-022/index.html" target="_blank">Demo</a> (binary pixels are on top-right)</p>
 
+    
+
+
 
     <span class="post-categories"><span>#javascript</span><span>#video</span><span>#html5</span><span>#sync</span></span>
 
@@ -358,6 +234,9 @@ btn.addEventListener(event, function(e){
 
 <p><a href="/code/day-021/index.html" target="_blank">Demo</a></p>
 
+    
+
+
 
     <span class="post-categories"><span>#javascript</span><span>#ipad</span><span>#video</span><span>#html5</span></span>
 
@@ -395,6 +274,9 @@ btn.addEventListener(event, function(e){
 
 <p><code>autologin-user=yourusernamehere</code></p>
 
+    
+
+
 
     <span class="post-categories"><span>#ubuntu</span><span>#lubuntu</span><span>#login</span></span>
 
@@ -421,6 +303,9 @@ btn.addEventListener(event, function(e){
  <span class="c1">// or without all the stuff...</span>
 <span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">install</span><span class="o">-</span><span class="nx">recommends</span> <span class="nx">ubuntu</span><span class="o">-</span><span class="nx">desktop</span></code></pre></div>
 
+    
+
+
 
     <span class="post-categories"><span>#ubuntu</span><span>#desktop</span><span>#server</span></span>
 
@@ -438,6 +323,7 @@ btn.addEventListener(event, function(e){
     
   
 </div>
+
       </div>
     </div>
 

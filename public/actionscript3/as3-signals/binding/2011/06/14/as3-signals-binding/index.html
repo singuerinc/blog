@@ -111,6 +111,8 @@
 
 <p>Aqu&iacute; es donde as3-signals nos puede dar una mano, si sois como yo, que ando buscando siempre c&oacute;digo nuevo que me facilite la vida habr&eacute;is notado que existe un branch en <a href="https://github.com/robertpenner/as3-signals/tree/binding">as3-signals</a> de Robert Penner llamado &quot;binding&quot;.</p>
 
+<!--break-->
+
 <p>Es un set de classes que nos permiten vincular una propiedad de un objeto a otra propiedad de otro objecto. Me explico: por ejemplo, cada vez que actualizo la propiedad &quot;name&quot; del objeto <strong>User</strong> quiero que se actualice la propiedad &quot;text&quot; de un &quot;TextField&quot;.</p>
 
 <p>Para hacer esto necesitamos que nuestro objeto <strong>User</strong> implemente la interface <strong>IBindable</strong> que se encuentra dentro del paquete de as3-signals, entonces tendremos una nueva propiedad dentro de <strong>User</strong> llamada <em>changeSignal</em> que ser&aacute; la encargada de notificar sobre los cambios en el objeto. Veamos un poco el c&oacute;digo, la classe <strong>User</strong> nos quedar&iacute;a as&iacute;:</p>
@@ -119,24 +121,24 @@
     <span class="k">import</span> <span class="nn">org.osflash.signals.binding.ChangeSignal</span><span class="o">;</span>
     <span class="k">import</span> <span class="nn">org.osflash.signals.binding.IBindable</span><span class="o">;</span>  
     <span class="k">import</span> <span class="nn">org.osflash.signals.binding.IChangeSignal</span><span class="o">;</span>  
-  
+
     <span class="kd">public</span> <span class="kd">class</span> <span class="n">User</span> <span class="kd">implements</span> <span class="n">IBindable</span> <span class="o">{</span>  
-  
+
         <span class="kd">private</span> <span class="kd">var</span> <span class="n">_name</span><span class="p">:</span><span class="kt">String</span><span class="o">;</span>  
         <span class="kd">private</span> <span class="kd">var</span> <span class="n">_changeSignal</span><span class="p">:</span><span class="kt">ChangeSignal</span><span class="o">;</span>  
-  
+
         <span class="kd">public</span> <span class="kd">function </span><span class="nf">User</span><span class="o">()</span> <span class="o">{</span>  
         <span class="o">}</span>  
-  
+
         <span class="kd">public</span> <span class="kd">function</span> <span class="kd">set</span> <span class="n">name</span><span class="o">(</span><span class="n">value</span><span class="o">:</span><span class="n">String</span><span class="o">):</span><span class="kc">void</span> <span class="o">{</span>  
             <span class="n">_name</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>  
             <span class="n">changeSignal</span><span class="o">.</span><span class="na">dispatch</span><span class="o">(</span><span class="s1">&#39;name&#39;</span><span class="o">,</span> <span class="n">_name</span><span class="o">);</span>  
         <span class="o">}</span>  
-  
+
         <span class="kd">public</span> <span class="kd">function</span> <span class="kd">get</span> <span class="n">name</span><span class="o">():</span><span class="n">String</span> <span class="o">{</span>  
             <span class="k">return</span> <span class="n">_name</span><span class="o">;</span>  
         <span class="o">}</span>  
-  
+
         <span class="kd">public</span> <span class="kd">function</span> <span class="kd">get</span> <span class="n">changeSignal</span><span class="o">():</span><span class="n">IChangeSignal</span> <span class="o">{</span>  
             <span class="k">return</span> <span class="n">_changeSignal</span> <span class="o">||=</span> <span class="k">new</span> <span class="kt">ChangeSignal</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>  
         <span class="o">}</span>  
@@ -152,26 +154,26 @@
     <span class="k">import</span> <span class="nn">flash.events.MouseEvent</span><span class="o">;</span>  
     <span class="k">import</span> <span class="nn">flash.text.TextField</span><span class="o">;</span>  
     <span class="k">import</span> <span class="nn">flash.text.TextFieldAutoSize</span><span class="o">;</span>  
-  
+
     <span class="kd">public</span> <span class="kd">class</span> <span class="n">SignalsBindingExample</span> <span class="kd">extends</span> <span class="o">[</span><span class="n">Sprite</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span> <span class="o">{</span>  
-  
+
         <span class="kd">public</span> <span class="kd">var</span> <span class="n">user</span><span class="p">:</span><span class="kt">User</span><span class="o">;</span>  
-  
+
         <span class="kd">public</span> <span class="kd">function </span><span class="nf">SignalsBindingExample</span><span class="o">()</span> <span class="o">{</span>  
-  
+
             <span class="k">new</span> <span class="kt">PushButton</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="s1">&#39;change user name&#39;</span><span class="o">,</span> <span class="n">onClick</span><span class="o">);</span>  
-  
+
             <span class="kd">var</span> <span class="n">txt1</span><span class="p">:</span><span class="kt">TextField</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">TextField</span><span class="o">();</span>  
             <span class="n">txt1</span><span class="o">.</span><span class="na">autoSize</span> <span class="o">=</span> <span class="n">TextFieldAutoSize</span><span class="o">.</span><span class="na">LEFT</span><span class="o">;</span>  
             <span class="n">addChild</span><span class="o">(</span><span class="n">txt1</span><span class="o">);</span>  
-  
+
             <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">User</span><span class="o">();</span>  
             <span class="n">user</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;User1&#39;</span><span class="o">;</span>  
-  
+
             <span class="kd">var</span> <span class="n">binder</span><span class="p">:</span><span class="kt">Binder</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">Binder</span><span class="o">();</span>  
             <span class="n">binder</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">txt1</span><span class="o">,</span> <span class="s1">&#39;text&#39;</span><span class="o">,</span> <span class="n">user</span><span class="o">,</span> <span class="s1">&#39;name&#39;</span><span class="o">);</span>  
         <span class="o">}</span>  
-  
+
         <span class="kd">private</span> <span class="kd">function </span><span class="nf">onClick</span><span class="o">(</span><span class="n">event</span><span class="o">:</span><span class="kt">MouseEvent</span><span class="o">):</span><span class="kt">void</span> <span class="o">{</span>  
             <span class="n">user</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;User&#39;</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="na">random</span><span class="o">();</span>  
         <span class="o">}</span>  

@@ -14,7 +14,9 @@ This is a classic... basic simple game, you have to find two cells with the same
 
 <iframe src="/code/labs/require-marionette-game/index.html" style="border: 1px solid grey; width: 100%; height: 625px;"></iframe>
 
-You could find the source at <a href="https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-game" target="_blank">GitHub</a>
+You could find the source at <a href="https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-game" target="\_blank">GitHub</a>
+
+<!--break-->
 
 There are two main classes: MapView.js and CellView.js
 
