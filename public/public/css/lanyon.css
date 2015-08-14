@@ -49,7 +49,7 @@ body {
 }
 
 html {
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #555;
   font-size: 18px;
   line-height: 1.5rem;
@@ -61,9 +61,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -.025rem;
 }
 
+.post-categories {
+
+}
+
 p {
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
 }
 
 /*
@@ -352,6 +356,11 @@ a.sidebar-nav-item:focus {
       font-size: 4.3rem;
       line-height: 4rem;
   }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
 }
 @media (min-width: 56rem) {
   .page-title,
@@ -359,6 +368,11 @@ a.sidebar-nav-item:focus {
   .post-title a {
       font-size: 5.3rem;
       line-height: 5rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 }
 

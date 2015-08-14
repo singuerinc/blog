@@ -15,7 +15,7 @@ layout: default
 
     {{ post.content | split:'<!--break-->' | first }}
     {% if post.content contains '<!--break-->' %}
-      <a href="{{ post.url }}">READ MORE</a><br/>
+      <a href="{{ post.url }}" target="_parent" title="Read more about {{post.title}}">READ MORE</a><br/>
     {% endif %}
 
 
