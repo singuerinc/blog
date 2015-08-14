@@ -160,10 +160,28 @@
     <loc>http://blog.singuerinc.com/404/</loc>
   </url>
   <url>
-    <loc>http://blog.singuerinc.com/about/</loc>
+    <loc>http://blog.singuerinc.com/</loc>
   </url>
   <url>
-    <loc>http://blog.singuerinc.com/</loc>
+    <loc>http://blog.singuerinc.com/page2/</loc>
+  </url>
+  <url>
+    <loc>http://blog.singuerinc.com/page3/</loc>
+  </url>
+  <url>
+    <loc>http://blog.singuerinc.com/page4/</loc>
+  </url>
+  <url>
+    <loc>http://blog.singuerinc.com/page5/</loc>
+  </url>
+  <url>
+    <loc>http://blog.singuerinc.com/page6/</loc>
+  </url>
+  <url>
+    <loc>http://blog.singuerinc.com/page7/</loc>
+  </url>
+  <url>
+    <loc>http://blog.singuerinc.com/page8/</loc>
   </url>
   <url>
     <loc>http://blog.singuerinc.com/code/day-001/index.html</loc>

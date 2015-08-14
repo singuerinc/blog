@@ -59,7 +59,7 @@ html {
 }
 
 body {
-  color: #515151;
+
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -67,13 +67,13 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #05bcad;
+  color: #3d84a8;
   text-decoration: none;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Headings */
@@ -311,8 +311,14 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: #46cdcf;
 }
+
+.post-title a:hover, .post-title a:focus {
+  color: #abedd8;
+}
+
+
 .page-title,
 .post-title {
   margin-top: 0;

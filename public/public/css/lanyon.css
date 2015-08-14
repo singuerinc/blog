@@ -34,6 +34,14 @@
  * Update the foundational and global aspects of the page.
  */
 
+@font-face {
+ font-family: 'Raleway';
+ font-style: normal;
+ font-weight: 400;
+ src: local('Raleway'), url(QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 /* Prevent scroll on narrow devices */
 html,
 body {
@@ -41,20 +49,21 @@ body {
 }
 
 html {
-  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  color: #313131;
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 400;
   letter-spacing: -.025rem;
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 
 /*
@@ -153,7 +162,7 @@ p {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
@@ -172,6 +181,12 @@ p {
 .sidebar-item {
   padding: 1rem;
 }
+
+.sidebar-item p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .sidebar-item p:last-child {
   margin-bottom: 0;
 }
@@ -319,7 +334,7 @@ a.sidebar-nav-item:focus {
 .post-title,
 .post-title a {
     font-size: 3.3rem;
-    line-height: 3.5rem;
+    line-height: 3rem;
 }
 .post-title span {
     color: #444;
@@ -330,12 +345,30 @@ a.sidebar-nav-item:focus {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 38rem) {
+  .page-title,
+  .post-title,
+  .post-title a {
+      font-size: 4.3rem;
+      line-height: 4rem;
+  }
+}
+@media (min-width: 56rem) {
+  .page-title,
+  .post-title,
+  .post-title a {
+      font-size: 5.3rem;
+      line-height: 5rem;
+  }
+}
+
 /* Meta data line below post title */
 .post-date {
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
   display: block;
   margin-top: 0rem;
   margin-bottom: 0rem;
-  color: #9a9a9a;
+  color: #DDD;
 }
 
 .post-categories span {
