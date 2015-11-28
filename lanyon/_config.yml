@@ -26,6 +26,3 @@ github:
 
 destination: ../public
 exclude: [puppet]
-
-gems:
-  - jekyll-sitemap
