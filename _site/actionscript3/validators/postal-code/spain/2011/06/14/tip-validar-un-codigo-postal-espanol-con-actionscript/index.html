@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Validate Spain postal code &#8211; singuerinc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Nahuel Scotti">
+    <meta name="keywords" content="actionscript3, validators, postal-code, spain">
+    <link rel="canonical" href="//actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for singuerinc" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201512092312" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300,400' rel='stylesheet' type='text/css'>
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Validate Spain postal code">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="//actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/">
+    <meta property="og:site_name" content="singuerinc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@singuerinc" />
+    
+    <meta name="twitter:title" content="Validate Spain postal code" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="//actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-881783-13']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+</head>
+
+<body class="site">
+
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">singuerinc</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<!--<a href="/contact/">Contact</a>-->
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/singuerinc"></a>
+    
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+      <a class="fa fa-twitter" href="https://twitter.com/singuerinc"></a>
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-medium" href="https://medium.com/@singuerinc"></a>
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Validate Spain postal code</h1>
+  <span class="post-meta small">Jun 14, 2011 /</span>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>Hola, aquí os dejo una pequeña classe con una Regular Expresion que he hecho para validar códigos postales españoles. También, puedes saber el nombre de la provincia al que pertenece:</p>
+
+<figure class="highlight"><pre><code class="language-as3" data-lang="as3">package com.singuerinc.labs.utils.validators {
+public class SpainPostalCodeValidator {
+
+    public var stateNames:Array = ['Alava/Araba', 'Albacete', 'Alicante', 'Almería', 'Avila', 'Badajoz', 'Islas Baleares', 'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Castellón', 'Ciudad Real', 'Córdoba', 'A Coruña/La Coruña', 'Cuenca', 'Gerona/Girona', 'Granada', 'Guadalajara', 'Gipuzkoa/Guipuzcoa', 'Huelva', 'Huesca', 'Jaen', 'León', 'Lérida/Lleida', 'La Rioja', 'Lugo', 'Madrid', 'Málaga', 'Murcia', 'Navarra', 'Orense/Ourense', 'Asturias', 'Palencia', 'Las Palmas', 'Pontevedra', 'Salamanca', 'S.C.Tenerife', 'Cantabria', 'Segovia', 'Sevilla', 'Soria', 'Tarragona', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Bizkaia/Vizcaya', 'Zamora', 'Zaragoza', 'Ceuta', 'Melilla'];
+
+    private var _stateName:String;
+    private var _stateCode:String;
+    private var _isValid:Boolean;
+
+    public function SpainPostalCodeValidator(codeOrStateName:String) {
+        if (isNaN(Number(codeOrStateName)) == true) {
+            var result:String = search(codeOrStateName);
+            if (result == '') {
+                _isValid = false;
+            } else {
+                result += '000';
+                _isValid = validate(result);
+            }
+        } else {
+            _isValid = validate(codeOrStateName);
+        }
+    }
+
+    public function get stateCode():String {
+        return _stateCode;
+    }
+
+    public function get stateName():String {
+        return _stateName;
+    }
+
+    public function isValid():Boolean {
+        return _isValid;
+    }
+
+    private function validate(value:String):Boolean {
+
+        var str:String = value.toString();
+        if (str.length != 5) return false;
+
+        var regExp:RegExp = /((?&gt;^[5]{1})[0-2][0-9]{3})|((?&gt;^[0]{1})[1-9]{1}[0-9]{3})|((?&gt;^[1-4]{1})[0-9]{1}[0-9]{3})$/;
+        var result:Boolean = regExp.test(str);
+        if (result) {
+            var codeInit:String = str.substr(0, 2);
+            var idx:uint = Number(codeInit);
+            _stateName = stateNames[idx - 1];
+            _stateCode = codeInit;
+        }
+
+        return result;
+    }
+
+    private function search(stateName:String):String {
+
+        stateName = stateName.toLowerCase();
+        var state:int = -1;
+
+        var l:uint = stateNames.length;
+        for (var i:uint = 0; i &lt; l; i++) {
+            var s:String = stateNames[i];
+            if (s.toLowerCase().search(stateName) != -1) {
+                state = i;
+                break;
+            }
+        }
+        return state == -1 ? '' : ('0' + (state + 1)).substr(-2);
+    }
+}
+}</code></pre></figure>
+
+<p>Algunos ejemplos <strong>válidos</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-as3" data-lang="as3">var sv1:SpainPostalCodeValidator = new SpainPostalCodeValidator('Barcelona');  
+sv1.stateName; //Barcelona  
+sv1.stateCode; //08  
+sv1.isValid(); //true  
+
+var sv2:SpainPostalCodeValidator = new SpainPostalCodeValidator('28001');  
+sv2.stateName; //Madrid  
+sv2.stateCode; //28  
+sv2.isValid(); //true</code></pre></figure>
+
+<p>Y otros que son <strong>inválidos</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-as3" data-lang="as3">var sv3:SpainPostalCodeValidator = new SpainPostalCodeValidator('New York');
+sv3.stateName; //null  
+sv3.stateCode; //null  
+sv3.isValid(); //false  
+
+var sv4:SpainPostalCodeValidator = new SpainPostalCodeValidator('80800');  
+sv4.stateName; //null  
+sv4.stateCode; //null  
+sv4.isValid(); //false</code></pre></figure>
+
+
+</article>
+
+
+  <div class="share-page">
+  
+
+  <div class="share-links">
+    
+      <a class = "fa fa-facebook" href="https://facebook.com/sharer.php?u=//actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+    
+
+    
+      <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text=Validate Spain postal code&url=//actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/" rel="nofollow" target="_blank" title="Share on Twitter"></a>
+    
+
+    
+      <a class="fa fa-google-plus" href="https://plus.google.com/share?url=//actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/" rel="nofollow" target="_blank" title="Share on Google+"></a>
+    
+
+    
+
+    
+
+    
+
+    
+      <a class="fa fa-reddit" href="http://reddit.com/submit?url=//actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/&title=Validate Spain postal code" rel="nofollow" target="_blank" title="Share on Reddit"></a>
+    
+
+    
+
+    
+      <a class = "fa fa-hacker-news" onclick="parent.postMessage('submit','*')" href="https://news.ycombinator.com/submitlink?u=//actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript/&t=Validate Spain postal code" rel="nofollow" target="_blank" title="Share on Hacker News"></a>
+    
+
+
+  </div>
+</div>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'singuerinc-blog';
+    var disqus_identifier = '/actionscript3/validators/postal-code/spain/2011/06/14/tip-validar-un-codigo-postal-espanol-con-actionscript';
+    var disqus_title      = 'Validate Spain postal code';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

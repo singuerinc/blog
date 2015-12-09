@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Perfect HTML5 Video Sync &#8211; singuerinc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Nahuel Scotti">
+    <meta name="keywords" content="javascript, video, html5, sync">
+    <link rel="canonical" href="//javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for singuerinc" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201512092312" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300,400' rel='stylesheet' type='text/css'>
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Perfect HTML5 Video Sync">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="//javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/">
+    <meta property="og:site_name" content="singuerinc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@singuerinc" />
+    
+    <meta name="twitter:title" content="Perfect HTML5 Video Sync" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="//javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-881783-13']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+</head>
+
+<body class="site">
+
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">singuerinc</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<!--<a href="/contact/">Contact</a>-->
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/singuerinc"></a>
+    
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+      <a class="fa fa-twitter" href="https://twitter.com/singuerinc"></a>
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-medium" href="https://medium.com/@singuerinc"></a>
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Perfect HTML5 Video Sync</h1>
+  <span class="post-meta small">Jan 22, 2014 /</span>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>When you work with video and Javascript and you need to tracking an object you can’t trust in video events or time, you need to identify each frame, because if the frame rate drops or anything else happends you need to stay in sync.</p>
+
+<p>There are a lot of tutorials of how to do this in ActionScript:
+<a href="http://labs.eric-decker.com/2011/08/video-sync-issues-with-flash-as3/">1</a>
+<a href="http://zehfernando.com/2011/flash-video-frame-time-woes/">2</a>
+<a href="http://nikohelle.net/2011/11/25/as3-perfect-video-sync-with-embedded-frame-numbers/">3</a></p>
+
+<p>But I want to focus on JavaScript, as described in these tutorials you need to write in each frame the frame number in binary (with black and white). There is a script for After Effect that do the job for you.</p>
+
+<p>So, how we get this data?</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// get the video element</span>
+<span class="kd">var</span> <span class="nx">video</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'video'</span><span class="p">);</span>
+
+<span class="c1">// create a tmp canvas element and get the context</span>
+<span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'canvas'</span><span class="p">),</span>
+    <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">'2d'</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">loop</span><span class="p">(){</span>
+
+    <span class="c1">// draw from the video those pixels that contains binary data</span>
+    <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">video</span><span class="p">,</span> <span class="mi">1281</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">48</span><span class="p">);</span>
+
+    <span class="c1">// get pixels data</span>
+    <span class="kd">var</span> <span class="nx">pixData</span> <span class="o">=</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">numPixToRead</span><span class="p">).</span><span class="nx">data</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">binStr</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">pixData</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//the pixel data has 4 values by pixel read (r,g,b,a)</span>
+
+        <span class="c1">// after the video compression the pixels</span>
+        <span class="c1">// aren't black (0) or white (255) so we need to</span>
+        <span class="c1">// separate them by luminosity and convert in 0s and 1s</span>
+        <span class="kd">var</span> <span class="nx">binNum</span> <span class="o">=</span> <span class="nx">pixData</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">127</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// store binary num in reverse order</span>
+        <span class="nx">binStr</span> <span class="o">=</span> <span class="nx">binNum</span> <span class="o">+</span> <span class="s1">''</span> <span class="o">+</span> <span class="nx">binStr</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// convert binary string into decimal, you have the FRAME number</span>
+    <span class="kd">var</span> <span class="nx">frame</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">binStr</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">//1,2,3,4,5....</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">animate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">loop</span><span class="p">();</span>
+    <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">animate</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">animate</span><span class="p">();</span></code></pre></figure>
+
+<p><a href="https://gist.github.com/singuerinc/8600823" target="_blank">Code source</a></p>
+
+<p><a href="/code/day-022/index.html" target="_blank">Demo</a> (binary pixels are on top-right)</p>
+
+</article>
+
+
+  <div class="share-page">
+  
+
+  <div class="share-links">
+    
+      <a class = "fa fa-facebook" href="https://facebook.com/sharer.php?u=//javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+    
+
+    
+      <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text=Perfect HTML5 Video Sync&url=//javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/" rel="nofollow" target="_blank" title="Share on Twitter"></a>
+    
+
+    
+      <a class="fa fa-google-plus" href="https://plus.google.com/share?url=//javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/" rel="nofollow" target="_blank" title="Share on Google+"></a>
+    
+
+    
+
+    
+
+    
+
+    
+      <a class="fa fa-reddit" href="http://reddit.com/submit?url=//javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/&title=Perfect HTML5 Video Sync" rel="nofollow" target="_blank" title="Share on Reddit"></a>
+    
+
+    
+
+    
+      <a class = "fa fa-hacker-news" onclick="parent.postMessage('submit','*')" href="https://news.ycombinator.com/submitlink?u=//javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync/&t=Perfect HTML5 Video Sync" rel="nofollow" target="_blank" title="Share on Hacker News"></a>
+    
+
+
+  </div>
+</div>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'singuerinc-blog';
+    var disqus_identifier = '/javascript/video/html5/sync/2014/01/22/code-day-022-perfect-html5-video-sync';
+    var disqus_title      = 'Perfect HTML5 Video Sync';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

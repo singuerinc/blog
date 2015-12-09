@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Just born: as3-audio &#8211; singuerinc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Nahuel Scotti">
+    <meta name="keywords" content="actionscript3, audio">
+    <link rel="canonical" href="//actionscript3/audio/2011/06/19/just-born-as3-audio/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for singuerinc" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201512092312" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300,400' rel='stylesheet' type='text/css'>
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Just born: as3-audio">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="//actionscript3/audio/2011/06/19/just-born-as3-audio/">
+    <meta property="og:site_name" content="singuerinc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@singuerinc" />
+    
+    <meta name="twitter:title" content="Just born: as3-audio" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="//actionscript3/audio/2011/06/19/just-born-as3-audio/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-881783-13']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+</head>
+
+<body class="site">
+
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">singuerinc</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<!--<a href="/contact/">Contact</a>-->
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/singuerinc"></a>
+    
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+      <a class="fa fa-twitter" href="https://twitter.com/singuerinc"></a>
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-medium" href="https://medium.com/@singuerinc"></a>
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Just born: as3-audio</h1>
+  <span class="post-meta small">Jun 19, 2011 /</span>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>Hola, he comenzado a desarrollar <strong>as3-audio</strong> en una pequeña librería para simplificar la reproducción y controlar sonidos.</p>
+
+<p>No tendrá la posibilidad de crear sonidos sino que está pensada más para el desarrollo en websites/apps. La idea es simplificar un poco el trabajo con sonido en Actionscript, y tener algunas funciones básicas como <em>play, pause, resume, stop</em> y otras útiles como * fadeIn, fadeOut, delay*, etc.</p>
+
+<!--break-->
+
+<p>Otra de las características que destacará es la utilización de <a href="https://github.com/robertpenner/as3-signals">as3-signals</a> para notificar los eventos.</p>
+
+<p>De momento está en desarrollo, puedes encontrar el código en github: <a href="https://github.com/singuerinc/as3-audio">as3-audio</a>, la classe <strong>Audio</strong> ya es funcional. Si quieres puedes realizar un <em>fork</em> y cuando tengas algo interesante podemos incorporarlo a la librería!</p>
+
+<p>Más o menos, la <em>syntax</em> será esta:</p>
+
+<figure class="highlight"><pre><code class="language-as3" data-lang="as3">//Mediante la carga de un mp3:
+var audio1:Audio = new Audio('audio1', 'audio.mp3');
+audio1.volume = .5;
+audio1.play();
+
+//Con una Classe que extienda de Sound:
+var audio2:AudioDeluxe = new AudioDeluxe('audio2', new AudioMP3());
+audio2.play();
+audio2.fade(, 1, 1500); //from, to, time</code></pre></figure>
+
+<p><a href="https://github.com/singuerinc/as3-audio">Source</a></p>
+
+</article>
+
+
+  <div class="share-page">
+  
+
+  <div class="share-links">
+    
+      <a class = "fa fa-facebook" href="https://facebook.com/sharer.php?u=//actionscript3/audio/2011/06/19/just-born-as3-audio/" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+    
+
+    
+      <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text=Just born: as3-audio&url=//actionscript3/audio/2011/06/19/just-born-as3-audio/" rel="nofollow" target="_blank" title="Share on Twitter"></a>
+    
+
+    
+      <a class="fa fa-google-plus" href="https://plus.google.com/share?url=//actionscript3/audio/2011/06/19/just-born-as3-audio/" rel="nofollow" target="_blank" title="Share on Google+"></a>
+    
+
+    
+
+    
+
+    
+
+    
+      <a class="fa fa-reddit" href="http://reddit.com/submit?url=//actionscript3/audio/2011/06/19/just-born-as3-audio/&title=Just born: as3-audio" rel="nofollow" target="_blank" title="Share on Reddit"></a>
+    
+
+    
+
+    
+      <a class = "fa fa-hacker-news" onclick="parent.postMessage('submit','*')" href="https://news.ycombinator.com/submitlink?u=//actionscript3/audio/2011/06/19/just-born-as3-audio/&t=Just born: as3-audio" rel="nofollow" target="_blank" title="Share on Hacker News"></a>
+    
+
+
+  </div>
+</div>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'singuerinc-blog';
+    var disqus_identifier = '/actionscript3/audio/2011/06/19/just-born-as3-audio';
+    var disqus_title      = 'Just born: as3-audio';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>

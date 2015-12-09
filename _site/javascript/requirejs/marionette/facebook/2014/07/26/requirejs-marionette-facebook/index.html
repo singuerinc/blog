@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mix of RequireJS, Marionette.js and Facebook API &#8211; singuerinc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Nahuel Scotti">
+    <meta name="keywords" content="javascript, requirejs, marionette, facebook">
+    <link rel="canonical" href="//javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for singuerinc" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201512092312" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300,400' rel='stylesheet' type='text/css'>
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mix of RequireJS, Marionette.js and Facebook API">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="//javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/">
+    <meta property="og:site_name" content="singuerinc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@singuerinc" />
+    
+    <meta name="twitter:title" content="Mix of RequireJS, Marionette.js and Facebook API" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="//javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-881783-13']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+</head>
+
+<body class="site">
+
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">singuerinc</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<!--<a href="/contact/">Contact</a>-->
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/singuerinc"></a>
+    
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+      <a class="fa fa-twitter" href="https://twitter.com/singuerinc"></a>
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-medium" href="https://medium.com/@singuerinc"></a>
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Mix of RequireJS, Marionette.js and Facebook API</h1>
+  <span class="post-meta small">Jul 26, 2014 /</span>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>This is a quick example of use a serie of libraries that work great together.<br />I like a lot <a href="http://requirejs.org" target="\_blank">RequireJS</a>, the way I can organize my modules/code with it. <a href="http://marionettejs.com/">Marionette.js</a> do a great work with the views, it takes care about everything: listeners, selectors, events, etc. And with the <a href="https://developers.facebook.com/docs/javascript" target="\_blank">Facebook SDK</a> we have a lot of info to build complex or simple applications like the next one.</p>
+
+<p>The example is very straightforward:</p>
+
+<p>Search for your Facebook ID or, for example: “obama” or “mickeymouse”</p>
+
+<iframe src="/code/labs/require-marionette-facebook/index.html" style="border: 1px solid grey;width: 354px;height: 252px;margin: 25px auto;display: block;"></iframe>
+
+<p>Take a look to the code at <a href="https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-facebook" target="_blank">GitHub</a></p>
+
+</article>
+
+
+  <div class="share-page">
+  
+
+  <div class="share-links">
+    
+      <a class = "fa fa-facebook" href="https://facebook.com/sharer.php?u=//javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+    
+
+    
+      <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text=Mix of RequireJS, Marionette.js and Facebook API&url=//javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/" rel="nofollow" target="_blank" title="Share on Twitter"></a>
+    
+
+    
+      <a class="fa fa-google-plus" href="https://plus.google.com/share?url=//javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/" rel="nofollow" target="_blank" title="Share on Google+"></a>
+    
+
+    
+
+    
+
+    
+
+    
+      <a class="fa fa-reddit" href="http://reddit.com/submit?url=//javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/&title=Mix of RequireJS, Marionette.js and Facebook API" rel="nofollow" target="_blank" title="Share on Reddit"></a>
+    
+
+    
+
+    
+      <a class = "fa fa-hacker-news" onclick="parent.postMessage('submit','*')" href="https://news.ycombinator.com/submitlink?u=//javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook/&t=Mix of RequireJS, Marionette.js and Facebook API" rel="nofollow" target="_blank" title="Share on Hacker News"></a>
+    
+
+
+  </div>
+</div>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'singuerinc-blog';
+    var disqus_identifier = '/javascript/requirejs/marionette/facebook/2014/07/26/requirejs-marionette-facebook';
+    var disqus_title      = 'Mix of RequireJS, Marionette.js and Facebook API';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>
