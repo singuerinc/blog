@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Step by step Redmine installation &#8211; singuerinc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Nahuel Scotti">
+    <meta name="keywords" content="redmine, apache, pusion, passenger, mysql, rvm, ruby">
+    <link rel="canonical" href="//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for singuerinc" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201512092315" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300,400' rel='stylesheet' type='text/css'>
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Step by step Redmine installation">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/">
+    <meta property="og:site_name" content="singuerinc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@singuerinc" />
+    
+    <meta name="twitter:title" content="Step by step Redmine installation" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-881783-13']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+</head>
+
+<body class="site">
+
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">singuerinc</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<!--<a href="/contact/">Contact</a>-->
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/singuerinc"></a>
+    
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+      <a class="fa fa-twitter" href="https://twitter.com/singuerinc"></a>
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-medium" href="https://medium.com/@singuerinc"></a>
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Step by step Redmine installation</h1>
+  <span class="post-meta small">Jan 23, 2014 /</span>
+  
+  <span class="post-meta small">
+  
+    2 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <blockquote>
+  <p>Update: I recommend to just run the Redmine Docker image instead of doing all this stuff I’ve written time ago.</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker run -d --name some-redmine redmine</code></pre></figure>
+
+<p>Check out this link too: <a href="">https://hub.docker.com/_/redmine/</a></p>
+
+<hr />
+
+<h1 id="the-old-method">The old method</h1>
+
+<h2 id="install-apache">1. Install Apache</h2>
+
+<pre><code>$ apt-get install apache2
+</code></pre>
+
+<h2 id="install-rmagick--nokigiri-dependencies">2. Install rmagick &amp; nokigiri dependencies</h2>
+
+<pre><code>$ apt-get install -y build-essential imagemagick libmagickcore-dev libmagickwand-dev libxml2 libxml2-dev libxslt1-dev
+</code></pre>
+
+<h2 id="install-mysql">3. Install MySQL</h2>
+<pre><code>$ apt-get update
+$ apt-get install -y mysql-client-core-5.5 mysql-server mysql-client libmysqlclient-dev
+// enter your top-secret-password
+</code></pre>
+
+<h2 id="restart-mysql">4. Restart MySQL</h2>
+<pre><code>$ /etc/init.d/mysql stop
+$ /etc/init.d/mysql start
+$ /usr/bin/mysqld_safe --user=mysql --skip-grant-tables
+</code></pre>
+
+<h2 id="download-redmine">5. Download Redmine</h2>
+<pre><code>curl -O http://www.redmine.org/releases/redmine-2.3.4.zip
+unzip redmine-2.3.4.zip
+</code></pre>
+
+<h2 id="change-database-configuration">6. Change database configuration</h2>
+<pre><code>$ cp /config/database.yml.example /config/database.yml
+$ vim /config/database.yml
+// user: redmine
+// pass: redminepassword
+</code></pre>
+
+<h2 id="install-rvm--ruby">7. Install RVM + Ruby</h2>
+<pre><code>$ curl -L https://get.rvm.io | bash -s stable
+// logout or source here
+$ rvm install 2.1.0 --autolibs=enabled &amp;&amp; rvm --fuzzy alias create default 2.1.0
+</code></pre>
+
+<h2 id="install-pusion-passenger">8. Install Pusion Passenger</h2>
+
+<ol>
+  <li>
+    <p>Install Pussion Passenger + Apache mod</p>
+
+    <pre><code> $ apt-get install -y libcurl4-openssl-dev apache2-threaded-dev libapr1-dev libaprutil1-dev
+ $ gem install passenger
+ $ passenger-install-apache2-module
+</code></pre>
+  </li>
+  <li>
+    <p>Add the following lines to <code>/etc/apache2/mods-available/passenger.load</code>:</p>
+
+    <pre><code> LoadModule passenger_module /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36/buildout/apache2/mod_passenger.so
+</code></pre>
+  </li>
+  <li>
+    <p>Add the following lines to <code>/etc/apache2/mods-available/passenger.conf</code>:</p>
+
+    <pre><code> &lt;IfModule mod_passenger.c&gt;
+   PassengerRoot /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36
+   PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.1.0/wrappers/ruby
+ &lt;/IfModule&gt;
+</code></pre>
+  </li>
+  <li>
+    <p>Enable Passenger as Apache module:</p>
+
+    <pre><code> sudo a2enmod passenger  
+</code></pre>
+  </li>
+  <li>
+    <p>Add a virtual host to your Apache configuration file and set its DocumentRoot to <code>/var/sites/redmine.domain.com/public</code>:</p>
+
+    <pre><code> &lt;VirtualHost *:80&gt;
+    ServerName redmine.domain.com
+    DocumentRoot /var/sites/redmine.domain.com/public
+    &lt;Directory /var/sites/redmine.domain.com/public&gt;
+       Require all granted
+       Options FollowSymLinks
+       AllowOverride none
+       Order allow,deny
+       Allow from all
+       PassengerUser root
+    &lt;/Directory&gt;
+ &lt;/VirtualHost&gt;
+</code></pre>
+  </li>
+</ol>
+
+<h2 id="enable-apache-site">8. Enable Apache site</h2>
+
+<pre><code>$ sudo a2ensite redmine
+</code></pre>
+
+<h2 id="install-dependencies">9. Install dependencies</h2>
+
+<pre><code>$ gem install bundler
+</code></pre>
+
+<h2 id="install-redmine-dependencies">10. Install Redmine dependencies</h2>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<h2 id="session-store-secret-generation">11. Session store secret generation</h2>
+<p>This step generates a random key used by Rails to encode cookies storing session data thus preventing their tampering.</p>
+
+<pre><code>$ rake generate_secret_token
+</code></pre>
+
+<h2 id="database-schema-objects-creation">12. Database schema objects creation</h2>
+<p>Create the database structure</p>
+
+<pre><code>$ RAILS_ENV=production rake db:migrate
+</code></pre>
+
+<h2 id="file-system-permissions">13. File system permissions</h2>
+<p>The user account running the application must have write permission on the following subdirectories:</p>
+
+<ol>
+  <li>files (storage of attachments)</li>
+  <li>log (application log file production.log)</li>
+  <li>tmp and tmp/pdf (create these ones if not present, used to generate PDF documents among other things)</li>
+  <li>public/plugin_assets (assets of plugins).</li>
+</ol>
+
+<p><b></b></p>
+
+<pre><code>$ mkdir -p tmp tmp/pdf public/plugin_assets
+$ sudo chown -R nobody:nogroup files log tmp public/plugin_assets
+$ sudo chmod -R 755 files log tmp public/plugin_assets
+</code></pre>
+
+<h2 id="email-configuration-gmail">14. Email configuration (gmail)</h2>
+
+<pre><code>$ cp config/configuration.yml.example config/configuration.yml
+$ vim config/configuration.yml
+</code></pre>
+
+<p>Edit <code>configuration.yml</code></p>
+
+<pre><code>production:
+  email_delivery:
+    delivery_method: :smtp
+    smtp_settings:
+      enable_starttls_auto: true
+      address: "smtp.gmail.com"
+      port: '587'
+      domain: "smtp.gmail.com"
+      authentication: :plain
+      user_name: "redmine.domain@gmail.com"
+      password: "secret"
+</code></pre>
+
+<h2 id="theme-optional">15. Theme (optional)</h2>
+
+<pre><code>$ cd public/themes/
+$ curl -O http://www.redminecrm.com/license_manager/9722/circle_theme-1_0_1.zip
+$ unzip circle_theme-1_0_1.zip
+</code></pre>
+
+<h2 id="test-redmine">16. Test Redmine</h2>
+
+<pre><code>$ ruby script/rails server webrick -e production
+</code></pre>
+
+<hr />
+
+<p>Note: Webrick is not suitable for production use, please only use webrick for testing that the installation up to this point is functional.</p>
+
+<hr />
+
+<p>Fatto!</p>
+
+</article>
+
+
+  <div class="share-page">
+  
+
+  <div class="share-links">
+    
+      <a class = "fa fa-facebook" href="https://facebook.com/sharer.php?u=//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+    
+
+    
+      <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text=Step by step Redmine installation&url=//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/" rel="nofollow" target="_blank" title="Share on Twitter"></a>
+    
+
+    
+      <a class="fa fa-google-plus" href="https://plus.google.com/share?url=//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/" rel="nofollow" target="_blank" title="Share on Google+"></a>
+    
+
+    
+
+    
+
+    
+
+    
+      <a class="fa fa-reddit" href="http://reddit.com/submit?url=//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/&title=Step by step Redmine installation" rel="nofollow" target="_blank" title="Share on Reddit"></a>
+    
+
+    
+
+    
+      <a class = "fa fa-hacker-news" onclick="parent.postMessage('submit','*')" href="https://news.ycombinator.com/submitlink?u=//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/&t=Step by step Redmine installation" rel="nofollow" target="_blank" title="Share on Hacker News"></a>
+    
+
+
+  </div>
+</div>
+
+
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = 'singuerinc-blog';
+    var disqus_identifier = '/redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step';
+    var disqus_title      = 'Step by step Redmine installation';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>
