@@ -7,6 +7,25 @@
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Validar DNI, NIF o NIE español</title>
+        <description>&lt;p&gt;Because this is my most viewed post I want to update a bit and make it more “reactive”.&lt;/p&gt;
+
+&lt;p&gt;If you want to generate some valid NIF or NIE for testing, make use of this tool I’ve made:&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; src=&quot;//jsfiddle.net/singuerinc/n5w2nsa9/4/embedded/result,js,html&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;But, if what you want is validate some DNI you should use this little function I’ve made some time ago. I’ve used on this demo Vue.js, a new Javascript library that allows me to make a quick &lt;em&gt;reactive&lt;/em&gt; prototype:&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; src=&quot;//jsfiddle.net/singuerinc/5bwL1r9n/2/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;740&quot; src=&quot;//jsfiddle.net/singuerinc/5bwL1r9n/2/embedded/js,html,css/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Tue, 22 Dec 2015 00:00:00 +0100</pubDate>
+        <link>//dni/nif/nie/validar/2015/12/22/validar-dni-nif-o-nie/</link>
+        <guid isPermaLink="true">//dni/nif/nie/validar/2015/12/22/validar-dni-nif-o-nie/</guid>
+      </item>
+    
+      <item>
         <title>CoreOS in 9 years old MacBook</title>
         <description>&lt;p&gt;I’ve written an article in Medium about my journey installing CoreOS in 9 years old Macbook. If you want to take a look follow the link below:&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://medium.com/@singuerinc/i-installed-coreos-in-9-years-old-macbook-3aec88489090#.pey62uh3b&quot;&gt;I installed CoreOS in 9 years old MacBook&lt;/a&gt; @ Medium&lt;/p&gt;
 </description>
@@ -397,201 +416,6 @@ In this application the user can search public photos on by tags Flickr.&lt;/p&g
         <pubDate>Sun, 26 Jan 2014 00:00:00 +0100</pubDate>
         <link>//nodejs/async/fabricjs/canvas/png/2014/01/26/code-day-026-batch-image-generation-with-nodejs/</link>
         <guid isPermaLink="true">//nodejs/async/fabricjs/canvas/png/2014/01/26/code-day-026-batch-image-generation-with-nodejs/</guid>
-      </item>
-    
-      <item>
-        <title>Step by step Redmine installation</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Update: I recommend to just run the Redmine Docker image instead of doing all this stuff I’ve written time ago.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker run -d --name some-redmine redmine&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out this link too: &lt;a href=&quot;&quot;&gt;https://hub.docker.com/_/redmine/&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;the-old-method&quot;&gt;The old method&lt;/h1&gt;
-
-&lt;h2 id=&quot;install-apache&quot;&gt;1. Install Apache&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ apt-get install apache2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;install-rmagick--nokigiri-dependencies&quot;&gt;2. Install rmagick &amp;amp; nokigiri dependencies&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ apt-get install -y build-essential imagemagick libmagickcore-dev libmagickwand-dev libxml2 libxml2-dev libxslt1-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;install-mysql&quot;&gt;3. Install MySQL&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ apt-get update
-$ apt-get install -y mysql-client-core-5.5 mysql-server mysql-client libmysqlclient-dev
-// enter your top-secret-password
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;restart-mysql&quot;&gt;4. Restart MySQL&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ /etc/init.d/mysql stop
-$ /etc/init.d/mysql start
-$ /usr/bin/mysqld_safe --user=mysql --skip-grant-tables
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;download-redmine&quot;&gt;5. Download Redmine&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;curl -O http://www.redmine.org/releases/redmine-2.3.4.zip
-unzip redmine-2.3.4.zip
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;change-database-configuration&quot;&gt;6. Change database configuration&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ cp /config/database.yml.example /config/database.yml
-$ vim /config/database.yml
-// user: redmine
-// pass: redminepassword
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;install-rvm--ruby&quot;&gt;7. Install RVM + Ruby&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ curl -L https://get.rvm.io | bash -s stable
-// logout or source here
-$ rvm install 2.1.0 --autolibs=enabled &amp;amp;&amp;amp; rvm --fuzzy alias create default 2.1.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;install-pusion-passenger&quot;&gt;8. Install Pusion Passenger&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Install Pussion Passenger + Apache mod&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt; $ apt-get install -y libcurl4-openssl-dev apache2-threaded-dev libapr1-dev libaprutil1-dev
- $ gem install passenger
- $ passenger-install-apache2-module
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add the following lines to &lt;code&gt;/etc/apache2/mods-available/passenger.load&lt;/code&gt;:&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt; LoadModule passenger_module /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36/buildout/apache2/mod_passenger.so
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add the following lines to &lt;code&gt;/etc/apache2/mods-available/passenger.conf&lt;/code&gt;:&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt; &amp;lt;IfModule mod_passenger.c&amp;gt;
-   PassengerRoot /usr/local/rvm/gems/ruby-2.1.0/gems/passenger-4.0.36
-   PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.1.0/wrappers/ruby
- &amp;lt;/IfModule&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enable Passenger as Apache module:&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt; sudo a2enmod passenger  
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add a virtual host to your Apache configuration file and set its DocumentRoot to &lt;code&gt;/var/sites/redmine.domain.com/public&lt;/code&gt;:&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt; &amp;lt;VirtualHost *:80&amp;gt;
-    ServerName redmine.domain.com
-    DocumentRoot /var/sites/redmine.domain.com/public
-    &amp;lt;Directory /var/sites/redmine.domain.com/public&amp;gt;
-       Require all granted
-       Options FollowSymLinks
-       AllowOverride none
-       Order allow,deny
-       Allow from all
-       PassengerUser root
-    &amp;lt;/Directory&amp;gt;
- &amp;lt;/VirtualHost&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;enable-apache-site&quot;&gt;8. Enable Apache site&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo a2ensite redmine
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;install-dependencies&quot;&gt;9. Install dependencies&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gem install bundler
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;install-redmine-dependencies&quot;&gt;10. Install Redmine dependencies&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ bundle install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;session-store-secret-generation&quot;&gt;11. Session store secret generation&lt;/h2&gt;
-&lt;p&gt;This step generates a random key used by Rails to encode cookies storing session data thus preventing their tampering.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ rake generate_secret_token
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;database-schema-objects-creation&quot;&gt;12. Database schema objects creation&lt;/h2&gt;
-&lt;p&gt;Create the database structure&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ RAILS_ENV=production rake db:migrate
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;file-system-permissions&quot;&gt;13. File system permissions&lt;/h2&gt;
-&lt;p&gt;The user account running the application must have write permission on the following subdirectories:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;files (storage of attachments)&lt;/li&gt;
-  &lt;li&gt;log (application log file production.log)&lt;/li&gt;
-  &lt;li&gt;tmp and tmp/pdf (create these ones if not present, used to generate PDF documents among other things)&lt;/li&gt;
-  &lt;li&gt;public/plugin_assets (assets of plugins).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mkdir -p tmp tmp/pdf public/plugin_assets
-$ sudo chown -R nobody:nogroup files log tmp public/plugin_assets
-$ sudo chmod -R 755 files log tmp public/plugin_assets
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;email-configuration-gmail&quot;&gt;14. Email configuration (gmail)&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cp config/configuration.yml.example config/configuration.yml
-$ vim config/configuration.yml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Edit &lt;code&gt;configuration.yml&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;production:
-  email_delivery:
-    delivery_method: :smtp
-    smtp_settings:
-      enable_starttls_auto: true
-      address: &quot;smtp.gmail.com&quot;
-      port: &#39;587&#39;
-      domain: &quot;smtp.gmail.com&quot;
-      authentication: :plain
-      user_name: &quot;redmine.domain@gmail.com&quot;
-      password: &quot;secret&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;theme-optional&quot;&gt;15. Theme (optional)&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd public/themes/
-$ curl -O http://www.redminecrm.com/license_manager/9722/circle_theme-1_0_1.zip
-$ unzip circle_theme-1_0_1.zip
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;test-redmine&quot;&gt;16. Test Redmine&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ruby script/rails server webrick -e production
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Note: Webrick is not suitable for production use, please only use webrick for testing that the installation up to this point is functional.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Fatto!&lt;/p&gt;
-</description>
-        <pubDate>Thu, 23 Jan 2014 00:00:00 +0100</pubDate>
-        <link>//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/</link>
-        <guid isPermaLink="true">//redmine/apache/pusion/passenger/mysql/rvm/ruby/2014/01/23/code-day-023-full-redmine-installation-step-by-step/</guid>
       </item>
     
   </channel>
