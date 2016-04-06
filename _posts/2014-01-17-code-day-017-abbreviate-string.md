@@ -35,4 +35,4 @@ abbreviate("abcdefghijklmno", 0, 10) // "abcdefg..."
 abbreviate("abcdefghijklmno", 8, 10) // "...ijklmno"
 {% endhighlight %}
 
-<a href="/code/day-017/index.html" target="_blank">Demo</a>
+<a href="{{ site.url }}/code/day-017/index.html" target="_blank">Demo</a>

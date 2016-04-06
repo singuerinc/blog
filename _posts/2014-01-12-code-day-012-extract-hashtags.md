@@ -19,4 +19,4 @@ var tags = extract("lorem #tag1 #tag2 diem #tag3");
 tags; // ['#tag1', '#tag2', '#tag3']
 {% endhighlight %}
 
-<a href="/code/day-012/index.html" target="_blank">Demo</a>
+<a href="{{ site.url }}/code/day-012/index.html" target="_blank">Demo</a>

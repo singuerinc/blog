@@ -42,4 +42,4 @@ validate('X9464187D');  //true - "nie"
 
 Y en ActionScript 3 puedes encontrar la clase completa <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as" target="_blank">aqu&iacute;</a>
 
-<a href="/code/day-006/index.html" target="_blank">Demo</a>
+<a href="{{ site.url }}/code/day-006/index.html" target="_blank">Demo</a>

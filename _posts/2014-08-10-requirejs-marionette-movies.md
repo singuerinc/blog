@@ -16,4 +16,4 @@ Yesterday I found that "The Movie DB" is one of the best options to search for m
 
 You could find the source at <a href="https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-movies" target="_blank">GitHub</a>
 
-<iframe src="/code/labs/require-marionette-movies/index.html" style="border: 1px solid grey;width: 706px;height: 790px;margin: 25px auto;display: block;"></iframe>
+<iframe src="{{ site.url }}/code/labs/require-marionette-movies/index.html" style="border: 1px solid grey;width: 706px;height: 790px;margin: 25px auto;display: block;"></iframe>

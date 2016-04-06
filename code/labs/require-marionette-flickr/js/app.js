@@ -27,7 +27,7 @@ define(['jquery', 'underscore', 'marionette', 'SearchView', 'GalleryView'],
       this.searchBox.on('search:value:changed', _.bind(function(value) {
 
         $.ajax({
-          url: "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+          url: "//api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
           dataType: 'json',
           data: {
             tags: value,

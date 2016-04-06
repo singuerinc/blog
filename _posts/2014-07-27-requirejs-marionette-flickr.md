@@ -12,7 +12,7 @@ categories:
 Another quick example of use <a href="http://requirejs.org" target="\_blank">RequireJS</a> and <a href="http://marionettejs.com/">Marionette.js</a> together.
 In this application the user can search public photos on by tags Flickr.
 
-<iframe src="/code/labs/require-marionette-flickr/index.html" style="border: 1px solid grey; width: 100%; height: 735px;"></iframe>
+<iframe src="{{ site.url }}/code/labs/require-marionette-flickr/index.html" style="border: 1px solid grey; width: 100%; height: 735px;"></iframe>
 
 <!--break-->
 

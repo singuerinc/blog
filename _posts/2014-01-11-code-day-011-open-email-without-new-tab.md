@@ -20,4 +20,4 @@ function open_email(){
 }
 {% endhighlight %}
 
-<a href="/code/day-011/index.html" target="_blank">Demo</a>
+<a href="{{ site.url }}/code/day-011/index.html" target="_blank">Demo</a>

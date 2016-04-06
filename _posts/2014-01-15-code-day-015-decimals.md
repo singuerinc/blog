@@ -19,4 +19,4 @@ format(6738963.296086764, 1);  // 6738963.2
 format(1393.8190264930017, 3); // 1393.819
 {% endhighlight %}
 
-<a href="/code/day-015/index.html" target="_blank">Demo</a>
+<a href="{{ site.url }}/code/day-015/index.html" target="_blank">Demo</a>
