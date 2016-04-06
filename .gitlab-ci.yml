@@ -3,6 +3,7 @@ image: ruby:2.3
 pages:
   script:
   - gem install redcarpet
+  - gem install jekyll-paginate
   - gem install jekyll
   - jekyll build -d public
   artifacts:
