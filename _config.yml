@@ -4,7 +4,7 @@ email:
 author:      Nahuel Scotti
 description: ""
 baseurl:     ""
-url:         "https://singuerinc.gitlab.io/blog.singuerinc.com"
+url:         "http://blog.singuerinc.com"
 date_format: "%b %-d, %Y"
 destination: public
 
