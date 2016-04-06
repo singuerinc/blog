@@ -4,8 +4,9 @@ email:
 author:      Nahuel Scotti
 description: ""
 baseurl:     ""
-url:         "/"
+url:         "https://singuerinc.gitlab.io/blog.singuerinc.com"
 date_format: "%b %-d, %Y"
+destination: public
 
 # Google services
 google_analytics: 'UA-881783-13'
@@ -61,6 +62,4 @@ redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
 paginate:     12
-sass:
-  compressed: true
 gems: [jekyll-paginate]

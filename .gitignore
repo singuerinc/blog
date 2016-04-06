@@ -1,6 +1,4 @@
 .DS_Store
-lanyon/.vagrant
-.vagrant
 .idea
-.sass-cache
 .jekyll-metadata
+public

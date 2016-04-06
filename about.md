@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Nahuel Scotti / @singuerinc
-permalink: /about/
 ---
 
 Front+backend developer living in Barcelona.<br/>Currently working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a>.
