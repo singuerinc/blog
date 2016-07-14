@@ -3,7 +3,7 @@ layout: page
 title: Nahuel Scotti / @singuerinc
 ---
 
-Front+backend developer living in Barcelona.<br/>Currently working at <a href="http://www.b-reel.com" target="_blank">B-REEL</a>.
+I'm a front/backend developer living in Stockholm, Sweden. I'm currently working at <a href="https://www.netent.com/en/" target="_blank">NetEnt</a>.
 
 I make apps in HTML5, Javascript, Node.js, Ruby on Rails among others technologies.
 
