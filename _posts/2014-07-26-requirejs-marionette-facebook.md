@@ -9,6 +9,8 @@ categories:
   - facebook
 ---
 
+Update: Facebook has disabled the lookup by username but still working with some usernames.
+
 This is a quick example of use a serie of libraries that work great together.<br/>I like a lot <a href="http://requirejs.org" target="\_blank">RequireJS</a>, the way I can organize my modules/code with it. <a href="http://marionettejs.com/">Marionette.js</a> do a great work with the views, it takes care about everything: listeners, selectors, events, etc. And with the <a href="https://developers.facebook.com/docs/javascript" target="\_blank">Facebook SDK</a> we have a lot of info to build complex or simple applications like the next one.
 
 The example is very straightforward:
