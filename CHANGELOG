@@ -13,3 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - A README.md file with instructions to serve the blog in a Docker container
 - A CHANGELOG file to keep track of every change
+
+## [1.0.0] - 2016-06-15
+### Changed
+- Update profile info
