@@ -29,12 +29,17 @@
 
     <!-- Open Graph -->
     <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:image" content="http://www.singuerinc.com/img/home/singuerinc--overlay-app.jpg">
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="816" />
+    <meta property="og:image:height" content="386" />
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{% if page.title %}{{ page.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.title | xml_escape }}">
+    <meta property="fb:app_id" content="{{ site.facebook_appid | xml_escape }}">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />

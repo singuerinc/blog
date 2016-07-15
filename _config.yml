@@ -26,7 +26,7 @@ disqus_shortname: singuerinc-blog
 # Facebook Comments plugin
 # (leave blank to disable Facebook Comments, otherwise set it to true)
 facebook_comments:
-facebook_appid:
+facebook_appid: 1774104969502286
 facebook_comments_number: 10
 
 # Social icons
