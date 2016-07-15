@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Facebook User Finder</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,6 +27,24 @@
 
     <script id="search-box-tpl" type="text/template">
         <input type="text" id="search-box-input" name="search-box-input" placeholder="facebook id..." />
+    </script>
+    
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1774104969502286',
+          xfbml      : true,
+          version    : 'v2.7'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
     </script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js" data-main="js/main"></script>

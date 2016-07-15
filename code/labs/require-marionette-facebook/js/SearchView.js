@@ -24,7 +24,6 @@ define(['marionette'], function (Marionette) {
     },
 
     _onInputChanged: function(e){
-      console.log(e.target.value);
       this.trigger('search:value:changed', e.target.value);
     }
 
