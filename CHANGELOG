@@ -1,7 +1,11 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.0] - 2016-06-16
+### Changed
+- Better page title
+
 ## [1.0.1] - 2016-06-16
 ### Added
 - A README.md file with instructions to serve the blog in a Docker container
-- A CHANGELOG file to keep track of every change 
+- A CHANGELOG file to keep track of every change
