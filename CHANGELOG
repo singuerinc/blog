@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Better page title
 
+### Fixed
+- Facebook Share info
+- Facebook User finder post example
+
 ## [1.0.1] - 2016-06-16
 ### Added
 - A README.md file with instructions to serve the blog in a Docker container
