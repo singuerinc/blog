@@ -19,3 +19,4 @@ docker run -it --rm -p 443:443 -p 80:80 --name certbot -v $PWD/letsencrypt/etc/l
 - Upload the verification file
 - Continue with the verification
 - Upload Certificate to GitLab
+- Verificate: [https://www.ssllabs.com/ssltest/analyze.html?d=blog.singuerinc.com&latest](https://www.ssllabs.com/ssltest/analyze.html?d=blog.singuerinc.com&latest)
