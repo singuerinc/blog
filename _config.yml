@@ -4,7 +4,7 @@ email:
 author:      "Nahuel Scotti"
 description: "I make apps in HTML5, Javascript, Node.js, Ruby on Rails among others technologies."
 baseurl:     ""
-url:         "http://blog.singuerinc.com"
+url:         "https://blog.singuerinc.com"
 date_format: "%b %-d, %Y"
 destination: public
 
