@@ -16,7 +16,7 @@ open 'http://localhost:4000'
 Read before: [https://about.gitlab.com/2016/04/11/tutorial-securing-your-gitlab-pages-with-tls-and-letsencrypt/](https://about.gitlab.com/2016/04/11/tutorial-securing-your-gitlab-pages-with-tls-and-letsencrypt/)
 
 ```sh
-docker run -it --rm -p 443:443 -p 80:80 --name certbot -v $PWD/letsencrypt/etc/letsencrypt:/etc/letsencrypt -v $PWD/letsencrypt/var/lib/letsencrypt:/var/lib/letsencrypt quay.io/letsencrypt/letsencrypt:latest certonly -a manual --email nahuel.scotti@gmail.com -d blog.singuerinc.com
+docker run -it --rm -p 443:443 -p 80:80 --name certbot -v ~/letsencrypt/etc/letsencrypt:/etc/letsencrypt -v ~/letsencrypt/var/lib/letsencrypt:/var/lib/letsencrypt quay.io/letsencrypt/letsencrypt:latest certonly -a manual --email nahuel.scotti@gmail.com -d blog.singuerinc.com
 ```
 
 - Follow the instructions
