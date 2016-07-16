@@ -1,5 +1,7 @@
 # BLOG
 
+[![build status](https://gitlab.com/singuerinc/blog.singuerinc.com/badges/master/build.svg)](https://gitlab.com/singuerinc/blog.singuerinc.com/commits/master)
+
 ## Serve the blog inside a Docker container
 
 ```sh
