@@ -1,5 +1,11 @@
 # Change Log
-This project adheres to [Semantic Versioning](http://semver.org/).
+
+## [1.2.0] - 2016-06-16
+### Added
+- SSL Certificate! https://blog.singuerinc.com/
+
+### Fixed
+- Absolute paths on links
 
 ## [1.1.0] - 2016-06-16
 ### Changed
