@@ -1,7 +1,7 @@
 require.config({
 
   baseUrl: 'js',
-  urlArgs: 'r=' + new Date().getTime(),
+  urlArgs: '',
 
   hbs: {
     disableI18n: true,
@@ -20,7 +20,7 @@ require.config({
     'jquery': '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min',
     'marionette': '//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.0.3/backbone.marionette.min',
     'backbone.marionette.handlebars': 'vendor/backbone.marionette.handlebars.min',
-    'isotope': '//isotope.metafizzy.co/isotope.pkgd.min',
+    'isotope': '//npmcdn.com/isotope-layout@3.0.1/dist/isotope.pkgd.min',
     'nprogress': '//cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.3/nprogress.min'
   },
 
