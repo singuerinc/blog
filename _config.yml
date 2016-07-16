@@ -8,6 +8,8 @@ url:         "http://blog.singuerinc.com"
 date_format: "%b %-d, %Y"
 destination: public
 
+include: [".well-known"]
+
 # Google services
 google_analytics: 'UA-881783-13'
 google_verification:
