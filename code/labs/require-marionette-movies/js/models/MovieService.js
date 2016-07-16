@@ -4,7 +4,7 @@ define(['underscore', 'marionette'], function (_, Marionette) {
     init: function () {
 
       this.API_KEY = 'cb5f886745e3ea2dd5975da09b7194ce';
-      this.ENDPOINT = "http://api.themoviedb.org/3";
+      this.ENDPOINT = "https://api.themoviedb.org/3";
 
       // get the basic configuration from "TheMovieDB" api
       $.ajax({
