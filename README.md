@@ -1,6 +1,6 @@
 # BLOG
 
-[![build status](https://gitlab.com/singuerinc/blog.singuerinc.com/badges/master/build.svg)](https://gitlab.com/singuerinc/blog.singuerinc.com/commits/master)
+[![build status](https://gitlab.com/singuerinc-works/com.singuerinc.blog/badges/master/build.svg)](https://gitlab.com/singuerinc-works/com.singuerinc.blog/commits/master)
 
 ## Serve the blog inside a Docker container
 
