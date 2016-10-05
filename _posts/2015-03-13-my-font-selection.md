@@ -8,8 +8,9 @@ categories:
   - fixed width
 ---
 
-I like to change from time to time the font and theme of my editor.<br/>
-This is a quick look about those I have used in the last years.<br/>I hope it makes easy for you to select your favorite font from this selection:
+I like to change from time to time the font and theme of my editor.  
+This is a quick look about those I have used in the last years.  
+I hope it make easy for you to select your favorite font from this selection:
 
 ## Andale Mono
 
