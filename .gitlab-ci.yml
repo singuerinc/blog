@@ -23,7 +23,7 @@ pages:
 
 pages:push-docker-image:
   variables:
-     - GIT_STRATEGY=none
+    GIT_STRATEGY: none
   image: docker:git
   services:
   - docker:dind
