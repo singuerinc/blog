@@ -3,8 +3,6 @@ layout: page
 title: Nahuel Scotti
 ---
 
-Another validator
-
 <ul>
     <li><a href="https://www.singuerinc.com" target="_blank">Portfolio</a></li>
     <li><a href="https://github.com/singuerinc" target="_blank">GitHub</a></li>
