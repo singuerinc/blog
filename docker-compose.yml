@@ -2,7 +2,7 @@ version: "2"
 services:
   jekyll:
     image: jekyll/jekyll:3.2.1
-    command: jekyll s
+    command: jekyll s --config _config.yml,_config-dev.yml
     ports:
       - 127.0.0.1:4000:4000
     volumes:
