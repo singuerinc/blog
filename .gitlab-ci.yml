@@ -22,8 +22,6 @@ pages:
   - tags
 
 pages:push-docker-image:
-  variables:
-    GIT_STRATEGY: none
   image: docker:git
   services:
   - docker:dind
