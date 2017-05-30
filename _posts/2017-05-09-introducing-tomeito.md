@@ -16,7 +16,7 @@ What's the difference between this one and other timers apps:
 - Minimal interface
 - Simple to use
 
-[Download](http://tomeito.singuerinc.com/releases/darwin/latest/tomeito.zip)
+[Download](https://tomeito-app.singuerinc.com/releases/darwin/latest/tomeito.zip)
 
 > Important: This is a free app. I'm not paying €99 to Apple to have a certified app. So expect a warning when you install it.
 
@@ -55,4 +55,4 @@ From the settings you can control how the app behaves:
 - Auto Play: If enabled, pomodori and breaks starts automatically
 - On Top: If active, the app remains on top of other windows
 
-[Download](http://tomeito.singuerinc.com/releases/darwin/latest/tomeito.zip)
+[Download](https://tomeito-app.singuerinc.com/releases/darwin/latest/tomeito.zip)
