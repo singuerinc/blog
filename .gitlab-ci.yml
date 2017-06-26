@@ -11,6 +11,9 @@ pages:
   stage: build
   environment: production
   script:
+  - sed -i -e "s/\$ACME_FILE_NAME/$ACME_FILE_NAME/" ./acme_file_template
+  - sed -i -e "s/\$ACME_FILE_CONTENT/$ACME_FILE_CONTENT/" ./acme_file_template
+  - mv ./acme_file_template ./$ACME_FILE_NAME
   - gem install redcarpet
   - gem install jekyll-paginate
   - gem install jekyll
