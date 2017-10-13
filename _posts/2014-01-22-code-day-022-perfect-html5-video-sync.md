@@ -64,4 +64,4 @@ animate();
 
 <a href="https://gist.github.com/singuerinc/8600823" target="_blank">Code source</a>
 
-<a href="{{ site.url }}/code/day-022/index.html" target="_blank">Demo</a> (binary pixels are on top-right)
+<a href="{{ site.baseurl | prepend: site.url }}/code/day-022/index.html" target="_blank">Demo</a> (binary pixels are on top-right)

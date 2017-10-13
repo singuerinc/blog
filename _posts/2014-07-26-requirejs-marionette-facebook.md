@@ -17,6 +17,6 @@ The example is very straightforward:
 
 Search for your Facebook ID or, for example: "obama" or "mickeymouse"
 
-<iframe src="{{ site.url }}/code/labs/require-marionette-facebook/index.html"  style="border: 1px solid grey;width: 354px;height: 252px;margin: 25px auto;display: block;"></iframe>
+<iframe src="{{ site.baseurl | prepend: site.url }}/code/labs/require-marionette-facebook/index.html"  style="border: 1px solid grey;width: 354px;height: 252px;margin: 25px auto;display: block;"></iframe>
 
-Take a look to the code at <a href="https://github.com/singuerinc/blog/tree/master/lanyon/code/labs/require-marionette-facebook" target="_blank">GitHub</a>
+Take a look to the code at <a href="https://github.com/singuerinc/blog/tree/master/code/labs/require-marionette-facebook" target="_blank">GitHub</a>

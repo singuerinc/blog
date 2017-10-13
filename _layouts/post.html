@@ -51,14 +51,14 @@ layout: default
 {% endif %}
 
 {% if site.facebook_comments %}
-  <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%" data-numposts="{{ site.facebook_comments_number }}"></div>
+  <div class="fb-comments" data-href="{{ site.baseurl }}{{ page.url }}" data-width="100%" data-numposts="{{ site.facebook_comments_number }}"></div>
 {% endif %}
 
 {% if site.show_related_posts %}
   <h2 class="related-post-title">Related Posts</h2>
   {% for post in site.related_posts %}
     <div class="post">
-      <a href="{{ post.url | prepend: site.url }}" class="post-link">
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
         <h4 class="post-title">{{ post.title }}</h4>
         <p class="post-summary">{{ post.summary }}</p>
       </a>

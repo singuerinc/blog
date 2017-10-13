@@ -3,8 +3,8 @@ title:       "@singuerinc"
 email:
 author:      "Nahuel Scotti"
 description: "I make apps in HTML5, Javascript, Node.js, Ruby on Rails among others technologies."
+url: "https://blog.singuerinc.com"
 baseurl:     ""
-url:         ""
 date_format: "%b %-d, %Y"
 destination: public
 
@@ -64,4 +64,4 @@ redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
 paginate:     12
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]

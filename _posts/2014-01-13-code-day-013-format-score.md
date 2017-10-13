@@ -16,4 +16,4 @@ function format(value){
 format(3601234); // '3.601.234'
 {% endhighlight %}
 
-<a href="{{ site.url }}/code/day-013/index.html" target="_blank">Demo</a>
+<a href="{{ site.baseurl | prepend: site.url }}/code/day-013/index.html" target="_blank">Demo</a>

@@ -25,4 +25,4 @@ validate('932 510 258'); //true
 
 Y en ActionScript 3 la clase completa puedes encontrarla <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainPhoneValidator.as" target="_blank">aqu&iacute;</a>
 
-<a href="{{ site.url }}/code/day-004/index.html" target="_blank">Demo</a>
+<a href="{{ site.baseurl | prepend: site.url }}/code/day-004/index.html" target="_blank">Demo</a>

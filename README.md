@@ -9,6 +9,13 @@ docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it -p 127.0.0.1:4000
 open 'http://localhost:4000'
 ```
 
+## Check links
+
+```sh
+docker run --rm --volume=$PWD:/srv/jekyll -it -p 127.0.0.1:4000:4000 jekyll/jekyll:3.5 jekyll build
+docker run -v $PWD/public:/site 18fgsa/html-proofer /site
+```
+
 ## SSL Certificate
 
 - Run the letsencrypt Docker container

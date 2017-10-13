@@ -16,4 +16,4 @@ var color = '#'+Math.floor(Math.random()*16777215).toString(16);
 console.log(color);
 {% endhighlight %}
 
-<a href="{{ site.url }}/code/day-001/index.html" target="_blank">Demo</a>
+<a href="{{ site.baseurl | prepend: site.url }}/code/day-001/index.html" target="_blank">Demo</a>
