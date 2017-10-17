@@ -1,14 +1,20 @@
 const path = require(`path`)
+const slugify = require('slug')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
+    const { categories } = node.frontmatter
     const slug = createFilePath({ node, getNode, basePath: `pages` })
+    const [, date, title] = slug.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/)
+    const value = `/${slugify(categories.concat([date]).join('-'), '/')}/${title}/`
+    // console.log(date, title)
+    console.log(value)
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value
     })
   }
 }
@@ -23,6 +29,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             node {
               fields {
                 slug
+              },
+              frontmatter {
+                categories
               }
             }
           }
@@ -36,6 +45,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
             slug: node.fields.slug,
+            categories: node.frontmatter.categories
           },
         })
       })
