@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-export default (props) => {
-  const {data} = props
-  console.log(props)
+export default ({data}) => {
   return (
     <div>
     {data.allMarkdownRemark.edges.map(({ node }) =>

@@ -20,72 +20,72 @@ Para hacer esto necesitamos que nuestro objeto **User** implemente la interface 
 
  [2]: https://github.com/robertpenner/as3-signals/tree/binding
 
-{% highlight as3 %}
-package net.singuerinc.labs.signals.binding {  
-	import org.osflash.signals.binding.ChangeSignal;
-	import org.osflash.signals.binding.IBindable;  
-	import org.osflash.signals.binding.IChangeSignal;  
+```actionscript
+package net.singuerinc.labs.signals.binding {
+  import org.osflash.signals.binding.ChangeSignal;
+  import org.osflash.signals.binding.IBindable;
+  import org.osflash.signals.binding.IChangeSignal;
 
-	public class User implements IBindable {  
+  public class User implements IBindable {
 
-		private var _name:String;  
-		private var _changeSignal:ChangeSignal;  
+    private var _name:String;
+    private var _changeSignal:ChangeSignal;
 
-		public function User() {  
-		}  
+    public function User() {
+    }
 
-		public function set name(value:String):void {  
-			_name = value;  
-			changeSignal.dispatch('name', _name);  
-		}  
+    public function set name(value:String):void {
+      _name = value;
+      changeSignal.dispatch('name', _name);
+    }
 
-		public function get name():String {  
-			return _name;  
-		}  
+    public function get name():String {
+      return _name;
+    }
 
-		public function get changeSignal():IChangeSignal {  
-			return _changeSignal ||= new ChangeSignal(this);  
-		}  
-	}  
+    public function get changeSignal():IChangeSignal {
+      return _changeSignal ||= new ChangeSignal(this);
+    }
+  }
 }
-{% endhighlight %}
+```
 
 Ahora, para vincular el **TextField** con **User** necesitamos de **Binder**, esta vincular&aacute; los dos objetos:
 
-{% highlight as3 %}
-package net.singuerinc.labs.signals.binding {  
-  	import com.bit101.components.PushButton;
-	import org.osflash.signals.binding.Binder;  
-	import flash.display.Sprite;  
-	import flash.events.MouseEvent;  
-	import flash.text.TextField;  
-	import flash.text.TextFieldAutoSize;  
+```actionscript
+package net.singuerinc.labs.signals.binding {
+  import com.bit101.components.PushButton;
+  import org.osflash.signals.binding.Binder;
+  import flash.display.Sprite;
+  import flash.events.MouseEvent;
+  import flash.text.TextField;
+  import flash.text.TextFieldAutoSize;
 
-	public class SignalsBindingExample extends [Sprite][4] {  
+  public class SignalsBindingExample extends [Sprite][4] {
 
-		public var user:User;  
+    public var user:User;
 
-		public function SignalsBindingExample() {  
+    public function SignalsBindingExample() {
 
-			new PushButton(this, , 20, 'change user name', onClick);  
+      new PushButton(this, , 20, 'change user name', onClick);
 
-			var txt1:TextField = new TextField();  
-			txt1.autoSize = TextFieldAutoSize.LEFT;  
-			addChild(txt1);  
+      var txt1:TextField = new TextField();
+      txt1.autoSize = TextFieldAutoSize.LEFT;
+      addChild(txt1);
 
-			user = new User();  
-			user.name = 'User1';  
+      user = new User();
+      user.name = 'User1';
 
-			var binder:Binder = new Binder();  
-			binder.bind(txt1, 'text', user, 'name');  
-		}  
+      var binder:Binder = new Binder();
+      binder.bind(txt1, 'text', user, 'name');
+    }
 
-		private function onClick(event:MouseEvent):void {  
-			user.name = 'User' + Math.random();  
-		}  
-	}  
+    private function onClick(event:MouseEvent):void {
+      user.name = 'User' + Math.random();
+    }
+  }
 }
-{% endhighlight %}
+```
 
-Listo, ahora cada vez que hagamos actualicemos **user.name** autom&aacute;ticamente **Binder** har&aacute; que ese valor se refleje en el **TextField**!  
+Listo, ahora cada vez que hagamos actualicemos **user.name** autom&aacute;ticamente **Binder** har&aacute; que ese valor se refleje en el **TextField**!
 [Source][2]
