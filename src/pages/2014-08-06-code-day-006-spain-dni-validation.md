@@ -40,4 +40,4 @@ validate('12345678Z');  //true - "nif"
 validate('X9464187D');  //true - "nie"
 {% endhighlight %}
 
-<a href="{{ site.url }}/dni/nif/nie/validar/2015/12/22/validar-dni-nif-o-nie/index.html" target="_blank">Demo</a>
+<a href="/dni/nif/nie/validar/2015/12/22/validar-dni-nif-o-nie/index.html" target="_blank">Demo</a>

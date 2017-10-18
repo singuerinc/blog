@@ -6,7 +6,12 @@ export default ({data}) => {
     <ul>
     {data.allMarkdownRemark.edges.reverse().map(({ node }) =>
       <li key={node.id}>
-        <Link to="/page-2/">{node.frontmatter.title}{" "}</Link>
+        <Link
+            to={node.fields.slug}
+            css={{ textDecoration: `none`, color: `inherit` }}
+          >
+          {node.frontmatter.title}{" "}
+          </Link>
         <div>
           {node.frontmatter.categories.join(", ")}
         </div>
@@ -25,6 +30,9 @@ query IndexQuery {
         frontmatter {
           title,
           categories
+        },
+        fields {
+          slug
         }
       }
     }

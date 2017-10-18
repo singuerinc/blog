@@ -38,4 +38,4 @@ btn.addEventListener(event, function(e){
 });
 {% endhighlight %}
 
-<a href="{{ site.url }}/code/day-021/index.html" target="_blank">Demo</a>
+<a href="/code/day-021/index.html" target="_blank">Demo</a>
