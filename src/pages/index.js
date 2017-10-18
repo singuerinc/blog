@@ -1,23 +1,25 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-export default ({data}) => {
+export default (props) => {
+  const {data} = props
+  console.log(props)
   return (
-    <ul>
-    {data.allMarkdownRemark.edges.reverse().map(({ node }) =>
-      <li key={node.id}>
-        <Link
-            to={node.fields.slug}
-            css={{ textDecoration: `none`, color: `inherit` }}
-          >
-          {node.frontmatter.title}{" "}
-          </Link>
-        <div>
-          {node.frontmatter.categories.join(", ")}
-        </div>
-      </li>
+    <div>
+    {data.allMarkdownRemark.edges.map(({ node }) =>
+      <article key={node.id}>
+        <header>
+          <span>{node.fields.date}</span>
+        </header>
+        <section>
+          <Link to={node.fields.slug}>{node.frontmatter.title}{" "}</Link>
+        </section>
+        <footer>
+          <span>{node.frontmatter.categories.join(", ")}</span>
+        </footer>
+      </article>
     )}
-    </ul>
+    </div>
   )
 }
 
@@ -32,7 +34,8 @@ query IndexQuery {
           categories
         },
         fields {
-          slug
+          slug,
+          date
         }
       }
     }

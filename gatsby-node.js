@@ -9,13 +9,8 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
     const [, date, title] = slug.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/)
     const value = `/${slugify(categories.concat([date]).join('-'), '/')}/${title}/`
-    // console.log(date, title)
-    console.log(value)
-    createNodeField({
-      node,
-      name: `slug`,
-      value
-    })
+    createNodeField({ node, name: `slug`, value })
+    createNodeField({ node, name: `date`, value: date })
   }
 }
 
@@ -28,7 +23,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           edges {
             node {
               fields {
-                slug
+                slug,
+                date
               },
               frontmatter {
                 categories
@@ -44,8 +40,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/blog-post.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
-            slug: node.fields.slug,
-            categories: node.frontmatter.categories
+            slug: node.fields.slug
           },
         })
       })
