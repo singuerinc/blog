@@ -10,7 +10,8 @@
     "gatsby-remark-prismjs": "^1.2.8",
     "gatsby-source-filesystem": "^1.5.5",
     "gatsby-transformer-remark": "^1.7.16",
-    "slug": "^0.9.1"
+    "slug": "^0.9.1",
+    "tachyons": "^4.8.1"
   },
   "keywords": [
     "gatsby"
