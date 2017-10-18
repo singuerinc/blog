@@ -5,15 +5,15 @@ export default ({data}) => {
   return (
     <div>
     {data.allMarkdownRemark.edges.map(({ node }) =>
-      <article key={node.id}>
+      <article key={node.id} className="mb4">
         <header>
-          <span>{node.fields.date}</span>
+          <span className="fw3 gray f5">{node.fields.date}</span>
         </header>
         <section>
-          <Link to={node.fields.slug}>{node.frontmatter.title}{" "}</Link>
+          <Link to={node.fields.slug} className="link f3 fw3 mv1 db title-gradient">{node.frontmatter.title}{" "}</Link>
         </section>
         <footer>
-          <span>{node.frontmatter.categories.join(", ")}</span>
+          <span className="f6">{node.frontmatter.categories.join(", ")}</span>
         </footer>
       </article>
     )}

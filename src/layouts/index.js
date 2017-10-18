@@ -10,15 +10,14 @@ import './index.css'
 const Header = () => (
   <div>
     <div>
-      <h1>
-        <Link to="/">@singuerinc</Link>
-      </h1>
+      <h1 className="fw3 mt3 mb1"><Link to="/" className="link dark-gray">@singuerinc</Link></h1>
+      <h4 className="mv2 f4">Subtitle here</h4>
     </div>
   </div>
 )
 
 const TemplateWrapper = ({ children }) => (
-  <div className="sans-serif near-black">
+  <div className="sans-serif dark-gray mh3">
     <Helmet
       title="singuerinc | blog"
       meta={[
@@ -27,7 +26,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div>
+    <div className="mv4">
       {children()}
     </div>
   </div>

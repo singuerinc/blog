@@ -7,8 +7,8 @@ export default ({ data, pathContext }) => {
   return (
     <article>
       <header>
-        <span>{date}</span>
-        <h1>{post.frontmatter.title}{" "}</h1>
+        <span className="fw3 gray f5">{date}</span>
+        <h1 className="f2 fw3 mv1 db title-gradient">{post.frontmatter.title}{" "}</h1>
       </header>
       <section>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
