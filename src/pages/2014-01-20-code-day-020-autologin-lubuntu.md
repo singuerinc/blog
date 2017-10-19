@@ -19,7 +19,9 @@ $ sudo vim /etc/lxdm/default.conf
 
 And change the line:
 
-`autologin=yourusernamehere`
+```bash
+autologin=yourusernamehere
+```
 
 For **Lubuntu 12.10** and above
 ```bash
