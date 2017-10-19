@@ -4,20 +4,20 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import 'tachyons'
-import 'syntax-highlighting/assets/css/prism/prism-base16-ateliercave.dark.css'
+import 'syntax-highlighting/assets/css/prism/prism-base16-ateliercave.light.css'
 import './index.css'
 
 const Header = () => (
   <div>
     <div>
-      <h1 className="fw3 mt3 mb1"><Link to="/" className="link dark-gray">@singuerinc</Link></h1>
+      <h1 className="fw3 mt4 mb1"><Link to="/" className="link dark-gray">@singuerinc</Link></h1>
       <h4 className="mv2 f4">Subtitle here</h4>
     </div>
   </div>
 )
 
 const TemplateWrapper = ({ children }) => (
-  <div className="sans-serif dark-gray mh3 mw-100 mw7-l center">
+  <div className="sans-serif dark-gray mh4 mh3 mw-100 mw7-l center-l">
     <Helmet
       title="singuerinc | blog"
       meta={[

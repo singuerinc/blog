@@ -18,7 +18,7 @@ Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador
 
 Pero siempre olvido d&oacute;nde colocarlos, por eso he escrito un peque&ntilde;o script que lo hace:
 
-{% highlight sh %}
+```bash
 $ MM_DIR="/Library/Application Support/Macromedia"
 $ LG_DIR="${HOME}/Library/Preferences/Macromedia/Flash Player/Logs"
 $ sudo mkdir -vp $MM_DIR
@@ -40,20 +40,20 @@ $ echo 'Flashlogs test' | tee "${LG_DIR}/flashlog.txt"
 
 # Restart the browser (w/ Flash Player "Debug" version) and execute:
 $ tail -f "${LG_DIR}/flashlog.txt"
-{% endhighlight %}
+```
 
 Para ejecutarlo:
 
 - Abre simplemente una ventana de Terminal y escribe:
 
-{% highlight sh %}
+```bash
 curl -L https://gist.github.com/singuerinc/5296967/raw/logs.sh | sh
-{% endhighlight %}
+```
 
 - Reinicia el navegador.
 
 - Visualiza los logs ejecutando en el Terminal lo siguiente:
 
-{% highlight sh %}
+```bash
 tail -f ~/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt
-{% endhighlight %}
+```

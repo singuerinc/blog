@@ -20,7 +20,7 @@ Para hacer esto necesitamos que nuestro objeto **User** implemente la interface 
 
  [2]: https://github.com/robertpenner/as3-signals/tree/binding
 
-```actionscript
+```javascript
 package net.singuerinc.labs.signals.binding {
   import org.osflash.signals.binding.ChangeSignal;
   import org.osflash.signals.binding.IBindable;
@@ -52,7 +52,7 @@ package net.singuerinc.labs.signals.binding {
 
 Ahora, para vincular el **TextField** con **User** necesitamos de **Binder**, esta vincular&aacute; los dos objetos:
 
-```actionscript
+```javascript
 package net.singuerinc.labs.signals.binding {
   import com.bit101.components.PushButton;
   import org.osflash.signals.binding.Binder;

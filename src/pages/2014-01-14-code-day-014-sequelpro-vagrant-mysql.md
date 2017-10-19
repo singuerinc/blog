@@ -11,10 +11,10 @@ categories:
 Connect SequelPro to Vagrant MySQL Database
 
 ### Vagrant Options
-{% highlight js %}
+```javascript
 config.vm.network :forwarded_port, guest: 3306, host: 3306
 config.vm.network "private_network", ip: "192.168.50.4"
-{% endhighlight %}
+```
 
 ### SequelPro SSH Options
 <table>

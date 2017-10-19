@@ -12,7 +12,7 @@ categories:
 
 Generate up to 4000 pngs with random names could be a tedious task without a script... But easier with this little piece of code using Node.js, async and <a href="http://fabricjs.com/" target="_blank">Fabric.js</a>:
 
-{% highlight js %}
+```javascript
 var fs = require('fs'),
     fabric = require('fabric').fabric,
     async = require('async');
@@ -48,4 +48,4 @@ async.eachSeries(names, function(name, callback) {
 }, function(err) {
     console.log('done!');
 });
-{% endhighlight %}
+```

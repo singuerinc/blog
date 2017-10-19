@@ -11,7 +11,7 @@ categories:
 ---
 Igual que el de ayer, pero para Italia y m&aacute;s complejo, una expresi&oacute;n regular para validar tel&eacute;fonos con ActionScript 3.
 
-{% highlight as3 %}
+```javascript
 private function validate(value:String):Boolean {
 
 	var a:RegExp = /^((0039){0,1})313[0-9]{7}$/,
@@ -39,6 +39,6 @@ validate('3936912345'); 		//true - "Vodafone"
 validate('3933216547'); 		//true - "Tre"
 validate('0039 368 1234567'); 	//true "TIM"
 validate('380 4567321'); 		//true "Wind"
-{% endhighlight %}
+```
 
 Algo más completo y complejo pero útil puedes encontrarlo <a href="https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/ItalyPhoneValidator.as" target="_blank">aqu&iacute;</a>

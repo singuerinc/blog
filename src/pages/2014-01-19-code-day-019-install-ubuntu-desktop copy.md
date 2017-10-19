@@ -11,10 +11,10 @@ Pre-requisites:
 
   - Ubuntu Server installed
 
-{% highlight js %}
+```javascript
 $ sudo apt-get update
 $ sudo apt-get install ubuntu-desktop // full version
 
  // or without all the stuff...
 $ sudo apt-get install --no-install-recommends ubuntu-desktop
-{% endhighlight %}
+```

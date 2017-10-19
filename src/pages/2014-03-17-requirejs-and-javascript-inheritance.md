@@ -11,7 +11,7 @@ Quick example, Require.js + Javascript inheritance.
 
 Our Human class:
 
-{% highlight js %}
+```javascript
 define('Human', [], function() {
 
     // static private var
@@ -55,11 +55,11 @@ define('Human', [], function() {
     return Human;
 
 });
-{% endhighlight %}
+```
 
 Extending "Human"
 
-{% highlight js %}
+```javascript
 define('John', ['Human'], function(Human){
 
     var John = function(){
@@ -78,11 +78,11 @@ define('John', ['Human'], function(Human){
     return John;
 
 });
-{% endhighlight %}
+```
 
 Create a Human
 
-{% highlight js %}
+```javascript
 require(['Human', 'John'], function(Human, John){
 
     console.log( Human.GET_TYPE() ); // biped
@@ -102,4 +102,4 @@ require(['Human', 'John'], function(Human, John){
     console.log( john.getNumEyes() ); // 2
 
 });
-{% endhighlight %}
+```

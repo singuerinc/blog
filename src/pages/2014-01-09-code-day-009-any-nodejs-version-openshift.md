@@ -15,4 +15,4 @@ $ git pull -s recursive -X theirs upstream master
 $ echo "0.10.15" >> .openshift/markers/NODEJS_VERSION
 $ git commit . -m 'use Node version 0.10.15'
 $ git push origin master
-{% endhighlight %}
+```

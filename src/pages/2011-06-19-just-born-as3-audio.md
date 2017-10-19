@@ -29,7 +29,7 @@ M&aacute;s o menos, la *syntax* ser&aacute; esta:
  [2]: https://github.com/robertpenner/as3-signals
  [3]: https://github.com/singuerinc/as3-audio
 
-{% highlight as3 %}
+```javascript
 //Mediante la carga de un mp3:
 var audio1:Audio = new Audio('audio1', 'audio.mp3');
 audio1.volume = .5;
@@ -39,5 +39,5 @@ audio1.play();
 var audio2:AudioDeluxe = new AudioDeluxe('audio2', new AudioMP3());
 audio2.play();
 audio2.fade(, 1, 1500); //from, to, time
-{% endhighlight %}
+```
 [Source][3]

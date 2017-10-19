@@ -20,7 +20,7 @@ But I want to focus on JavaScript, as described in these tutorials you need to w
 
 So, how we get this data?
 
-{% highlight js %}
+```javascript
 // get the video element
 var video = document.getElementById('video');
 
@@ -60,7 +60,7 @@ function animate() {
 
 animate();
 
-{% endhighlight %}
+```
 
 <a href="https://gist.github.com/singuerinc/8600823" target="_blank">Code source</a>
 

@@ -17,7 +17,7 @@ You want a video on your html, an overlay layer with some information and a butt
 <a id="btn" href="#">play</a>
 <p>Lorem ipsum Duis sit nisi occaecat ut</p>
 <video id="video" controls src="video.mp4"></video>
-{% endhighlight %}
+```
 
 **The solution:**
 
@@ -36,6 +36,6 @@ var ua = navigator.userAgent,
 btn.addEventListener(event, function(e){
     video.play();
 });
-{% endhighlight %}
+```
 
 <a href="/code/day-021/index.html" target="_blank">Demo</a>

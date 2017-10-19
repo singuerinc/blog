@@ -8,7 +8,7 @@ categories:
 ---
 Hoy un m&eacute;todo r&aacute;pido para simular herencia en Javascript.
 
-{% highlight js %}
+```javascript
 function extend(Child, Parent) {
     Child.prototype = (
         function (){
@@ -21,11 +21,11 @@ function extend(Child, Parent) {
     Child.parent = Parent.prototype;
     return Child.prototype;
 };
-{% endhighlight %}
+```
 
 Y c&oacute;mo lo usamos:
 
-{% highlight js %}
+```javascript
 var Animal = (function(){
     var Clazz = function(){
         this.name = 'Animal';
@@ -50,4 +50,4 @@ cat.run() // "Animal runnning"
 
 var dog = new Dog();
 dog.run() // "Dog runnning"
-{% endhighlight %}
+```

@@ -10,7 +10,7 @@ categories:
 ---
  &iquest;Abrir el cliente de correo desde el navegador sin abrir una pesta&ntilde;a nueva? F&aacute;cil.
 
-{% highlight js %}
+```javascript
 function open_email(){
     var f = document.createElement('iframe');
     f.style.display = 'none';
@@ -18,6 +18,6 @@ function open_email(){
     document.body.appendChild(f);
     document.body.removeChild(f);
 }
-{% endhighlight %}
+```
 
 <a href="/code/day-011/index.html" target="_blank">Demo</a>

@@ -10,7 +10,7 @@ export default ({data}) => {
           <span className="fw3 gray f5">{node.fields.date}</span>
         </header>
         <section>
-          <Link to={node.fields.slug} className="link f3 fw3 f2-m fw2-m f1-l fw2-l mv1 db title-gradient">{node.frontmatter.title}{" "}</Link>
+          <Link to={node.fields.slug} className="link f3 fw3 f2-m fw2-m f1-l fw2-l mv1 db title-gradient dim">{node.frontmatter.title}{" "}</Link>
         </section>
         <footer>
           <span className="f6 moon-gray">{node.frontmatter.categories.join(", ")}</span>

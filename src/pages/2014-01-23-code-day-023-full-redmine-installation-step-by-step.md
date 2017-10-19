@@ -14,9 +14,9 @@ categories:
 
 > Update: I recommend to just run the Redmine Docker image instead of doing all this stuff I've written time ago.
 
-{% highlight sh %}
+```bash
 $ docker run -d --name some-redmine redmine
-{% endhighlight %}
+```
 
 Check out this link too: [https://hub.docker.com/_/redmine/]()
 
@@ -79,7 +79,7 @@ Check out this link too: [https://hub.docker.com/_/redmine/]()
 
 4. Enable Passenger as Apache module:
 
-        sudo a2enmod passenger  
+        sudo a2enmod passenger
 
 5. Add a virtual host to your Apache configuration file and set its DocumentRoot to `/var/sites/redmine.domain.com/public`:
 

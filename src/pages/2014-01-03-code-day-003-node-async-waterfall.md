@@ -9,7 +9,7 @@ categories:
 ---
 **Waterfall** es una funci&oacute;n de la librer&iacute;a <a href="https://github.com/caolan/async" target="_blank">async.js</a> que nos permite ejecutar una serie de funciones, cada una pasa su resultado a la siguiente funci&oacute;n en el array.
 
-{% highlight js %}
+```javascript
 async.waterfall([
     function(callback){
     	var str = "b";
@@ -30,4 +30,4 @@ async.waterfall([
 ], function (err, result) {
    console.log(result); // "blog"
 });
-{% endhighlight %}
+```

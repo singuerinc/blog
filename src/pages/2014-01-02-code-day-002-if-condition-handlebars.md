@@ -9,7 +9,7 @@ categories:
 ---
 Hoy: Handlebars/Javascript, **if condition helper**
 
-{% highlight js %}
+```javascript
 handlebars.registerHelper('ifCond', function(v1, cond, v2, opt){
 	switch (cond) {
 		case '==':
@@ -28,14 +28,12 @@ handlebars.registerHelper('ifCond', function(v1, cond, v2, opt){
 			return opt.inverse(this);
 	}
 });
-{% endhighlight %}
+```
 
 Ejemplo:
 
-{% highlight xml %}
-
+```xml
 #ifCond blog '===' 'singuerinc'
 <node>blog ok</node>
 /ifCond
-
-{% endhighlight %}
+```
