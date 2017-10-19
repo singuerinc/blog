@@ -6,6 +6,7 @@
   "dependencies": {
     "gatsby": "^1.9.63",
     "gatsby-link": "^1.6.21",
+    "gatsby-plugin-google-analytics": "^1.0.10",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-remark-prismjs": "^1.2.8",
     "gatsby-source-filesystem": "^1.5.5",
