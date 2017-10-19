@@ -11,6 +11,7 @@
     "gatsby-source-filesystem": "^1.5.5",
     "gatsby-transformer-remark": "^1.7.16",
     "slug": "^0.9.1",
+    "syntax-highlighting": "git+https://github.com/atelierbram/syntax-highlighting.git",
     "tachyons": "^4.8.1"
   },
   "keywords": [

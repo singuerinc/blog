@@ -13,7 +13,7 @@ categories:
 ---
 Validamos un DNI espa&ntilde;ol con Javascript, puede validar tanto NIF como NIE.
 
-{% highlight js %}
+```js
 function validate(value){
 
   var validChars = 'TRWAGMYFPDXBNJZSQVHLCKET';
@@ -38,6 +38,6 @@ function validate(value){
 
 validate('12345678Z');  //true - "nif"
 validate('X9464187D');  //true - "nie"
-{% endhighlight %}
+```
 
 <a href="/dni/nif/nie/validar/2015/12/22/validar-dni-nif-o-nie/index.html" target="_blank">Demo</a>

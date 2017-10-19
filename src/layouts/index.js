@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import 'tachyons'
-import 'prismjs/themes/prism-tomorrow.css'
+import 'syntax-highlighting/assets/css/prism/prism-base16-ateliercave.dark.css'
 import './index.css'
 
 const Header = () => (
@@ -17,7 +17,7 @@ const Header = () => (
 )
 
 const TemplateWrapper = ({ children }) => (
-  <div className="sans-serif dark-gray mh3">
+  <div className="sans-serif dark-gray mh3 mw-100 mw7-l center">
     <Helmet
       title="singuerinc | blog"
       meta={[
