@@ -21,8 +21,24 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="singuerinc | blog"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'I make apps in HTML5, Javascript, Node.js, Ruby on Rails among others technologies.' },
+        { name: 'author', content: 'Nahuel Scotti' },
+        { property: 'og:image', content: 'http://www.singuerinc.com/img/home/singuerinc--overlay-app.jpg' },
+        { property: 'og:image:type', content: 'image/jpg' },
+        { property: 'og:image:width', content: '816" ' },
+        { property: 'og:image:height', content: '386" ' },
+        { property: 'og:locale', content: 'en_US' },
+        { property: 'og:type', content: 'article' },
+        { property: 'og:title', content: '@singuerinc' },
+        { property: 'og:description', content: 'I make apps in HTML5, Javascript, Node.js, Ruby on Rails among others technologies.' },
+        { property: 'og:url', content: 'https://blog.singuerinc.com/' },
+        { property: 'og:site_name', content: '@singuerinc' },
+        { property: 'fb:app_id', content: '1774104969502286' },
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:site', content: '@singuerinc' },
+        { name: 'twitter:title', content: '@singuerinc' },
+        { name: 'twitter:description', content: 'I make apps in HTML5, Javascript, Node.js, Ruby on Rails among others technologies.' },
+        { name: 'twitter:url', content: 'https://blog.singuerinc.com/' }
       ]}
     />
     <Header />
