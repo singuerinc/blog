@@ -13,7 +13,7 @@ You want a video on your html, an overlay layer with some information and a butt
 
 **The problem:** You can't click on the button, because the click event is captured by the video element.
 
-{% highlight html %}
+```html
 <a id="btn" href="#">play</a>
 <p>Lorem ipsum Duis sit nisi occaecat ut</p>
 <video id="video" controls src="video.mp4"></video>
@@ -27,7 +27,7 @@ You want a video on your html, an overlay layer with some information and a butt
 
 2. You need also specify the correct event on the iPad:
 
-{% highlight html %}
+```js
 var ua = navigator.userAgent,
     event = (ua.match(/iPad/i)) ? "touchstart" : "click",
     video = document.getElementsByTagName("video")[0];
@@ -38,4 +38,4 @@ btn.addEventListener(event, function(e){
 });
 ```
 
-<a href="/code/day-021/index.html" target="_blank">Demo</a>
+<a href="/static/code/day-021/index.html" target="_blank">Demo</a>

@@ -16,4 +16,4 @@ function format(value){
 format(3601234); // '3.601.234'
 ```
 
-<a href="/code/day-013/index.html" target="_blank">Demo</a>
+<a href="/static/code/day-013/index.html" target="_blank">Demo</a>

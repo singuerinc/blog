@@ -8,7 +8,7 @@ categories:
 ---
 Hoy: &iquest;C&oacute;mo instalamos una versi&oacute;n espec&iacute;fica de Node.js en OpenShift?
 
-{% highlight bash %}
+```bash
 $ git clone REPO_URL
 $ git remote add upstream -m master git://github.com/openshift/nodejs-custom-version-openshift.git
 $ git pull -s recursive -X theirs upstream master

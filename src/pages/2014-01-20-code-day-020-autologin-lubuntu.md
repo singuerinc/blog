@@ -28,4 +28,6 @@ $ sudo vim /etc/lightdm/lightdm.conf
 
 And then change this line:
 
-`autologin-user=yourusernamehere`
+```bash
+autologin-user=yourusernamehere
+```

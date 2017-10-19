@@ -20,4 +20,4 @@ function open_email(){
 }
 ```
 
-<a href="/code/day-011/index.html" target="_blank">Demo</a>
+<a href="/static/code/day-011/index.html" target="_blank">Demo</a>

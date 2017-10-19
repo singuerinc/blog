@@ -17,47 +17,16 @@ config.vm.network "private_network", ip: "192.168.50.4"
 ```
 
 ### SequelPro SSH Options
-<table>
-	<tbody>
-		<tr>
-			<td>Name</td>
-			<td>vagrant_connection</td>
-		</tr>
-		<tr>
-			<td>MySQL Host</td>
-			<td>127.0.0.1</td>
-		</tr>
-		<tr>
-			<td>Username</td>
-			<td>root</td>
-		</tr>
-		<tr>
-			<td>Password</td>
-			<td>&lt;blank&gt;</td>
-		</tr>
-		<tr>
-			<td>Database</td>
-			<td>&lt;optional&gt;</td>
-		</tr>
-		<tr>
-			<td>Port</td>
-			<td>3306</td>
-		</tr>
-		<tr>
-			<td>SSH Host</td>
-			<td>192.168.50.4</td>
-		</tr>
-		<tr>
-			<td>SSH User</td>
-			<td>vagrant</td>
-		</tr>
-		<tr>
-			<td>SSH Password</td>
-			<td>vagrant</td>
-		</tr>
-		<tr>
-			<td>SSH Port</td>
-			<td>&lt;optional&gt;</td>
-		</tr>
-	</tbody>
-</table>
+
+| Option        | Value              |
+|: ------------ |:-------------------|
+| Name          | vagrant_connection |
+| MySQL Host    | 127.0.0.1          |
+| Username      | root               |
+| Password      | &lt;blank&gt;      |
+| Database      | &lt;optional&gt;   |
+| Port          | 3306               |
+| SSH Host      | 192.168.50.4       |
+| SSH User      | vagrant            |
+| SSH Host      | vagrant            |
+| SSH Port      | &lt;optional&gt;   |

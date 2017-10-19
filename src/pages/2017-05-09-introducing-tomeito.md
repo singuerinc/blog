@@ -22,32 +22,32 @@ What's the difference between this one and other timers apps:
 
 ## Idle
 
-<img width="402" src="/images/posts-assets/tomeito/tomeito-idle.png">
+<img width="402" src="/static/images/posts-assets/tomeito/tomeito-idle.png">
 
 If a pomodoro/break is not started or is ended, the app is in idle state.
 
 ## Regular pomodoro (25 minutes)
 
-<img width="402" src="/images/posts-assets/tomeito/tomeito-pomodoro.png">
+<img width="402" src="/static/images/posts-assets/tomeito/tomeito-pomodoro.png">
 
 After clicking play in idle state a pomodoro timer is started.
 Each pomodoro consist in a timer of 25 minutes. You can skip or reset them at any time.
 
 ## Short Break (5 minutes)
 
-<img width="402" src="/images/posts-assets/tomeito/tomeito-break.png">
+<img width="402" src="/static/images/posts-assets/tomeito/tomeito-break.png">
 
 After each pomodoro a short break of 5 minutes could be taken.
 
 ## Long Break (15 minutes)
 
-<img width="402" src="/images/posts-assets/tomeito/tomeito-long-break.png">
+<img width="402" src="/static/images/posts-assets/tomeito/tomeito-long-break.png">
 
 After four pomodori a long break of 15 minutes could be taken.
 
 ## Settings
 
-<img width="402" src="/images/posts-assets/tomeito/tomeito-settings.png">
+<img width="402" src="/static/images/posts-assets/tomeito/tomeito-settings.png">
 
 From the settings you can control how the app behaves:
 

@@ -6,9 +6,9 @@ categories:
   - nodejs
   - ubuntu
 ---
-Hoy instalamos Node.js en Ubuntu!
+Install Node.js on Ubuntu!
 
-{% highlight console %}
+```bash
 $ sudo apt-get install python-software-properties python g++ make
 $ sudo add-apt-repository ppa:chris-lea/node.js
 $ sudo apt-get update
