@@ -13,7 +13,7 @@ build:
   stage: build
   environment: production
   script:
-    - npm install -q
+    - yarn
     - ./node_modules/.bin/gatsby build
   artifacts:
     paths:
@@ -36,7 +36,7 @@ deploy:
   stage: build
   environment: production
   script:
-    - npm install netlify-cli --global
+    - yarn global add netlify-cli
     - netlify deploy -p public
   only:
   - tags
