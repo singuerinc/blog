@@ -9,7 +9,7 @@ variables:
   CONTAINER_RELEASE_IMAGE: registry.gitlab.com/singuerinc-works/com.singuerinc.blog:latest
 
 build:
-  image: node:alpine
+  image: node:8
   stage: build
   environment: production
   script:
@@ -20,7 +20,7 @@ build:
     - public
 
 pages:
-  image: node:alpine
+  image: alpine
   stage: pages
   environment: production
   script:
@@ -32,7 +32,7 @@ pages:
   - master
 
 deploy:
-  image: node:alpine
+  image: node:8
   stage: build
   environment: production
   script:
