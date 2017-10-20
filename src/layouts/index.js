@@ -15,7 +15,6 @@ const Header = () => (
           @singuerinc
         </Link>
       </h1>
-      <h4 className="mv2 f4">Subtitle here</h4>
     </div>
   </div>
 )
