@@ -23,7 +23,9 @@ You want a video on your html, an overlay layer with some information and a butt
 
 1. Remove the "controls" property from the video html tag.
 
-    `<video id="video" src="video.mp4"></video>`
+```html
+<video id="video" src="video.mp4"></video>
+```
 
 2. You need also specify the correct event on the iPad:
 
