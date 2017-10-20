@@ -1,0 +1,57 @@
+stages:
+- build
+- deploy
+- pages
+- docker
+
+variables:
+  CONTAINER_TEST_IMAGE: registry.gitlab.com/singuerinc-works/com.singuerinc.blog:$CI_BUILD_TAG
+  CONTAINER_RELEASE_IMAGE: registry.gitlab.com/singuerinc-works/com.singuerinc.blog:latest
+
+build:
+  image: node:alpine
+  stage: build
+  environment: production
+  script:
+    - npm install -q
+    - ./node_modules/.bin/gatsby build
+  artifacts:
+    paths:
+    - public
+
+pages:
+  image: node:alpine
+  stage: pages
+  environment: production
+  script:
+    - echo 'pages'
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+deploy:
+  image: node:alpine
+  stage: build
+  environment: production
+  script:
+    - npm install netlify-cli --global
+    - netlify deploy -p public
+  only:
+  - tags
+
+docker-image:
+  image: docker:git
+  services:
+  - docker:dind
+  environment: production
+  stage: docker
+  script:
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+  - docker build -t $CONTAINER_TEST_IMAGE .
+  - docker push $CONTAINER_TEST_IMAGE
+  - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE
+  - docker push $CONTAINER_RELEASE_IMAGE
+  only:
+  - tags

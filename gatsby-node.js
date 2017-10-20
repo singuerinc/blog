@@ -1,4 +1,5 @@
-const path = require(`path`)
+const fs = require('fs-extra')
+const path = require('path')
 const slugify = require('slug')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -47,5 +48,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       })
       resolve()
     })
+  })
+}
+
+exports.onPostBuild = () => {
+  return new Promise((resolve, reject) => {
+    fs.copySync(path.join(__dirname, '/code'), path.join(__dirname, '/public/static/code'))
+    resolve();
   })
 }
