@@ -2,11 +2,6 @@ html, body {
   background-color: #fbfbfb;
 }
 
-td, th {
-  padding: 5px;
-  border: 1px solid #bbb;
-}
-
 .link:focus {
   outline: 0;
 }
