@@ -1,4 +1,8 @@
+node_modules
+.cache/
+# Build directory
+public/*
+!public/static
+public/static/code
 .DS_Store
-.idea
-.jekyll-metadata
-public
+yarn-error.log

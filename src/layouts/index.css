@@ -1,0 +1,19 @@
+html, body {
+  background-color: #fbfbfb;
+}
+
+.link:focus {
+  outline: 0;
+}
+
+
+.title-gradient {
+  -webkit-background-clip: text;
+  background-image: -webkit-linear-gradient(left, #616161, #FF5722, #FF5722);
+  background-image: linear-gradient(to right, #616161, #FF5722, #FF5722);
+  -webkit-text-fill-color: transparent;
+}
+
+.post__body h1, .post__body h2, .post__body h3 {
+  font-weight: 300;
+}

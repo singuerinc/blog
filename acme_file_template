@@ -1,6 +1,0 @@
----
-layout: null
-permalink: /.well-known/acme-challenge/$ACME_FILE_NAME
----
-
-$ACME_FILE_CONTENT
