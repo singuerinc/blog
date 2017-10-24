@@ -1,0 +1,9 @@
+<div class="movie-poster">
+    <img src="{{ image }}" alt="{{ original_title }}"/>
+</div>
+<span class="popularity"><span class="inner" style="{{#popularityWidth popularity}}{{/popularityWidth}}"></span></span>
+<div class="movie-info">
+    <span class="release_date">{{ release_date }}</span>
+    <a href="#movie/{{ id }}" target="_self"><h2>{{ original_title }}</h2></a>
+    <div class="vote_average">{{#rating vote_average }}{{/rating}}</div>
+</div>
