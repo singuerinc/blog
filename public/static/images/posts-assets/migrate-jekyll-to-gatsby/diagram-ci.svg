@@ -10,15 +10,15 @@
 .node circle,
 .node ellipse,
 .node polygon {
-  fill: #cde498;
-  stroke: #13540c;
+  fill: orange;
+  stroke: #ff5722;
   stroke-width: 1px;
 }
 .arrowheadPath {
-  fill: green;
+  fill: #ff5722;
 }
 .edgePath .path {
-  stroke: green;
+  stroke: #ff5722;
   stroke-width: 1.5px;
 }
 .edgeLabel {
@@ -27,15 +27,15 @@
 .cluster rect {
   fill: #cdffb2 !important;
   rx: 4 !important;
-  stroke: #6eaa49 !important;
+  stroke: #ff5722 !important;
   stroke-width: 1px !important;
 }
 .cluster text {
   fill: #333;
 }
 .actor {
-  stroke: #13540c;
-  fill: #cde498;
+  stroke: #ff5722;
+  fill: orange;
 }
 text.actor {
   fill: black;
@@ -67,8 +67,8 @@ text.actor {
   stroke: none;
 }
 .labelBox {
-  stroke: #326932;
-  fill: #cde498;
+  stroke: #ff5722;
+  fill: orange;
 }
 .labelText {
   fill: black;
@@ -173,7 +173,7 @@ text.actor {
 .task2,
 .task3 {
   fill: #487e3a;
-  stroke: #13540c;
+  stroke: #ff5722;
 }
 .taskTextOutside0,
 .taskTextOutside2 {
@@ -188,8 +188,8 @@ text.actor {
 .active1,
 .active2,
 .active3 {
-  fill: #cde498;
-  stroke: #13540c;
+  fill: orange;
+  stroke: #ff5722;
 }
 .activeText0,
 .activeText1,
@@ -226,7 +226,7 @@ text.actor {
 .activeCrit2,
 .activeCrit3 {
   stroke: #ff8888;
-  fill: #cde498;
+  fill: orange;
   stroke-width: 2;
 }
 .doneCrit0,
@@ -257,82 +257,82 @@ text.actor {
   fill: black;
 }
 g.classGroup text {
-  fill: #13540c;
+  fill: #ff5722;
   stroke: none;
   font-family: 'trebuchet ms', verdana, arial;
   font-size: 10px;
 }
 g.classGroup rect {
-  fill: #cde498;
-  stroke: #13540c;
+  fill: orange;
+  stroke: #ff5722;
 }
 g.classGroup line {
-  stroke: #13540c;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 svg .classLabel .box {
   stroke: none;
   stroke-width: 0;
-  fill: #cde498;
+  fill: orange;
   opacity: 0.5;
 }
 svg .classLabel .label {
-  fill: #13540c;
+  fill: #ff5722;
   font-size: 10px;
 }
 .relation {
-  stroke: #13540c;
+  stroke: #ff5722;
   stroke-width: 1;
   fill: none;
 }
 .composition {
-  fill: #13540c;
-  stroke: #13540c;
+  fill: #ff5722;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 #compositionStart {
-  fill: #13540c;
-  stroke: #13540c;
+  fill: #ff5722;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 #compositionEnd {
-  fill: #13540c;
-  stroke: #13540c;
+  fill: #ff5722;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 .aggregation {
-  fill: #cde498;
-  stroke: #13540c;
+  fill: orange;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 #aggregationStart {
-  fill: #cde498;
-  stroke: #13540c;
+  fill: orange;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 #aggregationEnd {
-  fill: #cde498;
-  stroke: #13540c;
+  fill: orange;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 #dependencyStart {
-  fill: #13540c;
-  stroke: #13540c;
+  fill: #ff5722;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 #dependencyEnd {
-  fill: #13540c;
-  stroke: #13540c;
+  fill: #ff5722;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 #extensionStart {
-  fill: #13540c;
-  stroke: #13540c;
+  fill: #ff5722;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 #extensionEnd {
-  fill: #13540c;
-  stroke: #13540c;
+  fill: #ff5722;
+  stroke: #ff5722;
   stroke-width: 1;
 }
 .node text {
