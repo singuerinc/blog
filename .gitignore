@@ -3,5 +3,6 @@ node_modules
 # Build directory
 public/*
 !public/static
+public/static/code
 .DS_Store
 yarn-error.log
