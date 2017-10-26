@@ -3083,9 +3083,9 @@ gatsby-plugin-react-helmet@^1.0.5:
     babel-runtime "^6.26.0"
     react-helmet "^5.1.3"
 
-gatsby-react-router-scroll@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.2.tgz#3fd66c242753eb447e7b2d450afa69c296908c0b"
+gatsby-react-router-scroll@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.3.tgz#b4b7850850d078b1816a15abf332c93b4d42e3f1"
   dependencies:
     babel-runtime "^6.26.0"
     scroll-behavior "^0.9.1"
@@ -3137,9 +3137,9 @@ gatsby-transformer-remark@^1.7.16:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
 
-gatsby@^1.9.77:
-  version "1.9.77"
-  resolved "https://registry.npmjs.org/gatsby/-/gatsby-1.9.77.tgz#6ffaaae85b8852ca6448c6a2c764872d26cde108"
+gatsby@^1.9.80:
+  version "1.9.80"
+  resolved "https://registry.npmjs.org/gatsby/-/gatsby-1.9.80.tgz#99baae0a4c20ef580e5d4b92056deb3539ae8367"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -3183,7 +3183,7 @@ gatsby@^1.9.77:
     gatsby-1-config-css-modules "^1.0.4"
     gatsby-cli "^1.1.11"
     gatsby-module-loader "^1.0.7"
-    gatsby-react-router-scroll "^1.0.2"
+    gatsby-react-router-scroll "^1.0.3"
     glob "^7.1.1"
     graphql "^0.10.3"
     graphql-relay "^0.5.1"

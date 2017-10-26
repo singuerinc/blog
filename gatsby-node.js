@@ -50,10 +50,3 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     })
   })
 }
-
-exports.onPostBuild = () => {
-  return new Promise((resolve, reject) => {
-    fs.copySync(path.join(__dirname, '/code'), path.join(__dirname, '/public/static/code'))
-    resolve();
-  })
-}
