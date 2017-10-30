@@ -1,10 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+const getClassNameByPostIndex = (index) => {
+  const indexZeroClasses = "f2 f1-m f-headline-l"
+  const indexAnyClasses = "f3 f2-m f1-l"
+
+  return index === 0 ? indexZeroClasses  : indexAnyClasses
+}
+
 export default ({ data }) => {
   return (
     <div>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
+      {data.allMarkdownRemark.edges.map(({ node }, index) => (
         <article key={node.id} className="mb4">
           <header>
             <span className="fw3 gray f5">{node.fields.date}</span>
@@ -12,7 +19,7 @@ export default ({ data }) => {
           <section>
             <Link
               to={node.fields.slug}
-              className="link f3 fw3 f2-m fw2-m f1-l fw2-l mv1 db title-gradient dim"
+              className={"link fw3 fw2-m fw2-l mv1 db title-gradient dim " + getClassNameByPostIndex(index)}
             >
               {node.frontmatter.title}{' '}
             </Link>
