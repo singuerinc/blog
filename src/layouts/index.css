@@ -26,3 +26,11 @@ code {
   background-color: #9EEBCF;
   color: #111;
 }
+
+.post__body blockquote {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  border-left: 3px solid orangered;
+  font-style: italic;
+  color: #777777;
+}
