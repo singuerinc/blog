@@ -11,6 +11,9 @@ categories:
   - nif
 ---
 
+> Update!
+> Si bien este código funciona, te recomiendo utilizar mi nueva librería ["Better DNI"](https://github.com/singuerinc/better-dni/) que he publicado en Github.
+> Puedes probarla aquí: [https://better-dni.netlify.com/](https://better-dni.netlify.com/)
 
 Hola, otra Class de validaci&oacute;n, en este caso para validar un DNI espa&ntilde;ol.<br/>
 Realic&eacute; una classe porque quer&iacute;a tener un set de funciones, y poder diferenciar si se trata de un nif o un nie.
@@ -83,16 +86,17 @@ package net.singuerinc.labs.utils.validators {
 Y algunos ejemplos:
 
 ```javascript
-var val1:SpainDNIValidator = new SpainDNIValidator('x9464186p');
+var val1: SpainDNIValidator = new SpainDNIValidator('x9464186p');
 val1.isValid(); //true
 val1.isNIF(); //false
 val1.isNIE(); //true
 
-var val2:SpainDNIValidator = new SpainDNIValidator('12345678Z');
+var val2: SpainDNIValidator = new SpainDNIValidator('12345678Z');
 val2.isValid(); //true
 val2.isNIF(); //true
 val2.isNIE(); //false
 ```
 
 [2]: https://github.com/singuerinc/singuerinc-blog/blob/master/src/net/singuerinc/labs/utils/validators/SpainDNIValidator.as
+
 Puedes encontrar la &uacute;ltima versi&oacute;n en [github][2].
