@@ -7663,8 +7663,8 @@ systemjs@^0.19.46:
     when "^3.7.5"
 
 tachyons@^4.8.1:
-  version "4.8.1"
-  resolved "https://registry.npmjs.org/tachyons/-/tachyons-4.8.1.tgz#9a3183feecb3240c4dcefee7feecc8259acd7381"
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.11.1.tgz#4e3666e7299e47aea7d820e0580dd4dc07cf3feb"
 
 tapable@^0.1.8, tapable@~0.1.8:
   version "0.1.10"
