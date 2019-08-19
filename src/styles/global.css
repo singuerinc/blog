@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   background-color: #fbfbfb;
 }
 
@@ -7,23 +8,26 @@ html, body {
 }
 
 code {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
 }
 
 .title-gradient {
   -webkit-background-clip: text;
-  background-image: -webkit-linear-gradient(left, #616161, #FF5722, #FF5722);
-  background-image: linear-gradient(to right, #616161, #FF5722, #FF5722);
+  background-image: -webkit-linear-gradient(left, #616161, #ff5722, #ff5722);
+  background-image: linear-gradient(to right, #616161, #ff5722, #ff5722);
   -webkit-text-fill-color: transparent;
 }
 
-.post__body h1, .post__body h2, .post__body h3 {
+.post__body h1,
+.post__body h2,
+.post__body h3 {
   font-weight: 300;
 }
 
 .post__body p code {
   padding: 0 5px;
-  background-color: #9EEBCF;
+  background-color: #9eebcf;
   color: #111;
 }
 

@@ -3,18 +3,17 @@ layout: post
 title: Flash Player Debug Logs on Mac OS
 comments: true
 categories:
-    - actionscript3
-    - flash
-    - logs
-    - osx
+  - actionscript3
+  - flash
+  - logs
+  - osx
 ---
-
 
 &iquest;C&oacute;mo puedo ver los **trace** de Flash Player?<br/>
 Es una pregunta que me repito una y otra vez cada vez que reinstalo el ordenador.
 
-- Primero tienes que instalar la versi&oacute;n de [Flash Player Debug](http://www.adobe.com/support/flashplayer/downloads.html)
-- Luego configurar el *mm.cfg* y *flashlog.txt*
+- Primero tienes que instalar la versi&oacute;n de [Flash Player Debug](https://www.adobe.com/support/flashplayer/downloads.html)
+- Luego configurar el _mm.cfg_ y _flashlog.txt_
 
 Pero siempre olvido d&oacute;nde colocarlos, por eso he escrito un peque&ntilde;o script que lo hace:
 
