@@ -18,7 +18,7 @@ I used to like Jekyll because I could write my posts in Markdown and easily to i
 
 But recently I found that I was installing Ruby and Jekyll in my machine just to manage my blog (I mostly develop with Node). I tried to develop it inside a Docker container, but was extremely slow.
 
-Some weeks ago one of my colleague at work talked me about [Gatsby](https://www.gatsbyjs.org), and since I was learning [React](https://reactjs.org/) and I started looking at [GraphQL](http://graphql.org/) (after attend a talk at [Nordic.js](http://nordicjs.com/)) I was very interested in give it a try.
+Some weeks ago one of my colleague at work talked me about [Gatsby](https://www.gatsbyjs.org), and since I was learning [React](https://reactjs.org/) and I started looking at [GraphQL](https://graphql.org/) (after attend a talk at [Nordic.js](https://nordicjs.com/)) I was very interested in give it a try.
 
 # Migration from Jekyll to Gatsby
 
@@ -33,14 +33,12 @@ Luckily Gatsby works with Markdown and it can take the data from your YAML front
 Then, in your `gatsby-config.js` file add:
 
 ```js
-plugins: [
-  'gatsby-transformer-remark'
-]
+plugins: ["gatsby-transformer-remark"];
 ```
 
 ## Theme
 
-My blog is clean and simple, I don't need too much css, instead of bloating my blog with a theme I added [Tachyons](http://tachyons.io/). I managed to replicate 99% of my previous theme with classes from Tachyons. Something that I would like to do better is to remove the part that I do not use from it.
+My blog is clean and simple, I don't need too much css, instead of bloating my blog with a theme I added [Tachyons](https://tachyons.io/). I managed to replicate 99% of my previous theme with classes from Tachyons. Something that I would like to do better is to remove the part that I do not use from it.
 
 The current css file has less than 30 lines, the rest of the layout is created with tachyons classes: [https://github.com/singuerinc/blog/blob/master/src/layouts/index.css](https://github.com/singuerinc/blog/blob/master/src/layouts/index.css)
 
@@ -73,25 +71,30 @@ I used the `onCreateNode` function to tweak the slug:
 
 ```js
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
+  const { createNodeField } = boundActionCreators;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const { categories } = node.frontmatter
+    const { categories } = node.frontmatter;
 
-    const filename = createFilePath({ node, getNode, basePath: `pages` })
+    const filename = createFilePath({ node, getNode, basePath: `pages` });
 
     // get the date and title from the file name
-    const [, date, title] = filename.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/)
+    const [, date, title] = filename.match(
+      /^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/
+    );
 
     // create a new slug concatenating everything
-    const slug = `/${slugify(categories.concat([date]).join('-'), '/')}/${title}/`
+    const slug = `/${slugify(
+      categories.concat([date]).join("-"),
+      "/"
+    )}/${title}/`;
 
-    createNodeField({ node, name: `slug`, value: slug })
+    createNodeField({ node, name: `slug`, value: slug });
 
     // save the date for later use
-    createNodeField({ node, name: `date`, value: date })
+    createNodeField({ node, name: `date`, value: date });
   }
-}
+};
 ```
 
 ## Deploy

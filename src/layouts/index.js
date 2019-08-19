@@ -31,7 +31,7 @@ const TemplateWrapper = ({ children }) => (
         {
           property: "og:image",
           content:
-            "http://www.singuerinc.com/img/home/singuerinc--overlay-app.jpg"
+            "https://www.singuerinc.com/img/home/singuerinc--overlay-app.jpg"
         },
         { property: "og:image:type", content: "image/jpg" },
         { property: "og:image:width", content: '816" ' },

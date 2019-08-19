@@ -12,7 +12,7 @@ categories:
 
 Does you application needs to display some info about a movie?<br/>Here I show you can do it.
 
-Yesterday I found that "The Movie DB" is one of the best options to search for movies info. So, I've made a quick example of how to integrate it, and like in the last 3 apps I've made I've used <a href="http://requirejs.org" target="_blank">RequireJS</a> and <a href="http://marionettejs.com/">Marionette.js</a>.
+Yesterday I found that "The Movie DB" is one of the best options to search for movies info. So, I've made a quick example of how to integrate it, and like in the last 3 apps I've made I've used <a href="https://requirejs.org" target="_blank">RequireJS</a> and <a href="https://marionettejs.com/">Marionette.js</a>.
 
 You could find the source at <a href="https://github.com/singuerinc/blog/tree/master/static/code/labs/require-marionette-movies" target="_blank">GitHub</a>
 
